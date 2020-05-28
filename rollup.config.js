@@ -40,7 +40,7 @@ export default {
     }),
     commonjs(),
     replace({ 
-      __BASE_API_URL__: '/api/',
+      __BASE_API_URL__: production ? '/api/' : 'http://127.0.0.1:3000/',
       __VERSION__: '1.2'
     }),
 

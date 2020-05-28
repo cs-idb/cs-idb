@@ -14,3 +14,37 @@ body {
 	background-color: #484848;
 	font-weight: bold;
 }
+
+.rotate-anim {
+	margin-right: 15px;
+	animation: rotate 1s;
+	-moz-animation: rotate 1s infinite;
+	-webkit-animation: rotate 1s infinite;
+}
+
+@keyframes rotate {
+	0% {
+		rotate: 0;
+	}
+	100% {
+		rotate: 360deg;
+	}
+}
+
+@-moz-keyframes rotate {
+	0% {
+		rotate: 0;
+	}
+	100% {
+		rotate: 360deg;
+	}
+}
+
+@-webkit-keyframes rotate {
+	0% {
+		rotate: 0;
+	}
+	100% {
+		rotate: 360deg;
+	}
+}
