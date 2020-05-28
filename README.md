@@ -7,3 +7,6 @@
 1) Install dependencies: `$ npm install`
 2) Build: `$ npm run build`
 3) Run `$ npm start` or `sirv public --single`
+
+## Updating checksums
+1) `$ node checksums.js`

@@ -41,7 +41,7 @@ export default {
     commonjs(),
     replace({ 
       __BASE_API_URL__: '/api/',
-      __VERSION__: '1.0'
+      __VERSION__: '1.2'
     }),
 
     // In dev mode, call `npm run start` once

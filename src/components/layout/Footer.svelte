@@ -35,25 +35,9 @@
           <li>
             <a
               class="grey-text text-lighten-3"
-              href={$url('https://github.com/cs-idb/item-api/')}>
+              href={$url('https://github.com/cs-idb/cs-idb/')}>
               <i class="material-icons">timeline</i>
-              Github repository (Item API)
-            </a>
-          </li>
-          <li>
-            <a
-              class="grey-text text-lighten-3"
-              href={$url('https://github.com/cs-idb/website/')}>
-              <i class="material-icons">timeline</i>
-              Github repository (Webpage)
-            </a>
-          </li>
-          <li>
-            <a
-              class="grey-text text-lighten-3"
-              href={$url('__BASE_API_URL__/')}>
-              <i class="material-icons">dns</i>
-              Item API
+              Github repository
             </a>
           </li>
           <li>

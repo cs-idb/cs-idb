@@ -180,6 +180,21 @@
           </Button>
         </a>
       </div>
+
+      <div class="source">
+        <h5>Vercel (Formally now.sh)</h5>
+        <p>Static site + cloud functions hosting</p>
+        <a href={$url('https://vercel.com/')} target="_blank" rel="noopener noreferrer">
+          <Button>
+            <span class="flex">
+              Vercel
+              <i class="material-icons">chevron_right</i>
+            </span>
+          </Button>
+        </a>
+      </div>
+
+
     </div>
   </div>
 
