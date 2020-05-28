@@ -15,8 +15,11 @@ body {
 	font-weight: bold;
 }
 
-.rotate-anim {
+.mr-15 {
 	margin-right: 15px;
+}
+
+.rotate-anim {
 	animation: rotate 1s;
 	-moz-animation: rotate 1s infinite;
 	-webkit-animation: rotate 1s infinite;

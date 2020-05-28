@@ -17,6 +17,12 @@ const changelogs = [
     'header': 'Api overhaul',
     'content': 'Reworked how paintkits are applied to skins, including paintkit name and image uri.',
   },
+  {
+    'version': '1.3',
+    'time': 1590686733000, // Thursday, 28 May 2020,
+    'header': 'Updating in the background',
+    'content': 'If your browser has the items stored locally (e.g. you visited the site already), it will check for updates in the background instead of showing a spinner.'
+  }
 ]
 
 export { changelogs }
