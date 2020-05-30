@@ -7,7 +7,8 @@
     "watch:routify": "routify",
     "watch:rollup": "rollup -c -w",
     "start": "sirv public --single",
-    "lint": "eslint --fix 'src/**/*.{js,svelte}'"
+    "lint": "eslint --fix 'src/**/*.{js,svelte}'",
+    "format": "prettier --write 'src/**/*.{js,svelte}'"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "11.0.2",
@@ -22,6 +23,8 @@
     "eslint-plugin-standard": "^4.0.1",
     "eslint-plugin-svelte3": "^2.7.3",
     "js-sha1": "^0.6.0",
+    "prettier": "^2.0.5",
+    "prettier-plugin-svelte": "^1.1.0",
     "rollup": "^1.20.0",
     "rollup-plugin-css-only": "^2.0.0",
     "rollup-plugin-livereload": "^1.0.0",
