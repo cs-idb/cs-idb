@@ -5,13 +5,14 @@
   import { Spinner } from "../shared";
   import { fetchDataByNames } from "../../dal";
   import { createEventDispatcher } from "svelte";
+  import { raw_checksums } from "../../stores/"
 
   const dispatch = createEventDispatcher();
 
   const TOAST_DISPLAY_TIME = 1000;
 
   let updating_data = true;
-  let data_exists_locally = localStorage.getItem("csdb/checksums") !== null;
+  let data_exists_locally = $raw_checksums !== null;
 
   onMount(async () => {
     if (data_exists_locally) {

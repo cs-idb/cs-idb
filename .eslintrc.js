@@ -25,7 +25,12 @@ module.exports = {
         'import/first': 'off',
         'import/no-duplicates': 'off',
         'import/no-mutable-exports': 'off',
-        'import/no-unresolved': 'off'
+        'import/no-unresolved': 'off',
+
+        'no-multiple-empty-lines': 0,
+        'no-use-before-define': 0,
+        eqeqeq: 1, // TODO: Check for == operators,
+        'no-return-assign': 0
       }
     }
   ],
