@@ -9,10 +9,9 @@
 
   const dispatch = createEventDispatcher()
 
-  $: sortedRows = SortableArray.from(tableRows)
-    .sortBy(activeSort.header, activeSort.sortAsc)
+  $: sortedRows = SortableArray.from(tableRows).sortBy(activeSort.header, activeSort.sortAsc)
 
-  const changeSort = (headerName) => {
+  const changeSort = headerName => {
     if (activeSort.header === headerName) {
       activeSort.sortAsc = !activeSort.sortAsc
     } else {
@@ -39,7 +38,7 @@
     width: 20px;
   }
 
-  tbody tr{
+  tbody tr {
     border: 1px solid #d5d5d5;
     cursor: pointer;
   }
@@ -76,7 +75,7 @@
                   <i class="material-icons">arrow_drop_up</i>
                 {/if}
               {:else}
-                <i></i>
+                <i />
               {/if}
             </p>
           </Button>
@@ -86,7 +85,10 @@
   </thead>
   <tbody>
     {#each sortedRows as tableRow}
-      <tr on:click={() => {dispatch('clickItem', tableRow.__id)}}>
+      <tr
+        on:click={() => {
+          dispatch('clickItem', tableRow.__id)
+        }}>
         {#each tableHeaders as tableHeader}
           <td>{tableRow[tableHeader]}</td>
         {/each}

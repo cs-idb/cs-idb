@@ -2,13 +2,13 @@
   import { goto } from '@sveltech/routify'
   import { Button, Table } from '../../components/shared/'
   import { weapons } from '../../stores'
-  
+
   $: tableHeaders = ['name', 'type', 'desc']
-  $: tableRows = $weapons.map(function(weapon) {
+  $: tableRows = $weapons.map(function (weapon) {
     return {
-      'name': weapon.tag,
-      'type': weapon.type,
-      'desc': weapon.desc
+      name: weapon.tag,
+      type: weapon.type,
+      desc: weapon.desc,
     }
   })
 
@@ -39,5 +39,5 @@
     <span>Weapons</span>
   </h3>
 
-  <Table {tableHeaders} {tableRows} {activeSort}/>
+  <Table {tableHeaders} {tableRows} {activeSort} />
 </div>

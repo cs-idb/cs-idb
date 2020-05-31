@@ -13,13 +13,13 @@
   }
 
   const tableHeaders = ['weapon', 'name', 'collection', 'rarity', 'Min float', 'Max float']
-  $: tableRows = collection_skins.map(function(skin) {
+  $: tableRows = collection_skins.map(function (skin) {
     return {
-      '__id': skin.id,
-      'weapon': skin.weapon.tag,
-      'name': skin.paintkit.tag,
-      'collection': collection.tag,
-      'rarity': skin.rarity.tag,
+      __id: skin.id,
+      weapon: skin.weapon.tag,
+      name: skin.paintkit.tag,
+      collection: collection.tag,
+      rarity: skin.rarity.tag,
       'Min float': skin.paintkit.minFloat,
       'Max float': skin.paintkit.maxFloat,
     }
@@ -34,16 +34,16 @@
   })
 
   const loadCollection = () => {
-    collection = $collections.find((c) => Number(c.id) === Number(id))
+    collection = $collections.find(c => Number(c.id) === Number(id))
 
     if (!collection) {
       return $goto($url('/collections'))
     }
 
-    collection_skins = $skins.filter((s) => Number(s.collection.id) === Number(id))
+    collection_skins = $skins.filter(s => Number(s.collection.id) === Number(id))
   }
 
-  const gotoSkin = (e) => {
+  const gotoSkin = e => {
     const skin_id = e.detail
     $goto($url(`/skins/${skin_id}`))
   }
@@ -73,13 +73,22 @@
   {#if collection}
     <div class="badges">
       <Badge>Released: {collection.released.toLocaleDateString()}</Badge>
-      <Badge>Case: <b>{collection.case ? 'Yes' : 'No'}</b></Badge>
-      <Badge color="orange">StatTrak™: <b>{collection.stattrak ? 'Yes' : 'No'}</b></Badge>
-      <Badge color="yellow accent-2">Souvenir: <b>{collection.souvenir ? 'Yes' : 'No'}</b></Badge>
+      <Badge>
+        Case:
+        <b>{collection.case ? 'Yes' : 'No'}</b>
+      </Badge>
+      <Badge color="orange">
+        StatTrak™:
+        <b>{collection.stattrak ? 'Yes' : 'No'}</b>
+      </Badge>
+      <Badge color="yellow accent-2">
+        Souvenir:
+        <b>{collection.souvenir ? 'Yes' : 'No'}</b>
+      </Badge>
     </div>
 
-    <br>
+    <br />
     <h4>Skins</h4>
-    <Table {tableHeaders} {tableRows} {activeSort} on:clickItem={gotoSkin}/>
+    <Table {tableHeaders} {tableRows} {activeSort} on:clickItem={gotoSkin} />
   {/if}
 </div>

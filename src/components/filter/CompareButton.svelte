@@ -5,7 +5,7 @@
   export let current = 'equals'
   const dispatch = createEventDispatcher()
 
-  const switchMode = function() {
+  const switchMode = function () {
     switch (type) {
       case 'text': {
         if (current === 'equals') {
@@ -32,8 +32,8 @@
   }
 </script>
 
-<Button on:click={() => switchMode()}>{current}</Button>
-
 <style>
 
 </style>
+
+<Button on:click={() => switchMode()}>{current}</Button>

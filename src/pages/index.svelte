@@ -82,10 +82,7 @@
   <div class="header">
     <h2 class="red-text text-lighten-2">Counter Strike: Global Offensive</h2>
     <h3 class="grey-text text-darken-2">Item Database</h3>
-    <h5>
-      A simple Counter Strike: Global Offensive skin, weapon and collection
-      database.
-    </h5>
+    <h5>A simple Counter Strike: Global Offensive skin, weapon and collection database.</h5>
     <h6 class="grey-text text-darken-2">Version __VERSION__</h6>
   </div>
 
@@ -193,7 +190,6 @@
           </Button>
         </a>
       </div>
-
 
     </div>
   </div>

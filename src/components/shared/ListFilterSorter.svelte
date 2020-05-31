@@ -2,11 +2,11 @@
   import { createEventDispatcher } from 'svelte'
   export let sortables
   export let search = ''
-  export let sorting 
+  export let sorting
 
   const dispatch = createEventDispatcher()
 
-  const handleSortUpdate = (sortable) => {
+  const handleSortUpdate = sortable => {
     if (sorting.sortBy === sortable) {
       sorting.sortAsc = !sorting.sortAsc
     } else {
@@ -16,31 +16,6 @@
     dispatch('updateSort', sorting)
   }
 </script>
-
-<div class="list-filter-sort">
-  <div>
-    <label for="search">Search by name</label>
-    <input id="search" type="text" bind:value={search} on:keyup={() => dispatch('updateSearch', search)}/>
-  </div>
-
-  <div>
-    <label>Sorting:</label>
-    <div class="sorting">
-      {#each sortables as sortable}
-        <button
-          class="btn red lighten-2 waves-effect waves-light"
-          on:click={() => handleSortUpdate(sortable)}>
-          {sortable}
-          {#if sortable === sorting.sortBy && sorting.sortAsc}
-            <i class="material-icons">arrow_upward</i>
-          {:else if sortable === sorting.sortBy && !sorting.sortAsc}
-            <i class="material-icons">arrow_downward</i>
-          {/if}
-        </button>
-      {/each}
-    </div>
-  </div>
-</div>
 
 <style>
   #search {
@@ -58,3 +33,26 @@
     display: inline-flex;
   }
 </style>
+
+<div class="list-filter-sort">
+  <div>
+    <label for="search">Search by name</label>
+    <input id="search" type="text" bind:value={search} on:keyup={() => dispatch('updateSearch', search)} />
+  </div>
+
+  <div>
+    <label>Sorting:</label>
+    <div class="sorting">
+      {#each sortables as sortable}
+        <button class="btn red lighten-2 waves-effect waves-light" on:click={() => handleSortUpdate(sortable)}>
+          {sortable}
+          {#if sortable === sorting.sortBy && sorting.sortAsc}
+            <i class="material-icons">arrow_upward</i>
+          {:else if sortable === sorting.sortBy && !sorting.sortAsc}
+            <i class="material-icons">arrow_downward</i>
+          {/if}
+        </button>
+      {/each}
+    </div>
+  </div>
+</div>

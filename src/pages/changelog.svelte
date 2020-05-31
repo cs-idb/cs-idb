@@ -5,7 +5,7 @@
   import { Button } from '../components/shared'
   import { goto, url } from '@sveltech/routify'
 
-  $: sortedChangelogs = changelogs.sort((a, b) => a.time > b.time ? -1 : 1)
+  $: sortedChangelogs = changelogs.sort((a, b) => (a.time > b.time ? -1 : 1))
 
   onMount(() => {
     const collapsibleElems = document.querySelectorAll('.collapsible')
@@ -53,12 +53,8 @@
   <ul class="changelog-list collection">
     {#each sortedChangelogs as changelog}
       <li class="collection-item">
-        <h4 class="grey-text text-darken-2">
-          v{changelog.version} - {changelog.header}
-        </h4>
-        <h6 class="grey-text text-darken-1">
-          {new Date(changelog.time).toDateString()}
-        </h6>
+        <h4 class="grey-text text-darken-2">v{changelog.version} - {changelog.header}</h4>
+        <h6 class="grey-text text-darken-1">{new Date(changelog.time).toDateString()}</h6>
         <p>{changelog.content}</p>
       </li>
     {/each}

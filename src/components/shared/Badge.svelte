@@ -14,7 +14,7 @@
     line-height: 22px;
     height: 22px;
     display: inline-block;
-    box-shadow: 2px 2px 2px rgba(0, 0,0, 0.2);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   }
 </style>
 

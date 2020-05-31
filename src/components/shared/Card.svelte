@@ -4,20 +4,6 @@
   export let flat = false
 </script>
 
-<div
-  class="card hoverable"
-  class:flat
-  style={`background-color: ${bgColor};`}
-  in:fly={{ x: 300, duration: 150 }}
-  out:fade={{ delay: 0, duration: 150 }}>
-  <div class="card-content">
-    <slot name="card-content" />
-  </div>
-  <div class="card-action">
-    <slot name="card-action" />
-  </div>
-</div>
-
 <style>
   .card {
     width: 300px;
@@ -45,3 +31,17 @@
     }
   }
 </style>
+
+<div
+  class="card hoverable"
+  class:flat
+  style={`background-color: ${bgColor};`}
+  in:fly={{ x: 300, duration: 150 }}
+  out:fade={{ delay: 0, duration: 150 }}>
+  <div class="card-content">
+    <slot name="card-content" />
+  </div>
+  <div class="card-action">
+    <slot name="card-action" />
+  </div>
+</div>

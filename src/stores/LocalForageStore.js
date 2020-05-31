@@ -8,11 +8,11 @@ localforage.config({
 
 function createLocalStorageStore(key, initialValue) {
   const store = writable(initialValue)
-  
-  localforage.getItem(key).then((local_value) => {
+
+  localforage.getItem(key).then(local_value => {
     store.set(local_value)
   })
-  
+
   return {
     subscribe: store.subscribe,
     set(value) {
@@ -23,7 +23,7 @@ function createLocalStorageStore(key, initialValue) {
       const value = cb(get(store))
       this.set(value)
     },
-  } 
+  }
 }
 
 export { createLocalStorageStore }

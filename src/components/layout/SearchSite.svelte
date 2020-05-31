@@ -1,50 +1,50 @@
 <script>
   import { createEventDispatcher } from 'svelte'
-  import { goto, url } from "@sveltech/routify";
-  import { collections, skins } from "../../stores";
+  import { goto, url } from '@sveltech/routify'
+  import { collections, skins } from '../../stores'
 
-  export let mobile;
+  export let mobile
 
   const dispatch = createEventDispatcher()
 
-  let search_value = "";
-  $: show_results = search_value.length >= 1;
-  $: search_value_lower = search_value.toLowerCase();
+  let search_value = ''
+  $: show_results = search_value.length >= 1
+  $: search_value_lower = search_value.toLowerCase()
 
   $: filteredCollections = $collections
     .filter(c => c.tag.toLowerCase().includes(search_value_lower))
     .map(c => {
-      return { id: c.id, name: c.tag };
-    });
+      return { id: c.id, name: c.tag }
+    })
 
   $: filteredSkins = $skins
-    .filter(s => 
-      s.paintkit.tag.toLowerCase().includes(search_value_lower) || 
-      s.weapon.tag.toLowerCase().includes(search_value_lower) ||
-      (s.weapon.tag + ' ' + s.paintkit.tag).toLowerCase().includes(search_value_lower))
+    .filter(
+      s =>
+        s.paintkit.tag.toLowerCase().includes(search_value_lower) ||
+        s.weapon.tag.toLowerCase().includes(search_value_lower) ||
+        (s.weapon.tag + ' ' + s.paintkit.tag).toLowerCase().includes(search_value_lower)
+    )
     .map(s => {
-      return { id: s.id, name: s.paintkit.tag, weapon_name: s.weapon.tag };
-    });
+      return { id: s.id, name: s.paintkit.tag, weapon_name: s.weapon.tag }
+    })
 
-  const clickResult = (url) => {
-    search_value = "";
+  const clickResult = url => {
+    search_value = ''
     dispatch('closeSideNav')
-    $goto($url(url, {}, false, true));
-  };
+    $goto($url(url, {}, false, true))
+  }
 
-  const handleMoveFocus = (e) => {
-    if (!(e.keyCode === 13 || e.keyCode === 27 || e.keyCode === 38 || e.keyCode === 40))
-      return
+  const handleMoveFocus = e => {
+    if (!(e.keyCode === 13 || e.keyCode === 27 || e.keyCode === 38 || e.keyCode === 40)) return
 
     if (e.keyCode === 27) {
       search_value = ''
       return
     }
-    
+
     const searchResultsEl = document.querySelector('#search-results')
 
-    if (searchResultsEl === null)
-      return
+    if (searchResultsEl === null) return
 
     let currentSelectedEl = searchResultsEl.querySelector('li.active')
     if (!currentSelectedEl) {
@@ -62,74 +62,29 @@
       if (previousResult.classList.contains('title')) {
         previousResult = previousResult.previousElementSibling
       }
-      
+
       if (previousResult !== null) {
         searchResultsEl.scrollTop -= previousResult.clientHeight
         currentSelectedEl.classList.remove('active')
         previousResult.classList.add('active')
-      } 
+      }
     }
 
     if (e.keyCode === 40) {
       let nextResult = currentSelectedEl.nextElementSibling
 
-      if (!nextResult)  
-        return
+      if (!nextResult) return
 
       if (nextResult.classList.contains('title')) {
         nextResult = nextResult.nextElementSibling
       }
-        
+
       currentSelectedEl.classList.remove('active')
       nextResult.classList.add('active')
       searchResultsEl.scrollTop += nextResult.clientHeight
     }
   }
 </script>
-
-<div id="search-box" class:mobile>
-  {#if mobile}
-    <i class="material-icons">search</i>
-  {/if}
-  <div>
-    <input
-    type="text"
-    id="search-input"
-    class="autocomplete"
-    placeholder="Search"
-    bind:value={search_value}
-    on:keydown={handleMoveFocus} />
-  </div>
-  {#if !mobile}
-    <i class="material-icons">search</i>
-  {/if}
-</div>
-
-{#if show_results}
-  <ul id="search-results" class:mobile>
-    {#if filteredCollections.length !== 0}
-      <li class="title">
-        <b>Collections: ({filteredCollections.length})</b>
-      </li>
-      {#each filteredCollections as collection}
-        <li class="move" on:click={() => clickResult(`/collections/${collection.id}`)}>
-          <p>{collection.name}</p>
-        </li>
-      {/each}
-    {/if}
-
-    {#if filteredSkins.length !== 0}
-      <li class="title">
-        <b>Skins: ({filteredSkins.length})</b>
-      </li>
-      {#each filteredSkins as skin}
-        <li class="move" on:click={() => clickResult(`/skins/${skin.id}`)}>
-          <p>{skin.weapon_name} | {skin.name}</p>
-        </li>
-      {/each}
-    {/if}
-  </ul>
-{/if}
 
 <style>
   #search-box {
@@ -211,3 +166,41 @@
     color: white;
   }
 </style>
+
+<div id="search-box" class:mobile>
+  {#if mobile}
+    <i class="material-icons">search</i>
+  {/if}
+  <div>
+    <input type="text" id="search-input" class="autocomplete" placeholder="Search" bind:value={search_value} on:keydown={handleMoveFocus} />
+  </div>
+  {#if !mobile}
+    <i class="material-icons">search</i>
+  {/if}
+</div>
+
+{#if show_results}
+  <ul id="search-results" class:mobile>
+    {#if filteredCollections.length !== 0}
+      <li class="title">
+        <b>Collections: ({filteredCollections.length})</b>
+      </li>
+      {#each filteredCollections as collection}
+        <li class="move" on:click={() => clickResult(`/collections/${collection.id}`)}>
+          <p>{collection.name}</p>
+        </li>
+      {/each}
+    {/if}
+
+    {#if filteredSkins.length !== 0}
+      <li class="title">
+        <b>Skins: ({filteredSkins.length})</b>
+      </li>
+      {#each filteredSkins as skin}
+        <li class="move" on:click={() => clickResult(`/skins/${skin.id}`)}>
+          <p>{skin.weapon_name} | {skin.name}</p>
+        </li>
+      {/each}
+    {/if}
+  </ul>
+{/if}

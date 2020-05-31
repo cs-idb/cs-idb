@@ -2,14 +2,6 @@
   export let error
 </script>
 
-<div class="error">
-  <span class="material-icons red-text text-darken-1">error</span>
-  <h3 class="red-text text-darken-1">Something went wrong!</h3>
-  <p class="red-text text-darken-1">{error}</p>
-
-  <button class="btn red darken-1" on:click={() => location.reload()}>Refresh page</button>
-</div>
-
 <style>
   .error {
     position: absolute;
@@ -35,3 +27,11 @@
     cursor: pointer;
   }
 </style>
+
+<div class="error">
+  <span class="material-icons red-text text-darken-1">error</span>
+  <h3 class="red-text text-darken-1">Something went wrong!</h3>
+  <p class="red-text text-darken-1">{error}</p>
+
+  <button class="btn red darken-1" on:click={() => location.reload()}>Refresh page</button>
+</div>

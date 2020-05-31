@@ -19,7 +19,7 @@
     modal = M.Modal.getInstance(elem)
   })
 
-  const loadQuery = function() {
+  const loadQuery = function () {
     let filters_param = $params['f']
     if (!filters_param) {
       return
@@ -30,21 +30,21 @@
     }
 
     const filters = filters_param.split(';')
-    filters.forEach((filter) => {
+    filters.forEach(filter => {
       const split_filter = filter.split(':')
       const url_name = split_filter[0]
       const compare_mode_shortName = split_filter[1]
       const filter_value = split_filter[2]
 
-      const compareMode = $compareModes.find((c) => c.shortName === compare_mode_shortName)
+      const compareMode = $compareModes.find(c => c.shortName === compare_mode_shortName)
       addFilter(url_name, compareMode, filter_value)
     })
 
     dispatch('setFilters', active_filters)
   }
 
-  const addFilter = function(urlName, compareMode, val) {
-    const { url_name, display_name, key, type } = filter_options.find((f) => f.url_name === urlName)
+  const addFilter = function (urlName, compareMode, val) {
+    const { url_name, display_name, key, type } = filter_options.find(f => f.url_name === urlName)
 
     const new_filter = {
       id: guidGenerator(),
@@ -55,19 +55,19 @@
     active_filters = [...active_filters, new_filter]
   }
 
-  const saveFilter = function() {
+  const saveFilter = function () {
     modal.close()
     dispatch('setFilters', active_filters)
     setUrl()
   }
 
-  const removeFilter = function(id) {
-    active_filters = active_filters.filter((af) => af.id !== id)
+  const removeFilter = function (id) {
+    active_filters = active_filters.filter(af => af.id !== id)
   }
 
-  const setUrl = function() {
+  const setUrl = function () {
     let filters = '?f='
-    active_filters.forEach((filter) => {
+    active_filters.forEach(filter => {
       filters += `${filter.column.url_name}:${filter.compare_mode.shortName}:${filter.value};`
     })
     window.history.replaceState({}, '', filters)
@@ -108,15 +108,21 @@
       <div class="right">
         <Button on:click={() => modal.close()}>Close</Button>
       </div>
-      
+
       <div class="divider" />
 
       <div class="filter-list">
         <div class="filter row">
-          <div class="col s3"><b>Column name</b></div>
-          <div class="col s3"><b>Comparison</b></div>
-          <div class="col s3"><b>Value</b></div>
-          <div class="col s3"></div>
+          <div class="col s3">
+            <b>Column name</b>
+          </div>
+          <div class="col s3">
+            <b>Comparison</b>
+          </div>
+          <div class="col s3">
+            <b>Value</b>
+          </div>
+          <div class="col s3" />
         </div>
         {#each active_filters as filter}
           <div class="filter row">
@@ -136,7 +142,7 @@
 
       <div class="divider" />
 
-      <AddFilter {filter_options} on:addFilter={(e) => addFilter(e.detail.column, e.detail.compare_mode, e.detail.value)} />
+      <AddFilter {filter_options} on:addFilter={e => addFilter(e.detail.column, e.detail.compare_mode, e.detail.value)} />
 
     </div>
     <div class="modal-footer">

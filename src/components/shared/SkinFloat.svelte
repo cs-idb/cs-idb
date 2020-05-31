@@ -9,70 +9,71 @@
   onMount(() => {
     const elems = document.querySelectorAll('.needs-tooltip')
     const tooltipOptions = {
-      'exitDelay': 0,
-      'enterDelay': 0,
-      'inDuration': 300,
-      'outDuration': 200,
-      'position': 'top',
+      exitDelay: 0,
+      enterDelay: 0,
+      inDuration: 300,
+      outDuration: 200,
+      position: 'top',
     }
     M.Tooltip.init(elems, tooltipOptions)
-    elems.forEach((el) => {
+    elems.forEach(el => {
       el.classList.remove('needs-tooltip')
     })
   })
 </script>
 
 <style>
-.float {
-  border: 1px solid black;
-  max-width: 750px;
-}
+  .float {
+    border: 1px solid black;
+    max-width: 750px;
+  }
 
-.represent-floats {
-  display: flex;
-}
-.represent-floats, .represent-floats div {
-  height: 20px;
-}
+  .represent-floats {
+    display: flex;
+  }
+  .represent-floats,
+  .represent-floats div {
+    height: 20px;
+  }
 
-.max {
-  background-color: green;
-}
+  .max {
+    background-color: green;
+  }
 
-.ranges {
-  display: flex;
-}
-.range {
-  display: flex;
-  justify-content: center;
-  border-top: 1px solid black;
-}
-.range span {
-  color: white;
-  padding: 5px;
-}
+  .ranges {
+    display: flex;
+  }
+  .range {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid black;
+  }
+  .range span {
+    color: white;
+    padding: 5px;
+  }
 
-#fn {
-  width: 7%;
-}
-#mw {
-  width: 8%;
-}
-#ft {
-  width: 23%;
-}
-#ww {
-  width: 7%;
-}
-#bs {
-  width: 55%;
-}
+  #fn {
+    width: 7%;
+  }
+  #mw {
+    width: 8%;
+  }
+  #ft {
+    width: 23%;
+  }
+  #ww {
+    width: 7%;
+  }
+  #bs {
+    width: 55%;
+  }
 </style>
 
 <div class="float">
   <div class="represent-floats red lighten-2 needs-tooltip" data-tooltip={tooltip}>
-    <div class="min" style={'width: ' + min*100 + '%;'}></div>
-    <div class="max green accent-3" style={'width: ' + max*100 + '%;'}></div>
+    <div class="min" style={'width: ' + min * 100 + '%;'} />
+    <div class="max green accent-3" style={'width: ' + max * 100 + '%;'} />
   </div>
   <div class="ranges">
     <div class="range grey needs-tooltip" id="fn" data-tooltip="Factory New: 0.00 - 0.07">

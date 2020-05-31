@@ -21,9 +21,7 @@
     <span>Rarities</span>
   </h3>
 
-  <p class="page-desc">
-    Every skin in the game is of a certain quality/ rarity.
-  </p>
+  <p class="page-desc">Every skin in the game is of a certain quality/ rarity.</p>
 
   <CardList>
     {#each $rarities as rarity (rarity.id)}
@@ -33,7 +31,10 @@
           <h6>Name: {rarity.name}</h6>
         </div>
         <div slot="card-action">
-          <p>Color: <span>{rarity.color}</span></p>
+          <p>
+            Color:
+            <span>{rarity.color}</span>
+          </p>
         </div>
       </Card>
     {/each}

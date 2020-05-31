@@ -5,16 +5,6 @@
   let updating_data = true
 </script>
 
-{#if updating_data}
-  <UpdateData on:done={() => updating_data = false}/>  
-{:else}
-  <Header />
-  <main class="content">
-    <slot />
-  </main>
-  <Footer />
-{/if}
-
 <style>
   .content {
     margin: 0 auto;
@@ -23,3 +13,13 @@
     position: relative;
   }
 </style>
+
+{#if updating_data}
+  <UpdateData on:done={() => (updating_data = false)} />
+{:else}
+  <Header />
+  <main class="content">
+    <slot />
+  </main>
+  <Footer />
+{/if}

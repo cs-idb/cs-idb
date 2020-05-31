@@ -1,5 +1,4 @@
-
-const getObjValueByNestedKey = function(key, obj=self, separator='.') {
+const getObjValueByNestedKey = function (key, obj = self, separator = '.') {
   const properties = Array.isArray(key) ? key : key.split(separator)
   return properties.reduce((prev, curr) => prev && prev[curr], obj)
 }
@@ -7,16 +6,16 @@ const getObjValueByNestedKey = function(key, obj=self, separator='.') {
 function applyFilter(original_array, filters) {
   const new_array = []
 
-  original_array.forEach((element) => {
+  original_array.forEach(element => {
     let add = true
-    
-    filters.forEach((filter) => {
+
+    filters.forEach(filter => {
       const value = getObjValueByNestedKey(filter.column.key, element)
       if (!checkValueWithFilter(filter, value)) {
         add = false
       }
     })
-    
+
     if (add) {
       new_array.push(element)
     }
@@ -25,7 +24,7 @@ function applyFilter(original_array, filters) {
   return new_array
 }
 
-function checkValueWithFilter (filter, value) {
+function checkValueWithFilter(filter, value) {
   if (filter.column.type === 'text') {
     switch (filter.compare_mode.shortName) {
       case 'eq': {

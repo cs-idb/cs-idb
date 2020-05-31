@@ -26,24 +26,19 @@
     <div class="row">
       <div class="col l6 s12">
         <h5 class="white-text">CSGO Item Database</h5>
-        <p class="grey-text text-lighten-4">A simple Counter Strike: Global Offensive skin, weapon and collection database.
-        </p>
+        <p class="grey-text text-lighten-4">A simple Counter Strike: Global Offensive skin, weapon and collection database.</p>
       </div>
       <div class="col l4 offset-l2 s12 links">
         <h5 class="white-text">Links</h5>
         <ul>
           <li>
-            <a
-              class="grey-text text-lighten-3"
-              href={$url('https://github.com/cs-idb/cs-idb/')}>
+            <a class="grey-text text-lighten-3" href={$url('https://github.com/cs-idb/cs-idb/')}>
               <i class="material-icons">timeline</i>
               Github repository
             </a>
           </li>
           <li>
-            <a
-              class="grey-text text-lighten-3"
-              href={$url('/sitemap')}>
+            <a class="grey-text text-lighten-3" href={$url('/sitemap')}>
               <i class="material-icons">map</i>
               Sitemap
             </a>

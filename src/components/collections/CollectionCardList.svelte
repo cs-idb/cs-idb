@@ -18,48 +18,37 @@
     sorting.sortAsc = $params.sortAsc === 'true' || false
   })
 
-  const updateSearch = (e) => {
+  const updateSearch = e => {
     search = e.detail
     updateWindowHistory()
   }
 
-  const updateSort = (e) => {
+  const updateSort = e => {
     sorting = e.detail
     updateWindowHistory()
-  } 
+  }
 
   const updateWindowHistory = () => {
     window.history.replaceState({}, '', `?q=${search}&sortBy=${sorting.sortBy}&sortAsc=${sorting.sortAsc}`)
   }
 
   $: sortedFilteredCollections = SortableArray.from($collections)
-    .filter((c) =>
-      c.tag.toLowerCase().includes(search.toLowerCase()),
-    )
+    .filter(c => c.tag.toLowerCase().includes(search.toLowerCase()))
     .sortBy(sorting.sortBy, sorting.sortAsc)
 </script>
 
 <style>
- .page-desc {
+  .page-desc {
     margin-bottom: 20px;
   }
 </style>
 
-<p class="page-desc">
-  CSGO has many collections, each containing different skins. Check them out
-  using the 'view' button on each collection card.
-</p>
+<p class="page-desc">CSGO has many collections, each containing different skins. Check them out using the 'view' button on each collection card.</p>
 
-<ListFilterSorter
-  {sortables}
-  {sorting}
-  on:updateSort={updateSort} 
-  on:updateSearch={updateSearch}/>
+<ListFilterSorter {sortables} {sorting} on:updateSort={updateSort} on:updateSearch={updateSearch} />
+
 <div>
-  <label>
-    Found {sortedFilteredCollections.length} collections matching to the
-    criteria
-  </label>
+  <label>Found {sortedFilteredCollections.length} collections matching to the criteria</label>
 </div>
 
 <CardList>
@@ -79,11 +68,7 @@
         {/if}
       </div>
       <div slot="card-action">
-        <a
-          class="red-text text-lighten-2"
-          href={$url(`/collections/${collection.id}`)}>
-          View
-        </a>
+        <a class="red-text text-lighten-2" href={$url(`/collections/${collection.id}`)}>View</a>
       </div>
     </Card>
   {/each}
