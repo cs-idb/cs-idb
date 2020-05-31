@@ -27,6 +27,11 @@ const weapons = derived(raw_weapons, ($raw_weapons) => {
   return $raw_weapons
 })
 
+const paintkits = derived(raw_paintkits, ($raw_paintkits) => {
+  if (!$raw_paintkits) return []
+  return $raw_paintkits
+})
+
 const skins = derived(raw_skins, ($raw_skins) => {
   if (!$raw_skins) return []
   const new_skins = JSON.parse(JSON.stringify($raw_skins))
@@ -35,6 +40,11 @@ const skins = derived(raw_skins, ($raw_skins) => {
   const _rarities = get(raw_rarities)
   const _weapons = get(raw_weapons)
   const _paintkits = get(raw_paintkits)
+
+  if (!_collections || _collections.length === 0 || 
+    !_rarities || _rarities.length === 0 || 
+    !_weapons || _weapons.length === 0 ||
+    !_paintkits || _paintkits.length === 0) return []
 
   new_skins.map((s) => {
     const collection = _collections.find((c) => c.id === s.collectionId)
@@ -54,10 +64,6 @@ const skins = derived(raw_skins, ($raw_skins) => {
     s.paintkit = paintkit
   })
   return new_skins
-})
-
-const paintkits = derived(raw_paintkits, ($raw_paintkits) => {
-  return $raw_paintkits
 })
 
 export {

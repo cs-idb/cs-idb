@@ -1,27 +1,36 @@
 <script>
+  import { onMount } from 'svelte'
   import { url, params } from '@sveltech/routify'
   import { collections } from '../../stores'
   import { Card, ListFilterSorter, Badge, CardList } from '../shared/'
   import { SortableArray } from '../../utils/'
 
   const sortables = ['name', 'case', 'stattrak', 'souvenir', 'released']
-  let search = $params.q || ''
+  let search = ''
   let sorting = {
-    sortBy: sortables.includes($params.sortBy) ? $params.sortBy : 'released',
-    sortAsc: $params.sortAsc == 'true' || false,
+    sortBy: 'released',
+    sortAsc: false,
   }
 
-  $: {
-    window.history.replaceState({}, '', `?q=${search}&sortBy=${sorting.sortBy}&sortAsc=${sorting.sortAsc}`)
-  }
+  onMount(() => {
+    search = $params.q || ''
+    sorting.sortBy = sortables.includes($params.sortBy) ? $params.sortBy : 'released'
+    sorting.sortAsc = $params.sortAsc === 'true' || false
+  })
 
   const updateSearch = (e) => {
     search = e.detail
+    updateWindowHistory()
   }
 
   const updateSort = (e) => {
     sorting = e.detail
+    updateWindowHistory()
   } 
+
+  const updateWindowHistory = () => {
+    window.history.replaceState({}, '', `?q=${search}&sortBy=${sorting.sortBy}&sortAsc=${sorting.sortAsc}`)
+  }
 
   $: sortedFilteredCollections = SortableArray.from($collections)
     .filter((c) =>

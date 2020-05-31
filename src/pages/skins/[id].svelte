@@ -17,7 +17,7 @@
   })
 
   const loadSkin = async () => {
-    skin = $skins.find((s) => s.id == id)
+    skin = $skins.find((s) => Number(s.id) === Number(id))
 
     if (!skin) {
       return $goto($url('/skins'))
@@ -89,9 +89,9 @@
       <div class="image-placeholder">Loading image...</div>
     </div>
 
-    {#if skin.collection.stattrak == true }
+    {#if skin.collection.stattrak === true }
       <Badge color="orange">StatTrak™ available</Badge>
-    {:else if skin.collection.souvenir == true}
+    {:else if skin.collection.souvenir === true}
       <Badge color="yellow accent-4">Souvenir available</Badge>
     {/if}
 

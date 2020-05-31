@@ -33,18 +33,17 @@
   };
 
   const handleMoveFocus = (e) => {
-    if (!(e.keyCode == 13 || e.keyCode == 27 || e.keyCode == 38 || e.keyCode == 40))
+    if (!(e.keyCode === 13 || e.keyCode === 27 || e.keyCode === 38 || e.keyCode === 40))
       return
 
-    if (e.keyCode == 27) {
+    if (e.keyCode === 27) {
       search_value = ''
       return
     }
     
     const searchResultsEl = document.querySelector('#search-results')
-    const searchInputEl = document.querySelector('#search-input')
 
-    if (searchResultsEl == null)
+    if (searchResultsEl === null)
       return
 
     let currentSelectedEl = searchResultsEl.querySelector('li.active')
@@ -54,24 +53,24 @@
       return
     }
 
-    if (e.keyCode == 13) {
+    if (e.keyCode === 13) {
       currentSelectedEl.click()
     }
 
-    if (e.keyCode == 38) {
+    if (e.keyCode === 38) {
       let previousResult = currentSelectedEl.previousElementSibling
       if (previousResult.classList.contains('title')) {
         previousResult = previousResult.previousElementSibling
       }
       
-      if (previousResult != null) {
+      if (previousResult !== null) {
         searchResultsEl.scrollTop -= previousResult.clientHeight
         currentSelectedEl.classList.remove('active')
         previousResult.classList.add('active')
       } 
     }
 
-    if (e.keyCode == 40) {
+    if (e.keyCode === 40) {
       let nextResult = currentSelectedEl.nextElementSibling
 
       if (!nextResult)  
@@ -108,7 +107,7 @@
 
 {#if show_results}
   <ul id="search-results" class:mobile>
-    {#if filteredCollections.length != 0}
+    {#if filteredCollections.length !== 0}
       <li class="title">
         <b>Collections: ({filteredCollections.length})</b>
       </li>
@@ -119,7 +118,7 @@
       {/each}
     {/if}
 
-    {#if filteredSkins.length != 0}
+    {#if filteredSkins.length !== 0}
       <li class="title">
         <b>Skins: ({filteredSkins.length})</b>
       </li>

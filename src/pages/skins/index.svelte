@@ -6,7 +6,8 @@
   import { applyFilter } from '../../utils/'
 
   const tableHeaders = ['weapon', 'name', 'collection', 'rarity', 'Min float', 'Max float']
-  let new_array = $skins
+
+  $: new_array = $skins
 
   $: tableRows = new_array.map(function(skin) {
     return {

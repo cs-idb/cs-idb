@@ -4,7 +4,7 @@ import { get } from 'svelte/store'
 async function fetchChecksums() {
   const currentChecksums = get(raw_checksums)
   const res = await fetch('__BASE_API_URL__' + 'checksums')
-    .catch((e) => {
+    .catch(() => {
       throw new Error('Error fetching checksums...')
     })
   const checksum_data = await res.json()

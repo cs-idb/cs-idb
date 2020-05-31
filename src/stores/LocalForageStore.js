@@ -2,9 +2,7 @@ import { writable, get } from 'svelte/store'
 import localforage from 'localforage'
 
 localforage.config({
-  driver: [localforage.WEBSQL,
-    localforage.INDEXEDDB,
-    localforage.LOCALSTORAGE],
+  driver: localforage.LOCALSTORAGE,
   name: 'csdb',
 })
 

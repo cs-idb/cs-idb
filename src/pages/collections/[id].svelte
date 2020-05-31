@@ -34,13 +34,13 @@
   })
 
   const loadCollection = () => {
-    collection = $collections.find((c) => c.id == id)
+    collection = $collections.find((c) => Number(c.id) === Number(id))
 
     if (!collection) {
       return $goto($url('/collections'))
     }
 
-    collection_skins = $skins.filter((s) => s.collection.id == id)
+    collection_skins = $skins.filter((s) => Number(s.collection.id) === Number(id))
   }
 
   const gotoSkin = (e) => {

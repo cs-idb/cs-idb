@@ -115,11 +115,11 @@
 
     {#if new_filter.compare_mode}
       <div class="input-field">
-        {#if new_filter_type == 'text'}
+        {#if new_filter_type === 'text'}
           <input type="text" bind:value={new_filter.value}>
-        {:else if new_filter_type == 'number'}
+        {:else if new_filter_type === 'number'}
           <input type="number" bind:value={new_filter.value} min="0" max="1">
-        {:else if new_filter_type == 'select'}
+        {:else if new_filter_type === 'select'}
           <select class="mat-select" bind:value={new_filter.value}>
             <option value="" disabled selected>Choose your option</option>
             {#each selectOptions as opt}
@@ -133,7 +133,7 @@
       </div>
     {/if}
 
-    {#if new_filter.value != undefined}
+    {#if new_filter.value !== undefined}
       <Button on:click={addFilter}>+</Button>
     {/if}
   </div>

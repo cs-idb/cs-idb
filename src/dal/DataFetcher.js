@@ -4,7 +4,7 @@ import { get } from 'svelte/store'
 async function baseFetch(name) {
   const url = '__BASE_API_URL__' + name
   const res = await fetch(url)
-    .catch((e) => {
+    .catch(() => {
       throw new Error(`Error fetching ${name}...`)
     })
   const data = await res.json()
