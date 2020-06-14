@@ -4732,7 +4732,7 @@
   {
     "id": 558,
     "name": "cu_bayonet_lore",
-    "key": "PaintKit_cu_lore",
+    "key": "Paintkit_cu_lore",
     "desc": "It has been custom painted with knotwork.",
     "flavor": null,
     "tag": "Lore",
@@ -4742,7 +4742,7 @@
   {
     "id": 559,
     "name": "cu_flip_lore",
-    "key": "PaintKit_cu_lore",
+    "key": "Paintkit_cu_lore",
     "desc": "It has been custom painted with knotwork.",
     "flavor": null,
     "tag": "Lore",
@@ -4752,7 +4752,7 @@
   {
     "id": 560,
     "name": "cu_gut_lore",
-    "key": "PaintKit_cu_lore",
+    "key": "Paintkit_cu_lore",
     "desc": "It has been custom painted with knotwork.",
     "flavor": null,
     "tag": "Lore",
@@ -4762,7 +4762,7 @@
   {
     "id": 561,
     "name": "cu_karam_lore",
-    "key": "PaintKit_cu_lore",
+    "key": "Paintkit_cu_lore",
     "desc": "It has been custom painted with knotwork.",
     "flavor": null,
     "tag": "Lore",
@@ -4772,7 +4772,7 @@
   {
     "id": 562,
     "name": "cu_m9_bay_lore",
-    "key": "PaintKit_cu_lore",
+    "key": "Paintkit_cu_lore",
     "desc": "It has been custom painted with knotwork.",
     "flavor": null,
     "tag": "Lore",
@@ -4782,7 +4782,7 @@
   {
     "id": 563,
     "name": "cu_bayonet_stonewash",
-    "key": "PaintKit_cu_stonewash",
+    "key": "Paintkit_cu_stonewash",
     "desc": "It has been stonewashed and given a black laminate handle.",
     "flavor": null,
     "tag": "Black Laminate",
@@ -4792,7 +4792,7 @@
   {
     "id": 564,
     "name": "cu_flip_stonewash",
-    "key": "PaintKit_cu_stonewash",
+    "key": "Paintkit_cu_stonewash",
     "desc": "It has been stonewashed and given a black laminate handle.",
     "flavor": null,
     "tag": "Black Laminate",
@@ -4802,7 +4802,7 @@
   {
     "id": 565,
     "name": "cu_gut_stonewash",
-    "key": "PaintKit_cu_stonewash",
+    "key": "Paintkit_cu_stonewash",
     "desc": "It has been stonewashed and given a black laminate handle.",
     "flavor": null,
     "tag": "Black Laminate",
@@ -4812,7 +4812,7 @@
   {
     "id": 566,
     "name": "cu_karam_stonewash",
-    "key": "PaintKit_cu_stonewash",
+    "key": "Paintkit_cu_stonewash",
     "desc": "It has been stonewashed and given a black laminate handle.",
     "flavor": null,
     "tag": "Black Laminate",
@@ -4822,7 +4822,7 @@
   {
     "id": 567,
     "name": "cu_m9_bay_stonewash",
-    "key": "PaintKit_cu_stonewash",
+    "key": "Paintkit_cu_stonewash",
     "desc": "It has been stonewashed and given a black laminate handle.",
     "flavor": null,
     "tag": "Black Laminate",

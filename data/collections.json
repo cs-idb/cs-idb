@@ -1,33 +1,6 @@
 [
   {
     "id": 0,
-    "name": "CSGO_set_overpass",
-    "case": false,
-    "released": "1 July 2014",
-    "stattrak": false,
-    "souvenir": true,
-    "tag": "The Overpass Collection"
-  },
-  {
-    "id": 1,
-    "name": "CSGO_set_baggage",
-    "case": false,
-    "released": "1 July 2014",
-    "stattrak": false,
-    "souvenir": false,
-    "tag": "The Baggage Collection"
-  },
-  {
-    "id": 2,
-    "name": "CSGO_set_cache",
-    "case": false,
-    "released": "8 August 2014",
-    "stattrak": false,
-    "souvenir": true,
-    "tag": "The Cache Collection"
-  },
-  {
-    "id": 3,
     "name": "CSGO_set_vertigo",
     "case": false,
     "released": "14 August 2013",
@@ -36,7 +9,7 @@
     "tag": "The Vertigo Collection"
   },
   {
-    "id": 4,
+    "id": 1,
     "name": "CSGO_set_office",
     "case": false,
     "released": "14 August 2013",
@@ -45,7 +18,7 @@
     "tag": "The Office Collection"
   },
   {
-    "id": 5,
+    "id": 2,
     "name": "CSGO_set_nuke",
     "case": false,
     "released": "14 August 2013",
@@ -54,7 +27,7 @@
     "tag": "The Nuke Collection"
   },
   {
-    "id": 6,
+    "id": 3,
     "name": "CSGO_set_militia",
     "case": false,
     "released": "14 August 2013",
@@ -63,7 +36,7 @@
     "tag": "The Militia Collection"
   },
   {
-    "id": 7,
+    "id": 4,
     "name": "CSGO_set_inferno",
     "case": false,
     "released": "14 August 2013",
@@ -72,7 +45,7 @@
     "tag": "The Inferno Collection"
   },
   {
-    "id": 8,
+    "id": 5,
     "name": "CSGO_set_dust",
     "case": false,
     "released": "14 August 2013",
@@ -81,7 +54,7 @@
     "tag": "The Dust Collection"
   },
   {
-    "id": 9,
+    "id": 6,
     "name": "CSGO_set_aztec",
     "case": false,
     "released": "14 August 2013",
@@ -90,7 +63,7 @@
     "tag": "The Aztec Collection"
   },
   {
-    "id": 10,
+    "id": 7,
     "name": "CSGO_set_assault",
     "case": false,
     "released": "14 August 2013",
@@ -99,7 +72,7 @@
     "tag": "The Assault Collection"
   },
   {
-    "id": 11,
+    "id": 8,
     "name": "CSGO_set_weapons_i",
     "case": true,
     "released": "14 August 2013",
@@ -108,7 +81,7 @@
     "tag": "The Arms Deal Collection"
   },
   {
-    "id": 12,
+    "id": 9,
     "name": "CSGO_set_esports",
     "case": true,
     "released": "14 August 2013",
@@ -117,7 +90,7 @@
     "tag": "The eSports 2013 Collection"
   },
   {
-    "id": 13,
+    "id": 10,
     "name": "CSGO_set_bravo_ii",
     "case": false,
     "released": "19 September 2013",
@@ -126,7 +99,7 @@
     "tag": "The Alpha Collection"
   },
   {
-    "id": 14,
+    "id": 11,
     "name": "CSGO_set_bravo_i",
     "case": true,
     "released": "19 September 2013",
@@ -135,7 +108,7 @@
     "tag": "The Bravo Collection"
   },
   {
-    "id": 15,
+    "id": 12,
     "name": "CSGO_set_weapons_ii",
     "case": true,
     "released": "8 November 2013",
@@ -144,7 +117,7 @@
     "tag": "The Arms Deal 2 Collection"
   },
   {
-    "id": 16,
+    "id": 13,
     "name": "CSGO_set_mirage",
     "case": false,
     "released": "27 November 2013",
@@ -153,7 +126,7 @@
     "tag": "The Mirage Collection"
   },
   {
-    "id": 17,
+    "id": 14,
     "name": "CSGO_set_train",
     "case": false,
     "released": "27 November 2013",
@@ -162,7 +135,7 @@
     "tag": "The Train Collection"
   },
   {
-    "id": 18,
+    "id": 15,
     "name": "CSGO_set_safehouse",
     "case": false,
     "released": "27 November 2013",
@@ -171,7 +144,7 @@
     "tag": "The Safehouse Collection"
   },
   {
-    "id": 19,
+    "id": 16,
     "name": "CSGO_set_lake",
     "case": false,
     "released": "27 November 2013",
@@ -180,7 +153,7 @@
     "tag": "The Lake Collection"
   },
   {
-    "id": 20,
+    "id": 17,
     "name": "CSGO_set_italy",
     "case": false,
     "released": "27 November 2013",
@@ -189,7 +162,7 @@
     "tag": "The Italy Collection"
   },
   {
-    "id": 21,
+    "id": 18,
     "name": "CSGO_set_dust_2",
     "case": false,
     "released": "27 November 2013",
@@ -198,7 +171,7 @@
     "tag": "The Dust 2 Collection"
   },
   {
-    "id": 22,
+    "id": 19,
     "name": "CSGO_set_esports_ii",
     "case": true,
     "released": "18 December 2013",
@@ -207,7 +180,7 @@
     "tag": "The eSports 2013 Winter Collection"
   },
   {
-    "id": 23,
+    "id": 20,
     "name": "CSGO_set_community_1",
     "case": true,
     "released": "18 December 2013",
@@ -216,7 +189,7 @@
     "tag": "The Winter Offensive Collection"
   },
   {
-    "id": 24,
+    "id": 21,
     "name": "CSGO_set_weapons_iii",
     "case": true,
     "released": "12 February 2014",
@@ -225,7 +198,7 @@
     "tag": "The Arms Deal 3 Collection"
   },
   {
-    "id": 25,
+    "id": 22,
     "name": "CSGO_set_community_2",
     "case": true,
     "released": "20 February 2014",
@@ -234,7 +207,7 @@
     "tag": "The Phoenix Collection"
   },
   {
-    "id": 26,
+    "id": 23,
     "name": "CSGO_set_bank",
     "case": false,
     "released": "1 May 2014",
@@ -243,7 +216,7 @@
     "tag": "The Bank Collection"
   },
   {
-    "id": 27,
+    "id": 24,
     "name": "CSGO_set_community_3",
     "case": true,
     "released": "1 May 2014",
@@ -252,7 +225,25 @@
     "tag": "The Huntsman Collection"
   },
   {
-    "id": 28,
+    "id": 25,
+    "name": "CSGO_set_overpass",
+    "case": false,
+    "released": "1 July 2014",
+    "stattrak": false,
+    "souvenir": true,
+    "tag": "The Overpass Collection"
+  },
+  {
+    "id": 26,
+    "name": "CSGO_set_baggage",
+    "case": false,
+    "released": "1 July 2014",
+    "stattrak": false,
+    "souvenir": false,
+    "tag": "The Baggage Collection"
+  },
+  {
+    "id": 27,
     "name": "CSGO_set_cobblestone",
     "case": false,
     "released": "1 July 2014",
@@ -261,7 +252,7 @@
     "tag": "The Cobblestone Collection"
   },
   {
-    "id": 29,
+    "id": 28,
     "name": "CSGO_set_community_4",
     "case": true,
     "released": "1 July 2014",
@@ -270,13 +261,22 @@
     "tag": "The Breakout Collection"
   },
   {
-    "id": 30,
+    "id": 29,
     "name": "CSGO_set_esports_iii",
     "case": true,
     "released": "10 July 2014",
     "stattrak": true,
     "souvenir": false,
     "tag": "The eSports 2014 Summer Collection"
+  },
+  {
+    "id": 30,
+    "name": "CSGO_set_cache",
+    "case": false,
+    "released": "8 August 2014",
+    "stattrak": false,
+    "souvenir": true,
+    "tag": "The Cache Collection"
   },
   {
     "id": 31,
@@ -469,33 +469,6 @@
   },
   {
     "id": 52,
-    "name": "CSGO_set_stmarc",
-    "case": false,
-    "released": "18 November 2019",
-    "stattrak": false,
-    "souvenir": false,
-    "tag": "The St. Marc Collection"
-  },
-  {
-    "id": 53,
-    "name": "CSGO_set_norse",
-    "case": false,
-    "released": "18 November 2019",
-    "stattrak": false,
-    "souvenir": false,
-    "tag": "The Norse Collection"
-  },
-  {
-    "id": 54,
-    "name": "CSGO_set_canals",
-    "case": false,
-    "released": "18 November 2019",
-    "stattrak": false,
-    "souvenir": false,
-    "tag": "The Canals Collection"
-  },
-  {
-    "id": 55,
     "name": "CSGO_set_blacksite",
     "case": false,
     "released": "06 December 2018",
@@ -504,7 +477,7 @@
     "tag": "The Blacksite Collection"
   },
   {
-    "id": 56,
+    "id": 53,
     "name": "CSGO_set_community_21",
     "case": true,
     "released": "06 December 2018",
@@ -513,7 +486,7 @@
     "tag": "The Danger Zone Collection"
   },
   {
-    "id": 57,
+    "id": 54,
     "name": "CSGO_set_community_22",
     "case": true,
     "released": "13 March 2019",
@@ -522,7 +495,7 @@
     "tag": "The Prisma Collection"
   },
   {
-    "id": 58,
+    "id": 55,
     "name": "CSGO_set_xraymachine",
     "case": true,
     "released": "30 September 2019",
@@ -531,13 +504,40 @@
     "tag": "The X-Ray Collection"
   },
   {
-    "id": 59,
+    "id": 56,
     "name": "CSGO_set_community_24",
     "case": true,
     "released": "18 October 2019",
     "stattrak": true,
     "souvenir": false,
     "tag": "The CS20 Collection"
+  },
+  {
+    "id": 57,
+    "name": "CSGO_set_stmarc",
+    "case": false,
+    "released": "18 November 2019",
+    "stattrak": false,
+    "souvenir": false,
+    "tag": "The St. Marc Collection"
+  },
+  {
+    "id": 58,
+    "name": "CSGO_set_norse",
+    "case": false,
+    "released": "18 November 2019",
+    "stattrak": false,
+    "souvenir": false,
+    "tag": "The Norse Collection"
+  },
+  {
+    "id": 59,
+    "name": "CSGO_set_canals",
+    "case": false,
+    "released": "18 November 2019",
+    "stattrak": false,
+    "souvenir": false,
+    "tag": "The Canals Collection"
   },
   {
     "id": 60,
