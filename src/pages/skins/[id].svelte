@@ -89,14 +89,14 @@
       <img
         class="needs-materialbox"
         width="300"
-        src={'http://media.steampowered.com/apps/730/icons/econ/default_generated/' + skin.image.mediaSteamPowered}
+        src={'https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/' + skin.image.fullname_filehash_png}
         alt={`An image of ${skin.weapon.tag} | ${skin.paintkit.tag}`} />
       <div class="image-placeholder">Loading image...</div>
     </div>
 
-    {#if skin.collection.stattrak === true}
+    {#if (skin.collection || {}).stattrak === true}
       <Badge color="orange">StatTrak™ available</Badge>
-    {:else if skin.collection.souvenir === true}
+    {:else if (skin.collection || {}).souvenir === true}
       <Badge color="yellow accent-4">Souvenir available</Badge>
     {/if}
 
@@ -117,14 +117,16 @@
     <div class="skin-collection">
       <h6 class="grey-text">
         <b>Collection:</b>
-        {skin.collection.tag}
+        {(skin.collection || {}).tag || '-'}
       </h6>
-      <Button on:click={() => $goto(`/collections/${skin.collection.id}`)}>
-        <span>
-          View
-          <i class="material-icons">chevron_right</i>
-        </span>
-      </Button>
+      {#if skin.collection}
+        <Button on:click={() => $goto(`/collections/${skin.collection.id}`)}>
+          <span>
+            View
+            <i class="material-icons">chevron_right</i>
+          </span>
+        </Button>
+      {/if}
     </div>
     <div class="skin-weapon">
       <h6 class="grey-text">

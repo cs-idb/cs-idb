@@ -25,6 +25,7 @@ function applyFilter(original_array, filters) {
 }
 
 function checkValueWithFilter(filter, value) {
+  if (!value) return false
   if (filter.column.type === 'text') {
     switch (filter.compare_mode.shortName) {
       case 'eq': {
@@ -100,7 +101,7 @@ function checkValueWithFilter(filter, value) {
   } else {
     console.error('idk waht this is:', filter.type)
   }
-
+  
   return true
 }
 

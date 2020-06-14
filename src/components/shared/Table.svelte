@@ -6,6 +6,7 @@
   export let tableHeaders
   export let tableRows
   export let activeSort
+  export let hasImage = false;
 
   const dispatch = createEventDispatcher()
 
@@ -63,6 +64,9 @@
 <table class="striped highlight">
   <thead>
     <tr>
+      {#if hasImage}
+        <th></th>
+      {/if}
       {#each tableHeaders as tableHeader}
         <th>
           <Button on:click={() => changeSort(tableHeader)}>
@@ -89,6 +93,14 @@
         on:click={() => {
           dispatch('clickItem', tableRow.__id)
         }}>
+        {#if hasImage}
+          <td>
+            <img
+              width="300"
+              src={tableRow['__image_path']}
+              alt={`An image of ${tableRow['weapon']} | ${tableRow['name']}`} />
+          </td>
+        {/if}
         {#each tableHeaders as tableHeader}
           <td>{tableRow[tableHeader]}</td>
         {/each}

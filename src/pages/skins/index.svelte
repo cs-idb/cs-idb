@@ -6,15 +6,17 @@
   import { applyFilter } from '../../utils/'
 
   const tableHeaders = ['weapon', 'name', 'collection', 'rarity', 'Min float', 'Max float']
+  let filtersSet = false
 
   $: new_array = $skins
 
   $: tableRows = new_array.map(function (skin) {
     return {
       __id: skin.id,
+      __image_path: `https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/${skin.image.fullname_filehash_png}`,
       weapon: skin.weapon.tag,
       name: skin.paintkit.tag,
-      collection: skin.collection.tag,
+      collection: (skin.collection || {}).tag || '-',
       rarity: skin.rarity.tag,
       'Min float': skin.paintkit.minFloat,
       'Max float': skin.paintkit.maxFloat,
@@ -69,6 +71,7 @@
   }
 
   const updateFilter = e => {
+    filtersSet = true
     active_filters = e.detail
     new_array = applyFilter($skins, active_filters)
   }
@@ -107,5 +110,5 @@
 
   <QueryFilter {filter_options} on:setFilters={updateFilter} />
   <p class="filter-skin-count grey-text text-darken-2">Found {new_array.length} out of {$skins.length} total skins.</p>
-  <Table {tableHeaders} {tableRows} {activeSort} on:clickItem={gotoSkin} />
+  <Table {tableHeaders} {tableRows} {activeSort} on:clickItem={gotoSkin} hasImage={filtersSet}/>
 </div>

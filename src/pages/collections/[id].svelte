@@ -16,6 +16,7 @@
   $: tableRows = collection_skins.map(function (skin) {
     return {
       __id: skin.id,
+      __image_path: `https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/${skin.image.fullname_filehash_png}`,
       weapon: skin.weapon.tag,
       name: skin.paintkit.tag,
       collection: collection.tag,
@@ -40,7 +41,7 @@
       return $goto($url('/collections'))
     }
 
-    collection_skins = $skins.filter(s => Number(s.collection.id) === Number(id))
+    collection_skins = $skins.filter(s => Number((s.collection||{}).id) === Number(id))
   }
 
   const gotoSkin = e => {
@@ -89,6 +90,6 @@
 
     <br />
     <h4>Skins</h4>
-    <Table {tableHeaders} {tableRows} {activeSort} on:clickItem={gotoSkin} />
+    <Table {tableHeaders} {tableRows} {activeSort} on:clickItem={gotoSkin} hasImage={true}/>
   {/if}
 </div>
