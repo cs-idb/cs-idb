@@ -3,6 +3,7 @@
   import { onMount } from 'svelte'
   export let min
   export let max
+  export let style = ''
 
   $: tooltip = `Float range: ${min} - ${max}`
 
@@ -70,7 +71,7 @@
   }
 </style>
 
-<div class="float">
+<div class="float" {style}>
   <div class="represent-floats red lighten-2 needs-tooltip" data-tooltip={tooltip}>
     <div class="min" style={'width: ' + min * 100 + '%;'} />
     <div class="max green accent-3" style={'width: ' + max * 100 + '%;'} />

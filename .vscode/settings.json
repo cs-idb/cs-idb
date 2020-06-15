@@ -3,5 +3,6 @@
   "eslint.validate": [
     "javascript",
     "svelte"
- ]
+  ],
+  "deno.enable": false
 }

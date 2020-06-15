@@ -1,85 +1,18 @@
 <script>
-  import { goto, url } from '@sveltech/routify'
-  import { Button, Table } from '../../components/shared/'
-  import { QueryFilter } from '../../components/filter/'
-  import { skins, rarities } from '../../stores'
-  import { applyFilter } from '../../utils/'
+  import { goto } from '@sveltech/routify'
+  import { Button } from '../../components/shared/'
+  import { skins } from '../../stores'
+  import { SkinCard } from "../../components/skins/"
 
-  const tableHeaders = ['weapon', 'name', 'collection', 'rarity', 'Min float', 'Max float']
-  let filtersSet = false
+  $: all_skins = $skins;
+  $: filtered_skins = all_skins.filter(s => s.weapon.tag === "M4A4");
 
-  $: new_array = $skins
+  // let pagination_current_page = 0;
+  // const pagination_amount_options = [10, 25, 50, 100, Infinity];
+  // let pagination_amount_per_page = 50;
+  // $: pagination_page_count = filtered_skins.length / pagination_amount_per_page;
 
-  $: tableRows = new_array.map(function (skin) {
-    return {
-      __id: skin.id,
-      __image_path: `https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/${skin.image.fullname_filehash_png}`,
-      weapon: skin.weapon.tag,
-      name: skin.paintkit.tag,
-      collection: (skin.collection || {}).tag || '-',
-      rarity: skin.rarity.tag,
-      'Min float': skin.paintkit.minFloat,
-      'Max float': skin.paintkit.maxFloat,
-    }
-  })
-
-  const filter_options = [
-    {
-      url_name: 'w',
-      display_name: 'Weapon name',
-      key: 'weapon.tag',
-      type: 'text',
-    },
-    {
-      url_name: 'n',
-      display_name: 'Skin name',
-      key: 'paintkit.tag',
-      type: 'text',
-    },
-    {
-      url_name: 'c',
-      display_name: 'Collection name',
-      key: 'collection.tag',
-      type: 'text',
-    },
-    {
-      url_name: 'r',
-      display_name: 'Rarity/ Quality',
-      key: 'rarity.tag',
-      type: 'select',
-      options: $rarities.map(r => r.tag),
-    },
-    {
-      url_name: 'min',
-      display_name: 'Min float value',
-      key: 'paintkit.minFloat',
-      type: 'number',
-    },
-    {
-      url_name: 'max',
-      display_name: 'Max float value',
-      key: 'paintkit.maxFloat',
-      type: 'number',
-    },
-  ]
-
-  let active_filters = []
-
-  const activeSort = {
-    header: 'name',
-    sortAsc: true,
-  }
-
-  const updateFilter = e => {
-    filtersSet = true
-    active_filters = e.detail
-    new_array = applyFilter($skins, active_filters)
-  }
-
-  const gotoSkin = e => {
-    const skin_id = e.detail
-    $goto($url(`/skins/${skin_id}`))
-  }
+  $: paginated_skins = filtered_skins;
 </script>
 
 <style>
@@ -96,9 +29,9 @@
     margin-left: 15px;
   }
 
-  .filter-skin-count {
-    margin-left: 15px;
-    display: inline-block;
+  .skin-list {
+    display: flex;
+    flex-wrap: wrap;
   }
 </style>
 
@@ -108,7 +41,9 @@
     <span>Skins</span>
   </h3>
 
-  <QueryFilter {filter_options} on:setFilters={updateFilter} />
-  <p class="filter-skin-count grey-text text-darken-2">Found {new_array.length} out of {$skins.length} total skins.</p>
-  <Table {tableHeaders} {tableRows} {activeSort} on:clickItem={gotoSkin} hasImage={filtersSet}/>
+  <div class="skin-list">
+    {#each paginated_skins as skin}
+      <SkinCard {skin}/>
+    {/each}
+  </div>
 </div>

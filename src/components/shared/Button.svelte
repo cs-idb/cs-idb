@@ -4,8 +4,7 @@
 
   export let dataTarget
   export let type = 'primary'
-  export let flat = false
-  export let inverse = false
+  export let style = ''
 </script>
 
 <style>
@@ -15,9 +14,8 @@
 <button
   data-target={dataTarget}
   class:modal-trigger={dataTarget}
-  class:flat
-  class:inverse
   class="waves-effect waves-light btn red lighten-2 {type}"
-  on:click={() => dispatch('click')}>
+  on:click={() => dispatch('click')}
+  {style}>
   <slot />
 </button>
