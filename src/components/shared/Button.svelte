@@ -2,7 +2,7 @@
   import { createEventDispatcher } from 'svelte'
   const dispatch = createEventDispatcher()
 
-  export let dataTarget
+  export let dataTarget = undefined
   export let type = 'primary'
   export let style = ''
 </script>

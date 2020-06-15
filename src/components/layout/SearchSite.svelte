@@ -3,7 +3,7 @@
   import { goto, url } from '@sveltech/routify'
   import { collections, skins } from '../../stores'
 
-  export let mobile
+  export let mobile = undefined;
 
   const dispatch = createEventDispatcher()
 

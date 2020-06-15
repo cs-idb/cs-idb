@@ -5,10 +5,15 @@
 
 <style>
   .skin-card {
-    border: 1px solid black;
+    border: 1px solid #00000030;
     padding: 10px;
-    max-width: 400px;
+    max-width: 300px;
     margin: 0 10px 10px 0;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+    transition: transform 0.1s ease-in-out;
+  }
+  .skin-card:hover {
+    transform: scale(1.05);
   }
 
   .name {
@@ -39,7 +44,10 @@
     <img style={`background: radial-gradient(circle, ${skin.rarity.color}b3 0%, #00000080 100%);`} src={`https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/${skin.image.fullname_filehash_png}`} alt={`An image of ${skin.weapon.tag} | ${skin.paintkit.tag}`}>
   </div>
   {#if skin.collection}
-    <Button style="width: 100%; margin-top: 10px;" type="blue">{skin.collection.tag}</Button>
+    <Button style="width: 100%; margin-top: 10px; display: flex; flex-direction: column; height: 50px;" type="blue">
+      <span class="tag" style="font-size: 11px;">{skin.collection.tag}</span>
+      <span class="released" style="font-size: 10px; margin-top: -20px; color: #403d3d; text-transform: none;">Released: {skin.collection.released}</span>
+    </Button>
   {/if}
   <SkinFloat style="margin-top: 10px;" min={skin.paintkit.minFloat} max={skin.paintkit.maxFloat}/>
 </div>
