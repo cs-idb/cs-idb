@@ -1,6 +1,6 @@
 <script>
   import { goto } from '@sveltech/routify'
-  import { Button } from '../../components/shared/'
+  import { Button, Pagination } from '../../components/shared/'
   import { skins } from '../../stores'
   import { SkinCard } from "../../components/skins/"
   import { onMount } from 'svelte'
@@ -30,13 +30,15 @@
   $: selectedSort = availableSorts[Number(sortingIndex)];
   $: sorted_skins = SortableArray.from(filtered_skins).sortBy(selectedSort.key, selectedSort.type, sortingAsc);
 
+  let pagination_current_page = 0;
+  let pagination_per_page = 10;
+  $: pagination_total_page_count = Math.ceil(sorted_skins.length / pagination_per_page);
 
-  // let pagination_current_page = 0;
-  // const pagination_amount_options = [10, 25, 50, 100, Infinity];
-  // let pagination_amount_per_page = 50;
-  // $: pagination_page_count = filtered_skins.length / pagination_amount_per_page;
+  const handleChangePagination = (e) => {
+    pagination_current_page = e.detail
+  }
 
-  $: paginated_skins = sorted_skins.slice(0, 50);
+  $: paginated_skins = sorted_skins.slice(pagination_current_page*pagination_per_page, pagination_current_page*pagination_per_page + pagination_per_page);
 </script>
 
 <style>
@@ -97,6 +99,7 @@
       <label>Sorting</label>
     </div>
     <Button on:click={() => sortingAsc = !sortingAsc}>{sortingAsc ? 'Sorting ASC' : 'Sorting DESC'}</Button>
+    <Pagination currentPage={0} totalPages={pagination_total_page_count} on:change={handleChangePagination}/>
   </div>
 
   <div class="skin-list">
