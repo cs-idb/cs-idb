@@ -1,11 +1,12 @@
 <script>
   import { goto } from '@sveltech/routify'
-  import { Button, Pagination } from '../../components/shared/'
+  import { Button } from '../../components/shared/'
   import { skins } from '../../stores'
   import { SkinCard } from "../../components/skins/"
   import { onMount } from 'svelte'
   import M from 'materialize-css'
   import { SortableArray } from "../../utils/"
+  import SvelteInfiniteScroll from "svelte-infinite-scroll";
 
   $: all_skins = $skins;
   $: filtered_skins = all_skins//.filter(s => s.weapon.tag === "AK-47");
@@ -16,7 +17,7 @@
   })
 
   let sortingIndex = 2;
-  let sortingAsc = true;
+  let sortingAsc = false;
   const availableSorts = [
     { "key": "weapon.tag", "type": "str" },
     { "key": "paintkit.tag", "type": "str" },
@@ -30,15 +31,19 @@
   $: selectedSort = availableSorts[Number(sortingIndex)];
   $: sorted_skins = SortableArray.from(filtered_skins).sortBy(selectedSort.key, selectedSort.type, sortingAsc);
 
-  let pagination_current_page = 0;
-  let pagination_per_page = 10;
-  $: pagination_total_page_count = Math.ceil(sorted_skins.length / pagination_per_page);
+  $: clearPagination(sortingIndex, sortingAsc)
 
-  const handleChangePagination = (e) => {
-    pagination_current_page = e.detail
+  const clearPagination = () => {
+    paginated_skins = []
   }
 
-  $: paginated_skins = sorted_skins.slice(pagination_current_page*pagination_per_page, pagination_current_page*pagination_per_page + pagination_per_page);
+  let page = 0;
+  let size = 20;
+  let paginated_skins = [];
+  $: paginated_skins = [
+    ...paginated_skins,
+    ...sorted_skins.splice(size * page, size * (page + 1) - 1)
+  ]
 </script>
 
 <style>
@@ -83,7 +88,7 @@
   <div class="filter-container">
     <Button style="display: flex; align-items: center;">
       <i class="material-icons" style="margin-right: 10px;">filter_alt</i>
-      <span>Filter {paginated_skins.length} skins</span>
+      <span>Filter {filtered_skins.length} skins</span>
     </Button>
 
     <div class="sorting input-field col s12">
@@ -99,12 +104,18 @@
       <label>Sorting</label>
     </div>
     <Button on:click={() => sortingAsc = !sortingAsc}>{sortingAsc ? 'Sorting ASC' : 'Sorting DESC'}</Button>
-    <Pagination currentPage={0} totalPages={pagination_total_page_count} on:change={handleChangePagination}/>
   </div>
 
   <div class="skin-list">
     {#each paginated_skins as skin}
       <SkinCard {skin}/>
+      
+      <SvelteInfiniteScroll 
+        threshold={90} 
+        on:loadMore={() => page++} 
+        window={true}
+        hasMore={page * size < filtered_skins.length}
+      />
     {/each}
   </div>
 </div>
