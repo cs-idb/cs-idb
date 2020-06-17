@@ -1,4 +1,5 @@
 <script>
+  import { goto } from '@sveltech/routify'
   import { Badge, Button, SkinFloat } from "../shared"
   export let skin;
 </script>
@@ -49,7 +50,11 @@
     <img loading="lazy" src={`https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/${skin.image.fullname_filehash_png}`} alt={`An image of ${skin.weapon.tag} | ${skin.paintkit.tag}`}>
   </div>
   {#if skin.collection}
-    <Button style="width: 100%; margin-top: 10px; display: flex; flex-direction: column; height: 50px; padding: 0;" type="blue">
+    <Button 
+      style="width: 100%; margin-top: 10px; display: flex; flex-direction: column; height: 50px; padding: 0;" 
+      type="blue"
+      on:click={$goto(`/collections/${skin.collection.id}`)}
+    >
       <span class="tag" style="font-size: 11px;">{skin.collection.tag}</span>
       <span class="released" style="font-size: 10px; margin-top: -20px; color: #403d3d; text-transform: none;">Released: {skin.collection.released}</span>
     </Button>

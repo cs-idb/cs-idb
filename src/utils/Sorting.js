@@ -7,7 +7,8 @@ function dynamicSort(key, type, order) {
     while (i < depth) {
       a = a[keys[i]];
       b = b[keys[i]];
-      if (!a || !b) return -1
+      if (a === undefined || b === undefined) 
+        return -1
       i++;
     }
     let result;
@@ -23,6 +24,10 @@ function dynamicSort(key, type, order) {
       }
       case "dte": {
         result = new Date(a) < new Date(b) ? -1 : new Date(a) > new Date(b) ? 1 : 0;
+        break;
+      }
+      case "bol": {
+        result = b - a;
         break;
       }
       default: {
