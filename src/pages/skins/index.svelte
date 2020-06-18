@@ -33,7 +33,8 @@
   $: clearPagination(sortingIndex, sortingAsc)
 
   const clearPagination = () => {
-    paginated_skins = []
+    page = 0;
+    paginated_skins = [];
   }
 
   let page = 0;
@@ -66,6 +67,23 @@
   .skin-list {
     display: flex;
     flex-wrap: wrap;
+    margin: 0 auto;
+  }
+
+  @media screen and (max-width: 700px) {
+    .skin-list { width: 310px; }
+  }
+  @media screen and (min-width: 700px) and (max-width: 1020px) {
+    .skin-list { width: 620px; }
+  }
+  @media screen and (min-width: 1020px) and (max-width: 1370px) {
+    .skin-list { width: 930px; }
+  }
+  @media screen and (min-width: 1370px) and (max-width: 1720px) {
+    .skin-list { width: 1240px; }
+  }
+  @media screen and (min-width: 1720px) {
+    .skin-list { width: 100%; }
   }
 </style>
 
