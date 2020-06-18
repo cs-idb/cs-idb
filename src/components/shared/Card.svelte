@@ -32,6 +32,7 @@
   }
 </style>
 
+{#if false}<slot></slot>{/if}
 <div
   class="card hoverable"
   class:flat

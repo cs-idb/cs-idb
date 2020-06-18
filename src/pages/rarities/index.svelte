@@ -1,25 +1,12 @@
 <script>
-  import { goto } from '@sveltech/routify'
-  import { Button, Card, CardList } from '../../components/shared/'
+  import { Card, CardList, PageHeader } from '../../components/shared/'
   import { rarities } from '../../stores'
 </script>
 
-<style>
-  .heading {
-    display: flex;
-    align-items: center;
-  }
-
-  .heading span {
-    margin-left: 15px;
-  }
-</style>
-
 <div class="rarities-container">
-  <h3 class="heading">
-    <Button on:click={() => $goto('/')}>&lt;</Button>
-    <span>Rarities</span>
-  </h3>
+  <PageHeader>
+    Rarities
+  </PageHeader>
 
   <p class="page-desc">Every skin in the game is of a certain quality/ rarity.</p>
 

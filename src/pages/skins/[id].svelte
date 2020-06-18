@@ -3,7 +3,7 @@
   import { goto, url } from '@sveltech/routify'
   import { onMount, tick } from 'svelte'
   import { skins } from '../../stores'
-  import { Button, SkinFloat, Badge } from '../../components/shared'
+  import { Button, SkinFloat, Badge, PageHeader } from '../../components/shared'
   export let id
 
   let skin
@@ -36,16 +36,7 @@
   .skin {
     margin-bottom: 2rem;
   }
-
-  .heading {
-    display: flex;
-    align-items: center;
-  }
-
-  .heading span {
-    margin-left: 15px;
-  }
-
+  
   .skin-collection h6,
   .skin-weapon h6 {
     display: inline-block;
@@ -80,10 +71,9 @@
 
 <div class="skin">
   {#if skin}
-    <h3 class="heading">
-      <Button on:click={() => $goto('/skins')}>&lt;</Button>
-      <span>{skin.weapon.tag} | {skin.paintkit.tag}</span>
-    </h3>
+    <PageHeader>
+      {skin.weapon.tag} | {skin.paintkit.tag}
+    </PageHeader>
 
     <div class="image-container">
       <img

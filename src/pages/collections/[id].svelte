@@ -1,6 +1,6 @@
 <script>
   import { goto, url } from '@sveltech/routify'
-  import { Button, Badge, Table } from '../../components/shared/'
+  import { Badge, Table, PageHeader } from '../../components/shared/'
   import { collections, skins } from '../../stores'
   import { onMount } from 'svelte'
   export let id
@@ -51,38 +51,28 @@
 </script>
 
 <style>
-  .heading {
-    display: flex;
-    align-items: center;
-  }
-
-  .heading span {
-    margin-left: 15px;
-  }
-
   .collection-container {
     margin: 30px 0;
   }
 </style>
 
 <div class="collection-container">
-  <h3 class="heading">
-    <Button on:click={() => $goto('/collections')}>&lt;</Button>
-    <span>{collection ? collection.tag : 'Loading collection...'}</span>
-  </h3>
+  <PageHeader>
+    {collection ? collection.tag : 'Loading collection...'}
+  </PageHeader>
 
   {#if collection}
     <div class="badges">
-      <Badge>Released: {collection.released.toLocaleDateString()}</Badge>
-      <Badge>
+      <Badge classes="blue lighten-2">Released: {collection.released.toLocaleDateString()}</Badge>
+      <Badge classes="blue">
         Case:
         <b>{collection.case ? 'Yes' : 'No'}</b>
       </Badge>
-      <Badge color="orange">
+      <Badge classes="orange">
         StatTrak™:
         <b>{collection.stattrak ? 'Yes' : 'No'}</b>
       </Badge>
-      <Badge color="yellow accent-2">
+      <Badge classes="yellow accent-2">
         Souvenir:
         <b>{collection.souvenir ? 'Yes' : 'No'}</b>
       </Badge>

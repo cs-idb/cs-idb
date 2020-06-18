@@ -10,7 +10,7 @@
 
   const dispatch = createEventDispatcher()
 
-  $: sortedRows = SortableArray.from(tableRows).sortBy(activeSort.header, activeSort.sortAsc)
+  $: sortedRows = SortableArray.from(tableRows).sortBy(activeSort.header, 'str', activeSort.sortAsc)
 
   const changeSort = headerName => {
     if (activeSort.header === headerName) {

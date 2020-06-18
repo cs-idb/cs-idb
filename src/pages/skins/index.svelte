@@ -1,6 +1,5 @@
 <script>
-  import { goto } from '@sveltech/routify'
-  import { Button } from '../../components/shared/'
+  import { Button, PageHeader } from '../../components/shared/'
   import { skins } from '../../stores'
   import { SkinCard } from "../../components/skins/"
   import { onMount } from 'svelte'
@@ -64,15 +63,6 @@
     left: 0;
   }
 
-  .heading {
-    display: flex;
-    align-items: center;
-  }
-
-  .heading span {
-    margin-left: 15px;
-  }
-
   .skin-list {
     display: flex;
     flex-wrap: wrap;
@@ -80,10 +70,9 @@
 </style>
 
 <div class="skins-container">
-  <h3 class="heading">
-    <Button on:click={() => $goto('/')}>&lt;</Button>
-    <span>Skins</span>
-  </h3>
+  <PageHeader>
+    Skins
+  </PageHeader>
 
   <div class="filter-container">
     <Button style="display: flex; align-items: center;">
