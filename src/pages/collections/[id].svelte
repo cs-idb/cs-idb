@@ -59,6 +59,6 @@
     <br />
     <h4>Skins</h4>
     
-    <SkinCardList skins={collection_skins}/>
+    <SkinCardList skins={collection_skins} showFilter={false} showCollection={false}/>
   {/if}
 </div>

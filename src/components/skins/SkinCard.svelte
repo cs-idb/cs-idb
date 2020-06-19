@@ -2,6 +2,7 @@
   import { goto } from '@sveltech/routify'
   import { Badge, Button, SkinFloat } from "../shared"
   export let skin;
+  export let showCollection = true;
 </script>
 
 <style>
@@ -11,10 +12,21 @@
     max-width: 300px;
     margin: 0 10px 10px 0;
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
-    transition: transform 0.1s ease-in-out;
+    transition: background-color 0.1s ease-in-out;
+    position: relative;
   }
   .skin-card:hover {
-    transform: scale(1.05);
+    background-color: #e1e1e1;
+  }
+
+  .skin-card .visit {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+  }
+
+  .skin-card .name {
+    margin-top: 0;
   }
 
   .name {
@@ -35,8 +47,9 @@
   }
 </style>
 
-<div class="skin-card">
-  <h6><b class="name">{skin.weapon.tag} | {skin.paintkit.tag}</b></h6>
+<div class="skin-card" on:click={$goto(`/skins/${skin.id}`)}>
+  <span class="visit"><i class="material-icons">visibility</i></span>
+  <h6 class="name"><b>{skin.weapon.tag} | {skin.paintkit.tag}</b></h6>
   <div class="badges">
     {#if (skin.collection||{}).stattrak}
       <Badge classes="orange">StatTrak™</Badge>
@@ -49,7 +62,7 @@
   <div class="img-container" style={`background: radial-gradient(circle, ${skin.rarity.color}b3 0%, #00000080 100%);`}>
     <img loading="lazy" src={`https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/${skin.image.fullname_filehash_png}`} alt={`An image of ${skin.weapon.tag} | ${skin.paintkit.tag}`}>
   </div>
-  {#if skin.collection}
+  {#if skin.collection && showCollection}
     <Button 
       style="width: 100%; margin-top: 10px; display: flex; flex-direction: column; height: 50px; padding: 0;" 
       type="blue"

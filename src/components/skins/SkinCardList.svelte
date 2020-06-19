@@ -7,6 +7,8 @@
   import SvelteInfiniteScroll from "svelte-infinite-scroll";
 
   export let skins = [];
+  export let showFilter = true;
+  export let showCollection = true;
 
   $: filtered_skins = skins;
 
@@ -47,23 +49,19 @@
 </script>
 
 <style>
-  .filter-container {
-    margin-bottom: 20px;
-  }
-
-  .sorting {
+  .order-container {
     margin-top: 25px;
     max-width: 300px;
   }
 
-  .sorting label {
+  .order-container label {
     left: 0;
   }
 
   .skin-list {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 auto;
+    margin: 20px auto 0px auto;
   }
 
   @media screen and (max-width: 700px) {
@@ -83,13 +81,17 @@
   }
 </style>
 
-<div class="filter-container">
-  <Button style="display: flex; align-items: center;">
-    <i class="material-icons" style="margin-right: 10px;">filter_alt</i>
-    <span>Filter {filtered_skins.length} skins</span>
-  </Button>
+{#if showFilter}
+  <div class="filter-container">
+    <Button style="display: flex; align-items: center;">
+      <i class="material-icons" style="margin-right: 10px;">filter_alt</i>
+      <span>Filter {filtered_skins.length} skins</span>
+    </Button>
+  </div>
+{/if}
 
-  <div class="sorting input-field col s12">
+<div class="order-container">
+  <div class="input-field col s12">
     <select class="needs-select-init" bind:value={sortingIndex}>
       <option value="0">Weapon name</option>
       <option value="1">Skin name</option>
@@ -105,12 +107,19 @@
 </div>
 
 <div class="skin-list">
-  {#each paginated_skins as skin}
-    <SkinCard {skin}/>
-  {/each}
-  <SvelteInfiniteScroll 
-      on:loadMore={() => page++} 
-      window={true}
-      hasMore={page * size < filtered_skins.length}
-    />
+  {#if showFilter}
+    {#each paginated_skins as skin}
+      <SkinCard {skin}/>
+    {/each}
+    <SvelteInfiniteScroll 
+        threshold={75}
+        on:loadMore={() => page++} 
+        window={true}
+        hasMore={page * size < filtered_skins.length}
+      />
+  {:else}
+    {#each sorted_skins as skin}
+      <SkinCard {skin} {showCollection}/>
+    {/each}
+  {/if}
 </div>
