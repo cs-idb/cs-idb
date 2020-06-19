@@ -27,7 +27,7 @@
 
   .img-container {
     width: 100%;
-    height: 190px;
+    height: auto;
   }
 
   .img-container img {

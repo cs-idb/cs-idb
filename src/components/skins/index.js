@@ -1,3 +1,4 @@
 import SkinCard from "./SkinCard.svelte"
+import SkinCardList from "./SkinCardList.svelte"
 
-export { SkinCard }
+export { SkinCard, SkinCardList }

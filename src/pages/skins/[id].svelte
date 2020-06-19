@@ -85,9 +85,9 @@
     </div>
 
     {#if (skin.collection || {}).stattrak === true}
-      <Badge color="orange">StatTrak™ available</Badge>
+      <Badge classes="orange">StatTrak™ available</Badge>
     {:else if (skin.collection || {}).souvenir === true}
-      <Badge color="yellow accent-4">Souvenir available</Badge>
+      <Badge classes="yellow accent-4">Souvenir available</Badge>
     {/if}
 
     <h6 class="grey-text">

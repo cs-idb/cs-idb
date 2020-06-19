@@ -1,8 +1,9 @@
 <script>
   import { goto, url } from '@sveltech/routify'
-  import { Badge, Table, PageHeader } from '../../components/shared/'
+  import { Badge, PageHeader } from '../../components/shared/'
+  import { SkinCardList } from '../../components/skins/' 
   import { collections, skins } from '../../stores'
-  import { onMount } from 'svelte'
+  import { onMount, tick } from 'svelte'
   export let id
 
   let collection
@@ -10,24 +11,6 @@
 
   $: {
     loadCollection(id)
-  }
-
-  const tableHeaders = ['weapon', 'name', 'collection', 'rarity', 'Min float', 'Max float']
-  $: tableRows = collection_skins.map(function (skin) {
-    return {
-      __id: skin.id,
-      __image_path: `https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/${skin.image.fullname_filehash_png}`,
-      weapon: skin.weapon.tag,
-      name: skin.paintkit.tag,
-      collection: collection.tag,
-      rarity: skin.rarity.tag,
-      'Min float': skin.paintkit.minFloat,
-      'Max float': skin.paintkit.maxFloat,
-    }
-  })
-  const activeSort = {
-    header: 'name',
-    sortAsc: true,
   }
 
   onMount(() => {
@@ -42,11 +25,6 @@
     }
 
     collection_skins = $skins.filter(s => Number((s.collection||{}).id) === Number(id))
-  }
-
-  const gotoSkin = e => {
-    const skin_id = e.detail
-    $goto($url(`/skins/${skin_id}`))
   }
 </script>
 
@@ -80,6 +58,7 @@
 
     <br />
     <h4>Skins</h4>
-    <Table {tableHeaders} {tableRows} {activeSort} on:clickItem={gotoSkin} hasImage={true}/>
+    
+    <SkinCardList skins={collection_skins}/>
   {/if}
 </div>
