@@ -6,6 +6,7 @@
   import M from 'materialize-css'
   import SvelteInfiniteScroll from "svelte-infinite-scroll";
   import { derived } from 'svelte/store'
+  import SkinFilterModal from './SkinFilterModal.svelte';
 
   export let skins = [];
   export let showFilter = true;
@@ -34,6 +35,8 @@
     ...sorted_skins.slice(size * page, size * (page + 1) - 1)
   ]
 
+  let showFilterModal = true;
+
   onMount(() => { 
     const elems = document.querySelectorAll('select.needs-select-init');
     M.FormSelect.init(elems);
@@ -48,8 +51,7 @@
   }
 
   .filter-container {
-    margin-right: 15px;
-    margin-bottom: 15px;
+    margin: 0 15px 15px 0;
   }
 
   .filter-container label {
@@ -81,10 +83,12 @@
   }
 </style>
 
+<SkinFilterModal showModal={showFilterModal} on:close={() => showFilterModal = false}/>
+
 <div class="filter-and-order-container">
   {#if showFilter}
     <div class="filter-container input-field">
-      <Button style="display: flex; align-items: center;">
+      <Button style="display: flex; align-items: center;" on:click={() => showFilterModal = !showFilterModal}>
         <i class="material-icons" style="margin-right: 10px;">filter_alt</i>
         <span>Filter {filtered_skins.length} skins</span>
       </Button>
