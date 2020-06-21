@@ -3,11 +3,24 @@
   import { Badge, PageHeader } from '../../components/shared/'
   import { SkinCardList } from '../../components/skins/' 
   import { collections, skins } from '../../stores'
-  import { onMount, tick } from 'svelte'
+  import { onMount } from 'svelte'
+  import { writable } from 'svelte/store'
   export let id
 
   let collection
   let collection_skins = []
+
+  const sortingStore = writable({
+    sortingIndex: 2,
+    sortAsc: false,
+    availableSorts: [
+      { "key": "weapon.tag", "type": "str", "name": "Weapon name" },
+      { "key": "paintkit.tag", "type": "str", "name": "Skin name" },
+      { "key": "rarity.id", "type": "num", "name": "Rarity" },
+      { "key": "paintkit.minFloat", "type": "num", "name": "Min float" },
+      { "key": "paintkit.maxFloat", "type": "num", "name": "Max float" }
+    ]
+  });
 
   $: {
     loadCollection(id)
@@ -59,6 +72,6 @@
     <br />
     <h4>Skins</h4>
     
-    <SkinCardList skins={collection_skins} showFilter={false} showCollection={false}/>
+    <SkinCardList skins={collection_skins} showFilter={false} showCollection={false} {sortingStore} />
   {/if}
 </div>

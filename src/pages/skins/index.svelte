@@ -2,6 +2,21 @@
   import { PageHeader } from '../../components/shared/'
   import { skins } from '../../stores'
   import { SkinCardList } from '../../components/skins/'
+  import { writable } from 'svelte/store'
+
+  const sortingStore = writable({
+    sortingIndex: 4,
+    sortAsc: false,
+    availableSorts: [
+      { "key": "weapon.tag", "type": "str", "name": "Weapon name" },
+      { "key": "paintkit.tag", "type": "str", "name": "Skin name" },
+      { "key": "rarity.id", "type": "num", "name": "Rarity" },
+      { "key": "collection.tag", "type": "str", "name": "Collection name" },
+      { "key": "collection.released", "type": "dte", "name": "Collection release date" },
+      { "key": "paintkit.minFloat", "type": "num", "name": "Min float" },
+      { "key": "paintkit.maxFloat", "type": "num", "name": "Max float" }
+    ]
+  });
 </script>
 
 <style>
@@ -15,5 +30,5 @@
     Skins
   </PageHeader>
 
-  <SkinCardList skins={$skins}/>
+  <SkinCardList skins={$skins} {sortingStore}/>
 </div>

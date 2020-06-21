@@ -1,14 +1,20 @@
 <script>
   import SkinCard from "./SkinCard.svelte"
   import { SortableArray } from "../../utils/"
-  import { Button } from "../../components/shared/"
+  import { Button, SortSelector } from "../../components/shared/"
   import { onMount } from 'svelte'
   import M from 'materialize-css'
   import SvelteInfiniteScroll from "svelte-infinite-scroll";
+  import { derived } from 'svelte/store'
 
   export let skins = [];
   export let showFilter = true;
   export let showCollection = true;
+
+  export let sortingStore;
+  const selectedSortStore = derived(sortingStore, $sortingStore => {
+    return $sortingStore.availableSorts[$sortingStore.sortingIndex]
+  })
 
   $: filtered_skins = skins;
 
@@ -17,30 +23,16 @@
     M.FormSelect.init(elems);
   })
 
-  let sortingIndex = 2;
-  let sortingAsc = false;
-  const availableSorts = [
-    { "key": "weapon.tag", "type": "str" },
-    { "key": "paintkit.tag", "type": "str" },
-    { "key": "rarity.id", "type": "num" },
-    { "key": "collection.tag", "type": "str" },
-    { "key": "collection.released", "type": "dte" },
-    { "key": "paintkit.minFloat", "type": "num" },
-    { "key": "paintkit.maxFloat", "type": "num" }
-  ]
+  $: sorted_skins = SortableArray.from(filtered_skins).sortBy($selectedSortStore.key, $selectedSortStore.type, $sortingStore.sortAsc);
 
-  $: selectedSort = availableSorts[Number(sortingIndex)];
-  $: sorted_skins = SortableArray.from(filtered_skins).sortBy(selectedSort.key, selectedSort.type, sortingAsc);
-
-  $: clearPagination(sortingIndex, sortingAsc)
-
+  $: clearPagination($sortingStore.sortingIndex, $sortingStore.sortingAsc)
   const clearPagination = () => {
     page = 0;
     paginated_skins = [];
   }
 
   let page = 0;
-  let size = 10;
+  let size = 20;
   let paginated_skins = [];
   $: paginated_skins = [
     ...paginated_skins,
@@ -49,15 +41,6 @@
 </script>
 
 <style>
-  .order-container {
-    margin-top: 25px;
-    max-width: 300px;
-  }
-
-  .order-container label {
-    left: 0;
-  }
-
   .skin-list {
     display: flex;
     flex-wrap: wrap;
@@ -90,26 +73,12 @@
   </div>
 {/if}
 
-<div class="order-container">
-  <div class="input-field col s12">
-    <select class="needs-select-init" bind:value={sortingIndex}>
-      <option value="0">Weapon name</option>
-      <option value="1">Skin name</option>
-      <option value="2" selected>Rarity</option>
-      <option value="3">Collection name</option>
-      <option value="4">Collection release date</option>
-      <option value="5">Min float</option>
-      <option value="6">Max float</option>
-    </select>
-    <label>Sorting</label>
-  </div>
-  <Button on:click={() => sortingAsc = !sortingAsc}>{sortingAsc ? 'Sorting ASC' : 'Sorting DESC'}</Button>
-</div>
+<SortSelector {sortingStore}/>
 
 <div class="skin-list">
   {#if showFilter}
     {#each paginated_skins as skin}
-      <SkinCard {skin}/>
+      <SkinCard {skin} {showCollection}/>
     {/each}
     <SvelteInfiniteScroll 
         threshold={75}

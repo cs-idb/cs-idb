@@ -9,7 +9,7 @@
   .skin-card {
     border: 1px solid #00000030;
     padding: 10px;
-    max-width: 300px;
+    width: 300px;
     margin: 0 10px 10px 0;
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
     transition: background-color 0.1s ease-in-out;
@@ -39,7 +39,7 @@
 
   .img-container {
     width: 100%;
-    height: auto;
+    min-height: 215px;
   }
 
   .img-container img {
