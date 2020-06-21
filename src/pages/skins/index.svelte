@@ -1,5 +1,5 @@
 <script>
-  import { PageHeader } from '../../components/shared/'
+  import { PageHeader, BackToTop } from '../../components/shared/'
   import { skins } from '../../stores'
   import { SkinCardList } from '../../components/skins/'
   import { writable } from 'svelte/store'
@@ -31,4 +31,5 @@
   </PageHeader>
 
   <SkinCardList skins={$skins} {sortingStore}/>
+  <BackToTop />
 </div>

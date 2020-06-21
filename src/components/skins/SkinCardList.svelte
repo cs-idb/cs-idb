@@ -18,11 +18,6 @@
 
   $: filtered_skins = skins;
 
-  onMount(() => { 
-    const elems = document.querySelectorAll('select.needs-select-init');
-    M.FormSelect.init(elems);
-  })
-
   $: sorted_skins = SortableArray.from(filtered_skins).sortBy($selectedSortStore.key, $selectedSortStore.type, $sortingStore.sortAsc);
 
   $: clearPagination($sortingStore.sortingIndex, $sortingStore.sortingAsc)
@@ -38,6 +33,11 @@
     ...paginated_skins,
     ...sorted_skins.slice(size * page, size * (page + 1) - 1)
   ]
+
+  onMount(() => { 
+    const elems = document.querySelectorAll('select.needs-select-init');
+    M.FormSelect.init(elems);
+  })
 </script>
 
 <style>

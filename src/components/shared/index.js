@@ -9,5 +9,6 @@ import Table from './Table.svelte'
 import SkinFloat from './SkinFloat.svelte'
 import PageHeader from './PageHeader.svelte'
 import SortSelector from './SortSelector.svelte'
+import BackToTop from './BackToTop.svelte'
 
-export { Button, Badge, Spinner, Error, Card, ListFilterSorter, CardList, Table, SkinFloat, PageHeader, SortSelector }
+export { Button, Badge, Spinner, Error, Card, ListFilterSorter, CardList, Table, SkinFloat, PageHeader, SortSelector, BackToTop }
