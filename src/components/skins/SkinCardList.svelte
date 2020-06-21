@@ -41,6 +41,23 @@
 </script>
 
 <style>
+  .filter-and-order-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .filter-container {
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+
+  .filter-container label {
+    position: absolute;
+    top: -35px;
+    font-size: 0.8rem;
+  }
+
   .skin-list {
     display: flex;
     flex-wrap: wrap;
@@ -64,16 +81,19 @@
   }
 </style>
 
-{#if showFilter}
-  <div class="filter-container">
-    <Button style="display: flex; align-items: center;">
-      <i class="material-icons" style="margin-right: 10px;">filter_alt</i>
-      <span>Filter {filtered_skins.length} skins</span>
-    </Button>
-  </div>
-{/if}
+<div class="filter-and-order-container">
+  {#if showFilter}
+    <div class="filter-container input-field">
+      <Button style="display: flex; align-items: center;">
+        <i class="material-icons" style="margin-right: 10px;">filter_alt</i>
+        <span>Filter {filtered_skins.length} skins</span>
+      </Button>
+      <label>Filtering</label>
+    </div>
+  {/if}
 
-<SortSelector {sortingStore}/>
+  <SortSelector {sortingStore}/>
+</div>
 
 <div class="skin-list">
   {#if showFilter}

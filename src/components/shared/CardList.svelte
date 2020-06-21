@@ -26,7 +26,7 @@
   }
   @media screen and (min-width: 1730px) and (max-width: 10000px) {
     .cards {
-      width: 1560px;
+      width: 100%;
     }
   }
 </style>

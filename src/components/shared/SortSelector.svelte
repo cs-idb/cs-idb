@@ -10,13 +10,33 @@
 
 <style>
   .sort-selector-container {
-    margin-top: 25px;
-    max-width: 300px;
+    display: flex;
+    align-items: center;
+  }
+
+  .sort-selector-container .input-field {
+    max-width: 200px;
+    margin-right: 10px;
   }
 
   .sort-selector-container label {
     left: 0;
   }
+
+  .sort-selector-container :global(button) {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .sort-selector-container :global(button span) {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .sort-selector-container :global(button span.flipped) {
+    transform: scaley(-1);
+  }
+
 </style>
 
 <div class="sort-selector-container">
@@ -28,5 +48,5 @@
     </select>
     <label>Sorting</label>
   </div>
-  <Button on:click={handleChangeSortingAsc}>{$sortingStore.sortAsc ? 'Sorting ASC' : 'Sorting DESC'}</Button>
+  <Button on:click={handleChangeSortingAsc}><span class="material-icons" class:flipped={$sortingStore.sortAsc}>sort</span></Button>
 </div>

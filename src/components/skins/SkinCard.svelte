@@ -47,8 +47,8 @@
   }
 </style>
 
-<div class="skin-card" on:click={$goto(`/skins/${skin.id}`)}>
-  <span class="visit"><i class="material-icons">visibility</i></span>
+<div class="skin-card">
+  <span class="visit" on:click={$goto(`/skins/${skin.id}`)}><i class="material-icons">visibility</i></span>
   <h6 class="name"><b>{skin.weapon.tag} | {skin.paintkit.tag}</b></h6>
   <div class="badges">
     {#if (skin.collection||{}).stattrak}

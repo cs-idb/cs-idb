@@ -5,7 +5,7 @@
   import { writable } from 'svelte/store'
 
   const sortingStore = writable({
-    sortingIndex: 4,
+    sortingIndex: 2,
     sortAsc: false,
     availableSorts: [
       { "key": "weapon.tag", "type": "str", "name": "Weapon name" },
