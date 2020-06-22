@@ -29,8 +29,8 @@ const changelogs = [
     version: '1.4',
     time: 1592146068000, // Sunday, 14 June 2020,
     header: 'Skin images',
-    content: 'Fixed issue with skin images not showing in Chrome; Images now also show in the global skins- and collection lists.'
-  }
+    content: 'Fixed issue with skin images not showing in Chrome; Images now also show in the global skins- and collection lists.',
+  },
 ]
 
 export { changelogs }

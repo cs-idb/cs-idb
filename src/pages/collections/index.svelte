@@ -4,9 +4,7 @@
 </script>
 
 <div class="collections-container">
-  <PageHeader>
-    Collections
-  </PageHeader>
+  <PageHeader>Collections</PageHeader>
 
   <CollectionCardList />
 </div>

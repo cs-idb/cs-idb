@@ -16,9 +16,7 @@
 </style>
 
 <div class="sitemap">
-  <PageHeader>
-    Sitemap
-  </PageHeader>
+  <PageHeader>Sitemap</PageHeader>
 
   <ul class="links-list">
     {#each sitemap as link}

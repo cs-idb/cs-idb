@@ -36,7 +36,7 @@
   .skin {
     margin-bottom: 2rem;
   }
-  
+
   .skin-collection h6,
   .skin-weapon h6 {
     display: inline-block;
@@ -71,9 +71,7 @@
 
 <div class="skin">
   {#if skin}
-    <PageHeader>
-      {skin.weapon.tag} | {skin.paintkit.tag}
-    </PageHeader>
+    <PageHeader>{skin.weapon.tag} | {skin.paintkit.tag}</PageHeader>
 
     <div class="image-container">
       <img

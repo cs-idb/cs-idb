@@ -4,9 +4,7 @@
 </script>
 
 <div class="rarities-container">
-  <PageHeader>
-    Rarities
-  </PageHeader>
+  <PageHeader>Rarities</PageHeader>
 
   <p class="page-desc">Every skin in the game is of a certain quality/ rarity.</p>
 

@@ -1,5 +1,5 @@
 <script>
-  import Button from './Button.svelte';
+  import Button from './Button.svelte'
 
   const handleGotoTop = () => {
     window.scrollTo({
@@ -8,8 +8,8 @@
     })
   }
 
-  let windowScrollY = 0;
-  $: hideTopButton = windowScrollY < 100;
+  let windowScrollY = 0
+  $: hideTopButton = windowScrollY < 100
 </script>
 
 <style>
@@ -26,14 +26,14 @@
 
   .back-to-top-wrapper :global(button .icon) {
     margin-left: 5px;
-  } 
+  }
 
   .hidden {
     display: none;
   }
 </style>
 
-<svelte:window bind:scrollY={windowScrollY}/>
+<svelte:window bind:scrollY={windowScrollY} />
 <div class="back-to-top-wrapper" class:hidden={hideTopButton}>
   <Button on:click={handleGotoTop}>
     <span>Top</span>

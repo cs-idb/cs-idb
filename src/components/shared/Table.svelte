@@ -6,7 +6,7 @@
   export let tableHeaders
   export let tableRows
   export let activeSort
-  export let hasImage = false;
+  export let hasImage = false
 
   const dispatch = createEventDispatcher()
 
@@ -65,7 +65,7 @@
   <thead>
     <tr>
       {#if hasImage}
-        <th></th>
+        <th />
       {/if}
       {#each tableHeaders as tableHeader}
         <th>
@@ -95,10 +95,7 @@
         }}>
         {#if hasImage}
           <td>
-            <img
-              width="300"
-              src={tableRow['__image_path']}
-              alt={`An image of ${tableRow['weapon']} | ${tableRow['name']}`} />
+            <img width="300" src={tableRow['__image_path']} alt={`An image of ${tableRow['weapon']} | ${tableRow['name']}`} />
           </td>
         {/if}
         {#each tableHeaders as tableHeader}

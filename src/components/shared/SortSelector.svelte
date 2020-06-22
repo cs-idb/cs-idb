@@ -1,7 +1,7 @@
 <script>
   import Button from './Button.svelte'
 
-  export let sortingStore;
+  export let sortingStore
 
   const handleChangeSortingAsc = () => {
     $sortingStore.sortAsc = !$sortingStore.sortAsc
@@ -36,7 +36,6 @@
   .sort-selector-container :global(button span.flipped) {
     transform: scaley(-1);
   }
-
 </style>
 
 <div class="sort-selector-container">
@@ -48,5 +47,7 @@
     </select>
     <label>Sorting</label>
   </div>
-  <Button on:click={handleChangeSortingAsc}><span class="material-icons" class:flipped={$sortingStore.sortAsc}>sort</span></Button>
+  <Button on:click={handleChangeSortingAsc}>
+    <span class="material-icons" class:flipped={$sortingStore.sortAsc}>sort</span>
+  </Button>
 </div>

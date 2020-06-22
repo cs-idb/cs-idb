@@ -1,44 +1,57 @@
 <script>
-  import { createEventDispatcher, onMount } from 'svelte';
-  import { Button } from '../shared';
+  import { createEventDispatcher, onMount } from 'svelte'
+  import { Button } from '../shared'
   import { weapons, skins, collections, rarities } from '../../stores'
-  import M from 'materialize-css';
-  import Select from 'svelte-select';
-  export let showModal = false;
+  import M from 'materialize-css'
+  import Select from 'svelte-select'
+  export let showModal = false
   const dispatch = createEventDispatcher()
 
   $: weaponOptions = $weapons
-    .sort((a, b) => { return a.tag > b.tag })
-    .map(w => { return { "value": w.id, "label": w.tag } })
+    .sort((a, b) => {
+      return a.tag > b.tag
+    })
+    .map(w => {
+      return { value: w.id, label: w.tag }
+    })
   $: skinOptions = $skins
-    .filter((v,i,a) => a.findIndex(t=>(t.paintkit.tag === v.paintkit.tag))===i)
-    .sort((a, b) => { return a.paintkit.tag > b.paintkit.tag })
-    .map(s => { return { "value": s.paintkit.tag, "label": s.paintkit.tag } })
+    .filter((v, i, a) => a.findIndex(t => t.paintkit.tag === v.paintkit.tag) === i)
+    .sort((a, b) => {
+      return a.paintkit.tag > b.paintkit.tag
+    })
+    .map(s => {
+      return { value: s.paintkit.tag, label: s.paintkit.tag }
+    })
   $: collectionOptions = $collections
-    .sort((a, b) => { return a.tag > b.tag })
-    .map(c => { return { "value": c.id, "label": c.tag } })
-  $: rarityOptions = $rarities
-    .sort((a, b) => { return a.id < b.id });
+    .sort((a, b) => {
+      return a.tag > b.tag
+    })
+    .map(c => {
+      return { value: c.id, label: c.tag }
+    })
+  $: rarityOptions = $rarities.sort((a, b) => {
+    return a.id < b.id
+  })
 
-  let selectedWeapon, selectedSkin, selectedCollection;
-  let selectedRarities = [];
+  let selectedWeapon, selectedSkin, selectedCollection
+  let selectedRarities = []
   $: allRaritiesAreSelected = rarityOptions.every(option => selectedRarities.find(r => r === option.id) !== undefined)
 
-  let minFloat = 0.00;
-  let maxFloat = 1.00;
+  let minFloat = 0.0
+  let maxFloat = 1.0
 
   onMount(() => {
-    const elems = document.querySelectorAll('select.needs-materialize-select');
-    M.FormSelect.init(elems);
+    const elems = document.querySelectorAll('select.needs-materialize-select')
+    M.FormSelect.init(elems)
     invertSelectedRarities()
   })
 
   const hideModal = () => {
-    dispatch('close');
+    dispatch('close')
   }
 
   const invertSelectedRarities = () => {
-    selectedRarities = [];
+    selectedRarities = []
     if (!allRaritiesAreSelected) {
       rarityOptions.forEach(option => {
         selectedRarities.push(option.id)
@@ -47,13 +60,13 @@
   }
 
   const resetAllFilters = () => {
-    selectedWeapon = undefined;
-    selectedSkin = undefined;
-    selectedCollection = undefined;
-    minFloat = 0.00;
-    maxFloat = 1.00;
-    selectedRarities = [];
-    invertSelectedRarities();
+    selectedWeapon = undefined
+    selectedSkin = undefined
+    selectedCollection = undefined
+    minFloat = 0.0
+    maxFloat = 1.0
+    selectedRarities = []
+    invertSelectedRarities()
   }
 
   const updateFilters = () => {
@@ -63,10 +76,10 @@
       collectionId: selectedCollection && selectedCollection.value,
       rarityId: selectedRarities,
       minFloat: minFloat,
-      maxFloat: maxFloat
+      maxFloat: maxFloat,
     }
-    hideModal();
-    dispatch('update', filters);
+    hideModal()
+    dispatch('update', filters)
   }
 </script>
 
@@ -173,11 +186,13 @@
   }
 </style>
 
-<div class="background-shadow" on:click={hideModal} class:show={showModal}></div>
+<div class="background-shadow" on:click={hideModal} class:show={showModal} />
 {#if showModal}
   <div class="skin-filter-modal">
     <div class="title">
-      <h6 class="header"><b>Filters</b></h6>
+      <h6 class="header">
+        <b>Filters</b>
+      </h6>
       <Button on:click={hideModal}>x</Button>
     </div>
 
@@ -185,17 +200,17 @@
 
       <div>
         <label>Weapon name</label>
-        <Select items={weaponOptions} bind:selectedValue={selectedWeapon}/>
+        <Select items={weaponOptions} bind:selectedValue={selectedWeapon} />
       </div>
 
       <div>
         <label>Skin name</label>
-        <Select items={skinOptions} bind:selectedValue={selectedSkin}/>
+        <Select items={skinOptions} bind:selectedValue={selectedSkin} />
       </div>
 
       <div>
         <label>Collection name</label>
-        <Select items={collectionOptions} bind:selectedValue={selectedCollection}/>
+        <Select items={collectionOptions} bind:selectedValue={selectedCollection} />
       </div>
 
       <div class="rarities">
@@ -203,7 +218,7 @@
         <p class="invert-button" on:click={invertSelectedRarities}>{allRaritiesAreSelected ? 'Clear all' : 'Select all'}</p>
         {#each rarityOptions as option}
           <label>
-            <input type="checkbox" class="filled-in" bind:group={selectedRarities} value={option.id}/>
+            <input type="checkbox" class="filled-in" bind:group={selectedRarities} value={option.id} />
             <span class="name" style={`color: ${option.color};`}>{option.tag}</span>
           </label>
         {/each}
@@ -213,10 +228,10 @@
         <label>Min float</label>
         <div class="val">
           <p class="range-field">
-            <input type="range" min="0" max="1" step="0.01" bind:value={minFloat}/>
+            <input type="range" min="0" max="1" step="0.01" bind:value={minFloat} />
           </p>
           <div class="input-field">
-            <input bind:value={minFloat} type="number" min="0" max="1" step="0.01">
+            <input bind:value={minFloat} type="number" min="0" max="1" step="0.01" />
           </div>
         </div>
       </div>
@@ -225,10 +240,10 @@
         <label>Max float</label>
         <div class="val">
           <p class="range-field">
-            <input type="range" min="0" max="1" step="0.01" bind:value={maxFloat}/>
+            <input type="range" min="0" max="1" step="0.01" bind:value={maxFloat} />
           </p>
           <div class="input-field">
-            <input bind:value={maxFloat} type="number" min="0" max="1" step="0.01">
+            <input bind:value={maxFloat} type="number" min="0" max="1" step="0.01" />
           </div>
         </div>
       </div>

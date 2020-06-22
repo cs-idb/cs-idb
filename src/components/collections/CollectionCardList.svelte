@@ -12,13 +12,13 @@
     sortAsc: false,
   }
   const availableSorts = [
-    { key: "name", type: "str" },
-    { key: "case", type: "bol" },
-    { key: "stattrak", type: "bol" },
-    { key: "souvenir", type: "bol" },
-    { key: "released", type: "dte" }
-  ];
-  $: chosenSort = availableSorts.find(s => s.key === sorting.sortBy);
+    { key: 'name', type: 'str' },
+    { key: 'case', type: 'bol' },
+    { key: 'stattrak', type: 'bol' },
+    { key: 'souvenir', type: 'bol' },
+    { key: 'released', type: 'dte' },
+  ]
+  $: chosenSort = availableSorts.find(s => s.key === sorting.sortBy)
 
   onMount(() => {
     search = $params.q || ''
@@ -42,7 +42,7 @@
 
   $: sortedFilteredCollections = SortableArray.from($collections)
     .filter(c => c.tag.toLowerCase().includes(search.toLowerCase()))
-    .sortBy(sorting.sortBy, chosenSort.type, sorting.sortAsc);
+    .sortBy(sorting.sortBy, chosenSort.type, sorting.sortAsc)
 </script>
 
 <style>

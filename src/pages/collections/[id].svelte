@@ -1,7 +1,7 @@
 <script>
   import { goto, url } from '@sveltech/routify'
   import { Badge, PageHeader } from '../../components/shared/'
-  import { SkinCardList } from '../../components/skins/' 
+  import { SkinCardList } from '../../components/skins/'
   import { collections, skins } from '../../stores'
   import { onMount } from 'svelte'
   import { writable } from 'svelte/store'
@@ -14,13 +14,13 @@
     sortingIndex: 2,
     sortAsc: false,
     availableSorts: [
-      { "key": "weapon.tag", "type": "str", "name": "Weapon name" },
-      { "key": "paintkit.tag", "type": "str", "name": "Skin name" },
-      { "key": "rarity.id", "type": "num", "name": "Rarity" },
-      { "key": "paintkit.minFloat", "type": "num", "name": "Min float" },
-      { "key": "paintkit.maxFloat", "type": "num", "name": "Max float" }
-    ]
-  });
+      { key: 'weapon.tag', type: 'str', name: 'Weapon name' },
+      { key: 'paintkit.tag', type: 'str', name: 'Skin name' },
+      { key: 'rarity.id', type: 'num', name: 'Rarity' },
+      { key: 'paintkit.minFloat', type: 'num', name: 'Min float' },
+      { key: 'paintkit.maxFloat', type: 'num', name: 'Max float' },
+    ],
+  })
 
   $: {
     loadCollection(id)
@@ -37,7 +37,7 @@
       return $goto($url('/collections'))
     }
 
-    collection_skins = $skins.filter(s => Number((s.collection||{}).id) === Number(id))
+    collection_skins = $skins.filter(s => Number((s.collection || {}).id) === Number(id))
   }
 </script>
 
@@ -48,9 +48,7 @@
 </style>
 
 <div class="collection-container">
-  <PageHeader>
-    {collection ? collection.tag : 'Loading collection...'}
-  </PageHeader>
+  <PageHeader>{collection ? collection.tag : 'Loading collection...'}</PageHeader>
 
   {#if collection}
     <div class="badges">
@@ -71,7 +69,7 @@
 
     <br />
     <h4>Skins</h4>
-    
+
     <SkinCardList skins={collection_skins} showFilter={false} showCollection={false} {sortingStore} />
   {/if}
 </div>

@@ -8,15 +8,15 @@
     sortingIndex: 2,
     sortAsc: false,
     availableSorts: [
-      { "key": "weapon.tag", "type": "str", "name": "Weapon name" },
-      { "key": "paintkit.tag", "type": "str", "name": "Skin name" },
-      { "key": "rarity.id", "type": "num", "name": "Rarity" },
-      { "key": "collection.tag", "type": "str", "name": "Collection name" },
-      { "key": "collection.released", "type": "dte", "name": "Collection release date" },
-      { "key": "paintkit.minFloat", "type": "num", "name": "Min float" },
-      { "key": "paintkit.maxFloat", "type": "num", "name": "Max float" }
-    ]
-  });
+      { key: 'weapon.tag', type: 'str', name: 'Weapon name' },
+      { key: 'paintkit.tag', type: 'str', name: 'Skin name' },
+      { key: 'rarity.id', type: 'num', name: 'Rarity' },
+      { key: 'collection.tag', type: 'str', name: 'Collection name' },
+      { key: 'collection.released', type: 'dte', name: 'Collection release date' },
+      { key: 'paintkit.minFloat', type: 'num', name: 'Min float' },
+      { key: 'paintkit.maxFloat', type: 'num', name: 'Max float' },
+    ],
+  })
 </script>
 
 <style>
@@ -26,10 +26,8 @@
 </style>
 
 <div class="skins-container">
-  <PageHeader>
-    Skins
-  </PageHeader>
+  <PageHeader>Skins</PageHeader>
 
-  <SkinCardList skins={$skins} {sortingStore}/>
+  <SkinCardList skins={$skins} {sortingStore} />
   <BackToTop />
 </div>

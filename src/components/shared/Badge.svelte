@@ -1,6 +1,6 @@
 <script>
-  export let classes = '';
-  export let style = '';
+  export let classes = ''
+  export let style = ''
 </script>
 
 <style>

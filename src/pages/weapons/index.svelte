@@ -24,9 +24,7 @@
 </style>
 
 <div class="weapons-container">
-  <PageHeader>
-    Weapons
-  </PageHeader>
+  <PageHeader>Weapons</PageHeader>
 
   <Table {tableHeaders} {tableRows} {activeSort} />
 </div>
