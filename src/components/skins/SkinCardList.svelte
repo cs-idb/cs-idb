@@ -100,9 +100,7 @@
   }
 </style>
 
-{#if showFilterModal}
-  <SkinFilterModal showModal={showFilterModal} on:close={() => (showFilterModal = false)} on:update={handleUpdateFilters} />
-{/if}
+<SkinFilterModal showModal={showFilterModal} on:close={() => (showFilterModal = false)} on:update={handleUpdateFilters} />
 
 <div class="filter-and-order-container">
   {#if showFilter}

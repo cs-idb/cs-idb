@@ -16,7 +16,7 @@ function filterSkinList(skins, filters) {
 
 function checkFilterOnSkin(skin, filter) {
   const [key, value] = filter;
-  if (!value) return true;
+  if (value === undefined) return true;
 
   switch (key) {
     case 'weaponId': {
