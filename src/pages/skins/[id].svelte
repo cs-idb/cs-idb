@@ -1,35 +1,35 @@
 <script>
-  import M from 'materialize-css'
-  import { goto, url } from '@sveltech/routify'
-  import { onMount, tick } from 'svelte'
-  import { skins } from '../../stores'
-  import { Button, SkinFloat, Badge, PageHeader } from '../../components/shared'
-  export let id
+  import M from 'materialize-css';
+  import { goto, url } from '@sveltech/routify';
+  import { onMount, tick } from 'svelte';
+  import { skins } from '../../stores';
+  import { Button, SkinFloat, Badge, PageHeader } from '../../components/shared';
+  export let id;
 
-  let skin
+  let skin;
 
   $: {
-    loadSkin(id)
+    loadSkin(id);
   }
 
   onMount(() => {
-    loadSkin()
-  })
+    loadSkin();
+  });
 
   const loadSkin = async () => {
-    skin = $skins.find(s => Number(s.id) === Number(id))
+    skin = $skins.find(s => Number(s.id) === Number(id));
 
     if (!skin) {
-      return $goto($url('/skins'))
+      return $goto($url('/skins'));
     }
 
-    await tick()
-    const imageBoxElements = document.querySelectorAll('.needs-materialbox')
-    M.Materialbox.init(imageBoxElements)
+    await tick();
+    const imageBoxElements = document.querySelectorAll('.needs-materialbox');
+    M.Materialbox.init(imageBoxElements);
     imageBoxElements.forEach(el => {
-      el.classList.remove('needs-materialbox')
-    })
-  }
+      el.classList.remove('needs-materialbox');
+    });
+  };
 </script>
 
 <style>

@@ -1,14 +1,14 @@
 <script>
-  import { goto, url } from '@sveltech/routify'
-  import { Badge, PageHeader } from '../../components/shared/'
-  import { SkinCardList } from '../../components/skins/'
-  import { collections, skins } from '../../stores'
-  import { onMount } from 'svelte'
-  import { writable } from 'svelte/store'
-  export let id
+  import { goto, url } from '@sveltech/routify';
+  import { Badge, PageHeader } from '../../components/shared/';
+  import { SkinCardList } from '../../components/skins/';
+  import { collections, skins } from '../../stores';
+  import { onMount } from 'svelte';
+  import { writable } from 'svelte/store';
+  export let id;
 
-  let collection
-  let collection_skins = []
+  let collection;
+  let collection_skins = [];
 
   const sortingStore = writable({
     sortingIndex: 2,
@@ -20,25 +20,25 @@
       { key: 'paintkit.minFloat', type: 'num', name: 'Min float' },
       { key: 'paintkit.maxFloat', type: 'num', name: 'Max float' },
     ],
-  })
+  });
 
   $: {
-    loadCollection(id)
+    loadCollection(id);
   }
 
   onMount(() => {
-    loadCollection()
-  })
+    loadCollection();
+  });
 
   const loadCollection = () => {
-    collection = $collections.find(c => Number(c.id) === Number(id))
+    collection = $collections.find(c => Number(c.id) === Number(id));
 
     if (!collection) {
-      return $goto($url('/collections'))
+      return $goto($url('/collections'));
     }
 
-    collection_skins = $skins.filter(s => Number((s.collection || {}).id) === Number(id))
-  }
+    collection_skins = $skins.filter(s => Number((s.collection || {}).id) === Number(id));
+  };
 </script>
 
 <style>

@@ -31,6 +31,6 @@ const changelogs = [
     header: 'Skin images',
     content: 'Fixed issue with skin images not showing in Chrome; Images now also show in the global skins- and collection lists.',
   },
-]
+];
 
-export { changelogs }
+export { changelogs };

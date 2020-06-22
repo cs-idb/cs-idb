@@ -1,6 +1,6 @@
 <script>
-  import { CollectionCardList } from '../../components/collections/'
-  import { PageHeader } from '../../components/shared/'
+  import { CollectionCardList } from '../../components/collections/';
+  import { PageHeader } from '../../components/shared/';
 </script>
 
 <div class="collections-container">

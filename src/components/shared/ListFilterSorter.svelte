@@ -1,20 +1,20 @@
 <script>
-  import { createEventDispatcher } from 'svelte'
-  export let sortables
-  export let search = ''
-  export let sorting
+  import { createEventDispatcher } from 'svelte';
+  export let sortables;
+  export let search = '';
+  export let sorting;
 
-  const dispatch = createEventDispatcher()
+  const dispatch = createEventDispatcher();
 
   const handleSortUpdate = sortable => {
     if (sorting.sortBy === sortable) {
-      sorting.sortAsc = !sorting.sortAsc
+      sorting.sortAsc = !sorting.sortAsc;
     } else {
-      sorting.sortBy = sortable
-      sorting.sortAsc = true
+      sorting.sortBy = sortable;
+      sorting.sortAsc = true;
     }
-    dispatch('updateSort', sorting)
-  }
+    dispatch('updateSort', sorting);
+  };
 </script>
 
 <style>

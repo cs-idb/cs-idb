@@ -1,9 +1,9 @@
 <script>
-  import Button from './Button.svelte'
+  import Button from './Button.svelte';
 
   const handleGoBack = () => {
-    window.history.go(-1)
-  }
+    window.history.go(-1);
+  };
 </script>
 
 <style>

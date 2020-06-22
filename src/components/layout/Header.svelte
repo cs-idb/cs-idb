@@ -1,36 +1,36 @@
 <script>
-  import { url } from '@sveltech/routify'
-  import { onMount } from 'svelte'
-  import M from 'materialize-css'
-  import SearchSite from './SearchSite.svelte'
+  import { url } from '@sveltech/routify';
+  import { onMount } from 'svelte';
+  import M from 'materialize-css';
+  import SearchSite from './SearchSite.svelte';
 
   onMount(() => {
-    initNav()
-  })
+    initNav();
+  });
 
-  let materializeSideNav
+  let materializeSideNav;
 
   const initNav = function () {
-    const dropdowns_bottom = document.querySelectorAll('.dropdown-trigger')
+    const dropdowns_bottom = document.querySelectorAll('.dropdown-trigger');
     const dropdown_options_bottom = {
       coverTrigger: false,
       alignment: 'bottom',
       hover: true,
       constrainWidth: false,
-    }
-    M.Dropdown.init(dropdowns_bottom, dropdown_options_bottom)
+    };
+    M.Dropdown.init(dropdowns_bottom, dropdown_options_bottom);
 
-    const sidenav_el = document.querySelector('.sidenav')
-    const sidenav_options = { inDuration: 100, outDuration: 100 }
-    M.Sidenav.init(sidenav_el, sidenav_options)
+    const sidenav_el = document.querySelector('.sidenav');
+    const sidenav_options = { inDuration: 100, outDuration: 100 };
+    M.Sidenav.init(sidenav_el, sidenav_options);
 
-    materializeSideNav = M.Sidenav.getInstance(sidenav_el)
-    document.querySelectorAll('.navitem').forEach(el => el.addEventListener('click', () => materializeSideNav.close()))
-  }
+    materializeSideNav = M.Sidenav.getInstance(sidenav_el);
+    document.querySelectorAll('.navitem').forEach(el => el.addEventListener('click', () => materializeSideNav.close()));
+  };
 
   const closeSideNav = () => {
-    materializeSideNav.close()
-  }
+    materializeSideNav.close();
+  };
 </script>
 
 <style>

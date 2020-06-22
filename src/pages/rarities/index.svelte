@@ -1,6 +1,6 @@
 <script>
-  import { Card, CardList, PageHeader } from '../../components/shared/'
-  import { rarities } from '../../stores'
+  import { Card, CardList, PageHeader } from '../../components/shared/';
+  import { rarities } from '../../stores';
 </script>
 
 <div class="rarities-container">

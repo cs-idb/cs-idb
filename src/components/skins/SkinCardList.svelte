@@ -1,49 +1,49 @@
 <script>
-  import SkinCard from './SkinCard.svelte'
-  import { SortableArray } from '../../utils/'
-  import { Button, SortSelector } from '../../components/shared/'
-  import { onMount } from 'svelte'
-  import M from 'materialize-css'
-  import SvelteInfiniteScroll from 'svelte-infinite-scroll'
-  import { derived } from 'svelte/store'
-  import SkinFilterModal from './SkinFilterModal.svelte'
-  import { filterSkinList } from '../../utils'
+  import SkinCard from './SkinCard.svelte';
+  import { SortableArray } from '../../utils/';
+  import { Button, SortSelector } from '../../components/shared/';
+  import { onMount } from 'svelte';
+  import M from 'materialize-css';
+  import SvelteInfiniteScroll from 'svelte-infinite-scroll';
+  import { derived } from 'svelte/store';
+  import SkinFilterModal from './SkinFilterModal.svelte';
+  import { filterSkinList } from '../../utils';
 
-  export let skins = []
-  export let showFilter = true
-  export let showCollection = true
+  export let skins = [];
+  export let showFilter = true;
+  export let showCollection = true;
 
-  export let sortingStore
+  export let sortingStore;
   const selectedSortStore = derived(sortingStore, $sortingStore => {
-    return $sortingStore.availableSorts[$sortingStore.sortingIndex]
-  })
+    return $sortingStore.availableSorts[$sortingStore.sortingIndex];
+  });
 
-  let showFilterModal = false
-  let filters = []
-  $: filtered_skins = filterSkinList(skins, filters)
+  let showFilterModal = false;
+  let filters = [];
+  $: filtered_skins = filterSkinList(skins, filters);
 
   const handleUpdateFilters = e => {
-    clearPagination()
-    filters = e.detail
-  }
+    clearPagination();
+    filters = e.detail;
+  };
 
-  $: sorted_skins = SortableArray.from(filtered_skins).sortBy($selectedSortStore.key, $selectedSortStore.type, $sortingStore.sortAsc)
+  $: sorted_skins = SortableArray.from(filtered_skins).sortBy($selectedSortStore.key, $selectedSortStore.type, $sortingStore.sortAsc);
 
-  $: clearPagination($sortingStore.sortingIndex, $sortingStore.sortingAsc)
+  $: clearPagination($sortingStore.sortingIndex, $sortingStore.sortingAsc);
   const clearPagination = () => {
-    page = 0
-    paginated_skins = []
-  }
+    page = 0;
+    paginated_skins = [];
+  };
 
-  let page = 0
-  let size = 20
-  let paginated_skins = []
-  $: paginated_skins = [...paginated_skins, ...sorted_skins.slice(size * page, size * (page + 1) - 1)]
+  let page = 0;
+  let size = 20;
+  let paginated_skins = [];
+  $: paginated_skins = [...paginated_skins, ...sorted_skins.slice(size * page, size * (page + 1) - 1)];
 
   onMount(() => {
-    const elems = document.querySelectorAll('select.needs-select-init')
-    M.FormSelect.init(elems)
-  })
+    const elems = document.querySelectorAll('select.needs-select-init');
+    M.FormSelect.init(elems);
+  });
 </script>
 
 <style>

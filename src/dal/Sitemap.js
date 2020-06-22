@@ -43,6 +43,6 @@ const sitemap = [
     name: 'Changelog',
     url: '/changelog',
   },
-]
+];
 
-export { sitemap }
+export { sitemap };

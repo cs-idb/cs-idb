@@ -1,10 +1,10 @@
 <script>
-  import { createEventDispatcher } from 'svelte'
-  const dispatch = createEventDispatcher()
+  import { createEventDispatcher } from 'svelte';
+  const dispatch = createEventDispatcher();
 
-  export let dataTarget = undefined
-  export let type = 'primary'
-  export let style = ''
+  export let dataTarget = undefined;
+  export let type = 'primary';
+  export let style = '';
 </script>
 
 <style>

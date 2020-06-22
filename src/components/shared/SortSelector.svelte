@@ -1,11 +1,11 @@
 <script>
-  import Button from './Button.svelte'
+  import Button from './Button.svelte';
 
-  export let sortingStore
+  export let sortingStore;
 
   const handleChangeSortingAsc = () => {
-    $sortingStore.sortAsc = !$sortingStore.sortAsc
-  }
+    $sortingStore.sortAsc = !$sortingStore.sortAsc;
+  };
 </script>
 
 <style>

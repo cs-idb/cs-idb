@@ -1,8 +1,8 @@
 <script>
-  import { PageHeader, BackToTop } from '../../components/shared/'
-  import { skins } from '../../stores'
-  import { SkinCardList } from '../../components/skins/'
-  import { writable } from 'svelte/store'
+  import { PageHeader, BackToTop } from '../../components/shared/';
+  import { skins } from '../../stores';
+  import { SkinCardList } from '../../components/skins/';
+  import { writable } from 'svelte/store';
 
   const sortingStore = writable({
     sortingIndex: 2,
@@ -16,7 +16,7 @@
       { key: 'paintkit.minFloat', type: 'num', name: 'Min float' },
       { key: 'paintkit.maxFloat', type: 'num', name: 'Max float' },
     ],
-  })
+  });
 </script>
 
 <style>

@@ -1,15 +1,15 @@
 <script>
-  import Button from './Button.svelte'
+  import Button from './Button.svelte';
 
   const handleGotoTop = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
-    })
-  }
+    });
+  };
 
-  let windowScrollY = 0
-  $: hideTopButton = windowScrollY < 100
+  let windowScrollY = 0;
+  $: hideTopButton = windowScrollY < 100;
 </script>
 
 <style>

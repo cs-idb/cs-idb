@@ -1,15 +1,15 @@
 <script>
-  import M from 'materialize-css'
-  import { onMount } from 'svelte'
-  import { changelogs } from '../dal/'
-  import { PageHeader } from '../components/shared'
+  import M from 'materialize-css';
+  import { onMount } from 'svelte';
+  import { changelogs } from '../dal/';
+  import { PageHeader } from '../components/shared';
 
-  $: sortedChangelogs = changelogs.sort((a, b) => (a.time > b.time ? -1 : 1))
+  $: sortedChangelogs = changelogs.sort((a, b) => (a.time > b.time ? -1 : 1));
 
   onMount(() => {
-    const collapsibleElems = document.querySelectorAll('.collapsible')
-    M.Collapsible.init(collapsibleElems)
-  })
+    const collapsibleElems = document.querySelectorAll('.collapsible');
+    M.Collapsible.init(collapsibleElems);
+  });
 </script>
 
 <style>

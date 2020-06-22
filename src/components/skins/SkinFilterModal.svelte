@@ -1,73 +1,73 @@
 <script>
-  import { createEventDispatcher, onMount } from 'svelte'
-  import { Button } from '../shared'
-  import { weapons, skins, collections, rarities } from '../../stores'
-  import M from 'materialize-css'
-  import Select from 'svelte-select'
-  export let showModal = false
-  const dispatch = createEventDispatcher()
+  import { createEventDispatcher, onMount } from 'svelte';
+  import { Button } from '../shared';
+  import { weapons, skins, collections, rarities } from '../../stores';
+  import M from 'materialize-css';
+  import Select from 'svelte-select';
+  export let showModal = false;
+  const dispatch = createEventDispatcher();
 
   $: weaponOptions = $weapons
     .sort((a, b) => {
-      return a.tag > b.tag
+      return a.tag > b.tag;
     })
     .map(w => {
-      return { value: w.id, label: w.tag }
-    })
+      return { value: w.id, label: w.tag };
+    });
   $: skinOptions = $skins
     .filter((v, i, a) => a.findIndex(t => t.paintkit.tag === v.paintkit.tag) === i)
     .sort((a, b) => {
-      return a.paintkit.tag > b.paintkit.tag
+      return a.paintkit.tag > b.paintkit.tag;
     })
     .map(s => {
-      return { value: s.paintkit.tag, label: s.paintkit.tag }
-    })
+      return { value: s.paintkit.tag, label: s.paintkit.tag };
+    });
   $: collectionOptions = $collections
     .sort((a, b) => {
-      return a.tag > b.tag
+      return a.tag > b.tag;
     })
     .map(c => {
-      return { value: c.id, label: c.tag }
-    })
+      return { value: c.id, label: c.tag };
+    });
   $: rarityOptions = $rarities.sort((a, b) => {
-    return a.id < b.id
-  })
+    return a.id < b.id;
+  });
 
-  let selectedWeapon, selectedSkin, selectedCollection
-  let selectedRarities = []
-  $: allRaritiesAreSelected = rarityOptions.every(option => selectedRarities.find(r => r === option.id) !== undefined)
+  let selectedWeapon, selectedSkin, selectedCollection;
+  let selectedRarities = [];
+  $: allRaritiesAreSelected = rarityOptions.every(option => selectedRarities.find(r => r === option.id) !== undefined);
 
-  let minFloat = 0.0
-  let maxFloat = 1.0
+  let minFloat = 0.0;
+  let maxFloat = 1.0;
 
   onMount(() => {
-    const elems = document.querySelectorAll('select.needs-materialize-select')
-    M.FormSelect.init(elems)
-    invertSelectedRarities()
-  })
+    const elems = document.querySelectorAll('select.needs-materialize-select');
+    M.FormSelect.init(elems);
+    invertSelectedRarities();
+  });
 
   const hideModal = () => {
-    dispatch('close')
-  }
+    dispatch('close');
+  };
 
   const invertSelectedRarities = () => {
-    selectedRarities = []
+    selectedRarities = [];
     if (!allRaritiesAreSelected) {
       rarityOptions.forEach(option => {
-        selectedRarities.push(option.id)
-      })
+        selectedRarities.push(option.id);
+      });
     }
-  }
+  };
 
   const resetAllFilters = () => {
-    selectedWeapon = undefined
-    selectedSkin = undefined
-    selectedCollection = undefined
-    minFloat = 0.0
-    maxFloat = 1.0
-    selectedRarities = []
-    invertSelectedRarities()
-  }
+    selectedWeapon = undefined;
+    selectedSkin = undefined;
+    selectedCollection = undefined;
+    minFloat = 0.0;
+    maxFloat = 1.0;
+    selectedRarities = [];
+    invertSelectedRarities();
+  };
 
   const updateFilters = () => {
     const filters = {
@@ -77,10 +77,10 @@
       rarityId: selectedRarities,
       minFloat: minFloat,
       maxFloat: maxFloat,
-    }
-    hideModal()
-    dispatch('update', filters)
-  }
+    };
+    hideModal();
+    dispatch('update', filters);
+  };
 </script>
 
 <style>

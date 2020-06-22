@@ -1,77 +1,77 @@
 <script>
-  import M from 'materialize-css'
-  import { params } from '@sveltech/routify'
-  import { createEventDispatcher, onMount } from 'svelte'
-  import { Button } from '../shared/'
-  import AddFilter from './AddFilter.svelte'
-  import { guidGenerator } from '../../utils/'
-  import { compareModes } from '../../stores/'
-  const dispatch = createEventDispatcher()
+  import M from 'materialize-css';
+  import { params } from '@sveltech/routify';
+  import { createEventDispatcher, onMount } from 'svelte';
+  import { Button } from '../shared/';
+  import AddFilter from './AddFilter.svelte';
+  import { guidGenerator } from '../../utils/';
+  import { compareModes } from '../../stores/';
+  const dispatch = createEventDispatcher();
 
-  export let filter_options = []
-  let active_filters = []
+  export let filter_options = [];
+  let active_filters = [];
 
-  let modal
+  let modal;
   onMount(() => {
-    loadQuery()
-    const elem = document.querySelector('.modal')
-    M.Modal.init(elem)
-    modal = M.Modal.getInstance(elem)
-  })
+    loadQuery();
+    const elem = document.querySelector('.modal');
+    M.Modal.init(elem);
+    modal = M.Modal.getInstance(elem);
+  });
 
   const loadQuery = function () {
-    let filters_param = $params['f']
+    let filters_param = $params['f'];
     if (!filters_param) {
-      return
+      return;
     }
 
     if (filters_param[filters_param.length - 1] === ';') {
-      filters_param = filters_param.slice(0, -1)
+      filters_param = filters_param.slice(0, -1);
     }
 
-    const filters = filters_param.split(';')
+    const filters = filters_param.split(';');
     filters.forEach(filter => {
-      const split_filter = filter.split(':')
-      const url_name = split_filter[0]
-      const compare_mode_shortName = split_filter[1]
-      const filter_value = split_filter[2]
+      const split_filter = filter.split(':');
+      const url_name = split_filter[0];
+      const compare_mode_shortName = split_filter[1];
+      const filter_value = split_filter[2];
 
-      const compareMode = $compareModes.find(c => c.shortName === compare_mode_shortName)
-      addFilter(url_name, compareMode, filter_value)
-    })
+      const compareMode = $compareModes.find(c => c.shortName === compare_mode_shortName);
+      addFilter(url_name, compareMode, filter_value);
+    });
 
-    dispatch('setFilters', active_filters)
-  }
+    dispatch('setFilters', active_filters);
+  };
 
   const addFilter = function (urlName, compareMode, val) {
-    const { url_name, display_name, key, type } = filter_options.find(f => f.url_name === urlName)
+    const { url_name, display_name, key, type } = filter_options.find(f => f.url_name === urlName);
 
     const new_filter = {
       id: guidGenerator(),
       column: { url_name, display_name, key, type },
       compare_mode: compareMode,
       value: val,
-    }
-    active_filters = [...active_filters, new_filter]
-  }
+    };
+    active_filters = [...active_filters, new_filter];
+  };
 
   const saveFilter = function () {
-    modal.close()
-    dispatch('setFilters', active_filters)
-    setUrl()
-  }
+    modal.close();
+    dispatch('setFilters', active_filters);
+    setUrl();
+  };
 
   const removeFilter = function (id) {
-    active_filters = active_filters.filter(af => af.id !== id)
-  }
+    active_filters = active_filters.filter(af => af.id !== id);
+  };
 
   const setUrl = function () {
-    let filters = '?f='
+    let filters = '?f=';
     active_filters.forEach(filter => {
-      filters += `${filter.column.url_name}:${filter.compare_mode.shortName}:${filter.value};`
-    })
-    window.history.replaceState({}, '', filters)
-  }
+      filters += `${filter.column.url_name}:${filter.compare_mode.shortName}:${filter.value};`;
+    });
+    window.history.replaceState({}, '', filters);
+  };
 </script>
 
 <style>

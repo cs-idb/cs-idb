@@ -1,28 +1,28 @@
 <script>
-  import M from 'materialize-css'
-  import { onMount, createEventDispatcher } from 'svelte'
-  import { compareModes } from '../../stores/'
-  export let type
+  import M from 'materialize-css';
+  import { onMount, createEventDispatcher } from 'svelte';
+  import { compareModes } from '../../stores/';
+  export let type;
 
-  const dispatch = createEventDispatcher()
+  const dispatch = createEventDispatcher();
 
-  $: filteredOptions = $compareModes.filter(option => option.types.includes(type))
+  $: filteredOptions = $compareModes.filter(option => option.types.includes(type));
 
-  let compare_mode = undefined
+  let compare_mode = undefined;
 
   onMount(async () => {
-    const elems = document.querySelectorAll('.mat-select')
-    M.FormSelect.init(elems)
+    const elems = document.querySelectorAll('.mat-select');
+    M.FormSelect.init(elems);
     elems.forEach(el => {
-      el.classList.remove('mat-select')
-    })
-  })
+      el.classList.remove('mat-select');
+    });
+  });
 
   const changeMode = function () {
-    const option = $compareModes.find(o => o.shortName === compare_mode)
-    const { shortName, longName } = option
-    dispatch('change', { shortName, longName })
-  }
+    const option = $compareModes.find(o => o.shortName === compare_mode);
+    const { shortName, longName } = option;
+    dispatch('change', { shortName, longName });
+  };
 </script>
 
 <div class="input-field">

@@ -1,20 +1,20 @@
 <script>
-  import { Table, PageHeader } from '../../components/shared/'
-  import { weapons } from '../../stores'
+  import { Table, PageHeader } from '../../components/shared/';
+  import { weapons } from '../../stores';
 
-  $: tableHeaders = ['name', 'type', 'desc']
+  $: tableHeaders = ['name', 'type', 'desc'];
   $: tableRows = $weapons.map(function (weapon) {
     return {
       name: weapon.tag,
       type: weapon.type,
       desc: weapon.desc,
-    }
-  })
+    };
+  });
 
   const activeSort = {
     header: 'name',
     sortAsc: true,
-  }
+  };
 </script>
 
 <style>

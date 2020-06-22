@@ -1,8 +1,8 @@
 <script>
-  import { url } from '@sveltech/routify'
-  import { PageHeader } from '../components/shared'
+  import { url } from '@sveltech/routify';
+  import { PageHeader } from '../components/shared';
 
-  import { sitemap } from '../dal/'
+  import { sitemap } from '../dal/';
 </script>
 
 <style>
