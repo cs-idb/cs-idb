@@ -24,9 +24,13 @@
   let selectedRarities = [];
   $: allRaritiesAreSelected = rarityOptions.every(option => selectedRarities.find(r => r === option.id) !== undefined)
 
+  let minFloat = 0.00;
+  let maxFloat = 1.00;
+
   onMount(() => {
     const elems = document.querySelectorAll('select.needs-materialize-select');
     M.FormSelect.init(elems);
+    invertSelectedRarities()
   })
 
   const hideModal = () => {
@@ -40,6 +44,29 @@
         selectedRarities.push(option.id)
       })
     }
+  }
+
+  const resetAllFilters = () => {
+    selectedWeapon = undefined;
+    selectedSkin = undefined;
+    selectedCollection = undefined;
+    minFloat = 0.00;
+    maxFloat = 1.00;
+    selectedRarities = [];
+    invertSelectedRarities();
+  }
+
+  const updateFilters = () => {
+    const filters = {
+      weaponId: selectedWeapon && selectedWeapon.value,
+      paintkitTag: selectedSkin && selectedSkin.value,
+      collectionId: selectedCollection && selectedCollection.value,
+      rarityId: selectedRarities,
+      minFloat: minFloat,
+      maxFloat: maxFloat
+    }
+    hideModal();
+    dispatch('update', filters);
   }
 </script>
 
@@ -72,10 +99,10 @@
     top: 50%;
     left: 50%;
     max-height: 90%;
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
     transform: translate(-50%, -50%);
     min-width: min(400px, 90%);
-    min-height: min(1000px, 90%);
   }
 
   .title {
@@ -102,6 +129,7 @@
   .body .rarities {
     display: flex;
     flex-direction: column;
+    margin-top: 5px;
   }
 
   .body .rarities .invert-button {
@@ -115,8 +143,23 @@
     font-weight: bold;
   }
 
+  .body .val {
+    display: flex;
+    align-items: center;
+  }
+
+  .body .val .range-field {
+    width: 100%;
+    margin-right: 15px;
+  }
+
+  .body .val .input-field {
+    width: 65px;
+    margin: 0 0 0 15px;
+  }
+
   :global(.selectContainer.focused) {
-    border-color: var(--borderFocusColor, #dd9194) !important;
+    border-color: var(--borderFocusColor, #26a69a) !important;
   }
 
   :global(.selectContainer input) {
@@ -125,7 +168,7 @@
   }
 
   .footer {
-    margin-top: 15px;
+    margin: 15px 0;
     text-align: right;
   }
 </style>
@@ -157,7 +200,7 @@
 
       <div class="rarities">
         <label>Rarity</label>
-        <p class="invert-button" on:click={invertSelectedRarities}>{allRaritiesAreSelected ? 'Clear' : 'Select all'}</p>
+        <p class="invert-button" on:click={invertSelectedRarities}>{allRaritiesAreSelected ? 'Clear all' : 'Select all'}</p>
         {#each rarityOptions as option}
           <label>
             <input type="checkbox" class="filled-in" bind:group={selectedRarities} value={option.id}/>
@@ -166,14 +209,35 @@
         {/each}
       </div>
 
+      <div class="min-float">
+        <label>Min float</label>
+        <div class="val">
+          <p class="range-field">
+            <input type="range" min="0" max="1" step="0.01" bind:value={minFloat}/>
+          </p>
+          <div class="input-field">
+            <input bind:value={minFloat} type="number" min="0" max="1" step="0.01">
+          </div>
+        </div>
+      </div>
+
+      <div class="max-float">
+        <label>Max float</label>
+        <div class="val">
+          <p class="range-field">
+            <input type="range" min="0" max="1" step="0.01" bind:value={maxFloat}/>
+          </p>
+          <div class="input-field">
+            <input bind:value={maxFloat} type="number" min="0" max="1" step="0.01">
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <div class="footer">
-      <p>{JSON.stringify(selectedWeapon)}</p>
-      <p>{JSON.stringify(selectedSkin)}</p>
-      <p>{JSON.stringify(selectedCollection)}</p>
-      <Button type="red">Reset</Button>
-      <Button type="green">Save</Button>
+      <Button type="red" on:click={resetAllFilters}>Reset</Button>
+      <Button type="green" on:click={updateFilters}>Save</Button>
     </div>
   </div>
 {/if}

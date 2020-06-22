@@ -7,6 +7,7 @@
   import SvelteInfiniteScroll from "svelte-infinite-scroll";
   import { derived } from 'svelte/store'
   import SkinFilterModal from './SkinFilterModal.svelte';
+  import { filterSkinList } from '../../utils';
 
   export let skins = [];
   export let showFilter = true;
@@ -17,7 +18,14 @@
     return $sortingStore.availableSorts[$sortingStore.sortingIndex]
   })
 
-  $: filtered_skins = skins;
+  let showFilterModal = false;
+  let filters = [];
+  $: filtered_skins = filterSkinList(skins, filters);
+
+  const handleUpdateFilters = (e) => {
+    clearPagination()
+    filters = e.detail
+  } 
 
   $: sorted_skins = SortableArray.from(filtered_skins).sortBy($selectedSortStore.key, $selectedSortStore.type, $sortingStore.sortAsc);
 
@@ -34,8 +42,6 @@
     ...paginated_skins,
     ...sorted_skins.slice(size * page, size * (page + 1) - 1)
   ]
-
-  let showFilterModal = true;
 
   onMount(() => { 
     const elems = document.querySelectorAll('select.needs-select-init');
@@ -54,9 +60,13 @@
     margin: 0 15px 15px 0;
   }
 
+  .filter-container :global(button) {
+    margin-top: 1rem;
+  }
+
   .filter-container label {
     position: absolute;
-    top: -35px;
+    top: -20px;
     font-size: 0.8rem;
   }
 
@@ -83,7 +93,13 @@
   }
 </style>
 
-<SkinFilterModal showModal={showFilterModal} on:close={() => showFilterModal = false}/>
+{#if showFilterModal}
+  <SkinFilterModal 
+    showModal={showFilterModal} 
+    on:close={() => showFilterModal = false}
+    on:update={handleUpdateFilters}
+  />
+{/if}
 
 <div class="filter-and-order-container">
   {#if showFilter}
