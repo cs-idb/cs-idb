@@ -31,6 +31,12 @@ const changelogs = [
     header: 'Skin images',
     content: 'Fixed issue with skin images not showing in Chrome; Images now also show in the global skins- and collection lists.',
   },
+  {
+    version: '1.5',
+    time: 1592940459000, // Tuesday, 23 June 2020,
+    header: 'Skin cards',
+    content: 'Replaced ugly skin table for nicer looking cards. Reworked the filtering system.'
+  }
 ];
 
 export { changelogs };

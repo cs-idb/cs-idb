@@ -121,7 +121,7 @@
         <b>Weapon:</b>
         {skin.weapon.tag}
       </h6>
-      <Button on:click={() => $goto(`/skins?f=w:eq:${skin.weapon.tag}`)}>
+      <Button on:click={() => $goto(`/skins?weaponId=${skin.weapon.id}`)}>
         <span>
           View skins
           <i class="material-icons">chevron_right</i>
