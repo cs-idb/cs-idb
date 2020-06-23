@@ -1,7 +1,30 @@
 <script>
+  import { onMount } from 'svelte'
+  import { derived } from 'svelte/store';
+  import M from 'materialize-css';
   import Button from './Button.svelte';
 
   export let sortingStore;
+  const selectedSortStore = derived(sortingStore, $sortingStore => {
+    return $sortingStore.availableSorts[$sortingStore.sortingIndex];
+  });
+
+  $: initFormSelect($selectedSortStore);
+
+  onMount(() => {
+    initFormSelect()
+  })
+
+  const initFormSelect = () => {
+    const selectEl = document.querySelector('#sort-key-selector');
+    
+    if (!selectEl) return;
+    selectEl.selectedIndex = $sortingStore.sortingIndex;
+
+    const oldInstance = M.FormSelect.getInstance(selectEl);
+    if (oldInstance) oldInstance.destroy();
+    M.FormSelect.init(selectEl);
+  }
 
   const handleChangeSortingAsc = () => {
     $sortingStore.sortAsc = !$sortingStore.sortAsc;
@@ -40,7 +63,7 @@
 
 <div class="sort-selector-container">
   <div class="input-field col s12">
-    <select class="needs-select-init" bind:value={$sortingStore.sortingIndex}>
+    <select id="sort-key-selector" bind:value={$sortingStore.sortingIndex}>
       {#each $sortingStore.availableSorts as sortOption, i}
         <option value={i}>{sortOption.name}</option>
       {/each}

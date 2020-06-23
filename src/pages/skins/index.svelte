@@ -17,6 +17,7 @@
       { key: 'paintkit.maxFloat', type: 'num', name: 'Max float' },
     ],
   });
+  const filtersStore = writable({});
 </script>
 
 <style>
@@ -28,6 +29,6 @@
 <div class="skins-container">
   <PageHeader>Skins</PageHeader>
 
-  <SkinCardList skins={$skins} {sortingStore} />
+  <SkinCardList skins={$skins} {sortingStore} {filtersStore} />
   <BackToTop />
 </div>

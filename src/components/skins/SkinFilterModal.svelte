@@ -5,6 +5,7 @@
   import M from 'materialize-css';
   import Select from 'svelte-select';
   export let showModal = false;
+  export let filtersStore;
   const dispatch = createEventDispatcher();
 
   $: weaponOptions = $weapons
@@ -33,50 +34,89 @@
     return a.id < b.id;
   });
 
-  let selectedWeapon, selectedSkin, selectedCollection;
-  let selectedRarities = [];
-  $: allRaritiesAreSelected = rarityOptions.every(option => selectedRarities.find(r => r === option.id) !== undefined);
+  const getSelectedWeapon = () => {
+    const weaponId = $filtersStore.weaponId;
+    if (weaponId === undefined) return undefined;
+    const fullWeapon = $weapons.find(w => w.id === weaponId);
+    return { value: weaponId, label: fullWeapon.tag }
+  }
 
-  let minFloat = 0.0;
-  let maxFloat = 1.0;
+  const getSelectedSkin = () => {
+    const tag = $filtersStore.paintkitTag;
+    if (tag === undefined) return undefined;
+    return { value: $filtersStore.paintkitTag, label: $filtersStore.paintkitTag };
+  }
+
+  const getSelectedCollection = () => {
+    const collectionId = $filtersStore.collectionId;
+    if (collectionId === undefined) return undefined;
+    const fullCollection = $collections.find(c => c.id === collectionId);
+    return { value: collectionId, label: fullCollection.tag }
+  }
+
+  const loadActiveFilters = () => {
+    newFilters.selectedWeapon = getSelectedWeapon();
+    newFilters.selectedSkin = getSelectedSkin();
+    newFilters.selectedCollection = getSelectedCollection();
+    newFilters.selectedRarities = $filtersStore.rarityIds;
+    if (newFilters.selectedRarities === undefined) {
+      newFilters.selectedRarities = [];
+      tickAllRarities(true);
+    }
+    newFilters.minFloat = $filtersStore.minFloat || 0.0;
+    newFilters.maxFloat = $filtersStore.maxFloat || 1.0;
+  }
+
+  let newFilters = {
+    selectedWeapon: undefined,
+    selectedSkin: undefined,
+    selectedCollection: undefined,
+    selectedRarities: [],
+    minFloat: 0.0,
+    maxFloat: 1.0
+  }
+
+  $: allRaritiesAreSelected = rarityOptions.every(option => newFilters.selectedRarities.find(r => r === option.id) !== undefined);
 
   onMount(() => {
     const elems = document.querySelectorAll('select.needs-materialize-select');
     M.FormSelect.init(elems);
-    invertSelectedRarities();
+    loadActiveFilters();
   });
 
   const hideModal = () => {
     dispatch('close');
   };
 
-  const invertSelectedRarities = () => {
-    selectedRarities = [];
-    if (!allRaritiesAreSelected) {
+  const tickAllRarities = (tick) => {
+    newFilters.selectedRarities = [];
+    if (tick === true) {
       rarityOptions.forEach(option => {
-        selectedRarities.push(option.id);
+        newFilters.selectedRarities.push(option.id);
       });
     }
-  };
+  }
 
   const resetAllFilters = () => {
-    selectedWeapon = undefined;
-    selectedSkin = undefined;
-    selectedCollection = undefined;
-    minFloat = 0.0;
-    maxFloat = 1.0;
-    selectedRarities = [];
-    invertSelectedRarities();
+    newFilters = {
+      selectedWeapon: undefined,
+      selectedSkin: undefined,
+      selectedCollection: undefined,
+      selectedRarities: [],
+      minFloat: 0.0,
+      maxFloat: 1.0
+    }
+    tickAllRarities(true);
   };
 
   const updateFilters = () => {
     const filters = {
-      weaponId: selectedWeapon && selectedWeapon.value,
-      paintkitTag: selectedSkin && selectedSkin.value,
-      collectionId: selectedCollection && selectedCollection.value,
-      rarityId: selectedRarities,
-      minFloat: minFloat,
-      maxFloat: maxFloat,
+      weaponId: newFilters.selectedWeapon && newFilters.selectedWeapon.value,
+      paintkitTag: newFilters.selectedSkin && newFilters.selectedSkin.value,
+      collectionId: newFilters.selectedCollection && newFilters.selectedCollection.value,
+      rarityIds: newFilters.selectedRarities,
+      minFloat: newFilters.minFloat,
+      maxFloat: newFilters.maxFloat,
     };
     hideModal();
     dispatch('update', filters);
@@ -200,25 +240,25 @@
 
       <div>
         <label>Weapon name</label>
-        <Select items={weaponOptions} bind:selectedValue={selectedWeapon} />
+        <Select items={weaponOptions} bind:selectedValue={newFilters.selectedWeapon} />
       </div>
 
       <div>
         <label>Skin name</label>
-        <Select items={skinOptions} bind:selectedValue={selectedSkin} />
+        <Select items={skinOptions} bind:selectedValue={newFilters.selectedSkin} />
       </div>
 
       <div>
         <label>Collection name</label>
-        <Select items={collectionOptions} bind:selectedValue={selectedCollection} />
+        <Select items={collectionOptions} bind:selectedValue={newFilters.selectedCollection} />
       </div>
 
       <div class="rarities">
         <label>Rarity</label>
-        <p class="invert-button" on:click={invertSelectedRarities}>{allRaritiesAreSelected ? 'Clear all' : 'Select all'}</p>
+        <p class="invert-button" on:click={() => tickAllRarities(!allRaritiesAreSelected)}>{allRaritiesAreSelected ? 'Clear all' : 'Select all'}</p>
         {#each rarityOptions as option}
           <label>
-            <input type="checkbox" class="filled-in" bind:group={selectedRarities} value={option.id} />
+            <input type="checkbox" class="filled-in" bind:group={newFilters.selectedRarities} value={option.id} />
             <span class="name" style={`color: ${option.color};`}>{option.tag}</span>
           </label>
         {/each}
@@ -228,10 +268,10 @@
         <label>Min float</label>
         <div class="val">
           <p class="range-field">
-            <input type="range" min="0" max="1" step="0.01" bind:value={minFloat} />
+            <input type="range" min="0" max="1" step="0.01" bind:value={newFilters.minFloat} />
           </p>
           <div class="input-field">
-            <input bind:value={minFloat} type="number" min="0" max="1" step="0.01" />
+            <input bind:value={newFilters.minFloat} type="number" min="0" max="1" step="0.01" />
           </div>
         </div>
       </div>
@@ -240,10 +280,10 @@
         <label>Max float</label>
         <div class="val">
           <p class="range-field">
-            <input type="range" min="0" max="1" step="0.01" bind:value={maxFloat} />
+            <input type="range" min="0" max="1" step="0.01" bind:value={newFilters.maxFloat} />
           </p>
           <div class="input-field">
-            <input bind:value={maxFloat} type="number" min="0" max="1" step="0.01" />
+            <input bind:value={newFilters.maxFloat} type="number" min="0" max="1" step="0.01" />
           </div>
         </div>
       </div>

@@ -21,6 +21,7 @@
       { key: 'paintkit.maxFloat', type: 'num', name: 'Max float' },
     ],
   });
+  const filtersStore = writable({});
 
   $: {
     loadCollection(id);
@@ -70,6 +71,6 @@
     <br />
     <h4>Skins</h4>
 
-    <SkinCardList skins={collection_skins} showFilter={false} showCollection={false} {sortingStore} />
+    <SkinCardList skins={collection_skins} showFilter={false} showCollection={false} {sortingStore} {filtersStore} />
   {/if}
 </div>

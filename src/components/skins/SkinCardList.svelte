@@ -8,6 +8,7 @@
   import { derived } from 'svelte/store';
   import SkinFilterModal from './SkinFilterModal.svelte';
   import { filterSkinList } from '../../utils';
+  import { params } from '@sveltech/routify'
 
   export let skins = [];
   export let showFilter = true;
@@ -18,13 +19,16 @@
     return $sortingStore.availableSorts[$sortingStore.sortingIndex];
   });
 
+  export let filtersStore;
+
+  const basePath = window.location.pathname + '?';
+
   let showFilterModal = false;
-  let filters = [];
-  $: filtered_skins = filterSkinList(skins, filters);
+  $: filtered_skins = filterSkinList(skins, $filtersStore);
 
   const handleUpdateFilters = e => {
     clearPagination();
-    filters = e.detail;
+    $filtersStore = e.detail;
   };
 
   $: sorted_skins = SortableArray.from(filtered_skins).sortBy($selectedSortStore.key, $selectedSortStore.type, $sortingStore.sortAsc);
@@ -43,7 +47,71 @@
   onMount(() => {
     const elems = document.querySelectorAll('select.needs-select-init');
     M.FormSelect.init(elems);
+    if (showFilter) {
+      parseFiltersFromParams();
+    }
   });
+
+  const parseFiltersFromParams = () => {
+    let newFilters = {}
+    const { weaponId, paintkitTag, collectionId, rarityIds, minFloat, maxFloat, sortingIndex, sortAsc } = $params;
+
+    if (weaponId !== undefined) {
+      newFilters.weaponId = Number(weaponId);
+    } 
+    if (paintkitTag !== undefined) {
+      newFilters.paintkitTag = paintkitTag;
+    }
+    if (collectionId !== undefined) {
+      newFilters.collectionId = Number(collectionId);
+    }
+    if (rarityIds !== undefined) {
+      newFilters.rarityIds = rarityIds.split(",").map(Number);
+    }
+    if (minFloat !== undefined) {
+      newFilters.minFloat = Number(minFloat);
+    }
+    if (maxFloat !== undefined) {
+      newFilters.maxFloat = Number(maxFloat);
+    }
+
+    clearPagination();
+    $filtersStore = newFilters;
+
+    if (sortingIndex !== undefined) {
+      sortingStore.update(s => {
+        s.sortingIndex = Number(sortingIndex);
+        return s;
+      })
+    }
+
+    if (sortAsc !== undefined) {
+      sortingStore.update(s => {
+        s.sortAsc = sortAsc === "true";
+        return s;
+      })
+    }
+  }
+
+  function encodeQueryData(data) {
+    const ret = [];
+    for (let d in data)
+      ret.push(encodeURIComponent(d) + '=' + encodeURIComponent(data[d]));
+    return ret.join('&');
+  }
+
+  $: fillUrlWithFilterAndSorting($filtersStore, $sortingStore);
+  const fillUrlWithFilterAndSorting = () => {
+    if (!showFilter) return;
+    const queryData = {}
+    Object.assign(queryData, $filtersStore);
+    Object.keys(queryData).forEach((key) => (queryData[key] === undefined) && delete queryData[key]);
+    queryData.sortingIndex = $sortingStore.sortingIndex;
+    queryData.sortAsc = $sortingStore.sortAsc;
+    
+    const queryString = basePath + encodeQueryData(queryData);
+    window.history.replaceState({}, '', queryString);
+  }
 </script>
 
 <style>
@@ -100,7 +168,9 @@
   }
 </style>
 
-<SkinFilterModal showModal={showFilterModal} on:close={() => (showFilterModal = false)} on:update={handleUpdateFilters} />
+{#if showFilterModal}
+  <SkinFilterModal showModal={showFilterModal} on:close={() => (showFilterModal = false)} on:update={handleUpdateFilters} {filtersStore} />
+{/if}
 
 <div class="filter-and-order-container">
   {#if showFilter}

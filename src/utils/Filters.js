@@ -6,6 +6,8 @@ function getObjValueByNestedKey(key, obj = self, separator = '.') {
 function filterSkinList(skins, filters) {
   const filteredSkins = [];
 
+  if (filters === undefined) return skins;
+
   skins.forEach(skin => {
     const isValid = Object.entries(filters).every(filter => checkFilterOnSkin(skin, filter));
     if (isValid) filteredSkins.push(skin);
@@ -28,7 +30,7 @@ function checkFilterOnSkin(skin, filter) {
     case 'collectionId': {
       return skin.collection.id === value;
     }
-    case 'rarityId': {
+    case 'rarityIds': {
       return value.includes(skin.rarity.id);
     }
     case 'minFloat': {
