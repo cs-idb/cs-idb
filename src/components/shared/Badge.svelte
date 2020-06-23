@@ -1,5 +1,6 @@
 <script>
-  export let color = 'blue lighten-2'
+  export let classes = '';
+  export let style = '';
 </script>
 
 <style>
@@ -18,6 +19,6 @@
   }
 </style>
 
-<span class={`badge-c ${color}`}>
+<span class={`badge-c ${classes}`} {style}>
   <slot />
 </span>

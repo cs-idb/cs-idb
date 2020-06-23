@@ -1,24 +1,25 @@
 <script>
-  import { createEventDispatcher } from 'svelte'
-  import { SortableArray } from '../../utils/'
-  import Button from './Button.svelte'
+  import { createEventDispatcher } from 'svelte';
+  import { SortableArray } from '../../utils/';
+  import Button from './Button.svelte';
 
-  export let tableHeaders
-  export let tableRows
-  export let activeSort
+  export let tableHeaders;
+  export let tableRows;
+  export let activeSort;
+  export let hasImage = false;
 
-  const dispatch = createEventDispatcher()
+  const dispatch = createEventDispatcher();
 
-  $: sortedRows = SortableArray.from(tableRows).sortBy(activeSort.header, activeSort.sortAsc)
+  $: sortedRows = SortableArray.from(tableRows).sortBy(activeSort.header, 'str', activeSort.sortAsc);
 
   const changeSort = headerName => {
     if (activeSort.header === headerName) {
-      activeSort.sortAsc = !activeSort.sortAsc
+      activeSort.sortAsc = !activeSort.sortAsc;
     } else {
-      activeSort.header = headerName
-      activeSort.sortAsc = true
+      activeSort.header = headerName;
+      activeSort.sortAsc = true;
     }
-  }
+  };
 </script>
 
 <style>
@@ -63,6 +64,9 @@
 <table class="striped highlight">
   <thead>
     <tr>
+      {#if hasImage}
+        <th />
+      {/if}
       {#each tableHeaders as tableHeader}
         <th>
           <Button on:click={() => changeSort(tableHeader)}>
@@ -87,8 +91,13 @@
     {#each sortedRows as tableRow}
       <tr
         on:click={() => {
-          dispatch('clickItem', tableRow.__id)
+          dispatch('clickItem', tableRow.__id);
         }}>
+        {#if hasImage}
+          <td>
+            <img width="300" src={tableRow['__image_path']} alt={`An image of ${tableRow['weapon']} | ${tableRow['name']}`} />
+          </td>
+        {/if}
         {#each tableHeaders as tableHeader}
           <td>{tableRow[tableHeader]}</td>
         {/each}

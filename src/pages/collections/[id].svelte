@@ -1,87 +1,68 @@
 <script>
-  import { goto, url } from '@sveltech/routify'
-  import { Button, Badge, Table } from '../../components/shared/'
-  import { collections, skins } from '../../stores'
-  import { onMount } from 'svelte'
-  export let id
+  import { goto, url } from '@sveltech/routify';
+  import { Badge, PageHeader } from '../../components/shared/';
+  import { SkinCardList } from '../../components/skins/';
+  import { collections, skins } from '../../stores';
+  import { onMount } from 'svelte';
+  import { writable } from 'svelte/store';
+  export let id;
 
-  let collection
-  let collection_skins = []
+  let collection;
+  let collection_skins = [];
+
+  const sortingStore = writable({
+    sortingIndex: 2,
+    sortAsc: false,
+    availableSorts: [
+      { key: 'weapon.tag', type: 'str', name: 'Weapon name' },
+      { key: 'paintkit.tag', type: 'str', name: 'Skin name' },
+      { key: 'rarity.id', type: 'num', name: 'Rarity' },
+      { key: 'paintkit.minFloat', type: 'num', name: 'Min float' },
+      { key: 'paintkit.maxFloat', type: 'num', name: 'Max float' },
+    ],
+  });
+  const filtersStore = writable({});
 
   $: {
-    loadCollection(id)
-  }
-
-  const tableHeaders = ['weapon', 'name', 'collection', 'rarity', 'Min float', 'Max float']
-  $: tableRows = collection_skins.map(function (skin) {
-    return {
-      __id: skin.id,
-      weapon: skin.weapon.tag,
-      name: skin.paintkit.tag,
-      collection: collection.tag,
-      rarity: skin.rarity.tag,
-      'Min float': skin.paintkit.minFloat,
-      'Max float': skin.paintkit.maxFloat,
-    }
-  })
-  const activeSort = {
-    header: 'name',
-    sortAsc: true,
+    loadCollection(id);
   }
 
   onMount(() => {
-    loadCollection()
-  })
+    loadCollection();
+  });
 
   const loadCollection = () => {
-    collection = $collections.find(c => Number(c.id) === Number(id))
+    collection = $collections.find(c => Number(c.id) === Number(id));
 
     if (!collection) {
-      return $goto($url('/collections'))
+      return $goto($url('/collections'));
     }
 
-    collection_skins = $skins.filter(s => Number(s.collection.id) === Number(id))
-  }
-
-  const gotoSkin = e => {
-    const skin_id = e.detail
-    $goto($url(`/skins/${skin_id}`))
-  }
+    collection_skins = $skins.filter(s => Number((s.collection || {}).id) === Number(id));
+  };
 </script>
 
 <style>
-  .heading {
-    display: flex;
-    align-items: center;
-  }
-
-  .heading span {
-    margin-left: 15px;
-  }
-
   .collection-container {
     margin: 30px 0;
   }
 </style>
 
 <div class="collection-container">
-  <h3 class="heading">
-    <Button on:click={() => $goto('/collections')}>&lt;</Button>
-    <span>{collection ? collection.tag : 'Loading collection...'}</span>
-  </h3>
+  <PageHeader>{collection ? collection.tag : 'Loading collection...'}</PageHeader>
 
   {#if collection}
     <div class="badges">
-      <Badge>Released: {collection.released.toLocaleDateString()}</Badge>
-      <Badge>
+      <Badge classes="blue lighten-2">Released: {collection.released.toLocaleDateString()}</Badge>
+      <Badge classes="blue">
         Case:
         <b>{collection.case ? 'Yes' : 'No'}</b>
       </Badge>
-      <Badge color="orange">
+      <Badge classes="orange">
         StatTrak™:
         <b>{collection.stattrak ? 'Yes' : 'No'}</b>
       </Badge>
-      <Badge color="yellow accent-2">
+      <Badge classes="yellow accent-2">
         Souvenir:
         <b>{collection.souvenir ? 'Yes' : 'No'}</b>
       </Badge>
@@ -89,6 +70,7 @@
 
     <br />
     <h4>Skins</h4>
-    <Table {tableHeaders} {tableRows} {activeSort} on:clickItem={gotoSkin} />
+
+    <SkinCardList skins={collection_skins} showFilter={false} showCollection={false} {sortingStore} {filtersStore} />
   {/if}
 </div>

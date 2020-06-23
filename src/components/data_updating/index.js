@@ -1,3 +1,3 @@
-import UpdateData from './UpdateData.svelte'
+import UpdateData from './UpdateData.svelte';
 
-export { UpdateData }
+export { UpdateData };

@@ -1,40 +1,48 @@
 <script>
-  import { onMount } from 'svelte'
-  import { url, params } from '@sveltech/routify'
-  import { collections } from '../../stores'
-  import { Card, ListFilterSorter, Badge, CardList } from '../shared/'
-  import { SortableArray } from '../../utils/'
+  import { onMount } from 'svelte';
+  import { url, params } from '@sveltech/routify';
+  import { collections } from '../../stores';
+  import { Card, ListFilterSorter, Badge, CardList } from '../shared/';
+  import { SortableArray } from '../../utils/';
 
-  const sortables = ['name', 'case', 'stattrak', 'souvenir', 'released']
-  let search = ''
+  const sortables = ['name', 'case', 'stattrak', 'souvenir', 'released'];
+  let search = '';
   let sorting = {
     sortBy: 'released',
     sortAsc: false,
-  }
+  };
+  const availableSorts = [
+    { key: 'name', type: 'str' },
+    { key: 'case', type: 'bol' },
+    { key: 'stattrak', type: 'bol' },
+    { key: 'souvenir', type: 'bol' },
+    { key: 'released', type: 'dte' },
+  ];
+  $: chosenSort = availableSorts.find(s => s.key === sorting.sortBy);
 
   onMount(() => {
-    search = $params.q || ''
-    sorting.sortBy = sortables.includes($params.sortBy) ? $params.sortBy : 'released'
-    sorting.sortAsc = $params.sortAsc === 'true' || false
-  })
+    search = $params.q || '';
+    sorting.sortBy = sortables.includes($params.sortBy) ? $params.sortBy : 'released';
+    sorting.sortAsc = $params.sortAsc === 'true' || false;
+  });
 
   const updateSearch = e => {
-    search = e.detail
-    updateWindowHistory()
-  }
+    search = e.detail;
+    updateWindowHistory();
+  };
 
   const updateSort = e => {
-    sorting = e.detail
-    updateWindowHistory()
-  }
+    sorting = e.detail;
+    updateWindowHistory();
+  };
 
   const updateWindowHistory = () => {
-    window.history.replaceState({}, '', `?q=${search}&sortBy=${sorting.sortBy}&sortAsc=${sorting.sortAsc}`)
-  }
+    window.history.replaceState({}, '', `?q=${search}&sortBy=${sorting.sortBy}&sortAsc=${sorting.sortAsc}`);
+  };
 
   $: sortedFilteredCollections = SortableArray.from($collections)
     .filter(c => c.tag.toLowerCase().includes(search.toLowerCase()))
-    .sortBy(sorting.sortBy, sorting.sortAsc)
+    .sortBy(sorting.sortBy, chosenSort.type, sorting.sortAsc);
 </script>
 
 <style>
@@ -58,13 +66,13 @@
         <h6>{collection.tag}</h6>
         <p>Released date: {collection.released.toLocaleDateString()}</p>
         {#if collection.stattrak}
-          <Badge color="orange">StatTrak™ available</Badge>
+          <Badge classes="orange">StatTrak™ available</Badge>
         {/if}
         {#if collection.souvenir}
-          <Badge color="yellow accent-4">Souvenir available</Badge>
+          <Badge classes="yellow accent-4">Souvenir available</Badge>
         {/if}
         {#if collection.case}
-          <Badge>Case available</Badge>
+          <Badge classes="blue">Case available</Badge>
         {/if}
       </div>
       <div slot="card-action">

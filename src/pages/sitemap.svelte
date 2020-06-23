@@ -1,20 +1,11 @@
 <script>
-  import { goto, url } from '@sveltech/routify'
-  import { Button } from '../components/shared'
+  import { url } from '@sveltech/routify';
+  import { PageHeader } from '../components/shared';
 
-  import { sitemap } from '../dal/'
+  import { sitemap } from '../dal/';
 </script>
 
 <style>
-  .heading {
-    display: flex;
-    align-items: center;
-  }
-
-  .heading span {
-    margin-left: 15px;
-  }
-
   .children-list {
     margin-left: 50px;
   }
@@ -25,10 +16,7 @@
 </style>
 
 <div class="sitemap">
-  <h3 class="heading">
-    <Button on:click={() => $goto('/')}>&lt;</Button>
-    <span>Sitemap</span>
-  </h3>
+  <PageHeader>Sitemap</PageHeader>
 
   <ul class="links-list">
     {#each sitemap as link}

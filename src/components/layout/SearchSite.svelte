@@ -1,21 +1,21 @@
 <script>
-  import { createEventDispatcher } from 'svelte'
-  import { goto, url } from '@sveltech/routify'
-  import { collections, skins } from '../../stores'
+  import { createEventDispatcher } from 'svelte';
+  import { goto, url } from '@sveltech/routify';
+  import { collections, skins } from '../../stores';
 
-  export let mobile
+  export let mobile = undefined;
 
-  const dispatch = createEventDispatcher()
+  const dispatch = createEventDispatcher();
 
-  let search_value = ''
-  $: show_results = search_value.length >= 1
-  $: search_value_lower = search_value.toLowerCase()
+  let search_value = '';
+  $: show_results = search_value.length >= 1;
+  $: search_value_lower = search_value.toLowerCase();
 
   $: filteredCollections = $collections
     .filter(c => c.tag.toLowerCase().includes(search_value_lower))
     .map(c => {
-      return { id: c.id, name: c.tag }
-    })
+      return { id: c.id, name: c.tag };
+    });
 
   $: filteredSkins = $skins
     .filter(
@@ -25,65 +25,65 @@
         (s.weapon.tag + ' ' + s.paintkit.tag).toLowerCase().includes(search_value_lower)
     )
     .map(s => {
-      return { id: s.id, name: s.paintkit.tag, weapon_name: s.weapon.tag }
-    })
+      return { id: s.id, name: s.paintkit.tag, weapon_name: s.weapon.tag };
+    });
 
   const clickResult = url => {
-    search_value = ''
-    dispatch('closeSideNav')
-    $goto($url(url, {}, false, true))
-  }
+    search_value = '';
+    dispatch('closeSideNav');
+    $goto($url(url, {}, false, true));
+  };
 
   const handleMoveFocus = e => {
-    if (!(e.keyCode === 13 || e.keyCode === 27 || e.keyCode === 38 || e.keyCode === 40)) return
+    if (!(e.keyCode === 13 || e.keyCode === 27 || e.keyCode === 38 || e.keyCode === 40)) return;
 
     if (e.keyCode === 27) {
-      search_value = ''
-      return
+      search_value = '';
+      return;
     }
 
-    const searchResultsEl = document.querySelector('#search-results')
+    const searchResultsEl = document.querySelector('#search-results');
 
-    if (searchResultsEl === null) return
+    if (searchResultsEl === null) return;
 
-    let currentSelectedEl = searchResultsEl.querySelector('li.active')
+    let currentSelectedEl = searchResultsEl.querySelector('li.active');
     if (!currentSelectedEl) {
-      const firstEl = searchResultsEl.querySelector('li.move')
-      firstEl.classList.add('active')
-      return
+      const firstEl = searchResultsEl.querySelector('li.move');
+      firstEl.classList.add('active');
+      return;
     }
 
     if (e.keyCode === 13) {
-      currentSelectedEl.click()
+      currentSelectedEl.click();
     }
 
     if (e.keyCode === 38) {
-      let previousResult = currentSelectedEl.previousElementSibling
+      let previousResult = currentSelectedEl.previousElementSibling;
       if (previousResult.classList.contains('title')) {
-        previousResult = previousResult.previousElementSibling
+        previousResult = previousResult.previousElementSibling;
       }
 
       if (previousResult !== null) {
-        searchResultsEl.scrollTop -= previousResult.clientHeight
-        currentSelectedEl.classList.remove('active')
-        previousResult.classList.add('active')
+        searchResultsEl.scrollTop -= previousResult.clientHeight;
+        currentSelectedEl.classList.remove('active');
+        previousResult.classList.add('active');
       }
     }
 
     if (e.keyCode === 40) {
-      let nextResult = currentSelectedEl.nextElementSibling
+      let nextResult = currentSelectedEl.nextElementSibling;
 
-      if (!nextResult) return
+      if (!nextResult) return;
 
       if (nextResult.classList.contains('title')) {
-        nextResult = nextResult.nextElementSibling
+        nextResult = nextResult.nextElementSibling;
       }
 
-      currentSelectedEl.classList.remove('active')
-      nextResult.classList.add('active')
-      searchResultsEl.scrollTop += nextResult.clientHeight
+      currentSelectedEl.classList.remove('active');
+      nextResult.classList.add('active');
+      searchResultsEl.scrollTop += nextResult.clientHeight;
     }
-  }
+  };
 </script>
 
 <style>

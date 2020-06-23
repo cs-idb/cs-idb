@@ -1,7 +1,7 @@
 <script>
-  import { fade, fly } from 'svelte/transition'
-  export let bgColor = ''
-  export let flat = false
+  import { fade, fly } from 'svelte/transition';
+  export let bgColor = '';
+  export let flat = false;
 </script>
 
 <style>
@@ -32,6 +32,9 @@
   }
 </style>
 
+{#if false}
+  <slot />
+{/if}
 <div
   class="card hoverable"
   class:flat

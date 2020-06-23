@@ -1,35 +1,35 @@
 <script>
-  import { Button } from '../shared/'
-  import { createEventDispatcher } from 'svelte'
-  export let type = 'text'
-  export let current = 'equals'
-  const dispatch = createEventDispatcher()
+  import { Button } from '../shared/';
+  import { createEventDispatcher } from 'svelte';
+  export let type = 'text';
+  export let current = 'equals';
+  const dispatch = createEventDispatcher();
 
   const switchMode = function () {
     switch (type) {
       case 'text': {
         if (current === 'equals') {
-          current = 'includes'
+          current = 'includes';
         } else if (current === 'includes') {
-          current = 'does not include'
+          current = 'does not include';
         } else if (current === 'does not include') {
-          current = 'does not equal'
+          current = 'does not equal';
         } else {
-          current = 'equals'
+          current = 'equals';
         }
 
-        break
+        break;
       }
       case 'number': {
-        break
+        break;
       }
       case 'boolean': {
-        break
+        break;
       }
     }
 
-    dispatch('updateMode', current)
-  }
+    dispatch('updateMode', current);
+  };
 </script>
 
 <style>

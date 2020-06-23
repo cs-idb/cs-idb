@@ -1,25 +1,26 @@
 <script>
-  import M from 'materialize-css'
-  import { onMount } from 'svelte'
-  export let min
-  export let max
+  import M from 'materialize-css';
+  import { onMount } from 'svelte';
+  export let min;
+  export let max;
+  export let style = '';
 
-  $: tooltip = `Float range: ${min} - ${max}`
+  $: tooltip = `Float range: ${min} - ${max}`;
 
   onMount(() => {
-    const elems = document.querySelectorAll('.needs-tooltip')
+    const elems = document.querySelectorAll('.needs-tooltip');
     const tooltipOptions = {
       exitDelay: 0,
       enterDelay: 0,
       inDuration: 300,
       outDuration: 200,
       position: 'top',
-    }
-    M.Tooltip.init(elems, tooltipOptions)
+    };
+    M.Tooltip.init(elems, tooltipOptions);
     elems.forEach(el => {
-      el.classList.remove('needs-tooltip')
-    })
-  })
+      el.classList.remove('needs-tooltip');
+    });
+  });
 </script>
 
 <style>
@@ -70,7 +71,7 @@
   }
 </style>
 
-<div class="float">
+<div class="float" {style}>
   <div class="represent-floats red lighten-2 needs-tooltip" data-tooltip={tooltip}>
     <div class="min" style={'width: ' + min * 100 + '%;'} />
     <div class="max green accent-3" style={'width: ' + max * 100 + '%;'} />

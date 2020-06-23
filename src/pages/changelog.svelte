@@ -1,35 +1,18 @@
 <script>
-  import M from 'materialize-css'
-  import { onMount } from 'svelte'
-  import { changelogs } from '../dal/'
-  import { Button } from '../components/shared'
-  import { goto, url } from '@sveltech/routify'
+  import M from 'materialize-css';
+  import { onMount } from 'svelte';
+  import { changelogs } from '../dal/';
+  import { PageHeader } from '../components/shared';
 
-  $: sortedChangelogs = changelogs.sort((a, b) => (a.time > b.time ? -1 : 1))
+  $: sortedChangelogs = changelogs.sort((a, b) => (a.time > b.time ? -1 : 1));
 
   onMount(() => {
-    const collapsibleElems = document.querySelectorAll('.collapsible')
-    M.Collapsible.init(collapsibleElems)
-  })
+    const collapsibleElems = document.querySelectorAll('.collapsible');
+    M.Collapsible.init(collapsibleElems);
+  });
 </script>
 
 <style>
-  .heading {
-    display: flex;
-    align-items: center;
-  }
-
-  .heading span {
-    margin-left: 15px;
-    display: flex;
-    align-items: center;
-  }
-
-  .heading span i {
-    font-size: 40px;
-    margin: 0 10px;
-  }
-
   .collection {
     border: none;
   }
@@ -42,13 +25,10 @@
 </style>
 
 <div class="changelog">
-  <h3 class="heading">
-    <Button on:click={() => $goto($url('/'))}>&lt;</Button>
-    <span class="grey-text text-darken-2">
-      <i class="material-icons">history</i>
-      Changelog
-    </span>
-  </h3>
+  <PageHeader>
+    <i class="material-icons">history</i>
+    Changelog
+  </PageHeader>
 
   <ul class="changelog-list collection">
     {#each sortedChangelogs as changelog}

@@ -1,4 +1,4 @@
-import { readable } from 'svelte/store'
+import { readable } from 'svelte/store';
 
 const compare_modes = [
   {
@@ -31,8 +31,8 @@ const compare_modes = [
     longName: 'Less than',
     types: ['number'],
   },
-]
+];
 
-const compareModes = readable(compare_modes)
+const compareModes = readable(compare_modes);
 
-export { compareModes }
+export { compareModes };

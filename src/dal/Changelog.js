@@ -25,6 +25,18 @@ const changelogs = [
     content:
       'If your browser has the items stored locally (e.g. you visited the site already), it will check for updates in the background instead of showing a spinner.',
   },
-]
+  {
+    version: '1.4',
+    time: 1592146068000, // Sunday, 14 June 2020,
+    header: 'Skin images',
+    content: 'Fixed issue with skin images not showing in Chrome; Images now also show in the global skins- and collection lists.',
+  },
+  {
+    version: '1.5',
+    time: 1592940459000, // Tuesday, 23 June 2020,
+    header: 'Skin cards',
+    content: 'Replaced ugly skin table for nicer looking cards. Reworked the filtering system.'
+  }
+];
 
-export { changelogs }
+export { changelogs };

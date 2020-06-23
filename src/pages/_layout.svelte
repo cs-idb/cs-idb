@@ -1,8 +1,8 @@
 <script>
-  import { Header, Footer } from '../components/layout/'
-  import { UpdateData } from '../components/data_updating/'
+  import { Header, Footer } from '../components/layout/';
+  import { UpdateData } from '../components/data_updating/';
 
-  let updating_data = true
+  let updating_data = true;
 </script>
 
 <style>

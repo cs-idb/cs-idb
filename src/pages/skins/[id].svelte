@@ -1,49 +1,40 @@
 <script>
-  import M from 'materialize-css'
-  import { goto, url } from '@sveltech/routify'
-  import { onMount, tick } from 'svelte'
-  import { skins } from '../../stores'
-  import { Button, SkinFloat, Badge } from '../../components/shared'
-  export let id
+  import M from 'materialize-css';
+  import { goto, url } from '@sveltech/routify';
+  import { onMount, tick } from 'svelte';
+  import { skins } from '../../stores';
+  import { Button, SkinFloat, Badge, PageHeader } from '../../components/shared';
+  export let id;
 
-  let skin
+  let skin;
 
   $: {
-    loadSkin(id)
+    loadSkin(id);
   }
 
   onMount(() => {
-    loadSkin()
-  })
+    loadSkin();
+  });
 
   const loadSkin = async () => {
-    skin = $skins.find(s => Number(s.id) === Number(id))
+    skin = $skins.find(s => Number(s.id) === Number(id));
 
     if (!skin) {
-      return $goto($url('/skins'))
+      return $goto($url('/skins'));
     }
 
-    await tick()
-    const imageBoxElements = document.querySelectorAll('.needs-materialbox')
-    M.Materialbox.init(imageBoxElements)
+    await tick();
+    const imageBoxElements = document.querySelectorAll('.needs-materialbox');
+    M.Materialbox.init(imageBoxElements);
     imageBoxElements.forEach(el => {
-      el.classList.remove('needs-materialbox')
-    })
-  }
+      el.classList.remove('needs-materialbox');
+    });
+  };
 </script>
 
 <style>
   .skin {
     margin-bottom: 2rem;
-  }
-
-  .heading {
-    display: flex;
-    align-items: center;
-  }
-
-  .heading span {
-    margin-left: 15px;
   }
 
   .skin-collection h6,
@@ -80,24 +71,21 @@
 
 <div class="skin">
   {#if skin}
-    <h3 class="heading">
-      <Button on:click={() => $goto('/skins')}>&lt;</Button>
-      <span>{skin.weapon.tag} | {skin.paintkit.tag}</span>
-    </h3>
+    <PageHeader>{skin.weapon.tag} | {skin.paintkit.tag}</PageHeader>
 
     <div class="image-container">
       <img
         class="needs-materialbox"
         width="300"
-        src={'http://media.steampowered.com/apps/730/icons/econ/default_generated/' + skin.image.mediaSteamPowered}
+        src={'https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/' + skin.image.fullname_filehash_png}
         alt={`An image of ${skin.weapon.tag} | ${skin.paintkit.tag}`} />
       <div class="image-placeholder">Loading image...</div>
     </div>
 
-    {#if skin.collection.stattrak === true}
-      <Badge color="orange">StatTrak™ available</Badge>
-    {:else if skin.collection.souvenir === true}
-      <Badge color="yellow accent-4">Souvenir available</Badge>
+    {#if (skin.collection || {}).stattrak === true}
+      <Badge classes="orange">StatTrak™ available</Badge>
+    {:else if (skin.collection || {}).souvenir === true}
+      <Badge classes="yellow accent-4">Souvenir available</Badge>
     {/if}
 
     <h6 class="grey-text">
@@ -117,21 +105,23 @@
     <div class="skin-collection">
       <h6 class="grey-text">
         <b>Collection:</b>
-        {skin.collection.tag}
+        {(skin.collection || {}).tag || '-'}
       </h6>
-      <Button on:click={() => $goto(`/collections/${skin.collection.id}`)}>
-        <span>
-          View
-          <i class="material-icons">chevron_right</i>
-        </span>
-      </Button>
+      {#if skin.collection}
+        <Button on:click={() => $goto(`/collections/${skin.collection.id}`)}>
+          <span>
+            View
+            <i class="material-icons">chevron_right</i>
+          </span>
+        </Button>
+      {/if}
     </div>
     <div class="skin-weapon">
       <h6 class="grey-text">
         <b>Weapon:</b>
         {skin.weapon.tag}
       </h6>
-      <Button on:click={() => $goto(`/skins?f=w:eq:${skin.weapon.tag}`)}>
+      <Button on:click={() => $goto(`/skins?weaponId=${skin.weapon.id}`)}>
         <span>
           View skins
           <i class="material-icons">chevron_right</i>

@@ -1,78 +1,78 @@
 <script>
-  import M from 'materialize-css'
-  import { onMount, createEventDispatcher, tick } from 'svelte'
-  import { Button } from '../shared/'
-  import CompareModeSelect from './CompareModeSelect.svelte'
-  export let filter_options
+  import M from 'materialize-css';
+  import { onMount, createEventDispatcher, tick } from 'svelte';
+  import { Button } from '../shared/';
+  import CompareModeSelect from './CompareModeSelect.svelte';
+  export let filter_options;
 
-  const dispatch = createEventDispatcher()
+  const dispatch = createEventDispatcher();
 
   let new_filter = {
     column: undefined,
     compare_mode: undefined,
     value: undefined,
-  }
-  let new_filter_type = undefined
-  let selectOptions = []
+  };
+  let new_filter_type = undefined;
+  let selectOptions = [];
 
-  let columnSelectEl
-  let newFilterValueError = undefined
+  let columnSelectEl;
+  let newFilterValueError = undefined;
 
   onMount(() => {
-    initMatSelects()
-    columnSelectEl = document.getElementById('column-select')
-  })
+    initMatSelects();
+    columnSelectEl = document.getElementById('column-select');
+  });
 
   const initMatSelects = function () {
-    const elems = document.querySelectorAll('.mat-select')
-    M.FormSelect.init(elems)
+    const elems = document.querySelectorAll('.mat-select');
+    M.FormSelect.init(elems);
     elems.forEach(el => {
-      el.classList.remove('mat-select')
-    })
-  }
+      el.classList.remove('mat-select');
+    });
+  };
 
   const setColumnName = async function () {
-    new_filter.compare_mode = undefined
-    new_filter.value = undefined
-    new_filter_type = undefined
+    new_filter.compare_mode = undefined;
+    new_filter.value = undefined;
+    new_filter_type = undefined;
 
-    await tick()
-    const filter_option = filter_options.find(fo => fo.url_name === new_filter.column)
-    new_filter_type = filter_option.type
-  }
+    await tick();
+    const filter_option = filter_options.find(fo => fo.url_name === new_filter.column);
+    new_filter_type = filter_option.type;
+  };
 
   const setCompareMode = async function (e) {
-    new_filter.compare_mode = e.detail
-    const current_filter = filter_options.find(f => f.url_name === new_filter.column)
+    new_filter.compare_mode = e.detail;
+    const current_filter = filter_options.find(f => f.url_name === new_filter.column);
     if (current_filter && current_filter.type === 'select') {
-      selectOptions = current_filter.options
-      await tick()
-      initMatSelects()
+      selectOptions = current_filter.options;
+      await tick();
+      initMatSelects();
     }
-  }
+  };
 
   const resetSelectEl = function () {
-    const inputEl = columnSelectEl.parentElement.querySelector('input.select-dropdown')
+    const inputEl = columnSelectEl.parentElement.querySelector('input.select-dropdown');
 
-    columnSelectEl.selectedIndex = 0
-    inputEl.value = 'Choose your option'
-  }
+    columnSelectEl.selectedIndex = 0;
+    inputEl.value = 'Choose your option';
+  };
 
   const addFilter = function () {
     if (new_filter_type === 'text' && new_filter.value.includes(':')) {
-      newFilterValueError = "You can't use a (semi)colon in the filter value"
-      return
+      newFilterValueError = "You can't use a (semi)colon in the filter value";
+      return;
     }
 
-    dispatch('addFilter', new_filter)
+    dispatch('addFilter', new_filter);
     new_filter = {
       column: undefined,
       compare_mode: undefined,
       value: undefined,
-    }
-    newFilterValueError = undefined
-    resetSelectEl()
-  }
+    };
+    newFilterValueError = undefined;
+    resetSelectEl();
+  };
 </script>
 
 <style>

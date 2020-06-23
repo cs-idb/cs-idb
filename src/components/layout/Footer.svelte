@@ -1,9 +1,9 @@
 <script>
-  import { url } from '@sveltech/routify'
+  import { url } from '@sveltech/routify';
 
-  const firstYear = 2020
-  const currentYear = new Date().getFullYear()
-  const year = firstYear === currentYear ? currentYear : `${firstYear} - ${currentYear}`
+  const firstYear = 2020;
+  const currentYear = new Date().getFullYear();
+  const year = firstYear === currentYear ? currentYear : `${firstYear} - ${currentYear}`;
 </script>
 
 <style>
