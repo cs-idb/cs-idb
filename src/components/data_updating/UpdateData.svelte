@@ -25,8 +25,8 @@
 
   const fetchData = () => {
     fetchChecksums()
-      .then(fetchChecksumsres => {
-        fetchDataByNames(fetchChecksumsres);
+      .then(async fetchChecksumsres => {
+        await fetchDataByNames(fetchChecksumsres);
       })
       .then(() => {
         showUpdatedSuccesfulToast();

@@ -60,6 +60,10 @@
     font-weight: normal;
   }
 
+  .sidenav :global(li.move p) {
+    line-height: normal !important;
+  }
+
   #main-sidenav a.navitem {
     padding: 0 20px;
   }
@@ -139,6 +143,12 @@
       <a class="navitem" href={$url('/weapons')}>
         <i class="material-icons">games</i>
         Weapons
+      </a>
+    </li>
+    <li>
+      <a class="navitem icon-fix" href={$url('/changelog')}>
+        <i class="material-icons">history</i>
+        Changelog
       </a>
     </li>
   </ul>
