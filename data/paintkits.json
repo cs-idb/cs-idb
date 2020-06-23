@@ -5034,7 +5034,7 @@
     "name": "cu_m4a4_desolate_space",
     "key": "PaintKit_cu_m4a4_desolate_space",
     "desc": "It has been custom painted with a space theme.",
-    "flavor": "\\We've lost contact\\",
+    "flavor": "We've lost contact",
     "tag": "Desolate Space",
     "minFloat": 0,
     "maxFloat": 1
@@ -5104,7 +5104,7 @@
     "name": "cu_r8_cybersport",
     "key": "PaintKit_cu_r8_cybersport",
     "desc": "It has been decorated with red accents over silver and black panels.",
-    "flavor": "\\Have you tried turning it off and on again?\\",
+    "flavor": "Have you tried turning it off and on again?",
     "tag": "Reboot",
     "minFloat": 0,
     "maxFloat": 1
@@ -5684,7 +5684,7 @@
     "name": "cu_usps_noir",
     "key": "PaintKit_cu_usps_noir",
     "desc": "It has been custom painted with a stylized blue-magenta woman over a grayscale background.",
-    "flavor": "\\Drenched in a neon glow, she lies at the foot of an oppressive skyscraper\\",
+    "flavor": "Drenched in a neon glow, she lies at the foot of an oppressive skyscraper",
     "tag": "Neo-Noir",
     "minFloat": 0,
     "maxFloat": 0.7
@@ -5814,7 +5814,7 @@
     "name": "am_mag7_caustic",
     "key": "PaintKit_am_mag7_caustic",
     "desc": "It has been painted with a grey anodized pattern and finished with blue highlights.",
-    "flavor": "\\I wouldn't drink that\\",
+    "flavor": "I wouldn't drink that",
     "tag": "Hard Water",
     "minFloat": 0,
     "maxFloat": 0.45
@@ -5824,7 +5824,7 @@
     "name": "cu_p2000_hunter",
     "key": "PaintKit_cu_p2000_hunter",
     "desc": "It has been hand painted with custom green camouflage and orange detailing.",
-    "flavor": "\\The orange is for you, not me\\",
+    "flavor": "The orange is for you, not me",
     "tag": "Woodsman",
     "minFloat": 0,
     "maxFloat": 0.8
@@ -6034,7 +6034,7 @@
     "name": "cu_ump45_x-ray_machine",
     "key": "PaintKit_cu_ump45_x-ray_machine",
     "desc": "A custom paint job has been applied which resembles an x-ray; rib cage and all.",
-    "flavor": "\\Please remove all metal objects from your pockets\\",
+    "flavor": "Please remove all metal objects from your pockets",
     "tag": "Exposure",
     "minFloat": 0,
     "maxFloat": 0.55
@@ -6104,7 +6104,7 @@
     "name": "cu_m4a4_neo_noir",
     "key": "PaintKit_cu_m4a4_neo_noir",
     "desc": "It has been custom painted with a stylized blue-magenta woman over a grayscale background.",
-    "flavor": "\\She grabbed what she could and disappeared into a decaying dystopia\\",
+    "flavor": "She grabbed what she could and disappeared into a decaying dystopia",
     "tag": "Neo-Noir",
     "minFloat": 0,
     "maxFloat": 0.9
@@ -6124,7 +6124,7 @@
     "name": "cu_mp9_black_sand",
     "key": "PaintKit_cu_mp9_black_sand",
     "desc": "It has been custom painted with a tan and black military camo pattern.",
-    "flavor": "\\End their campaign before it begins\\",
+    "flavor": "End their campaign before it begins",
     "tag": "Black Sand",
     "minFloat": 0,
     "maxFloat": 1
@@ -6364,7 +6364,7 @@
     "name": "cu_r8_survivalist",
     "key": "PaintKit_cu_r8_survivalist",
     "desc": "Hand painted green stripes allow the owner to blend in and avoid detection in tense situations.",
-    "flavor": "\\Eight shots and multiple enemies; better make them count\\",
+    "flavor": "Eight shots and multiple enemies; better make them count",
     "tag": "Survivalist",
     "minFloat": 0,
     "maxFloat": 0.7
@@ -6374,7 +6374,7 @@
     "name": "cu_tec9_snake",
     "key": "PaintKit_cu_tec9_snake",
     "desc": "A custom paint job inspired by coral snakes has been applied.",
-    "flavor": "\\If red meets yellow, you're a dead fellow\\",
+    "flavor": "If red meets yellow, you're a dead fellow",
     "tag": "Snek-9",
     "minFloat": 0,
     "maxFloat": 1
@@ -6524,7 +6524,7 @@
     "name": "gs_mag7_glass",
     "key": "PaintKit_gs_mag7_glass",
     "desc": "It has been custom painted with patterned glass panels and a red grip and pump.",
-    "flavor": "\\Whatever you paid for this, it wasn't enough\\",
+    "flavor": "Whatever you paid for this, it wasn't enough",
     "tag": "Cinquedea",
     "minFloat": 0,
     "maxFloat": 1
@@ -6654,7 +6654,7 @@
     "name": "cu_sg553_rally",
     "key": "PaintKit_cu_sg553_rally",
     "desc": "A custom paint job paying homage to an Italian racing car has been applied.",
-    "flavor": "\\Accendete i motori!\\",
+    "flavor": "Accendete i motori!",
     "tag": "Integrale",
     "minFloat": 0,
     "maxFloat": 1
@@ -6784,7 +6784,7 @@
     "name": "gs_negev_thor",
     "key": "PaintKit_gs_negev_thor",
     "desc": "It has been custom painted red and features a number of Norse runes.",
-    "flavor": "\\This is all Loki's fault…\\",
+    "flavor": "This is all Loki's fault…",
     "tag": "Mjölnir",
     "minFloat": 0,
     "maxFloat": 0.6
@@ -6794,7 +6794,7 @@
     "name": "hy_blueprint_white",
     "key": "PaintKit_hy_blueprint_white",
     "desc": "A grayscale hydrographic pattern resembling a nuclear power plant has been applied.",
-    "flavor": "\\Your point of entry is the ventilation system\\",
+    "flavor": "Your point of entry is the ventilation system",
     "tag": "Facility Sketch",
     "minFloat": 0,
     "maxFloat": 0.5
@@ -6904,7 +6904,7 @@
     "name": "hy_ducts_blue",
     "key": "PaintKit_hy_ducts_blue",
     "desc": "A hydrographic pattern of interweaving pipes has been applied.",
-    "flavor": "\\My life for yours\\",
+    "flavor": "My life for yours",
     "tag": "Exchanger",
     "minFloat": 0,
     "maxFloat": 0.5
@@ -6964,7 +6964,7 @@
     "name": "gs_m4a1s_operator",
     "key": "PaintKit_gs_m4a1s_operator",
     "desc": "It has been hand painted with colorful dials and switches atop a blue base.",
-    "flavor": "\\Is this line secure?\\",
+    "flavor": "Is this line secure?",
     "tag": "Control Panel",
     "minFloat": 0,
     "maxFloat": 1
@@ -7004,7 +7004,7 @@
     "name": "sp_mesh_safetyred",
     "key": "PaintKit_sp_mesh_safetyred",
     "desc": "It has been spray painted with a red mesh pattern.",
-    "flavor": "\\You should have that looked at…\\",
+    "flavor": "You should have that looked at…",
     "tag": "Check Engine",
     "minFloat": 0,
     "maxFloat": 0.6
@@ -7074,7 +7074,7 @@
     "name": "cu_awp_neonoir",
     "key": "PaintKit_cu_awp_neonoir",
     "desc": "It has been custom painted with two stylized blue-magenta women over a grayscale background.",
-    "flavor": "\\They took comfort in each other's despair\\",
+    "flavor": "They took comfort in each other's despair",
     "tag": "Neo-Noir",
     "minFloat": 0,
     "maxFloat": 0.5
@@ -7124,7 +7124,7 @@
     "name": "cu_glock18_corroden",
     "key": "PaintKit_cu_glock18_corroden",
     "desc": "A custom paint job has been applied with a rust-colored base and white detailing.",
-    "flavor": "\\The subject claims this washed up on shore\\",
+    "flavor": "The subject claims this washed up on shore",
     "tag": "Oxide Blaze",
     "minFloat": 0,
     "maxFloat": 0.85
@@ -7244,7 +7244,7 @@
     "name": "cu_five_seven_angry",
     "key": "PaintKit_cu_five_seven_angry",
     "desc": "A brightly colored paint job inspired by street art has been applied.",
-    "flavor": "\\Inside voices, please\\",
+    "flavor": "Inside voices, please",
     "tag": "Angry Mob",
     "minFloat": 0,
     "maxFloat": 0.7
@@ -7304,7 +7304,7 @@
     "name": "cu_revolver_oppressor",
     "key": "PaintKit_cu_revolver_oppressor",
     "desc": "It has been hand painted with yellow flames and red and white accents.",
-    "flavor": "\\Open wiiiiide\\",
+    "flavor": "Open wiiiiide",
     "tag": "Skull Crusher",
     "minFloat": 0.25,
     "maxFloat": 0.8
@@ -7334,7 +7334,7 @@
     "name": "gs_mp5sd_astromatic",
     "key": "PaintKit_gs_mp5sd_astromatic",
     "desc": "It has been custom painted to look like it was assembled from pieces of stamped steel.",
-    "flavor": "Lovingly referred to as the \\SpaceGat 2000\\",
+    "flavor": "Lovingly referred to as the SpaceGat 2000",
     "tag": "Gauss",
     "minFloat": 0,
     "maxFloat": 1
@@ -7504,7 +7504,7 @@
     "name": "sp_knots_blue",
     "key": "PaintKit_sp_knots_blue",
     "desc": "It has been spray-painted with a Norse inspired pattern of interlocking blue rings.",
-    "flavor": "\\It is better to fight and fall than to live without hope\\",
+    "flavor": "It is better to fight and fall than to live without hope",
     "tag": "Night Borre",
     "minFloat": 0,
     "maxFloat": 0.55
@@ -7704,7 +7704,7 @@
     "name": "cu_mp7_replica",
     "key": "PaintKit_cu_mp7_replica",
     "desc": "It has been laminated and filled with every neon color imaginable.",
-    "flavor": "\\Roy G. Biv? Never heard of 'em.\\",
+    "flavor": "Roy G. Biv? Never heard of 'em.",
     "tag": "Neon Ply",
     "minFloat": 0,
     "maxFloat": 1
@@ -7714,7 +7714,7 @@
     "name": "cu_p2000_obsidian",
     "key": "PaintKit_cu_p2000_obsidian",
     "desc": "It has been custom painted to look like it was submerged in lava and is solidifying into obsidian as it cools.",
-    "flavor": "Giving the term \\glass cannon\\ a whole new meaning",
+    "flavor": "Giving the term glass cannon a whole new meaning",
     "tag": "Obsidian",
     "minFloat": 0,
     "maxFloat": 1
@@ -7834,7 +7834,7 @@
     "name": "gs_p250_inferno",
     "key": "PaintKit_gs_p250_inferno",
     "desc": "A custom paint job which reflects the ethos of de_inferno has been applied.",
-    "flavor": "\\But look at the time!\\",
+    "flavor": "But look at the time!",
     "tag": "Inferno",
     "minFloat": 0,
     "maxFloat": 0.68
@@ -7884,7 +7884,7 @@
     "name": "am_aug_death_by_doggy",
     "key": "PaintKit_am_aug_death_by_doggy",
     "desc": "A multicolored Pop Dog pattern has been applied.",
-    "flavor": "Not to be confused with \\ladder\\",
+    "flavor": "Not to be confused with ladder",
     "tag": "Death by Puppy",
     "minFloat": 0,
     "maxFloat": 0.4
@@ -7904,7 +7904,7 @@
     "name": "gs_mp5_fbi",
     "key": "PaintKit_gs_mp5_fbi",
     "desc": "It has been custom painted in FBI blue and finished with yellow accents.",
-    "flavor": "\\It's time to earn our stories\\",
+    "flavor": "It's time to earn our stories",
     "tag": "Agent",
     "minFloat": 0,
     "maxFloat": 1
@@ -7934,7 +7934,7 @@
     "name": "cu_glock_hero",
     "key": "PaintKit_cu_glock_hero",
     "desc": "This custom paint job pays homage to olofmeister's burning defuse on Overpass at ESL One Cologne 2014.",
-    "flavor": "\\The defuse is coming in—he's still going!\\",
+    "flavor": "The defuse is coming in—he's still going!",
     "tag": "Sacrifice",
     "minFloat": 0,
     "maxFloat": 1
@@ -7964,7 +7964,7 @@
     "name": "cu_ak-47_phantom_disruptor",
     "key": "PaintKit_cu_ak-47_phantom_disruptor",
     "desc": "A mistform illusion creature has been custom painted over a matte black base.",
-    "flavor": "\\It can be whatever it wants, wherever it wants, and yet it chooses to reside with you…\\",
+    "flavor": "It can be whatever it wants, wherever it wants, and yet it chooses to reside with you…",
     "tag": "Phantom Disruptor",
     "minFloat": 0,
     "maxFloat": 0.65
@@ -8084,7 +8084,7 @@
     "name": "cu_sawedoff_apocalypto",
     "key": "PaintKit_cu_sawedoff_apocalypto",
     "desc": "A decomposing hand reaching for a bomb-like planet has been custom painted over a purple outer space background.",
-    "flavor": "\\Have you got the time?\\",
+    "flavor": "Have you got the time?",
     "tag": "Apocalypto",
     "minFloat": 0,
     "maxFloat": 1
@@ -8124,7 +8124,7 @@
     "name": "cu_glock18_warmaiden",
     "key": "PaintKit_cu_glock18_warmaiden",
     "desc": "Menacing bullets and a War Maiden in a pink jacket have been custom painted over a yellow and black base.",
-    "flavor": "\\I'll stop shooting when you start shushing\\",
+    "flavor": "I'll stop shooting when you start shushing",
     "tag": "Bullet Queen",
     "minFloat": 0,
     "maxFloat": 1
