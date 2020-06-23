@@ -1,5 +1,5 @@
 <script>
-  import { onMount } from 'svelte'
+  import { onMount } from 'svelte';
   import { derived } from 'svelte/store';
   import M from 'materialize-css';
   import Button from './Button.svelte';
@@ -12,19 +12,19 @@
   $: initFormSelect($selectedSortStore);
 
   onMount(() => {
-    initFormSelect()
-  })
+    initFormSelect();
+  });
 
   const initFormSelect = () => {
     const selectEl = document.querySelector('#sort-key-selector');
-    
+
     if (!selectEl) return;
     selectEl.selectedIndex = $sortingStore.sortingIndex;
 
     const oldInstance = M.FormSelect.getInstance(selectEl);
     if (oldInstance) oldInstance.destroy();
     M.FormSelect.init(selectEl);
-  }
+  };
 
   const handleChangeSortingAsc = () => {
     $sortingStore.sortAsc = !$sortingStore.sortAsc;

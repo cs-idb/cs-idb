@@ -38,21 +38,21 @@
     const weaponId = $filtersStore.weaponId;
     if (weaponId === undefined) return undefined;
     const fullWeapon = $weapons.find(w => w.id === weaponId);
-    return { value: weaponId, label: fullWeapon.tag }
-  }
+    return { value: weaponId, label: fullWeapon.tag };
+  };
 
   const getSelectedSkin = () => {
     const tag = $filtersStore.paintkitTag;
     if (tag === undefined) return undefined;
     return { value: $filtersStore.paintkitTag, label: $filtersStore.paintkitTag };
-  }
+  };
 
   const getSelectedCollection = () => {
     const collectionId = $filtersStore.collectionId;
     if (collectionId === undefined) return undefined;
     const fullCollection = $collections.find(c => c.id === collectionId);
-    return { value: collectionId, label: fullCollection.tag }
-  }
+    return { value: collectionId, label: fullCollection.tag };
+  };
 
   const loadActiveFilters = () => {
     newFilters.selectedWeapon = getSelectedWeapon();
@@ -65,7 +65,7 @@
     }
     newFilters.minFloat = $filtersStore.minFloat || 0.0;
     newFilters.maxFloat = $filtersStore.maxFloat || 1.0;
-  }
+  };
 
   let newFilters = {
     selectedWeapon: undefined,
@@ -73,8 +73,8 @@
     selectedCollection: undefined,
     selectedRarities: [],
     minFloat: 0.0,
-    maxFloat: 1.0
-  }
+    maxFloat: 1.0,
+  };
 
   $: allRaritiesAreSelected = rarityOptions.every(option => newFilters.selectedRarities.find(r => r === option.id) !== undefined);
 
@@ -88,14 +88,14 @@
     dispatch('close');
   };
 
-  const tickAllRarities = (tick) => {
+  const tickAllRarities = tick => {
     newFilters.selectedRarities = [];
     if (tick === true) {
       rarityOptions.forEach(option => {
         newFilters.selectedRarities.push(option.id);
       });
     }
-  }
+  };
 
   const resetAllFilters = () => {
     newFilters = {
@@ -104,8 +104,8 @@
       selectedCollection: undefined,
       selectedRarities: [],
       minFloat: 0.0,
-      maxFloat: 1.0
-    }
+      maxFloat: 1.0,
+    };
     tickAllRarities(true);
   };
 

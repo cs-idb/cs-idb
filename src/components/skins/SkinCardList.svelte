@@ -8,7 +8,7 @@
   import { derived } from 'svelte/store';
   import SkinFilterModal from './SkinFilterModal.svelte';
   import { filterSkinList } from '../../utils';
-  import { params } from '@sveltech/routify'
+  import { params } from '@sveltech/routify';
 
   export let skins = [];
   export let showFilter = true;
@@ -53,12 +53,12 @@
   });
 
   const parseFiltersFromParams = () => {
-    let newFilters = {}
+    let newFilters = {};
     const { weaponId, paintkitTag, collectionId, rarityIds, minFloat, maxFloat, sortingIndex, sortAsc } = $params;
 
     if (weaponId !== undefined) {
       newFilters.weaponId = Number(weaponId);
-    } 
+    }
     if (paintkitTag !== undefined) {
       newFilters.paintkitTag = paintkitTag;
     }
@@ -66,7 +66,7 @@
       newFilters.collectionId = Number(collectionId);
     }
     if (rarityIds !== undefined) {
-      newFilters.rarityIds = rarityIds.split(",").map(Number);
+      newFilters.rarityIds = rarityIds.split(',').map(Number);
     }
     if (minFloat !== undefined) {
       newFilters.minFloat = Number(minFloat);
@@ -82,36 +82,35 @@
       sortingStore.update(s => {
         s.sortingIndex = Number(sortingIndex);
         return s;
-      })
+      });
     }
 
     if (sortAsc !== undefined) {
       sortingStore.update(s => {
-        s.sortAsc = sortAsc === "true";
+        s.sortAsc = sortAsc === 'true';
         return s;
-      })
+      });
     }
-  }
+  };
 
   function encodeQueryData(data) {
     const ret = [];
-    for (let d in data)
-      ret.push(encodeURIComponent(d) + '=' + encodeURIComponent(data[d]));
+    for (let d in data) ret.push(encodeURIComponent(d) + '=' + encodeURIComponent(data[d]));
     return ret.join('&');
   }
 
   $: fillUrlWithFilterAndSorting($filtersStore, $sortingStore);
   const fillUrlWithFilterAndSorting = () => {
     if (!showFilter) return;
-    const queryData = {}
+    const queryData = {};
     Object.assign(queryData, $filtersStore);
-    Object.keys(queryData).forEach((key) => (queryData[key] === undefined) && delete queryData[key]);
+    Object.keys(queryData).forEach(key => queryData[key] === undefined && delete queryData[key]);
     queryData.sortingIndex = $sortingStore.sortingIndex;
     queryData.sortAsc = $sortingStore.sortAsc;
-    
+
     const queryString = basePath + encodeQueryData(queryData);
     window.history.replaceState({}, '', queryString);
-  }
+  };
 </script>
 
 <style>
