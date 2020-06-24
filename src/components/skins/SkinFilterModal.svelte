@@ -10,7 +10,7 @@
 
   $: weaponOptions = $weapons
     .sort((a, b) => {
-      return a.tag > b.tag;
+      return a.tag > b.tag ? 1 : -1;
     })
     .map(w => {
       return { value: w.id, label: w.tag };
@@ -18,20 +18,20 @@
   $: skinOptions = $skins
     .filter((v, i, a) => a.findIndex(t => t.paintkit.tag === v.paintkit.tag) === i)
     .sort((a, b) => {
-      return a.paintkit.tag > b.paintkit.tag;
+      return a.paintkit.tag > b.paintkit.tag ? 1 : -1;
     })
     .map(s => {
       return { value: s.paintkit.tag, label: s.paintkit.tag };
     });
   $: collectionOptions = $collections
     .sort((a, b) => {
-      return a.tag > b.tag;
+      return a.tag > b.tag ? 1 : -1;
     })
     .map(c => {
       return { value: c.id, label: c.tag };
     });
   $: rarityOptions = $rarities.sort((a, b) => {
-    return a.id < b.id;
+    return a.id < b.id ? 1 : -1;
   });
 
   const getSelectedWeapon = () => {
