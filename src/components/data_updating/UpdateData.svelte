@@ -6,7 +6,7 @@
   import M from 'materialize-css';
   import { onMount } from 'svelte';
   import { Spinner } from '../shared';
-  
+
   const dispatch = createEventDispatcher();
 
   const TOAST_DISPLAY_TIME = 1000;

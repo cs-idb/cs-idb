@@ -35,8 +35,8 @@ const changelogs = [
     version: '1.5',
     time: 1592940459000, // Tuesday, 23 June 2020,
     header: 'Skin cards',
-    content: 'Replaced ugly skin table for nicer looking cards. Reworked the filtering system.'
-  }
+    content: 'Replaced ugly skin table for nicer looking cards. Reworked the filtering system.',
+  },
 ];
 
 export { changelogs };
