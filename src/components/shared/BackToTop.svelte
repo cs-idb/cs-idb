@@ -17,6 +17,8 @@
     position: fixed;
     right: 20px;
     bottom: 20px;
+    z-index: 999;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
   }
 
   .back-to-top-wrapper :global(button) {

@@ -71,7 +71,7 @@
   </div>
   {#if skin.collection && showCollection}
     <Button
-      style="width: 100%; margin-top: 10px; display: flex; flex-direction: column; height: 50px; padding: 0;"
+      style="width: 100%; margin-top: 10px; display: flex; flex-direction: column; height: 50px; padding: 0; align-items: center;"
       type="blue"
       on:click={$goto(`/collections/${skin.collection.id}`)}>
       <span class="tag" style="font-size: 11px;">{skin.collection.tag}</span>
