@@ -100,25 +100,26 @@
     margin: 0 20px 0 0;
   }
 
-  #search-box.mobile #search-input {
+  #search-box.mobile #search-input-mobile {
     color: gray;
     border-bottom: 1px solid gray;
+    margin-top: 8px;
   }
-  #search-box.mobile #search-input::placeholder {
+  #search-box.mobile #search-input-mobile::placeholder {
     color: gray;
   }
 
-  #search-input {
+  #search-input-desktop {
     margin-top: 8px;
     color: white;
     border-bottom: 1px solid white;
   }
 
-  #search-input:focus {
+  #search-input-desktop:focus {
     box-shadow: 0 1px 0 0 white;
   }
 
-  #search-input::placeholder {
+  #search-input-desktop::placeholder {
     color: white;
   }
 
@@ -172,7 +173,7 @@
     <i class="material-icons">search</i>
   {/if}
   <div>
-    <input type="text" id="search-input" class="autocomplete" placeholder="Search" bind:value={search_value} on:keydown={handleMoveFocus} />
+    <input type="text" id={mobile ? "search-input-mobile" : 'search-input-desktop'} class="autocomplete search-input" placeholder="Search" bind:value={search_value} on:keydown={handleMoveFocus} />
   </div>
   {#if !mobile}
     <i class="material-icons">search</i>

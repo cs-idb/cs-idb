@@ -49,7 +49,7 @@
   .sort-selector-container :global(button) {
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 0 10px;
   }
 
   .sort-selector-container :global(button span) {

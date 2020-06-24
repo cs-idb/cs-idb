@@ -142,19 +142,23 @@
     visibility: visible;
   }
 
-  .skin-filter-modal {
+  .modal-container {
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
     position: fixed;
+  }
+
+  .skin-filter-modal {
     background-color: white;
     border: 1px solid lightgrey;
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
     padding: 20px;
-    z-index: 1000;
-    top: 50%;
-    left: 50%;
-    max-height: 90%;
-    overflow-x: hidden;
-    overflow-y: auto;
-    transform: translate(-50%, -50%);
     min-width: min(400px, 90%);
   }
 
@@ -226,73 +230,75 @@
   }
 </style>
 
-<div class="background-shadow" on:click={hideModal} class:show={showModal} />
+<div class="background-shadow" class:show={showModal} />
 {#if showModal}
-  <div class="skin-filter-modal">
-    <div class="title">
-      <h6 class="header">
-        <b>Filters</b>
-      </h6>
-      <Button on:click={hideModal}>x</Button>
-    </div>
-
-    <div class="body">
-
-      <div>
-        <label>Weapon name</label>
-        <Select items={weaponOptions} bind:selectedValue={newFilters.selectedWeapon} />
+  <div class="modal-container" on:click|self={hideModal}>
+    <div class="skin-filter-modal">
+      <div class="title">
+        <h6 class="header">
+          <b>Filters</b>
+        </h6>
+        <Button on:click={hideModal}>x</Button>
       </div>
 
-      <div>
-        <label>Skin name</label>
-        <Select items={skinOptions} bind:selectedValue={newFilters.selectedSkin} />
-      </div>
+      <div class="body">
 
-      <div>
-        <label>Collection name</label>
-        <Select items={collectionOptions} bind:selectedValue={newFilters.selectedCollection} />
-      </div>
+        <div>
+          <label>Weapon name</label>
+          <Select items={weaponOptions} bind:selectedValue={newFilters.selectedWeapon} />
+        </div>
 
-      <div class="rarities">
-        <label>Rarity</label>
-        <p class="invert-button" on:click={() => tickAllRarities(!allRaritiesAreSelected)}>{allRaritiesAreSelected ? 'Clear all' : 'Select all'}</p>
-        {#each rarityOptions as option}
-          <label>
-            <input type="checkbox" class="filled-in" bind:group={newFilters.selectedRarities} value={option.id} />
-            <span class="name" style={`color: ${option.color};`}>{option.tag}</span>
-          </label>
-        {/each}
-      </div>
+        <div>
+          <label>Skin name</label>
+          <Select items={skinOptions} bind:selectedValue={newFilters.selectedSkin} />
+        </div>
 
-      <div class="min-float">
-        <label>Min float</label>
-        <div class="val">
-          <p class="range-field">
-            <input type="range" min="0" max="1" step="0.01" bind:value={newFilters.minFloat} />
-          </p>
-          <div class="input-field">
-            <input bind:value={newFilters.minFloat} type="number" min="0" max="1" step="0.01" />
+        <div>
+          <label>Collection name</label>
+          <Select items={collectionOptions} bind:selectedValue={newFilters.selectedCollection} />
+        </div>
+
+        <div class="rarities">
+          <label>Rarity</label>
+          <p class="invert-button" on:click={() => tickAllRarities(!allRaritiesAreSelected)}>{allRaritiesAreSelected ? 'Clear all' : 'Select all'}</p>
+          {#each rarityOptions as option}
+            <label>
+              <input type="checkbox" class="filled-in" bind:group={newFilters.selectedRarities} value={option.id} />
+              <span class="name" style={`color: ${option.color};`}>{option.tag}</span>
+            </label>
+          {/each}
+        </div>
+
+        <div class="min-float">
+          <label>Min float</label>
+          <div class="val">
+            <p class="range-field">
+              <input type="range" min="0" max="1" step="0.01" bind:value={newFilters.minFloat} />
+            </p>
+            <div class="input-field">
+              <input bind:value={newFilters.minFloat} type="number" min="0" max="1" step="0.01" />
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="max-float">
-        <label>Max float</label>
-        <div class="val">
-          <p class="range-field">
-            <input type="range" min="0" max="1" step="0.01" bind:value={newFilters.maxFloat} />
-          </p>
-          <div class="input-field">
-            <input bind:value={newFilters.maxFloat} type="number" min="0" max="1" step="0.01" />
+        <div class="max-float">
+          <label>Max float</label>
+          <div class="val">
+            <p class="range-field">
+              <input type="range" min="0" max="1" step="0.01" bind:value={newFilters.maxFloat} />
+            </p>
+            <div class="input-field">
+              <input bind:value={newFilters.maxFloat} type="number" min="0" max="1" step="0.01" />
+            </div>
           </div>
         </div>
+
       </div>
 
-    </div>
-
-    <div class="footer">
-      <Button type="red" on:click={resetAllFilters}>Reset</Button>
-      <Button type="green" on:click={updateFilters}>Save</Button>
+      <div class="footer">
+        <Button type="red" on:click={resetAllFilters}>Reset</Button>
+        <Button type="green" on:click={updateFilters}>Save</Button>
+      </div>
     </div>
   </div>
 {/if}
