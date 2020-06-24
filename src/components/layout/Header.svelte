@@ -1,8 +1,8 @@
 <script>
-  import { url } from '@sveltech/routify';
-  import { onMount } from 'svelte';
   import M from 'materialize-css';
+  import { onMount } from 'svelte';
   import SearchSite from './SearchSite.svelte';
+  import { url } from '@sveltech/routify';
 
   onMount(() => {
     initNav();

@@ -30,10 +30,16 @@ module.exports = {
     }
   ],
   rules: {
-    camelcase: 0,
+    'camelcase': 0,
     'no-multiple-empty-lines': 0,
     'no-use-before-define': 0,
-    eqeqeq: 1, // TODO: Check for == operators,
-    'no-return-assign': 0
+    'eqeqeq': 1, // TODO: Check for == operators,
+    'no-return-assign': 0,
+    "sort-imports": ["error", {
+      "ignoreCase": true,
+      "ignoreDeclarationSort": false,
+      "ignoreMemberSort": false,
+      "memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
+    }]
   }
 }

@@ -1,9 +1,9 @@
 <script>
-  import M from 'materialize-css';
+  import { Badge, Button, PageHeader, SkinFloat } from '../../components/shared';
   import { goto, url } from '@sveltech/routify';
   import { onMount, tick } from 'svelte';
+  import M from 'materialize-css';
   import { skins } from '../../stores';
-  import { Button, SkinFloat, Badge, PageHeader } from '../../components/shared';
   export let id;
 
   let skin;

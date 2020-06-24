@@ -1,6 +1,6 @@
 import { derived, get } from 'svelte/store';
-import { createLocalStorageStore } from './LocalForageStore';
 import { compareModes } from './FilterStore';
+import { createLocalStorageStore } from './LocalForageStore';
 
 const raw_checksums = createLocalStorageStore('checksums', []);
 const raw_collections = createLocalStorageStore('collections', []);

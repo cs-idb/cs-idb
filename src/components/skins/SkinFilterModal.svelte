@@ -1,7 +1,7 @@
 <script>
+  import { collections, rarities, skins, weapons } from '../../stores';
   import { createEventDispatcher, onMount } from 'svelte';
   import { Button } from '../shared';
-  import { weapons, skins, collections, rarities } from '../../stores';
   import M from 'materialize-css';
   import Select from 'svelte-select';
   export let showModal = false;

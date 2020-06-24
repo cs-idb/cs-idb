@@ -1,7 +1,7 @@
 <script>
-  import { PageHeader, BackToTop } from '../../components/shared/';
-  import { skins } from '../../stores';
+  import { BackToTop, PageHeader } from '../../components/shared/';
   import { SkinCardList } from '../../components/skins/';
+  import { skins } from '../../stores';
   import { writable } from 'svelte/store';
 
   const sortingStore = writable({

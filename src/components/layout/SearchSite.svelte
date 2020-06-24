@@ -1,7 +1,7 @@
 <script>
-  import { createEventDispatcher } from 'svelte';
-  import { goto, url } from '@sveltech/routify';
   import { collections, skins } from '../../stores';
+  import { goto, url } from '@sveltech/routify';
+  import { createEventDispatcher } from 'svelte';
 
   export let mobile = undefined;
 

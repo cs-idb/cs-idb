@@ -1,8 +1,8 @@
 <script>
-  import M from 'materialize-css';
-  import { onMount, createEventDispatcher, tick } from 'svelte';
+  import { createEventDispatcher, onMount, tick } from 'svelte';
   import { Button } from '../shared/';
   import CompareModeSelect from './CompareModeSelect.svelte';
+  import M from 'materialize-css';
   export let filter_options;
 
   const dispatch = createEventDispatcher();

@@ -1,5 +1,5 @@
-import { raw_checksums } from '../stores';
 import { get } from 'svelte/store';
+import { raw_checksums } from '../stores';
 
 async function fetchChecksums() {
   const currentChecksums = get(raw_checksums);

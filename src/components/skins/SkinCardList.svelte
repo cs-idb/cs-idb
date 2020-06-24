@@ -1,14 +1,14 @@
 <script>
-  import SkinCard from './SkinCard.svelte';
-  import { SortableArray } from '../../utils/';
   import { Button, SortSelector } from '../../components/shared/';
-  import { onMount } from 'svelte';
-  import M from 'materialize-css';
-  import SvelteInfiniteScroll from 'svelte-infinite-scroll';
   import { derived } from 'svelte/store';
-  import SkinFilterModal from './SkinFilterModal.svelte';
   import { filterSkinList } from '../../utils';
+  import M from 'materialize-css';
+  import { onMount } from 'svelte';
   import { params } from '@sveltech/routify';
+  import SkinCard from './SkinCard.svelte';
+  import SkinFilterModal from './SkinFilterModal.svelte';
+  import { SortableArray } from '../../utils/';
+  import SvelteInfiniteScroll from 'svelte-infinite-scroll';
 
   export let skins = [];
   export let showFilter = true;

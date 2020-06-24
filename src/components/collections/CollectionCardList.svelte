@@ -1,8 +1,8 @@
 <script>
-  import { onMount } from 'svelte';
-  import { url, params } from '@sveltech/routify';
+  import { Badge, Card, CardList, ListFilterSorter } from '../shared/';
+  import { params, url } from '@sveltech/routify';
   import { collections } from '../../stores';
-  import { Card, ListFilterSorter, Badge, CardList } from '../shared/';
+  import { onMount } from 'svelte';
   import { SortableArray } from '../../utils/';
 
   const sortables = ['name', 'case', 'stattrak', 'souvenir', 'released'];

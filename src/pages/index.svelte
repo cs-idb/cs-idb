@@ -1,7 +1,7 @@
 <script>
-  import { url } from '@sveltech/routify';
-  import { collections, skins, weapons, rarities } from '../stores';
+  import { collections, rarities, skins, weapons } from '../stores';
   import { Button } from '../components/shared';
+  import { url } from '@sveltech/routify';
 </script>
 
 <style>
