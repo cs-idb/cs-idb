@@ -1,6 +1,6 @@
 <script>
-  import { goto } from '@sveltech/routify';
   import { Badge, Button, SkinFloat } from '../shared';
+  import { goto } from '@sveltech/routify';
   export let skin;
   export let showCollection = true;
 </script>

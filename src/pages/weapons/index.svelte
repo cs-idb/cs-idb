@@ -1,5 +1,5 @@
 <script>
-  import { Table, PageHeader } from '../../components/shared/';
+  import { PageHeader, Table } from '../../components/shared/';
   import { weapons } from '../../stores';
 
   $: tableHeaders = ['name', 'type', 'desc'];

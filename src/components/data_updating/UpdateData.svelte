@@ -1,11 +1,11 @@
 <script>
+  import { createEventDispatcher } from 'svelte';
+  import { fetchChecksums } from '../../dal/';
+  import { fetchDataByNames } from '../../dal';
+  import localforage from 'localforage';
   import M from 'materialize-css';
   import { onMount } from 'svelte';
-  import { fetchChecksums } from '../../dal/';
   import { Spinner } from '../shared';
-  import { fetchDataByNames } from '../../dal';
-  import { createEventDispatcher } from 'svelte';
-  import localforage from 'localforage';
 
   const dispatch = createEventDispatcher();
 

@@ -1,7 +1,7 @@
 <script>
-  import { createEventDispatcher } from 'svelte';
-  import { goto, url } from '@sveltech/routify';
   import { collections, skins } from '../../stores';
+  import { goto, url } from '@sveltech/routify';
+  import { createEventDispatcher } from 'svelte';
 
   export let mobile = undefined;
 
@@ -173,7 +173,13 @@
     <i class="material-icons">search</i>
   {/if}
   <div>
-    <input type="text" id={mobile ? "search-input-mobile" : 'search-input-desktop'} class="autocomplete search-input" placeholder="Search" bind:value={search_value} on:keydown={handleMoveFocus} />
+    <input
+      type="text"
+      id={mobile ? 'search-input-mobile' : 'search-input-desktop'}
+      class="autocomplete search-input"
+      placeholder="Search"
+      bind:value={search_value}
+      on:keydown={handleMoveFocus} />
   </div>
   {#if !mobile}
     <i class="material-icons">search</i>

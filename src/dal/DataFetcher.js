@@ -1,4 +1,4 @@
-import { raw_checksums, raw_collections, raw_rarities, raw_skins, raw_weapons, raw_paintkits } from '../stores';
+import { raw_checksums, raw_collections, raw_paintkits, raw_rarities, raw_skins, raw_weapons } from '../stores';
 import { get } from 'svelte/store';
 
 async function baseFetch(name) {

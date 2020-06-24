@@ -1,7 +1,7 @@
 <script>
+  import { changelogs } from '../dal/';
   import M from 'materialize-css';
   import { onMount } from 'svelte';
-  import { changelogs } from '../dal/';
   import { PageHeader } from '../components/shared';
 
   $: sortedChangelogs = changelogs.sort((a, b) => (a.time > b.time ? -1 : 1));

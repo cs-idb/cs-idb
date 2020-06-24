@@ -1,5 +1,5 @@
 <script>
-  import { Header, Footer } from '../components/layout/';
+  import { Footer, Header } from '../components/layout/';
   import { UpdateData } from '../components/data_updating/';
 
   let updating_data = true;

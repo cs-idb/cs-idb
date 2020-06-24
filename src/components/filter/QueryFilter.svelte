@@ -1,11 +1,11 @@
 <script>
+  import { createEventDispatcher, onMount } from 'svelte';
+  import AddFilter from './AddFilter.svelte';
+  import { Button } from '../shared/';
+  import { compareModes } from '../../stores/';
+  import { guidGenerator } from '../../utils/';
   import M from 'materialize-css';
   import { params } from '@sveltech/routify';
-  import { createEventDispatcher, onMount } from 'svelte';
-  import { Button } from '../shared/';
-  import AddFilter from './AddFilter.svelte';
-  import { guidGenerator } from '../../utils/';
-  import { compareModes } from '../../stores/';
   const dispatch = createEventDispatcher();
 
   export let filter_options = [];

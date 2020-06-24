@@ -1,8 +1,8 @@
 <script>
-  import { onMount } from 'svelte';
+  import Button from './Button.svelte';
   import { derived } from 'svelte/store';
   import M from 'materialize-css';
-  import Button from './Button.svelte';
+  import { onMount } from 'svelte';
 
   export let sortingStore;
   const selectedSortStore = derived(sortingStore, $sortingStore => {

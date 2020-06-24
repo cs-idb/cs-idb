@@ -1,9 +1,9 @@
 <script>
-  import { goto, url } from '@sveltech/routify';
   import { Badge, PageHeader } from '../../components/shared/';
-  import { SkinCardList } from '../../components/skins/';
   import { collections, skins } from '../../stores';
+  import { goto, url } from '@sveltech/routify';
   import { onMount } from 'svelte';
+  import { SkinCardList } from '../../components/skins/';
   import { writable } from 'svelte/store';
   export let id;
 

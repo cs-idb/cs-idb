@@ -1,7 +1,7 @@
 <script>
+  import Button from './Button.svelte';
   import { createEventDispatcher } from 'svelte';
   import { SortableArray } from '../../utils/';
-  import Button from './Button.svelte';
 
   export let tableHeaders;
   export let tableRows;

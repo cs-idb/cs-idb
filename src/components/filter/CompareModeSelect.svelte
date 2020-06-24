@@ -1,7 +1,7 @@
 <script>
-  import M from 'materialize-css';
-  import { onMount, createEventDispatcher } from 'svelte';
+  import { createEventDispatcher, onMount } from 'svelte';
   import { compareModes } from '../../stores/';
+  import M from 'materialize-css';
   export let type;
 
   const dispatch = createEventDispatcher();
