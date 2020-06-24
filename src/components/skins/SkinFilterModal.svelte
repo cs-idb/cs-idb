@@ -159,7 +159,16 @@
     border: 1px solid lightgrey;
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
     padding: 20px;
-    min-width: min(400px, 90%);
+    min-width: 90%;
+    max-height: 90%;
+    overflow-y: auto;
+  }
+
+  @media only screen and (min-width: 600px) {
+    .skin-filter-modal {
+      width: 500px;
+      min-width: auto;
+    }
   }
 
   .title {
