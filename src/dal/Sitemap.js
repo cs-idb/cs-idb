@@ -16,14 +16,6 @@ const sitemap = [
     ],
   },
   {
-    name: 'Rarities',
-    url: '/rarities',
-  },
-  {
-    name: 'Weapons',
-    url: '/weapons',
-  },
-  {
     name: 'Skins',
     url: '/skins',
     children: [
