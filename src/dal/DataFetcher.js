@@ -3,20 +3,20 @@ import localforage from 'localforage';
 
 const sessionDataKey = 'csidb/loadeddata';
 const pathsToFetch = {
-  "collections": raw_collections,
-  "paintkits": raw_paintkits,
-  "rarities": raw_rarities,
-  "weapons": raw_weapons,
-  "skins": raw_skins
-}
+  collections: raw_collections,
+  paintkits: raw_paintkits,
+  rarities: raw_rarities,
+  weapons: raw_weapons,
+  skins: raw_skins,
+};
 
 async function isDataLoadedLocally() {
   const firstLocalItem = localforage.getItem(Object.keys(pathsToFetch)[0]);
-  return (firstLocalItem !== null); 
+  return firstLocalItem !== null;
 }
 
 function isSessionDataSet() {
-  return (sessionDataKey in sessionStorage);
+  return sessionDataKey in sessionStorage;
 }
 
 function setSessionDataLoaded() {
@@ -24,11 +24,11 @@ function setSessionDataLoaded() {
 }
 
 async function fetchData() {
-    const promises = [];
-    Object.keys(pathsToFetch).forEach(path => {
-      promises.push(fetchSinglePath(path))
-    })
-    await Promise.all(promises);
+  const promises = [];
+  Object.keys(pathsToFetch).forEach(path => {
+    promises.push(fetchSinglePath(path));
+  });
+  await Promise.all(promises);
 }
 
 async function fetchSinglePath(path) {
@@ -45,4 +45,4 @@ async function baseFetch(name) {
   return data;
 }
 
-export { isDataLoadedLocally, isSessionDataSet, setSessionDataLoaded, fetchData }
+export { isDataLoadedLocally, isSessionDataSet, setSessionDataLoaded, fetchData };

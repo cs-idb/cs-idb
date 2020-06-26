@@ -43,6 +43,13 @@ const changelogs = [
     header: 'Site cleanup',
     content: 'Removed rarities- and weaponspage, cleaned up homepage.',
   },
+  {
+    version: '1.4.3',
+    time: 1593166661000, // Friday, 26 June 2020,
+    header: 'Change data loading approach.',
+    content:
+      'Replaced the crappy checksum approach of data fetching with fetching the data every new session, loading the old data first and potentially overwriting it with new data.',
+  },
 ];
 
 export { changelogs };

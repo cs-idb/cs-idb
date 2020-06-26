@@ -1,5 +1,5 @@
 <script>
-  import { fetchData, isDataLoadedLocally, isSessionDataSet, setSessionDataLoaded } from '../../dal'
+  import { fetchData, isDataLoadedLocally, isSessionDataSet, setSessionDataLoaded } from '../../dal';
   import { createEventDispatcher } from 'svelte';
   import { onMount } from 'svelte';
   import { Spinner } from '../shared';
@@ -14,17 +14,16 @@
     if (dataIsLoadedLocally === true) {
       updating_data = false;
       dispatch('done');
-      
-      if (sessionDataIsSet === true)
-        return;
+
+      if (sessionDataIsSet === true) return;
     }
 
-    await fetchData(); 
+    await fetchData();
     if (sessionDataIsSet === false) {
       updating_data = false;
       dispatch('done');
       setSessionDataLoaded();
-    } 
+    }
   });
 </script>
 

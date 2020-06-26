@@ -72,16 +72,4 @@ const skins = derived(raw_skins, $raw_skins => {
   return new_skins;
 });
 
-export {
-  raw_collections,
-  raw_rarities,
-  raw_skins,
-  raw_weapons,
-  raw_paintkits,
-  collections,
-  rarities,
-  weapons,
-  skins,
-  paintkits,
-  compareModes,
-};
+export { raw_collections, raw_rarities, raw_skins, raw_weapons, raw_paintkits, collections, rarities, weapons, skins, paintkits, compareModes };
