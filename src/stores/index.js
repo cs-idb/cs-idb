@@ -2,7 +2,6 @@ import { derived, get } from 'svelte/store';
 import { compareModes } from './FilterStore';
 import { createLocalStorageStore } from './LocalForageStore';
 
-const raw_checksums = createLocalStorageStore('checksums', []);
 const raw_collections = createLocalStorageStore('collections', []);
 const raw_rarities = createLocalStorageStore('rarities', []);
 const raw_skins = createLocalStorageStore('skins', []);
@@ -74,7 +73,6 @@ const skins = derived(raw_skins, $raw_skins => {
 });
 
 export {
-  raw_checksums,
   raw_collections,
   raw_rarities,
   raw_skins,
