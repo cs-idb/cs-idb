@@ -1,5 +1,5 @@
 <script>
-  import { collections, rarities, skins, weapons } from '../stores';
+  import { collections, skins } from '../stores';
   import { Button } from '../components/shared';
   import { url } from '@sveltech/routify';
 </script>
@@ -82,7 +82,7 @@
   <div class="header">
     <h2 class="red-text text-lighten-2">Counter Strike: Global Offensive</h2>
     <h3 class="grey-text text-darken-2">Item Database</h3>
-    <h5>A simple Counter Strike: Global Offensive skin, weapon and collection database.</h5>
+    <h5>A simple Counter Strike: Global Offensive skin wiki.</h5>
     <h6 class="grey-text text-darken-2">Version __VERSION__</h6>
   </div>
 
@@ -98,28 +98,6 @@
         </a>
       </h5>
       <p>A list of all {$collections.length} collections!</p>
-    </div>
-
-    <div class="ref">
-      <i class="material-icons red-text text-lighten-2">grade</i>
-      <h5>
-        <a href={$url('/rarities')}>
-          Rarities
-          <i class="material-icons">chevron_right</i>
-        </a>
-      </h5>
-      <p>A list of all {$rarities.length} rarities!</p>
-    </div>
-
-    <div class="ref">
-      <i class="material-icons red-text text-lighten-2">games</i>
-      <h5>
-        <a href={$url('/weapons')}>
-          Weapons
-          <i class="material-icons">chevron_right</i>
-        </a>
-      </h5>
-      <p>A list of all {$weapons.length} weapons!</p>
     </div>
 
     <div class="ref">
@@ -153,20 +131,7 @@
       </div>
 
       <div class="source">
-        <h5>Json-server</h5>
-        <p>Easy fake json API</p>
-        <a href={$url('https://github.com/typicode/json-server')} target="_blank" rel="noopener noreferrer">
-          <Button>
-            <span class="flex">
-              GitHub
-              <i class="material-icons">chevron_right</i>
-            </span>
-          </Button>
-        </a>
-      </div>
-
-      <div class="source">
-        <h5>Materialize-css and -icons</h5>
+        <h5>Materializecss</h5>
         <p>CSS Framework + iconset</p>
         <a href={$url('https://materializecss.com/')} target="_blank" rel="noopener noreferrer">
           <Button>
@@ -179,7 +144,7 @@
       </div>
 
       <div class="source">
-        <h5>Vercel (Formally now.sh)</h5>
+        <h5>Vercel</h5>
         <p>Static site + cloud functions hosting</p>
         <a href={$url('https://vercel.com/')} target="_blank" rel="noopener noreferrer">
           <Button>

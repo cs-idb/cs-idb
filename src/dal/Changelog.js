@@ -32,10 +32,23 @@ const changelogs = [
     content: 'Fixed issue with skin images not showing in Chrome; Images now also show in the global skins- and collection lists.',
   },
   {
-    version: '1.5',
+    version: '1.4.1',
     time: 1592940459000, // Tuesday, 23 June 2020,
     header: 'Skin cards',
     content: 'Replaced ugly skin table for nicer looking cards. Reworked the filtering system.',
+  },
+  {
+    version: '1.4.2',
+    time: 1593108741000, // Thursday, 25 June 2020,
+    header: 'Site cleanup',
+    content: 'Removed rarities- and weaponspage, cleaned up homepage.',
+  },
+  {
+    version: '1.4.3',
+    time: 1593166661000, // Friday, 26 June 2020,
+    header: 'Change data loading approach.',
+    content:
+      'Replaced the crappy checksum approach of data fetching with fetching the data every new session, loading the old data first and potentially overwriting it with new data.',
   },
 ];
 

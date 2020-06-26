@@ -1,5 +1,40 @@
-import { raw_checksums, raw_collections, raw_paintkits, raw_rarities, raw_skins, raw_weapons } from '../stores';
-import { get } from 'svelte/store';
+import { raw_collections, raw_paintkits, raw_rarities, raw_skins, raw_weapons } from '../stores';
+import localforage from 'localforage';
+
+const sessionDataKey = 'csidb/loadeddata';
+const pathsToFetch = {
+  collections: raw_collections,
+  paintkits: raw_paintkits,
+  rarities: raw_rarities,
+  weapons: raw_weapons,
+  skins: raw_skins,
+};
+
+async function isDataLoadedLocally() {
+  const firstLocalItem = localforage.getItem(Object.keys(pathsToFetch)[0]);
+  return firstLocalItem !== null;
+}
+
+function isSessionDataSet() {
+  return sessionDataKey in sessionStorage;
+}
+
+function setSessionDataLoaded() {
+  sessionStorage[sessionDataKey] = '1';
+}
+
+async function fetchData() {
+  const promises = [];
+  Object.keys(pathsToFetch).forEach(path => {
+    promises.push(fetchSinglePath(path));
+  });
+  await Promise.all(promises);
+}
+
+async function fetchSinglePath(path) {
+  const data = await baseFetch(path);
+  pathsToFetch[path].set(data);
+}
 
 async function baseFetch(name) {
   const url = '__BASE_API_URL__' + name;
@@ -10,72 +45,4 @@ async function baseFetch(name) {
   return data;
 }
 
-async function fetchCollections() {
-  const data = await baseFetch('collections');
-  raw_collections.set(data);
-}
-
-async function fetchRarities() {
-  const data = await baseFetch('rarities');
-  raw_rarities.set(data);
-}
-
-async function fetchWeapons() {
-  const data = await baseFetch('weapons');
-  raw_weapons.set(data);
-}
-
-async function fetchSkins() {
-  const data = await baseFetch('skins');
-  raw_skins.set(data);
-}
-
-async function fetchPaintkits() {
-  const data = await baseFetch('paintkits');
-  raw_paintkits.set(data);
-}
-
-function fetchDataByNames(raw_checksums) {
-  let checksum_counter = 0;
-  const amount_of_checksums = raw_checksums.length;
-
-  return new Promise(resolve => {
-    if (amount_of_checksums === 0) resolve();
-
-    raw_checksums.forEach(async checksum => {
-      const { name, hash } = checksum;
-      await fetchDataByName(name, hash);
-      checksum_counter++;
-      if (checksum_counter === amount_of_checksums) resolve();
-    });
-  });
-}
-
-async function fetchDataByName(name, hash) {
-  if (name === 'collections') await fetchCollections();
-
-  if (name === 'rarities') await fetchRarities();
-
-  if (name === 'weapons') await fetchWeapons();
-
-  if (name === 'paintkits') await fetchPaintkits();
-
-  if (name === 'skins') await fetchSkins();
-
-  changeLocalHash(name, hash);
-}
-
-function changeLocalHash(name, hash) {
-  const current_checksums = get(raw_checksums) || [];
-
-  const checksum = current_checksums.find(c => c.name === name);
-  if (checksum) {
-    checksum.hash = hash;
-  } else {
-    current_checksums.push({ name, hash });
-  }
-
-  raw_checksums.set(current_checksums);
-}
-
-export { fetchDataByNames };
+export { isDataLoadedLocally, isSessionDataSet, setSessionDataLoaded, fetchData };

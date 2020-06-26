@@ -128,21 +128,9 @@
       </a>
     </li>
     <li>
-      <a class="navitem" href={$url('/rarities')}>
-        <i class="material-icons">grade</i>
-        Rarities
-      </a>
-    </li>
-    <li>
       <a class="navitem" href={$url('/skins')}>
         <i class="material-icons">brush</i>
         Skins
-      </a>
-    </li>
-    <li>
-      <a class="navitem" href={$url('/weapons')}>
-        <i class="material-icons">games</i>
-        Weapons
       </a>
     </li>
     <li>
@@ -161,21 +149,9 @@
       </a>
     </li>
     <li>
-      <a class="navitem red-text text-lighten-2" href={$url('/rarities')}>
-        <i class="material-icons">grade</i>
-        Rarities
-      </a>
-    </li>
-    <li>
       <a class="navitem red-text text-lighten-2" href={$url('/skins')}>
         <i class="material-icons">brush</i>
         Skins
-      </a>
-    </li>
-    <li>
-      <a class="navitem red-text text-lighten-2" href={$url('/weapons')}>
-        <i class="material-icons">games</i>
-        Weapons
       </a>
     </li>
   </ul>
