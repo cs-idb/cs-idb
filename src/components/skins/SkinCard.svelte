@@ -66,7 +66,7 @@
   <div class="img-container" style={`background: radial-gradient(circle, ${skin.rarity.color}b3 0%, #00000080 100%);`}>
     <img
       loading="lazy"
-      src={`https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/${skin.image.fullname_filehash_png}`}
+      src={`https://steamcdn-a.akamaihd.net/apps/730/icons/econ/${skin.image}`}
       alt={`An image of ${skin.weapon.tag} | ${skin.paintkit.tag}`} />
   </div>
   {#if skin.collection && showCollection}

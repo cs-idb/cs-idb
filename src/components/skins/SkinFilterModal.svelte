@@ -9,6 +9,7 @@
   const dispatch = createEventDispatcher();
 
   $: weaponOptions = $weapons
+    .filter(w => w.type !== 'Knife')
     .sort((a, b) => {
       return a.tag > b.tag ? 1 : -1;
     })

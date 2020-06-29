@@ -69,7 +69,7 @@ const skins = derived(raw_skins, $raw_skins => {
     delete s.paintkitId;
     s.paintkit = paintkit;
   });
-  return new_skins;
+  return new_skins.filter(s => s.weapon.type !== 'Knife');
 });
 
 export { raw_collections, raw_rarities, raw_skins, raw_weapons, raw_paintkits, collections, rarities, weapons, skins, paintkits, compareModes };
