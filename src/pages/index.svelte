@@ -110,6 +110,18 @@
       </h5>
       <p>A list of all {$skins.length} skins!</p>
     </div>
+
+    <div class="ref">
+      <i class="material-icons red-text text-lighten-2">restaurant</i>
+      <h5>
+        <a href={$url('/knives')}>
+          Knives
+          <i class="material-icons">chevron_right</i>
+        </a>
+      </h5>
+      <p>TODO</p>
+      <!-- <p>A list of all {$skins.length} knives!</p> -->
+    </div>
   </div>
 
   <div class="divider" />

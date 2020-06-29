@@ -134,6 +134,12 @@
       </a>
     </li>
     <li>
+      <a class="navitem" href={$url('/knives')}>
+        <i class="material-icons">restaurant</i>
+        Knives
+      </a>
+    </li>
+    <li>
       <a class="navitem icon-fix" href={$url('/changelog')}>
         <i class="material-icons">history</i>
         Changelog
@@ -152,6 +158,12 @@
       <a class="navitem red-text text-lighten-2" href={$url('/skins')}>
         <i class="material-icons">brush</i>
         Skins
+      </a>
+    </li>
+    <li>
+      <a class="navitem red-text text-lighten-2" href={$url('/knives')}>
+        <i class="material-icons">restaurant</i>
+        Knives
       </a>
     </li>
   </ul>

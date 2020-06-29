@@ -34,9 +34,11 @@ function checkFilterOnSkin(skin, filter) {
       return value.includes(skin.rarity.id);
     }
     case 'minFloat': {
+      if (!skin.paintkit) return true;
       return skin.paintkit.minFloat >= value;
     }
     case 'maxFloat': {
+      if (!skin.paintkit) return true;
       return skin.paintkit.maxFloat <= value;
     }
     default: {
