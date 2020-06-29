@@ -1,8 +1,13 @@
 <script>
   import { BackToTop, PageHeader } from '../../components/shared/';
+  import { KnifeCard } from '../../components/knives/';
   import { knive_skins } from '../../stores'
+  import SvelteInfiniteScroll from 'svelte-infinite-scroll';
 
-  $: paginated_knives = ($knive_skins || []).slice(0, 1)
+  let page = 0;
+  let size = 20;
+  let paginated_knives = [];
+  $: paginated_knives = [...paginated_knives, ...$knive_skins.slice(size * page, size * (page + 1) - 1)];
 </script>
 
 <style>
@@ -15,8 +20,9 @@
   <PageHeader>Knives</PageHeader>
 
   {#each paginated_knives as knife}
-    <div><p>{JSON.stringify(knife)}</p></div>
+    <KnifeCard {knife} />
   {/each}
+  <SvelteInfiniteScroll threshold={75} on:loadMore={() => page++} window={true} hasMore={page * size < $knive_skins.length} />
   
   <BackToTop />
 </div>
