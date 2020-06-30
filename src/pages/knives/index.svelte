@@ -1,13 +1,18 @@
 <script>
-  import { BackToTop, PageHeader } from '../../components/shared/';
-  import { KnifeCard } from '../../components/knives/';
+  import { BackToTop, CardList, PageHeader } from '../../components/shared/';
+  import { KnifeCard } from '../../components/knives'
   import { knive_skins } from '../../stores'
-  import SvelteInfiniteScroll from 'svelte-infinite-scroll';
+  import { writable } from 'svelte/store';
 
-  let page = 0;
-  let size = 20;
-  let paginated_knives = [];
-  $: paginated_knives = [...paginated_knives, ...$knive_skins.slice(size * page, size * (page + 1) - 1)];
+  const sortingStore = writable({
+    sortingIndex: 0,
+    sortAsc: true,
+    availableSorts: [
+      { key: 'weapon.tag', type: 'str', name: 'Weapon name' },
+      { key: 'paintkit.tag', type: 'str', name: 'Skin name' }
+    ],
+  });
+  const filtersStore = writable({});
 </script>
 
 <style>
@@ -18,11 +23,6 @@
 
 <div class="knives-container">
   <PageHeader>Knives</PageHeader>
-
-  {#each paginated_knives as knife}
-    <KnifeCard {knife} />
-  {/each}
-  <SvelteInfiniteScroll threshold={75} on:loadMore={() => page++} window={true} hasMore={page * size < $knive_skins.length} />
-  
+  <CardList items={$knive_skins} {sortingStore} {filtersStore} cardComponent={KnifeCard} />
   <BackToTop />
 </div>

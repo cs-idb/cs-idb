@@ -3,6 +3,22 @@ function getObjValueByNestedKey(key, obj = self, separator = '.') {
   return properties.reduce((prev, curr) => prev && prev[curr], obj);
 }
 
+function filterList(listItems, filters) {
+  const filteredItems = [];
+
+  if (filters === undefined) return listItems;
+  listItems.forEach(item => {
+    const isValid = Object.entries(filters).every(filter => applyFilterOnItem(item, filter));
+    if (isValid) filteredItems.push(item);
+  })
+
+  return filteredItems;
+}
+
+function applyFilterOnItem(item, filter) {
+  return true
+}
+
 function filterSkinList(skins, filters) {
   const filteredSkins = [];
 
@@ -151,4 +167,4 @@ function checkValueWithFilter(filter, value) {
   return true;
 }
 
-export { applyFilter, getObjValueByNestedKey, filterSkinList };
+export { applyFilter, getObjValueByNestedKey, filterSkinList, filterList };

@@ -1,14 +1,14 @@
 <script>
   import { Card, SkinFloat } from '../shared';
   import { goto } from '@sveltech/routify';
-  export let knife;
+  export let item;
 
   let name = '';
   $: {
-    if (knife.paintkit) {
-      name = '★ ' + knife.weapon.tag + ' | ' + knife.paintkit.tag
+    if (item.paintkit) {
+      name = '★ ' + item.weapon.tag + ' | ' + item.paintkit.tag
     } else {
-      name = '★ ' + knife.weapon.tag
+      name = '★ ' + item.weapon.tag
     }
   }
 </script>
@@ -50,19 +50,19 @@
 
 <Card>
   <div slot="card-content" class="card-content">
-    <span class="visit" on:click={$goto(`/knives/${knife.id}`)}>
+    <span class="visit" on:click={$goto(`/knives/${item.id}`)}>
       <i class="material-icons">visibility</i>
     </span>
     <h6 class="name">
       <b>{name}</b>
     </h6>
-    <div class="img-container" style={`background: radial-gradient(circle, ${knife.rarity.color}b3 0%, #00000080 100%);`}>
+    <div class="img-container" style={`background: radial-gradient(circle, ${item.rarity.color}b3 0%, #00000080 100%);`}>
       <img
         loading="lazy"
-        src={`https://steamcdn-a.akamaihd.net/apps/730/icons/econ/${knife.image}`}
+        src={`https://steamcdn-a.akamaihd.net/apps/730/icons/econ/${item.image}`}
         alt={`An image of ${name}`} />
     </div>
-    <p>Included in <b>{knife.collections.length}</b> collections</p>
-    <SkinFloat style="margin-top: 10px;" min={knife.paintkit ? knife.paintkit.minFloat : 0} max={knife.paintkit ? knife.paintkit.maxFloat : 1} />
+    <p>Included in <b>{item.collections.length}</b> collections</p>
+    <SkinFloat style="margin-top: 10px;" min={item.paintkit ? item.paintkit.minFloat : 0} max={item.paintkit ? item.paintkit.maxFloat : 1} />
   </div>
 </Card>
