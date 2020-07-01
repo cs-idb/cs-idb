@@ -73,6 +73,28 @@ const skins = derived(raw_skins, $raw_skins => {
   return new_skins;
 });
 
+const knife_weapon_names = derived(raw_knives, $raw_knives => {
+  if (!$raw_knives) return [];
+  const knive_weapon_ids = $raw_knives.map(k => k.weaponId);
+  const unique_weapon_ids = [...new Set(knive_weapon_ids)];
+  const unique_weapon_names = unique_weapon_ids.map(id => {
+    const weapon = get(weapons).find(w => w.id === id);
+    return { id, tag: weapon.tag }
+  })
+  return unique_weapon_names;
+});
+
+const knife_paintkit_tags = derived(raw_knives, $raw_knives => {
+  if (!$raw_knives) return [];
+  const knife_paintkit_ids = $raw_knives.filter(k => k.paintkitId !== null).map(k => k.paintkitId);
+  const knife_paintkit_tags = knife_paintkit_ids.map(id => {
+    const paintkit = get(paintkits).find(p => p.id === id)
+    return paintkit ? paintkit.tag : undefined
+  })
+  const unique_paintkit_tags = [...new Set(knife_paintkit_tags)];
+  return unique_paintkit_tags
+});
+
 const knive_skins = derived(raw_knives, $raw_knives => {
   if (!$raw_knives) return [];
 
@@ -120,4 +142,4 @@ const knive_skins = derived(raw_knives, $raw_knives => {
   return new_knives;
 })
 
-export { raw_collections, raw_rarities, raw_skins, raw_weapons, raw_paintkits, raw_knives, collections, rarities, weapons, skins, paintkits, compareModes, knive_skins };
+export { raw_collections, raw_rarities, raw_skins, raw_weapons, raw_paintkits, raw_knives, collections, rarities, weapons, skins, paintkits, compareModes, knive_skins, knife_weapon_names, knife_paintkit_tags };

@@ -31,9 +31,13 @@
     .map(c => {
       return { value: c.id, label: c.tag };
     });
-  $: rarityOptions = $rarities.sort((a, b) => {
-    return a.id < b.id ? 1 : -1;
-  });
+  $: rarityOptions = $rarities
+    .filter(r => {
+      return r.name !== "default" && r.name !== "knife"
+    })
+    .sort((a, b) => {
+      return a.id < b.id ? 1 : -1;
+    });
 
   const getSelectedWeapon = () => {
     const weaponId = $filtersStore.weaponId;

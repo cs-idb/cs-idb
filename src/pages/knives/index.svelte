@@ -1,6 +1,6 @@
 <script>
   import { BackToTop, CardList, PageHeader } from '../../components/shared/';
-  import { KnifeCard } from '../../components/knives'
+  import { KnifeCard, KnifeFilterModal } from '../../components/knives'
   import { knive_skins } from '../../stores'
   import { writable } from 'svelte/store';
 
@@ -23,6 +23,6 @@
 
 <div class="knives-container">
   <PageHeader>Knives</PageHeader>
-  <CardList items={$knive_skins} {sortingStore} {filtersStore} cardComponent={KnifeCard} />
+  <CardList items={$knive_skins} {sortingStore} {filtersStore} cardComponent={KnifeCard} cardFilterComponent={KnifeFilterModal}/>
   <BackToTop />
 </div>
