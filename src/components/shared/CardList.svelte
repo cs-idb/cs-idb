@@ -1,11 +1,13 @@
 <script>
   import { filterList, SortableArray } from '../../utils/';
   import BaseModal from './BaseModal.svelte';
+  import Button from './Button.svelte';
   import Card from './Card.svelte';
   import { derived } from 'svelte/store';
   import M from 'materialize-css';
   import { onMount } from 'svelte';
   import { params } from '@sveltech/routify';
+  import SortSelector from './SortSelector.svelte';
   import SvelteInfiniteScroll from 'svelte-infinite-scroll';
   import { writable } from 'svelte/store';
 
@@ -21,9 +23,9 @@
   });
 
   const newFiltersStore = writable({
-    selectedWeapon: undefined,
-    selectedSkin: undefined,
-    selectedCollection: undefined,
+    weaponId: undefined,
+    paintkitTag: undefined,
+    collectionId: undefined,
     minFloat: 0.0,
     maxFloat: 1.0,
   });
@@ -34,7 +36,6 @@
   $: filtered_items = filterList(items, $filtersStore);
 
   const handleUpdateFilters = () => {
-    console.info('CardList handleUpdateFilters', $newFiltersStore)
     clearPagination();
     $filtersStore = $newFiltersStore;
   };
@@ -121,19 +122,19 @@
   </BaseModal>
 {/if}
 
-<!-- <div class="filter-and-order-container">
+<div class="filter-and-order-container">
   {#if showFilter}
     <div class="filter-container input-field">
       <Button style="display: flex; align-items: center;" on:click={() => (showFilterModal = !showFilterModal)}>
         <i class="material-icons" style="margin-right: 10px;">filter_alt</i>
-        <span>Filter {filtered_skins.length} skins</span>
+        <span>Filter {filtered_items.length} skins</span>
       </Button>
       <label>Filtering</label>
     </div>
   {/if}
 
   <SortSelector {sortingStore} />
-</div> -->
+</div>
 
 <div class="card-list">
   {#if showFilter}

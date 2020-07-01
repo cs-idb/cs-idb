@@ -28,14 +28,7 @@
 
   .name {
     margin-top: 0;
-  }
-
-  .name {
-    margin-top: 0;
-  }
-
-  .badges {
-    margin-bottom: 10px;
+    max-width: 220px;
   }
 
   .img-container {

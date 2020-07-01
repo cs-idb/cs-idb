@@ -9,7 +9,10 @@
     sortAsc: true,
     availableSorts: [
       { key: 'weapon.tag', type: 'str', name: 'Weapon name' },
-      { key: 'paintkit.tag', type: 'str', name: 'Skin name' }
+      { key: 'paintkit.tag', type: 'str', name: 'Skin name' },
+      { key: 'paintkit.minFloat', type: 'num', name: 'Min float' },
+      { key: 'paintkit.maxFloat', type: 'num', name: 'Max float' },
+      { key: 'collectionIdAmount', type: 'num', name: 'Included in x collections'}
     ],
   });
   const filtersStore = writable({});

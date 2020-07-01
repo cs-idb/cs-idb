@@ -1,8 +1,13 @@
 <script>
-  import { collections, knife_paintkit_tags, knife_weapon_names } from '../../stores';
+  import { collections_with_knife_amount, knife_paintkit_tags, knife_weapon_names } from '../../stores';
   import Select from 'svelte-select';
 
   export let newFiltersStore;
+
+  let selectedWeapon, selectedPaintkit, selectedCollection;
+  $: $newFiltersStore.weaponId = (selectedWeapon || {}).value;
+  $: $newFiltersStore.paintkitTag = (selectedPaintkit || {}).value;
+  $: $newFiltersStore.collectionId = (selectedCollection || {}).value;
 
   $: weaponOptions = $knife_weapon_names
     .sort((a, b) => {
@@ -18,12 +23,19 @@
     .map(s => {
       return { value: s, label: s }
     });
-  $: collectionOptions = $collections
+  $: collectionOptions = $collections_with_knife_amount
+    .filter(c => {
+      return c.knife_amount !== 0
+    })
     .sort((a, b) => {
-      return a.tag > b.tag ? 1 : -1;
+      if (a.knife_amount === b.knife_amount) {
+        return a.tag > b.tag ? 1 : -1;
+      }
+
+      return a.knife_amount < b.knife_amount ? 1 : -1;
     })
     .map(c => {
-      return { value: c.id, label: c.tag };
+      return { value: c.id, label: `${c.tag} (${c.knife_amount})`};
     });
 </script>
 
@@ -56,17 +68,17 @@
 <div class="knife-filter-modal">
   <div>
     <label>Knife name</label>
-    <Select items={weaponOptions} bind:selectedValue={$newFiltersStore.selectedWeapon} />
+    <Select items={weaponOptions} bind:selectedValue={selectedWeapon} />
   </div>
 
   <div>
     <label>Skin name</label>
-    <Select items={skinOptions} bind:selectedValue={$newFiltersStore.selectedSkin} />
+    <Select items={skinOptions} bind:selectedValue={selectedPaintkit} />
   </div>
 
   <div>
     <label>Found in collection</label>
-    <Select items={collectionOptions} bind:selectedValue={$newFiltersStore.selectedCollection} />
+    <Select items={collectionOptions} bind:selectedValue={selectedCollection} />
   </div>
 
   <div class="min-float">

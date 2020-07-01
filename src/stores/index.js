@@ -137,9 +137,23 @@ const knive_skins = derived(raw_knives, $raw_knives => {
     })
     delete knife.collectionIds
     knife.collections = collections
+    knife.collectionIdAmount = collections.length;
   })
 
   return new_knives;
 })
 
-export { raw_collections, raw_rarities, raw_skins, raw_weapons, raw_paintkits, raw_knives, collections, rarities, weapons, skins, paintkits, compareModes, knive_skins, knife_weapon_names, knife_paintkit_tags };
+const collections_with_knife_amount = derived([collections, knive_skins], ([collections, knive_skins]) => {
+  const new_collections = [];
+
+  collections.forEach(collection => {
+    let new_collection = JSON.parse(JSON.stringify(collection));
+    const amount_of_knives = (knive_skins.filter(k => k.collections.map(c => c.id).includes(new_collection.id)) || []).length;
+    new_collection.knife_amount = amount_of_knives;
+    new_collections.push(new_collection)
+  })
+
+  return new_collections;
+})
+
+export { raw_collections, raw_rarities, raw_skins, raw_weapons, raw_paintkits, raw_knives, collections, rarities, weapons, skins, paintkits, compareModes, knive_skins, knife_weapon_names, knife_paintkit_tags, collections_with_knife_amount };
