@@ -14,10 +14,10 @@
 </script>
 
 <style global>
-  :global(.card) {
+  :global(.knives-container .card) {
     min-height: 400px !important;
   }
-  :global(.card .card-action) {
+  :global(.knives-container .card .card-action) {
     padding: 0;
   }
 

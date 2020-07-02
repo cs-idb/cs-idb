@@ -1,5 +1,5 @@
 <script>
-  import { collections, skins } from '../stores';
+  import { collections, skins, knive_skins } from '../stores';
   import { Button } from '../components/shared';
   import { url } from '@sveltech/routify';
 </script>
@@ -108,7 +108,7 @@
           <i class="material-icons">chevron_right</i>
         </a>
       </h5>
-      <p>A list of all {$skins.length} skins!</p>
+      <p>A list of all {$skins.length} weapon skins!</p>
     </div>
 
     <div class="ref">
@@ -119,8 +119,7 @@
           <i class="material-icons">chevron_right</i>
         </a>
       </h5>
-      <p>TODO</p>
-      <!-- <p>A list of all {$skins.length} knives!</p> -->
+      <p>A list of all {$knive_skins.length} knive skins!</p>
     </div>
   </div>
 

@@ -133,7 +133,7 @@
     <div class="filter-container input-field">
       <Button style="display: flex; align-items: center;" on:click={() => (showFilterModal = !showFilterModal)}>
         <i class="material-icons" style="margin-right: 10px;">filter_alt</i>
-        <span>Filter {filtered_items.length} skins</span>
+        <span>Filter {filtered_items.length} items</span>
       </Button>
       <label>Filtering</label>
     </div>

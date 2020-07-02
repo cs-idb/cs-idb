@@ -167,6 +167,7 @@
     min-width: 90%;
     max-height: 90%;
     overflow-y: auto;
+    overflow-x: hidden;
   }
 
   @media only screen and (min-width: 600px) {
