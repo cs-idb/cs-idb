@@ -16,7 +16,6 @@
       { key: 'released', type: 'dte', name: 'Release date'}
     ],
   });
-  const filtersStore = writable({});
 </script>
 
 <style>
@@ -27,5 +26,5 @@
 
 <div class="collections-container">
   <PageHeader>Collections</PageHeader>
-  <CardList items={$collections} {sortingStore} {filtersStore} cardComponent={CollectionCard} />
+  <CardList items={$collections} {sortingStore} showFilter={false} cardComponent={CollectionCard} />
 </div>

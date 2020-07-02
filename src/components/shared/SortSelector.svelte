@@ -15,15 +15,14 @@
     initFormSelect();
   });
 
-  const initFormSelect = () => {
-    const selectEl = document.querySelector('#sort-key-selector');
-
-    if (!selectEl) return;
-    selectEl.selectedIndex = $sortingStore.sortingIndex;
-
-    const oldInstance = M.FormSelect.getInstance(selectEl);
-    if (oldInstance) oldInstance.destroy();
-    M.FormSelect.init(selectEl);
+  const initFormSelect = async () => {
+    const selectEls = document.querySelectorAll('.sort-selector-container .needs-select-init');
+    selectEls.forEach(el => { 
+      el.classList.remove('needs-select-init');
+      el.classList.add('select-initialized');
+      el.selectedIndex = $sortingStore.sortingIndex;
+    });
+    M.FormSelect.init(selectEls);
   };
 
   const handleChangeSortingAsc = () => {
@@ -63,7 +62,7 @@
 
 <div class="sort-selector-container">
   <div class="input-field col s12">
-    <select id="sort-key-selector" bind:value={$sortingStore.sortingIndex}>
+    <select class="needs-select-init" bind:value={$sortingStore.sortingIndex}>
       {#each $sortingStore.availableSorts as sortOption, i}
         <option value={i}>{sortOption.name}</option>
       {/each}

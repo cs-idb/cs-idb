@@ -14,9 +14,13 @@
     position: absolute;
     right: 0;
   }
+  .name {
+    max-width: 220px;
+    height: 40px;
+  }
 
   :global(.collections-container .card) {
-    min-height: 135px !important;
+    min-height: 155px !important;
   }
 
   :global(.collections-container .card-action) {
@@ -29,7 +33,7 @@
     <span class="visit" on:click={$goto(`/collections/${item.id}`)}>
       <i class="material-icons">visibility</i>
     </span>
-    <h6>{item.tag}</h6>
+    <h6 class="name">{item.tag}</h6>
     <p>Released date: {item.released.toLocaleDateString()}</p>
     {#if item.stattrak}
     <Badge classes="orange">StatTrak™ available</Badge>

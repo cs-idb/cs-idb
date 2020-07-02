@@ -14,9 +14,9 @@
   export let items = [];
   export let showFilter = true;
   export let sortingStore;
-  export let filtersStore;
+  export let filtersStore = undefined;
   export let cardComponent = Card;
-  export let cardFilterComponent;
+  export let cardFilterComponent = undefined;
 
   const selectedSortStore = derived(sortingStore, $sortingStore => {
     return $sortingStore.availableSorts[$sortingStore.sortingIndex];
