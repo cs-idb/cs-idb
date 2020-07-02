@@ -14,6 +14,13 @@
 </script>
 
 <style global>
+  :global(.card) {
+    min-height: 400px !important;
+  }
+  :global(.card .card-action) {
+    padding: 0;
+  }
+
   .card-content {
     position: relative;
     padding: 0;
@@ -29,6 +36,11 @@
   .name {
     margin-top: 0;
     max-width: 220px;
+    height: 40px;
+  }
+
+  .name .weapon {
+    display: block;
   }
 
   .img-container {
@@ -47,7 +59,13 @@
       <i class="material-icons">visibility</i>
     </span>
     <h6 class="name">
-      <b>{name}</b>
+      <b class="weapon">
+        ★ {item.weapon.tag}
+        {#if item.paintkit}|{/if}
+      </b>
+      {#if item.paintkit}
+        <b>{item.paintkit.tag}</b>
+      {/if}
     </h6>
     <div class="img-container" style={`background: radial-gradient(circle, ${item.rarity.color}b3 0%, #00000080 100%);`}>
       <img

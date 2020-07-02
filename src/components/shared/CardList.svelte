@@ -30,24 +30,19 @@
     maxFloat: 1.0,
   });
 
+  $: {
+    if (showFilterModal) {
+      Object.assign($newFiltersStore, $filtersStore);
+    }
+  }
+
   const basePath = window.location.pathname + '?';
 
-  let showFilterModal = true;
+  let showFilterModal = false;
   $: filtered_items = filterList(items, $filtersStore);
-
-  const handleUpdateFilters = () => {
-    clearPagination();
-    $filtersStore = $newFiltersStore;
-  };
-
   $: sorted_items = SortableArray.from(filtered_items).sortBy($selectedSortStore.key, $selectedSortStore.type, $sortingStore.sortAsc);
-
   $: clearPagination($sortingStore.sortingIndex, $sortingStore.sortingAsc);
-  const clearPagination = () => {
-    page = 0;
-    paginated_items = [];
-  };
-
+  
   let page = 0;
   let size = 20;
   let paginated_items = [];
@@ -60,6 +55,16 @@
       parseFiltersFromParams();
     }
   });
+
+  const handleUpdateFilters = () => {
+    clearPagination();
+    $filtersStore = $newFiltersStore;
+  };
+
+  const clearPagination = () => {
+    page = 0;
+    paginated_items = [];
+  };
 
   const parseFiltersFromParams = () => {
     let newFilters = {};
@@ -74,6 +79,7 @@
 
     clearPagination();
     $filtersStore = newFilters;
+    $newFiltersStore = newFilters;
 
     if (sortingIndex !== undefined) {
       sortingStore.update(s => {

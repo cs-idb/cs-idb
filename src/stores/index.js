@@ -79,7 +79,8 @@ const knife_weapon_names = derived(raw_knives, $raw_knives => {
   const unique_weapon_ids = [...new Set(knive_weapon_ids)];
   const unique_weapon_names = unique_weapon_ids.map(id => {
     const weapon = get(weapons).find(w => w.id === id);
-    return { id, tag: weapon.tag }
+    const knife_amount = $raw_knives.filter(k => k.weaponId === weapon.id).length;
+    return { id, tag: weapon.tag, knife_amount }
   })
   return unique_weapon_names;
 });
@@ -91,9 +92,14 @@ const knife_paintkit_tags = derived(raw_knives, $raw_knives => {
     const paintkit = get(paintkits).find(p => p.id === id)
     return paintkit ? paintkit.tag : undefined
   })
-  const unique_paintkit_tags = [...new Set(knife_paintkit_tags)];
+  const unique_paintkit_tags = [...new Set(knife_paintkit_tags)].map(k => { return { value: k, label: k, knife_amount: get_knife_amount_with_paintkittag(k) } });
   return unique_paintkit_tags
 });
+
+function get_knife_amount_with_paintkittag(paintkitTag) {
+  const knives_with_paintkittag = get(knive_skins).filter(k => ((k.paintkit || {}).tag || '').includes(paintkitTag));
+  return knives_with_paintkittag.length
+}
 
 const knive_skins = derived(raw_knives, $raw_knives => {
   if (!$raw_knives) return [];

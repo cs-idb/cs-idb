@@ -1,27 +1,55 @@
 <script>
   import { collections_with_knife_amount, knife_paintkit_tags, knife_weapon_names } from '../../stores';
+  import { onMount } from 'svelte';
   import Select from 'svelte-select';
 
   export let newFiltersStore;
 
+  let loaded = false;
+
+  onMount(() => {
+    selectedWeapon = weaponOptions.find(w => w.value === $newFiltersStore.weaponId);
+    selectedPaintkit = skinOptions.find(s => s.value === $newFiltersStore.paintkitTag);
+    selectedCollection = collectionOptions.find(c => c.value === $newFiltersStore.collectionId);
+    loaded = true;
+  });
+
   let selectedWeapon, selectedPaintkit, selectedCollection;
-  $: $newFiltersStore.weaponId = (selectedWeapon || {}).value;
-  $: $newFiltersStore.paintkitTag = (selectedPaintkit || {}).value;
-  $: $newFiltersStore.collectionId = (selectedCollection || {}).value;
+  $: {
+    if (loaded) {
+      $newFiltersStore.weaponId = (selectedWeapon || {}).value;
+    }
+  }
+  $: {
+    if (loaded) {
+      $newFiltersStore.paintkitTag = (selectedPaintkit || {}).value;
+    }
+  }
+  $: {
+    if (loaded) {
+      $newFiltersStore.collectionId = (selectedCollection || {}).value;
+    }
+  }
 
   $: weaponOptions = $knife_weapon_names
     .sort((a, b) => {
-      return a.tag > b.tag ? 1 : -1;
+      if (a.knife_amount === b.knife_amount) {
+        return a.tag > b.tag ? 1 : -1;
+      }
+      return a.knife_amount < b.knife_amount ? 1 : -1;
     })
     .map(w => {
-      return { value: w.id, label: w.tag };
+      return { value: w.id, label: `${w.tag} (${w.knife_amount})` };
     });
   $: skinOptions = $knife_paintkit_tags
     .sort((a, b) => {
-      return a > b ? 1 : -1
+      if (a.knife_amount === b.knife_amount) {
+        return a.label > b.label ? 1 : -1
+      }
+      return a.knife_amount < b.knife_amount ? 1 : -1;
     })
     .map(s => {
-      return { value: s, label: s }
+      return { value: s.value, label: `${s.label} (${s.knife_amount})` }
     });
   $: collectionOptions = $collections_with_knife_amount
     .filter(c => {
@@ -31,7 +59,6 @@
       if (a.knife_amount === b.knife_amount) {
         return a.tag > b.tag ? 1 : -1;
       }
-
       return a.knife_amount < b.knife_amount ? 1 : -1;
     })
     .map(c => {
