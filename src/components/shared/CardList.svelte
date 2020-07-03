@@ -29,6 +29,12 @@
       width: 100%;
     }
   }
+
+  .card-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px auto 0 auto;
+  }
 </style>
 
 <div class="cards">

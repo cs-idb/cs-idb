@@ -188,12 +188,12 @@
 <div class="skin-list">
   {#if showFilter}
     {#each paginated_skins as skin}
-      <SkinCard {skin} {showCollection} />
+      <SkinCard item={skin} {showCollection} />
     {/each}
     <SvelteInfiniteScroll threshold={75} on:loadMore={() => page++} window={true} hasMore={page * size < filtered_skins.length} />
   {:else}
     {#each sorted_skins as skin}
-      <SkinCard {skin} {showCollection} />
+      <SkinCard item={skin} {showCollection} />
     {/each}
   {/if}
 </div>

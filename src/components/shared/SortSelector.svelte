@@ -39,7 +39,7 @@
 
   .sort-selector-container .input-field {
     max-width: 200px;
-    margin-right: 10px;
+    margin: 1rem 10px 0 0;
   }
 
   .sort-selector-container label {
@@ -50,6 +50,7 @@
     display: flex;
     align-items: center;
     padding: 0 10px;
+    margin-bottom: -1rem;
   }
 
   .sort-selector-container :global(button span) {

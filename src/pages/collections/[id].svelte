@@ -2,13 +2,17 @@
   import { Badge, PageHeader } from '../../components/shared/';
   import { collections, skins } from '../../stores';
   import { goto, url } from '@sveltech/routify';
+  import { KnifeCard } from '../../components/knives'
   import { onMount } from 'svelte';
-  import { SkinCardList } from '../../components/skins/';
+  import { SkinCard } from '../../components/skins/';
   import { writable } from 'svelte/store';
   export let id;
 
   let collection;
   let collection_skins = [];
+  let collection_knives = [];
+  let knivesCollapsed = false;
+  let skinsCollapsed = false;
 
   const sortingStore = writable({
     sortingIndex: 2,
@@ -68,9 +72,25 @@
       </Badge>
     </div>
 
-    <br />
-    <h4>Skins</h4>
+    <br>
+    <h4 
+      on:click={() => knivesCollapsed = !knivesCollapsed}
+      class="item-header"
+      class:collapsed={knivesCollapsed}
+    >
+      <i class="material-icons">expand_more</i>
+      Knives ({collection_knives.length})
+    </h4>
+    <CardList collapsed={knivesCollapsed} items={collection_knives} showFilter={false} sortingStore={knifeSortingStore} filtersStore={knifeFiltersStore} cardComponent={KnifeCard} />
 
-    <SkinCardList skins={collection_skins} showFilter={false} showCollection={false} {sortingStore} {filtersStore} />
+    <h4
+      on:click={() => skinsCollapsed = !skinsCollapsed}
+      class="item-header"
+      class:collapsed={skinsCollapsed}
+    > 
+      <i class="material-icons">expand_more</i>
+      Skins ({collection_skins.length})
+    </h4>
+    <CardList collapsed={skinsCollapsed} items={collection_skins} showFilter={false} sortingStore={skinSortingStore} filtersStore={skinFiltersStore} cardComponent={SkinCard} />
   {/if}
 </div>
