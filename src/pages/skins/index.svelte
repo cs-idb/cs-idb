@@ -1,6 +1,6 @@
 <script>
-  import { BackToTop, PageHeader } from '../../components/shared/';
-  import { SkinCardList } from '../../components/skins/';
+  import { BackToTop, CardList, PageHeader } from '../../components/shared/';
+  import { SkinCard, SkinFilterModal } from '../../components/skins/';
   import { skins } from '../../stores';
   import { writable } from 'svelte/store';
 
@@ -29,6 +29,6 @@
 <div class="skins-container">
   <PageHeader>Skins</PageHeader>
 
-  <SkinCardList skins={$skins} {sortingStore} {filtersStore} />
+  <CardList items={$skins} {sortingStore} {filtersStore} cardComponent={SkinCard} cardFilterComponent={SkinFilterModal} />
   <BackToTop />
 </div>
