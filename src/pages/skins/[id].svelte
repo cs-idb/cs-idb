@@ -77,7 +77,7 @@
       <img
         class="needs-materialbox"
         width="300"
-        src={'https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/' + skin.image.fullname_filehash_png}
+        src={'https://steamcdn-a.akamaihd.net/apps/730/icons/econ/' + skin.image}
         alt={`An image of ${skin.weapon.tag} | ${skin.paintkit.tag}`} />
       <div class="image-placeholder">Loading image...</div>
     </div>

@@ -3,6 +3,53 @@ function getObjValueByNestedKey(key, obj = self, separator = '.') {
   return properties.reduce((prev, curr) => prev && prev[curr], obj);
 }
 
+function filterList(listItems, filters) {
+  const filteredItems = [];
+
+  if (filters === undefined) return listItems;
+  listItems.forEach(item => {
+    const isValid = Object.entries(filters).every(filter => {
+      const [filterName, filterValue] = filter;
+      if (filterValue === undefined) return true;
+      return applyFilterOnItem(item, filterName, filterValue);
+    });
+    if (isValid) filteredItems.push(item);
+  })
+
+  return filteredItems;
+}
+
+function applyFilterOnItem(item, filterName, filterValue) {
+  switch (filterName) {
+    case "weaponId": {
+      const itemValue = item.weapon.id;
+      return itemValue === filterValue;
+    }
+    case "paintkitTag": {
+      if (item.paintkit === undefined) return false;
+      const itemValue = item.paintkit.tag;
+      return itemValue.includes(filterValue);
+    }
+    case "collectionId": {
+      const itemValue = item.collections.map(c => c.id);
+      return itemValue.includes(filterValue);
+    }
+    case "minFloat": {
+      const itemValue = item.paintkit ? item.paintkit.minFloat : 0;
+      return Number(itemValue) >= Number(filterValue);
+    }
+    case "maxFloat": {
+      const itemValue = item.paintkit ? item.paintkit.maxFloat : 1;
+      return Number(itemValue) <= Number(filterValue);
+    }
+
+    default: {
+      console.error('I do not know what to do with this filter:', filterName);
+      return false;
+    }
+  }
+}
+
 function filterSkinList(skins, filters) {
   const filteredSkins = [];
 
@@ -34,9 +81,11 @@ function checkFilterOnSkin(skin, filter) {
       return value.includes(skin.rarity.id);
     }
     case 'minFloat': {
+      if (!skin.paintkit) return true;
       return skin.paintkit.minFloat >= value;
     }
     case 'maxFloat': {
+      if (!skin.paintkit) return true;
       return skin.paintkit.maxFloat <= value;
     }
     default: {
@@ -149,4 +198,4 @@ function checkValueWithFilter(filter, value) {
   return true;
 }
 
-export { applyFilter, getObjValueByNestedKey, filterSkinList };
+export { applyFilter, getObjValueByNestedKey, filterSkinList, filterList };

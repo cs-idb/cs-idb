@@ -46,5 +46,11 @@
     "name": "immortal",
     "tag": "Contraband",
     "color": "#e4ae39"
+  },
+  {
+    "id": 8,
+    "name": "knife",
+    "tag": "Covert",
+    "color": "#8650ac"
   }
 ]

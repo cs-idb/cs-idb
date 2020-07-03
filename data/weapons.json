@@ -1,206 +1,143 @@
 [
   {
-    "id": 0,
-    "name": "weapon_ak47",
-    "type": "Rifle",
-    "desc": "Powerful and reliable, the AK-47 is one of the most popular assault rifles in the world. It is most deadly in short, controlled bursts of fire.",
-    "tag": "AK-47"
-  },
-  {
     "id": 1,
-    "name": "weapon_aug",
-    "type": "Rifle",
-    "desc": "Powerful and accurate, the AUG scoped assault rifle compensates for its long reload times with low spread and a high rate of fire.",
-    "tag": "AUG"
-  },
-  {
-    "id": 2,
-    "name": "weapon_awp",
-    "type": "Rifle",
-    "desc": "High risk and high reward, the infamous AWP is recognizable by its signature report and one-shot, one-kill policy.",
-    "tag": "AWP"
-  },
-  {
-    "id": 3,
-    "name": "weapon_cz75a",
-    "type": "Pistol",
-    "desc": "A fully automatic variant of the CZ75, the CZ75-Auto is another inexpensive choice against armored opponents. But with very little ammo provided, strong trigger discipline is required.",
-    "tag": "CZ75-Auto"
-  },
-  {
-    "id": 4,
     "name": "weapon_deagle",
     "type": "Pistol",
     "desc": "As expensive as it is powerful, the Desert Eagle is an iconic pistol that is difficult to master but surprisingly accurate at long range.",
     "tag": "Desert Eagle"
   },
   {
-    "id": 5,
+    "id": 2,
     "name": "weapon_elite",
     "type": "Pistol",
     "desc": "Firing two large-mag Berettas at once will lower accuracy and increase load times. On the bright side, you'll get to fire two large-mag Berettas at once.",
     "tag": "Dual Berettas"
   },
   {
-    "id": 6,
-    "name": "weapon_famas",
-    "type": "Rifle",
-    "desc": "A cheap option for cash-strapped players, the FAMAS effectively fills the niche between more expensive rifles and the less-effective SMGs.",
-    "tag": "FAMAS"
-  },
-  {
-    "id": 7,
+    "id": 3,
     "name": "weapon_fiveseven",
     "type": "Pistol",
     "desc": "Highly accurate and armor-piercing, the pricy Five-Seven is a slow-loader that compensates with a generous 20-round magazine and forgiving recoil.",
     "tag": "Five-SeveN"
   },
   {
-    "id": 8,
-    "name": "weapon_g3sg1",
-    "type": "Rifle",
-    "desc": "The pricy G3SG1 lowers movement speed considerably but compensates with a higher rate of fire than other sniper rifles.",
-    "tag": "G3SG1"
-  },
-  {
-    "id": 9,
-    "name": "weapon_galilar",
-    "type": "Rifle",
-    "desc": "A less expensive option among the terrorist-exclusive assault rifles, the Galil AR is a serviceable weapon in medium to long-range combat.",
-    "tag": "Galil AR"
-  },
-  {
-    "id": 10,
+    "id": 4,
     "name": "weapon_glock",
     "type": "Pistol",
     "desc": "The Glock 18 is a serviceable first-round pistol that works best against unarmored opponents and is capable of firing three-round bursts.",
     "tag": "Glock-18"
   },
   {
+    "id": 7,
+    "name": "weapon_ak47",
+    "type": "Rifle",
+    "desc": "Powerful and reliable, the AK-47 is one of the most popular assault rifles in the world. It is most deadly in short, controlled bursts of fire.",
+    "tag": "AK-47"
+  },
+  {
+    "id": 8,
+    "name": "weapon_aug",
+    "type": "Rifle",
+    "desc": "Powerful and accurate, the AUG scoped assault rifle compensates for its long reload times with low spread and a high rate of fire.",
+    "tag": "AUG"
+  },
+  {
+    "id": 9,
+    "name": "weapon_awp",
+    "type": "Rifle",
+    "desc": "High risk and high reward, the infamous AWP is recognizable by its signature report and one-shot, one-kill policy.",
+    "tag": "AWP"
+  },
+  {
+    "id": 10,
+    "name": "weapon_famas",
+    "type": "Rifle",
+    "desc": "A cheap option for cash-strapped players, the FAMAS effectively fills the niche between more expensive rifles and the less-effective SMGs.",
+    "tag": "FAMAS"
+  },
+  {
     "id": 11,
+    "name": "weapon_g3sg1",
+    "type": "Rifle",
+    "desc": "The pricy G3SG1 lowers movement speed considerably but compensates with a higher rate of fire than other sniper rifles.",
+    "tag": "G3SG1"
+  },
+  {
+    "id": 13,
+    "name": "weapon_galilar",
+    "type": "Rifle",
+    "desc": "A less expensive option among the terrorist-exclusive assault rifles, the Galil AR is a serviceable weapon in medium to long-range combat.",
+    "tag": "Galil AR"
+  },
+  {
+    "id": 14,
     "name": "weapon_m249",
     "type": "Heavy",
     "desc": "A strong open-area LMG, the M249 is the perfect choice for players willing to trade a slow fire rate for increased accuracy and a high ammo capacity.",
     "tag": "M249"
   },
   {
-    "id": 12,
-    "name": "weapon_m4a1_silencer",
-    "type": "Rifle",
-    "desc": "With a smaller magazine than its unmuffled counterpart, the silenced M4A1 provides quieter shots with less recoil and better accuracy.",
-    "tag": "M4A1-S"
-  },
-  {
-    "id": 13,
+    "id": 16,
     "name": "weapon_m4a1",
     "type": "Rifle",
     "desc": "More accurate but less damaging than its AK-47 counterpart, the M4A4 is the full-auto assault rifle of choice for CTs.",
     "tag": "M4A4"
   },
   {
-    "id": 14,
+    "id": 17,
     "name": "weapon_mac10",
     "type": "SMG",
     "desc": "Essentially a box that bullets come out of, the MAC-10 SMG boasts a high rate of fire, with poor spread accuracy and high recoil as trade-offs.",
     "tag": "MAC-10"
   },
   {
-    "id": 15,
-    "name": "weapon_mag7",
-    "type": "Heavy",
-    "desc": "The CT-exclusive Mag-7 delivers a devastating amount of damage at close range. Its rapid magazine-style reloads make it a great tactical choice.",
-    "tag": "MAG-7"
-  },
-  {
-    "id": 16,
-    "name": "weapon_mp5sd",
-    "type": "SMG",
-    "desc": "Often imitated but never equaled, the iconic MP5 is perhaps the most versatile and popular SMG in the world. This SD variant features an integrated silencer, making an already formidable weapon whisper-quiet.",
-    "tag": "MP5-SD"
-  },
-  {
-    "id": 17,
-    "name": "weapon_mp7",
-    "type": "SMG",
-    "desc": "Versatile but expensive, the German-made MP7 SMG is the perfect choice for high-impact close-range combat.",
-    "tag": "MP7"
-  },
-  {
-    "id": 18,
-    "name": "weapon_mp9",
-    "type": "SMG",
-    "desc": "Manufactured in Switzerland, the cutting-edge MP9 SMG is an ergonomic polymer weapon favored by private security firms.",
-    "tag": "MP9"
-  },
-  {
     "id": 19,
-    "name": "weapon_negev",
-    "type": "Heavy",
-    "desc": "The high-mag, fast-firing Negev is the perfect weapon for spraying a lot of rounds quickly, with a hefty price tag, high spread and frustrating recoil as trade-offs.",
-    "tag": "Negev"
-  },
-  {
-    "id": 20,
-    "name": "weapon_nova",
-    "type": "Heavy",
-    "desc": "The Nova's rock-bottom price tag makes it a great ambush weapon for a cash-strapped team.",
-    "tag": "Nova"
-  },
-  {
-    "id": 21,
-    "name": "weapon_hkp2000",
-    "type": "Pistol",
-    "desc": "Accurate and controllable, the German-made P2000 is a serviceable first-round pistol that works best against unarmored opponents.",
-    "tag": "P2000"
-  },
-  {
-    "id": 22,
-    "name": "weapon_p250",
-    "type": "Pistol",
-    "desc": "A low-recoil firearm with a high rate of fire, the P250 is a relatively inexpensive choice against armored opponents.",
-    "tag": "P250"
-  },
-  {
-    "id": 23,
     "name": "weapon_p90",
     "type": "SMG",
     "desc": "Easily recognizable for its unique bullpup design, the P90 is a great weapon to shoot on the move due to its high-capacity magazine and low recoil.",
     "tag": "P90"
   },
   {
+    "id": 23,
+    "name": "weapon_mp5sd",
+    "type": "SMG",
+    "desc": "Often imitated but never equaled, the iconic MP5 is perhaps the most versatile and popular SMG in the world. This SD variant features an integrated silencer, making an already formidable weapon whisper-quiet.",
+    "tag": "MP5-SD"
+  },
+  {
     "id": 24,
+    "name": "weapon_ump45",
+    "type": "SMG",
+    "desc": "The misunderstood middle child of the SMG family, the UMP45's small magazine is the only drawback to an otherwise versatile close-quarters automatic.",
+    "tag": "UMP-45"
+  },
+  {
+    "id": 25,
+    "name": "weapon_xm1014",
+    "type": "Heavy",
+    "desc": "The XM1014 is a powerful fully automatic shotgun that justifies its heftier price tag with the ability to paint a room with lead fast.",
+    "tag": "XM1014"
+  },
+  {
+    "id": 26,
     "name": "weapon_bizon",
     "type": "SMG",
     "desc": "The Bizon SMG is low-damage, but offers a uniquely designed high-capacity drum magazine that reloads quickly.",
     "tag": "PP-Bizon"
   },
   {
-    "id": 25,
-    "name": "weapon_revolver",
-    "type": "Pistol",
-    "desc": "The R8 Revolver delivers a highly accurate and powerful round at the expense of a lengthy trigger-pull. Firing rapidly by fanning the hammer may be the best option when point-blank stopping power is required.",
-    "tag": "R8 Revolver"
-  },
-  {
-    "id": 26,
-    "name": "weapon_scar20",
-    "type": "Rifle",
-    "desc": "The SCAR-20 is a semi-automatic sniper rifle that trades a high rate of fire and powerful long-distance damage for sluggish movement speed and big price tag.",
-    "tag": "SCAR-20"
-  },
-  {
     "id": 27,
-    "name": "weapon_sg556",
-    "type": "Rifle",
-    "desc": "The terrorist-exclusive SG 553 is a premium scoped alternative to the AK-47 for effective long-range engagement.",
-    "tag": "SG 553"
+    "name": "weapon_mag7",
+    "type": "Heavy",
+    "desc": "The CT-exclusive Mag-7 delivers a devastating amount of damage at close range. Its rapid magazine-style reloads make it a great tactical choice.",
+    "tag": "MAG-7"
   },
   {
     "id": 28,
-    "name": "weapon_ssg08",
-    "type": "Rifle",
-    "desc": "The SSG 08 bolt-action is a low-damage but very cost-effective sniper rifle, making it a smart choice for early-round long-range marksmanship.",
-    "tag": "SSG 08"
+    "name": "weapon_negev",
+    "type": "Heavy",
+    "desc": "The high-mag, fast-firing Negev is the perfect weapon for spraying a lot of rounds quickly, with a hefty price tag, high spread and frustrating recoil as trade-offs.",
+    "tag": "Negev"
   },
   {
     "id": 29,
@@ -217,24 +154,220 @@
     "tag": "Tec-9"
   },
   {
-    "id": 31,
-    "name": "weapon_ump45",
-    "type": "SMG",
-    "desc": "The misunderstood middle child of the SMG family, the UMP45's small magazine is the only drawback to an otherwise versatile close-quarters automatic.",
-    "tag": "UMP-45"
+    "id": 32,
+    "name": "weapon_hkp2000",
+    "type": "Pistol",
+    "desc": "Accurate and controllable, the German-made P2000 is a serviceable first-round pistol that works best against unarmored opponents.",
+    "tag": "P2000"
   },
   {
-    "id": 32,
+    "id": 33,
+    "name": "weapon_mp7",
+    "type": "SMG",
+    "desc": "Versatile but expensive, the German-made MP7 SMG is the perfect choice for high-impact close-range combat.",
+    "tag": "MP7"
+  },
+  {
+    "id": 34,
+    "name": "weapon_mp9",
+    "type": "SMG",
+    "desc": "Manufactured in Switzerland, the cutting-edge MP9 SMG is an ergonomic polymer weapon favored by private security firms.",
+    "tag": "MP9"
+  },
+  {
+    "id": 35,
+    "name": "weapon_nova",
+    "type": "Heavy",
+    "desc": "The Nova's rock-bottom price tag makes it a great ambush weapon for a cash-strapped team.",
+    "tag": "Nova"
+  },
+  {
+    "id": 36,
+    "name": "weapon_p250",
+    "type": "Pistol",
+    "desc": "A low-recoil firearm with a high rate of fire, the P250 is a relatively inexpensive choice against armored opponents.",
+    "tag": "P250"
+  },
+  {
+    "id": 38,
+    "name": "weapon_scar20",
+    "type": "Rifle",
+    "desc": "The SCAR-20 is a semi-automatic sniper rifle that trades a high rate of fire and powerful long-distance damage for sluggish movement speed and big price tag.",
+    "tag": "SCAR-20"
+  },
+  {
+    "id": 39,
+    "name": "weapon_sg556",
+    "type": "Rifle",
+    "desc": "The terrorist-exclusive SG 553 is a premium scoped alternative to the AK-47 for effective long-range engagement.",
+    "tag": "SG 553"
+  },
+  {
+    "id": 40,
+    "name": "weapon_ssg08",
+    "type": "Rifle",
+    "desc": "The SSG 08 bolt-action is a low-damage but very cost-effective sniper rifle, making it a smart choice for early-round long-range marksmanship.",
+    "tag": "SSG 08"
+  },
+  {
+    "id": 60,
+    "name": "weapon_m4a1_silencer",
+    "type": "Rifle",
+    "desc": "With a smaller magazine than its unmuffled counterpart, the silenced M4A1 provides quieter shots with less recoil and better accuracy.",
+    "tag": "M4A1-S"
+  },
+  {
+    "id": 61,
     "name": "weapon_usp_silencer",
     "type": "Pistol",
     "desc": "A fan favorite from Counter-Strike: Source, the Silenced USP Pistol has a detachable silencer that gives shots less recoil while suppressing attention-getting noise.",
     "tag": "USP-S"
   },
   {
-    "id": 33,
-    "name": "weapon_xm1014",
-    "type": "Heavy",
-    "desc": "The XM1014 is a powerful fully automatic shotgun that justifies its heftier price tag with the ability to paint a room with lead fast.",
-    "tag": "XM1014"
+    "id": 63,
+    "name": "weapon_cz75a",
+    "type": "Pistol",
+    "desc": "A fully automatic variant of the CZ75, the CZ75-Auto is another inexpensive choice against armored opponents. But with very little ammo provided, strong trigger discipline is required.",
+    "tag": "CZ75-Auto"
+  },
+  {
+    "id": 64,
+    "name": "weapon_revolver",
+    "type": "Pistol",
+    "desc": "The R8 Revolver delivers a highly accurate and powerful round at the expense of a lengthy trigger-pull. Firing rapidly by fanning the hammer may be the best option when point-blank stopping power is required.",
+    "tag": "R8 Revolver"
+  },
+  {
+    "id": 500,
+    "name": "weapon_bayonet",
+    "type": "Knife",
+    "desc": "Relatively unchanged in its design since World War II, the bayonet still retains a place in modern military strategy. Bayonet charges have continued to be effective as recently as the second Gulf War and the war in Afghanistan.",
+    "tag": "Bayonet"
+  },
+  {
+    "id": 503,
+    "name": "weapon_knife_css",
+    "type": "Knife",
+    "desc": "A classic of the Counter-Strike series, the edge of this knife is press-fit Stellite perfectly held in place due to its precise fit with the titanium on the blade's cheek and spine. The handle is fossilized mastodon ivory held in a carbon fibre pocket.",
+    "tag": "Classic Knife"
+  },
+  {
+    "id": 505,
+    "name": "weapon_knife_flip",
+    "type": "Knife",
+    "desc": "Flip knives sport a Persian-style back-swept blade with an acute point.  While the point itself may be fragile, the overall design of the flip knife's design is surprisingly durable.",
+    "tag": "Flip Knife"
+  },
+  {
+    "id": 506,
+    "name": "weapon_knife_gut",
+    "type": "Knife",
+    "desc": "The most notable feature of a gut knife is the gut hook on the spine of the blade.  Originally popularized as an aid for field dressing game, the gut hook is also effective at  cutting through fibrous materials like rope, webbing, or safety belts with ease.",
+    "tag": "Gut Knife"
+  },
+  {
+    "id": 507,
+    "name": "weapon_knife_karambit",
+    "type": "Knife",
+    "desc": "With its curved blade mimicking a tiger's claw, the karambit was developed as part of the southeast Asian martial discipline of silat. The knife is typically used with a reverse grip, with the finger ring on the index finger.",
+    "tag": "Karambit"
+  },
+  {
+    "id": 508,
+    "name": "weapon_knife_m9_bayonet",
+    "type": "Knife",
+    "desc": "This is the M-9 bayonet.  Originally intended to be mounted on a rifle, it is also well suited to close-quarters combat.",
+    "tag": "M9 Bayonet"
+  },
+  {
+    "id": 509,
+    "name": "weapon_knife_tactical",
+    "type": "Knife",
+    "desc": "A knife designed for modern tactical uses, the blade is well suited for a range of both combat and utilitarian needs.  The unique Tanto point allows for maximum penetration through even the toughest of surfaces.",
+    "tag": "Huntsman Knife"
+  },
+  {
+    "id": 512,
+    "name": "weapon_knife_falchion",
+    "type": "Knife",
+    "desc": "A modern homage to a falchion sword, this clip point blade has a curved edge.",
+    "tag": "Falchion Knife"
+  },
+  {
+    "id": 514,
+    "name": "weapon_knife_survival_bowie",
+    "type": "Knife",
+    "desc": "This full-tang sawback Bowie knife is designed for heavy use in brutal survival situations.",
+    "tag": "Bowie Knife"
+  },
+  {
+    "id": 515,
+    "name": "weapon_knife_butterfly",
+    "type": "Knife",
+    "desc": "This is a custom-designed balisong, commonly known as a butterfly knife. The defining characteristic of this weapon is the fan-like opening of a freely pivoting blade, allowing rapid deployment or concealment. As a result, butterfly knives are outlawed in many countries.",
+    "tag": "Butterfly Knife"
+  },
+  {
+    "id": 516,
+    "name": "weapon_knife_push",
+    "type": "Knife",
+    "desc": "Designed for efficient brutality, using a push dagger is as simple as throwing a punch or two.",
+    "tag": "Shadow Daggers"
+  },
+  {
+    "id": 517,
+    "name": "weapon_knife_cord",
+    "type": "Knife",
+    "desc": "This fixed-blade survival knife is designed to withstand being used as both a weapon and a tool, such as for setting traps, hunting animals or cutting foliage. The handle is wrapped in a length of multi-purpose paracord.",
+    "tag": "Paracord Knife"
+  },
+  {
+    "id": 518,
+    "name": "weapon_knife_canis",
+    "type": "Knife",
+    "desc": "This multi-purpose tactical knife features a serrated edge for ripping through coarse material like bone or fiber, plus a sharp gutting hook. The composite material handle is bolted to the blade with hex nuts.",
+    "tag": "Survival Knife"
+  },
+  {
+    "id": 519,
+    "name": "weapon_knife_ursus",
+    "type": "Knife",
+    "desc": "This tanto-style survival knife features a faceted blade and full tang, complete with impact pommel. No fuss, no moving parts - just a reliable blade that's ready to work.",
+    "tag": "Ursus Knife"
+  },
+  {
+    "id": 520,
+    "name": "weapon_knife_gypsy_jackknife",
+    "type": "Knife",
+    "desc": "This marble-enamel-handled flip knife conceals a small but viciously tapered blade.",
+    "tag": "Navaja Knife"
+  },
+  {
+    "id": 521,
+    "name": "weapon_knife_outdoor",
+    "type": "Knife",
+    "desc": "This ergonomic tactical hunting lock-blade knife features composite handle inserts and a broad, sturdy blade, useful for cutting and prying apart material.",
+    "tag": "Nomad Knife"
+  },
+  {
+    "id": 522,
+    "name": "weapon_knife_stiletto",
+    "type": "Knife",
+    "desc": "Historically a focal point of contention and even regulation, this Italian-style stiletto switchblade knife features a spring-loaded blade that can be deployed almost instantly with the push of a release catch.",
+    "tag": "Stiletto Knife"
+  },
+  {
+    "id": 523,
+    "name": "weapon_knife_widowmaker",
+    "type": "Knife",
+    "desc": "This ivory-handled karambit features brass rivets and saw-tooth ridges, so it cuts on the way in, and tears on the way out.",
+    "tag": "Talon Knife"
+  },
+  {
+    "id": 509,
+    "name": "weapon_knife_skeleton",
+    "type": "Knife",
+    "desc": "This skeletonized-tang knife has been taped at the handle for improved grip. The hole allows a finger to be threaded through for stability and safety.",
+    "tag": "Skeleton Knife"
   }
 ]
