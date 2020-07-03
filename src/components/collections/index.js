@@ -1,3 +1,3 @@
-import CollectionCardList from './CollectionCardList.svelte';
+import CollectionCard from './CollectionCard.svelte';
 
-export { CollectionCardList };
+export { CollectionCard };

@@ -1,5 +1,5 @@
 <script>
-  import { collections, skins } from '../../stores';
+  import { collections, knive_skins, skins } from '../../stores';
   import { goto, url } from '@sveltech/routify';
   import { createEventDispatcher } from 'svelte';
 
@@ -26,6 +26,17 @@
     )
     .map(s => {
       return { id: s.id, name: s.paintkit.tag, weapon_name: s.weapon.tag };
+    });
+
+  $: filteredKnives = $knive_skins
+    .filter(
+      k =>
+        k.weapon.tag.toLowerCase().includes(search_value_lower) ||
+        ((k.paintkit || {}).tag || '').toLowerCase().includes(search_value_lower) ||
+        (k.weapon.tag + ' ' + ((k.paintkit || {}).tag || '')).toLowerCase().includes(search_value_lower)
+    )
+    .map(k => {
+      return { id: k.id, skin_tag: (k.paintkit || {}).tag, knife_tag: k.weapon.tag };
     });
 
   const clickResult = url => {
@@ -206,6 +217,20 @@
       {#each filteredSkins as skin}
         <li class="move" on:click={() => clickResult(`/skins/${skin.id}`)}>
           <p>{skin.weapon_name} | {skin.name}</p>
+        </li>
+      {/each}
+    {/if}
+
+    {#if filteredKnives.length !== 0}
+      <li class="title">
+        <b>Knives: ({filteredKnives.length})</b>
+      </li>
+      {#each filteredKnives as knife}
+        <li class="move" on:click={() => clickResult(`/knives/${knife.id}`)}>
+          <p>
+            ★ {knife.knife_tag}
+            {#if knife.skin_tag}| {knife.skin_tag}{/if}
+          </p>
         </li>
       {/each}
     {/if}

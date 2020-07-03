@@ -1,4 +1,4 @@
-import { raw_collections, raw_paintkits, raw_rarities, raw_skins, raw_weapons } from '../stores';
+import { raw_collections, raw_knives, raw_paintkits, raw_rarities, raw_skins, raw_weapons } from '../stores';
 import localforage from 'localforage';
 
 const sessionDataKey = 'csidb/loadeddata';
@@ -8,6 +8,7 @@ const pathsToFetch = {
   rarities: raw_rarities,
   weapons: raw_weapons,
   skins: raw_skins,
+  knives: raw_knives,
 };
 
 async function isDataLoadedLocally() {

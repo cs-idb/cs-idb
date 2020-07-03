@@ -1,4 +1,4 @@
 import SkinCard from './SkinCard.svelte';
-import SkinCardList from './SkinCardList.svelte';
+import SkinFilterModal from './SkinFilterModal.svelte';
 
-export { SkinCard, SkinCardList };
+export { SkinCard, SkinFilterModal };

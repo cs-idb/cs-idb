@@ -9,6 +9,7 @@
   const dispatch = createEventDispatcher();
 
   $: weaponOptions = $weapons
+    .filter(w => w.type !== 'Knife')
     .sort((a, b) => {
       return a.tag > b.tag ? 1 : -1;
     })
@@ -30,9 +31,13 @@
     .map(c => {
       return { value: c.id, label: c.tag };
     });
-  $: rarityOptions = $rarities.sort((a, b) => {
-    return a.id < b.id ? 1 : -1;
-  });
+  $: rarityOptions = $rarities
+    .filter(r => {
+      return r.name !== 'default' && r.name !== 'knife';
+    })
+    .sort((a, b) => {
+      return a.id < b.id ? 1 : -1;
+    });
 
   const getSelectedWeapon = () => {
     const weaponId = $filtersStore.weaponId;
@@ -162,6 +167,7 @@
     min-width: 90%;
     max-height: 90%;
     overflow-y: auto;
+    overflow-x: hidden;
   }
 
   @media only screen and (min-width: 600px) {

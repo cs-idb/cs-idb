@@ -50,6 +50,12 @@ const changelogs = [
     content:
       'Replaced the crappy checksum approach of data fetching with fetching the data every new session, loading the old data first and potentially overwriting it with new data.',
   },
+  {
+    version: '1.5',
+    time: 1593798665000, // Friday, 3 July 2020,
+    header: 'Add knives',
+    content: 'Added the /knives page, containing all knife skins. Collections with a case that contains knives now display these knives.'
+  }
 ];
 
 export { changelogs };

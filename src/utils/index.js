@@ -1,5 +1,4 @@
-import { applyFilter, filterSkinList, getObjValueByNestedKey } from './Filters';
-import { guidGenerator } from './IDGenerator';
+import { filterList, filterSkinList } from './Filters';
 import { SortableArray } from './Sorting';
 
-export { SortableArray, applyFilter, guidGenerator, getObjValueByNestedKey, filterSkinList };
+export { filterList, filterSkinList, SortableArray };
