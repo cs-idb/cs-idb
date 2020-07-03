@@ -1,8 +1,8 @@
 <script>
-  import { Badge, PageHeader } from '../../components/shared';
   import { goto, url } from '@sveltech/routify';
   import { knive_skins } from '../../stores';
   import { onMount } from 'svelte';
+  import { PageHeader } from '../../components/shared';
 
   export let id;
   let knife;
@@ -12,21 +12,21 @@
   $: loadKnife(id);
   $: {
     if (knife.paintkit) {
-      knifeName = '★ ' + knife.weapon.tag + ' | ' + knife.paintkit.tag
+      knifeName = '★ ' + knife.weapon.tag + ' | ' + knife.paintkit.tag;
     } else {
-      knifeName = '★ ' + knife.weapon.tag
+      knifeName = '★ ' + knife.weapon.tag;
     }
   }
   $: {
     sortedCollections = JSON.parse(JSON.stringify(knife.collections));
     sortedCollections.sort((a, b) => {
       return new Date(a.released) > new Date(b.released) ? 1 : -1;
-    })
+    });
   }
 
   onMount(() => {
     loadKnife();
-  })
+  });
 
   const loadKnife = async () => {
     knife = $knive_skins.find(k => Number(k.id) === Number(id));
@@ -34,8 +34,7 @@
     if (!knife) {
       return $goto($url('/knives'));
     }
-  }
-
+  };
 </script>
 
 <style>
@@ -113,7 +112,7 @@
       </h6>
     {/if}
 
-    <br>
+    <br />
     <h5>Available in the following collections ({sortedCollections.length}):</h5>
     <ul class="collections">
       {#each sortedCollections as collection}
@@ -128,7 +127,6 @@
         </li>
       {/each}
     </ul>
-
   {:else}
     <span>Loading...</span>
   {/if}

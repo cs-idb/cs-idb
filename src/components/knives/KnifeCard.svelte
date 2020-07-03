@@ -6,9 +6,9 @@
   let name = '';
   $: {
     if (item.paintkit) {
-      name = '★ ' + item.weapon.tag + ' | ' + item.paintkit.tag
+      name = '★ ' + item.weapon.tag + ' | ' + item.paintkit.tag;
     } else {
-      name = '★ ' + item.weapon.tag
+      name = '★ ' + item.weapon.tag;
     }
   }
 </script>
@@ -68,12 +68,13 @@
       {/if}
     </h6>
     <div class="img-container" style={`background: radial-gradient(circle, ${item.rarity.color}b3 0%, #00000080 100%);`}>
-      <img
-        loading="lazy"
-        src={`https://steamcdn-a.akamaihd.net/apps/730/icons/econ/${item.image}`}
-        alt={`An image of ${name}`} />
+      <img loading="lazy" src={`https://steamcdn-a.akamaihd.net/apps/730/icons/econ/${item.image}`} alt={`An image of ${name}`} />
     </div>
-    <p>Included in <b>{item.collections.length}</b> collections</p>
+    <p>
+      Included in
+      <b>{item.collections.length}</b>
+      collections
+    </p>
     <SkinFloat style="margin-top: 10px;" min={item.paintkit ? item.paintkit.minFloat : 0} max={item.paintkit ? item.paintkit.maxFloat : 1} />
   </div>
 </Card>

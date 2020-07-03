@@ -17,7 +17,7 @@
 
   const initFormSelect = async () => {
     const selectEls = document.querySelectorAll('.sort-selector-container .needs-select-init');
-    selectEls.forEach(el => { 
+    selectEls.forEach(el => {
       el.classList.remove('needs-select-init');
       el.classList.add('select-initialized');
       el.selectedIndex = $sortingStore.sortingIndex;

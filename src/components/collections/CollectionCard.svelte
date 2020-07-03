@@ -36,13 +36,13 @@
     <h6 class="name">{item.tag}</h6>
     <p>Released date: {item.released.toLocaleDateString()}</p>
     {#if item.stattrak}
-    <Badge classes="orange">StatTrak™ available</Badge>
+      <Badge classes="orange">StatTrak™ available</Badge>
     {/if}
     {#if item.souvenir}
-    <Badge classes="yellow accent-4">Souvenir available</Badge>
+      <Badge classes="yellow accent-4">Souvenir available</Badge>
     {/if}
     {#if item.case}
-    <Badge classes="blue">Case available</Badge>
+      <Badge classes="blue">Case available</Badge>
     {/if}
   </div>
 </Card>

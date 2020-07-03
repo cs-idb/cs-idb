@@ -1,5 +1,5 @@
 <script>
-  import { collections, skins, knive_skins } from '../stores';
+  import { collections, knive_skins, skins } from '../stores';
   import { Button } from '../components/shared';
   import { url } from '@sveltech/routify';
 </script>

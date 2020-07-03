@@ -33,7 +33,7 @@
     });
   $: rarityOptions = $rarities
     .filter(r => {
-      return r.name !== "default" && r.name !== "knife"
+      return r.name !== 'default' && r.name !== 'knife';
     })
     .sort((a, b) => {
       return a.id < b.id ? 1 : -1;

@@ -43,7 +43,7 @@
   $: filtered_items = filterList(items, $filtersStore);
   $: sorted_items = SortableArray.from(filtered_items).sortBy($selectedSortStore.key, $selectedSortStore.type, $sortingStore.sortAsc);
   $: clearPagination($sortingStore.sortingIndex, $sortingStore.sortingAsc);
-  
+
   let page = 0;
   let size = 20;
   let paginated_items = [];
@@ -119,16 +119,16 @@
   let collapseWrapper;
 
   $: collapseDiv(collapsed);
-  function collapseDiv () {
+  function collapseDiv() {
     if (!collapseWrapper) return;
-    const height = collapsed ? 0 : [...collapseWrapper.children].reduce((el1, el2) => el1.clientHeight + el2.clientHeight)
-    collapseWrapper.style.height = height + "px";
+    const height = collapsed ? 0 : [...collapseWrapper.children].reduce((el1, el2) => el1.clientHeight + el2.clientHeight);
+    collapseWrapper.style.height = height + 'px';
   }
 </script>
 
 <style>
   .collapse-wrapper {
-    transition: height .3s;
+    transition: height 0.3s;
     overflow: hidden;
   }
 
@@ -140,18 +140,14 @@
 </style>
 
 {#if showFilterModal}
-  <BaseModal 
-    showModal={showFilterModal} 
-    on:close={() => (showFilterModal = false)} 
-    on:update={handleUpdateFilters}
-  >
+  <BaseModal showModal={showFilterModal} on:close={() => (showFilterModal = false)} on:update={handleUpdateFilters}>
     <div slot="modal-body">
       <svelte:component this={cardFilterComponent} {newFiltersStore} />
     </div>
   </BaseModal>
 {/if}
 
-<div class="collapse-wrapper" bind:this="{collapseWrapper}">
+<div class="collapse-wrapper" bind:this={collapseWrapper}>
   <div class="filter-and-order-container">
     {#if showFilter}
       <div class="filter-container input-field">
@@ -168,12 +164,12 @@
   <div class="card-list">
     {#if showFilter}
       {#each paginated_items as item}
-        <svelte:component this={cardComponent} {item}/>
+        <svelte:component this={cardComponent} {item} />
       {/each}
       <SvelteInfiniteScroll threshold={75} on:loadMore={() => page++} window={true} hasMore={page * size < filtered_items.length} />
     {:else}
       {#each sorted_items as item}
-        <svelte:component this={cardComponent} {item}/>
+        <svelte:component this={cardComponent} {item} />
       {/each}
     {/if}
   </div>

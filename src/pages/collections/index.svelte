@@ -13,7 +13,7 @@
       { key: 'case', type: 'str', name: 'Case available' },
       { key: 'stattrak', type: 'bol', name: 'StatTrak available' },
       { key: 'souvenir', type: 'bol', name: 'Souvenir available' },
-      { key: 'released', type: 'dte', name: 'Release date'}
+      { key: 'released', type: 'dte', name: 'Release date' },
     ],
   });
 </script>

@@ -29,14 +29,15 @@
     });
 
   $: filteredKnives = $knive_skins
-    .filter(k => 
-      k.weapon.tag.toLowerCase().includes(search_value_lower) || 
-      ((k.paintkit || {}).tag || '').toLowerCase().includes(search_value_lower) ||
-      (k.weapon.tag + ' ' + ((k.paintkit || {}).tag || '')).toLowerCase().includes(search_value_lower)
+    .filter(
+      k =>
+        k.weapon.tag.toLowerCase().includes(search_value_lower) ||
+        ((k.paintkit || {}).tag || '').toLowerCase().includes(search_value_lower) ||
+        (k.weapon.tag + ' ' + ((k.paintkit || {}).tag || '')).toLowerCase().includes(search_value_lower)
     )
     .map(k => {
-      return { id: k.id, skin_tag: (k.paintkit || {}).tag, knife_tag: k.weapon.tag }
-    })
+      return { id: k.id, skin_tag: (k.paintkit || {}).tag, knife_tag: k.weapon.tag };
+    });
 
   const clickResult = url => {
     search_value = '';
@@ -228,9 +229,7 @@
         <li class="move" on:click={() => clickResult(`/knives/${knife.id}`)}>
           <p>
             ★ {knife.knife_tag}
-            {#if knife.skin_tag}
-              | {knife.skin_tag}
-            {/if}
+            {#if knife.skin_tag}| {knife.skin_tag}{/if}
           </p>
         </li>
       {/each}

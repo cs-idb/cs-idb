@@ -1,7 +1,7 @@
 <script>
   import { BackToTop, CardList, PageHeader } from '../../components/shared/';
-  import { KnifeCard, KnifeFilterModal } from '../../components/knives'
-  import { knive_skins } from '../../stores'
+  import { KnifeCard, KnifeFilterModal } from '../../components/knives';
+  import { knive_skins } from '../../stores';
   import { writable } from 'svelte/store';
 
   const sortingStore = writable({
@@ -12,7 +12,7 @@
       { key: 'paintkit.tag', type: 'str', name: 'Skin name' },
       { key: 'paintkit.minFloat', type: 'num', name: 'Min float' },
       { key: 'paintkit.maxFloat', type: 'num', name: 'Max float' },
-      { key: 'collectionIdAmount', type: 'num', name: 'Included in x collections'}
+      { key: 'collectionIdAmount', type: 'num', name: 'Included in x collections' },
     ],
   });
   const filtersStore = writable({});
@@ -26,6 +26,6 @@
 
 <div class="knives-container">
   <PageHeader>Knives</PageHeader>
-  <CardList items={$knive_skins} {sortingStore} {filtersStore} cardComponent={KnifeCard} cardFilterComponent={KnifeFilterModal}/>
+  <CardList items={$knive_skins} {sortingStore} {filtersStore} cardComponent={KnifeCard} cardFilterComponent={KnifeFilterModal} />
   <BackToTop />
 </div>

@@ -44,16 +44,16 @@
   $: skinOptions = $knife_paintkit_tags
     .sort((a, b) => {
       if (a.knife_amount === b.knife_amount) {
-        return a.label > b.label ? 1 : -1
+        return a.label > b.label ? 1 : -1;
       }
       return a.knife_amount < b.knife_amount ? 1 : -1;
     })
     .map(s => {
-      return { value: s.value, label: `${s.label} (${s.knife_amount})` }
+      return { value: s.value, label: `${s.label} (${s.knife_amount})` };
     });
   $: collectionOptions = $collections_with_knife_amount
     .filter(c => {
-      return c.knife_amount !== 0
+      return c.knife_amount !== 0;
     })
     .sort((a, b) => {
       if (a.knife_amount === b.knife_amount) {
@@ -62,7 +62,7 @@
       return a.knife_amount < b.knife_amount ? 1 : -1;
     })
     .map(c => {
-      return { value: c.id, label: `${c.tag} (${c.knife_amount})`};
+      return { value: c.id, label: `${c.tag} (${c.knife_amount})` };
     });
 </script>
 
