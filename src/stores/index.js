@@ -162,4 +162,18 @@ const collections_with_knife_amount = derived([collections, knive_skins], ([coll
   return new_collections;
 })
 
-export { raw_collections, raw_rarities, raw_skins, raw_weapons, raw_paintkits, raw_knives, collections, rarities, weapons, skins, paintkits, compareModes, knive_skins, knife_weapon_names, knife_paintkit_tags, collections_with_knife_amount };
+const get_knives_in_collection = (collectionId) => {
+  const knives = [];
+
+  get(knive_skins).forEach(knife_skin => {
+    knife_skin.collections.forEach(collection => {
+      if (collection.id === collectionId) {
+        knives.push(knife_skin);
+      }
+    })
+  });
+
+  return knives;
+}
+
+export { raw_collections, raw_rarities, raw_skins, raw_weapons, raw_paintkits, raw_knives, collections, rarities, weapons, skins, paintkits, compareModes, knive_skins, knife_weapon_names, knife_paintkit_tags, collections_with_knife_amount, get_knives_in_collection };

@@ -17,6 +17,7 @@
   export let filtersStore = undefined;
   export let cardComponent = Card;
   export let cardFilterComponent = undefined;
+  export let collapsed = false;
 
   const selectedSortStore = derived(sortingStore, $sortingStore => {
     return $sortingStore.availableSorts[$sortingStore.sortingIndex];
@@ -114,7 +115,23 @@
     const queryString = basePath + encodeQueryData(queryData);
     window.history.replaceState({}, '', queryString);
   };
+
+  let collapseWrapper;
+
+  $: collapseDiv(collapsed);
+  function collapseDiv () {
+    if (!collapseWrapper) return;
+    const height = collapsed ? 0 : [...collapseWrapper.children].reduce((el1, el2) => el1.clientHeight + el2.clientHeight)
+    collapseWrapper.style.height = height + "px";
+  }
 </script>
+
+<style>
+  .collapse-wrapper {
+    transition: height .3s;
+    overflow: hidden;
+  }
+</style>
 
 {#if showFilterModal}
   <BaseModal 
@@ -128,29 +145,30 @@
   </BaseModal>
 {/if}
 
-<div class="filter-and-order-container">
-  {#if showFilter}
-    <div class="filter-container input-field">
-      <Button style="display: flex; align-items: center;" on:click={() => (showFilterModal = !showFilterModal)}>
-        <i class="material-icons" style="margin-right: 10px;">filter_alt</i>
-        <span>Filter {filtered_items.length} items</span>
-      </Button>
-      <label>Filtering</label>
-    </div>
-  {/if}
+<div class="collapse-wrapper" bind:this="{collapseWrapper}">
+  <div class="filter-and-order-container">
+    {#if showFilter}
+      <div class="filter-container input-field">
+        <Button style="display: flex; align-items: center;" on:click={() => (showFilterModal = !showFilterModal)}>
+          <i class="material-icons" style="margin-right: 10px;">filter_alt</i>
+          <span>Filter {filtered_items.length} items</span>
+        </Button>
+        <label>Filtering</label>
+      </div>
+    {/if}
+    <SortSelector {sortingStore} />
+  </div>
 
-  <SortSelector {sortingStore} />
-</div>
-
-<div class="card-list">
-  {#if showFilter}
-    {#each paginated_items as item}
-      <svelte:component this={cardComponent} {item}/>
-    {/each}
-    <SvelteInfiniteScroll threshold={75} on:loadMore={() => page++} window={true} hasMore={page * size < filtered_items.length} />
-  {:else}
-    {#each sorted_items as item}
-      <svelte:component this={cardComponent} {item}/>
-    {/each}
-  {/if}
+  <div class="card-list">
+    {#if showFilter}
+      {#each paginated_items as item}
+        <svelte:component this={cardComponent} {item}/>
+      {/each}
+      <SvelteInfiniteScroll threshold={75} on:loadMore={() => page++} window={true} hasMore={page * size < filtered_items.length} />
+    {:else}
+      {#each sorted_items as item}
+        <svelte:component this={cardComponent} {item}/>
+      {/each}
+    {/if}
+  </div>
 </div>
