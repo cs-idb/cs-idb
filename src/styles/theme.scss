@@ -1,11 +1,13 @@
-html {
-  &.light {
-    --background-color-primary: white;
-    --color-primary: grey;
-  }
+[data-theme="light"] {
+  --color-primary: #e4efff;
+  --color-accent: #e57373;
+  --color-foreground: #444;
+  --color-background: #fff;
+}
 
-  &.dark {
-    --background-color-primary: black;
-    --color-primary: white;
-  }
+[data-theme="dark"] {
+  --color-primary: #273677;
+  --color-accent: #e47f17;
+  --color-foreground: #111;
+  --color-background: #ddd;
 }

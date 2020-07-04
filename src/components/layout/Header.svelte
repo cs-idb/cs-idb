@@ -2,6 +2,7 @@
   import M from 'materialize-css';
   import { onMount } from 'svelte';
   import SearchSite from './SearchSite.svelte';
+  import SiteSettings from './SiteSettings.svelte';
   import { url } from '@sveltech/routify';
 
   onMount(() => {
@@ -103,6 +104,11 @@
             <i class="material-icons">history</i>
             Changelog
           </a>
+        </li>
+      </ul>
+      <ul class="right">
+        <li>
+          <SiteSettings />
         </li>
       </ul>
       <ul class="hide-on-small-only right">
