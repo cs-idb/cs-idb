@@ -1,0 +1,11 @@
+html {
+  &.light {
+    --background-color-primary: white;
+    --color-primary: grey;
+  }
+
+  &.dark {
+    --background-color-primary: black;
+    --color-primary: white;
+  }
+}

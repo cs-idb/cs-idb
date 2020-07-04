@@ -26,6 +26,11 @@ module.exports = {
         'import/no-duplicates': 'off',
         'import/no-mutable-exports': 'off',
         'import/no-unresolved': 'off',
+      },
+      settings: {
+        "svelte3/ignore-styles": function() {
+          return true;
+        }
       }
     }
   ],
