@@ -13,10 +13,17 @@
     cursor: pointer;
     position: absolute;
     right: 0;
+    color: var(--color-secondary);
   }
   .name {
     max-width: 220px;
     height: 40px;
+    color: var(--color-primary);
+  }
+
+  .released {
+    color: var(--color-secondary);
+    margin-bottom: 15px !important;
   }
 
   :global(.collections-container .card) {
@@ -34,7 +41,7 @@
       <i class="material-icons">visibility</i>
     </span>
     <h6 class="name">{item.tag}</h6>
-    <p>Released date: {item.released.toLocaleDateString()}</p>
+    <p class="released">Released date: {item.released.toLocaleDateString()}</p>
     {#if item.stattrak}
       <Badge classes="orange">StatTrak™ available</Badge>
     {/if}

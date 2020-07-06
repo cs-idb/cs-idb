@@ -30,19 +30,39 @@
   };
 </script>
 
-<style>
+<style lang="scss">
   .sort-selector-container {
     display: flex;
     align-items: center;
-  }
 
-  .sort-selector-container .input-field {
-    max-width: 200px;
-    margin: 1rem 10px 0 0;
-  }
+    .input-field {
+      max-width: 200px;
+      margin: 1rem 10px 0 0;
 
-  .sort-selector-container label {
-    left: 0;
+      :global(.select-wrapper input) {
+        color: var(--color-primary);
+      }
+
+      :global(.select-wrapper input:focus) {
+        border-bottom: 1px solid var(--color-accent);
+      }
+
+      :global(.select-wrapper ul) {
+        background-color: var(--color-background3);
+      }
+
+      :global(.select-wrapper ul li span) {
+        color: var(--color-primary);
+      }
+
+      :global(.select-wrapper svg.caret) {
+        fill: var(--color-primary);
+      }
+
+      label {
+        left: 0;
+      }
+    }
   }
 
   .sort-selector-container :global(button) {
@@ -50,6 +70,7 @@
     align-items: center;
     padding: 0 10px;
     margin-bottom: -1rem;
+    background-color: var(--color-accent);
   }
 
   .sort-selector-container :global(button span) {

@@ -16,6 +16,11 @@
     margin-left: 15px;
     display: flex;
     align-items: center;
+    color: var(--color-heading);
+  }
+
+  :global(.heading button, .heading button:hover, .heading button:focus) {
+    background-color: var(--color-accent);
   }
 
   :global(.heading span i) {
@@ -26,7 +31,7 @@
 
 <h3 class="heading">
   <Button on:click={handleGoBack}>&lt;</Button>
-  <span class="grey-text text-darken-2">
+  <span>
     <slot />
   </span>
 </h3>

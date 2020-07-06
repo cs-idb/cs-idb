@@ -4,15 +4,20 @@
   export let flat = false;
 </script>
 
-<style>
+<style class="scss">
   .card {
     width: 300px;
     max-width: 300px;
-    border: 1px solid lightgrey;
+    border: 1px solid var(--color-foreground);
     min-height: 200px;
     margin: 10px 0 0 10px;
     display: inline-flex;
     flex-direction: column;
+    background-color: var(--color-background3);
+  }
+
+  .card:hover {
+    box-shadow: 0 0px 1px 0px var(--color-secondary) !important;
   }
 
   .card .card-content {
@@ -44,7 +49,7 @@
   <div class="card-content">
     <slot name="card-content" />
   </div>
-  <div class="card-action">
+  <div class="action">
     <slot name="card-action" />
   </div>
 </div>
