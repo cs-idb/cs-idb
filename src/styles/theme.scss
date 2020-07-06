@@ -1,13 +1,19 @@
 [data-theme="light"] {
-  --color-primary: #e4efff;
+  --color-primary: #313131;
+  --color-secondary: #313131;
   --color-accent: #e57373;
-  --color-foreground: #444;
+  --color-heading: #616161;
+  --color-foreground: #bbb7b7;
   --color-background: #fff;
+  --color-background2: #e57373;
 }
 
 [data-theme="dark"] {
-  --color-primary: #273677;
-  --color-accent: #e47f17;
+  --color-primary: #e4e4ff;
+  --color-secondary: #8c8c8e;
+  --color-accent: #5d90c8;
   --color-foreground: #111;
-  --color-background: #ddd;
+  --color-heading: #cecece;
+  --color-background: #181818;
+  --color-background2: #252525;
 }

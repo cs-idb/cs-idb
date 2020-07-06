@@ -21,7 +21,7 @@
     padding: 0;
   }
 
-  .card-content {
+  .content {
     position: relative;
     padding: 0;
     margin-bottom: -24px;
@@ -54,7 +54,7 @@
 </style>
 
 <Card>
-  <div slot="card-content" class="card-content">
+  <div slot="card-content" class="content">
     <span class="visit" on:click={$goto(`/knives/${item.id}`)}>
       <i class="material-icons">visibility</i>
     </span>

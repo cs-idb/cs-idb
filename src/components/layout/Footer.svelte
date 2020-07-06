@@ -7,6 +7,10 @@
 </script>
 
 <style>
+  footer {
+    background-color: var(--color-background2);
+  }
+
   .footer-copyright p {
     display: inline-block;
   }

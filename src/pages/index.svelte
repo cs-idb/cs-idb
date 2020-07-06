@@ -13,16 +13,28 @@
     text-align: center;
   }
 
-  .header h2 {
+  .header .title {
     margin-bottom: 0;
+    color: var(--color-accent) !important;
   }
-  .header h3 {
+
+  .header .subtitle {
     margin-top: 0;
     margin-bottom: 20px;
+    color: var(--color-heading) !important;
+  }
+
+  .header .description {
+    color: var(--color-primary) !important;
+  }  
+
+  .header .version {
+    color: var(--color-secondary) !important;
   }
 
   .divider {
     margin: 50px 0;
+    background-color: var(--color-foreground);
   }
 
   .refs {
@@ -42,20 +54,30 @@
 
   .ref > i {
     font-size: 6rem;
+    color: var(--color-accent) !important;
   }
 
   .ref a {
-    color: black;
+    color: var(--color-primary);
     display: flex;
     align-items: center;
   }
 
   .ref a i {
     height: 20px;
+    color: var(--color-accent);
+  }
+
+  .ref p {
+    color: var(--color-secondary);
   }
 
   .sources {
     text-align: center;
+  }
+
+  .sources .heading {
+    color: var(--color-heading);
   }
 
   .sources span.flex {
@@ -73,17 +95,26 @@
     width: 300px;
   }
 
-  .source p {
+  .source .title {
+    color: var(--color-primary);
+  }
+
+  .source .subtitle {
     margin-bottom: 10px;
+    color: var(--color-secondary);
+  }
+
+  :global(.index .sources .source a button) {
+    background-color: var(--color-accent);
   }
 </style>
 
 <div class="index">
   <div class="header">
-    <h2 class="red-text text-lighten-2">Counter Strike: Global Offensive</h2>
-    <h3 class="grey-text text-darken-2">Item Database</h3>
-    <h5>A simple Counter Strike: Global Offensive skin wiki.</h5>
-    <h6 class="grey-text text-darken-2">Version __VERSION__</h6>
+    <h2 class="title">Counter Strike: Global Offensive</h2>
+    <h3 class="subtitle">Item Database</h3>
+    <h5 class="description">A simple Counter Strike: Global Offensive skin wiki.</h5>
+    <h6 class="version">Version __VERSION__</h6>
   </div>
 
   <div class="divider" />
@@ -126,11 +157,11 @@
   <div class="divider" />
 
   <div class="sources">
-    <h3 class="grey-text text-darken-2">Powered by</h3>
+    <h3 class="heading">Powered by</h3>
     <div class="flex">
       <div class="source">
-        <h5>SvelteJS v3</h5>
-        <p>A javascript framework/compiler.</p>
+        <h5 class="title">SvelteJS v3</h5>
+        <p class="subtitle">A javascript framework/compiler.</p>
         <a href={$url('https://svelte.dev/')} target="_blank" rel="noopener noreferrer">
           <Button>
             <span class="flex">
@@ -142,8 +173,8 @@
       </div>
 
       <div class="source">
-        <h5>Materializecss</h5>
-        <p>CSS Framework + iconset</p>
+        <h5 class="title">Materializecss</h5>
+        <p class="subtitle">CSS Framework + iconset</p>
         <a href={$url('https://materializecss.com/')} target="_blank" rel="noopener noreferrer">
           <Button>
             <span class="flex">
@@ -155,8 +186,8 @@
       </div>
 
       <div class="source">
-        <h5>Vercel</h5>
-        <p>Static site + cloud functions hosting</p>
+        <h5 class="title">Vercel</h5>
+        <p class="subtitle">Static site + cloud functions hosting</p>
         <a href={$url('https://vercel.com/')} target="_blank" rel="noopener noreferrer">
           <Button>
             <span class="flex">
