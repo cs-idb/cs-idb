@@ -14,19 +14,22 @@
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
     transition: background-color 0.1s ease-in-out;
     position: relative;
+    background-color: var(--color-background3);
   }
   .skin-card:hover {
-    background-color: #e1e1e1;
+    background-color: var(--color-foreground);
   }
 
   .skin-card .visit {
     position: absolute;
     right: 10px;
     cursor: pointer;
+    color: var(--color-secondary);
   }
 
   .skin-card .name {
     margin-top: 0;
+    color: var(--color-primary);
   }
 
   .name {

@@ -4,13 +4,21 @@
   import Select from 'svelte-select';
 
   export let newFiltersStore;
+  export const resetFilter = () => {
+    selectedWeapon = undefined;
+    selectedPaintkit = undefined;
+    selectedCollection = undefined;
+
+    $newFiltersStore.minFloat = 0.0;
+    $newFiltersStore.maxFloat = 1.0;
+  }
 
   let loaded = false;
 
   onMount(() => {
     selectedWeapon = weaponOptions.find(w => w.value === $newFiltersStore.weaponId);
     selectedPaintkit = skinOptions.find(s => s.value === $newFiltersStore.paintkitTag);
-    selectedCollection = collectionOptions.find(c => c.value === $newFiltersStore.collectionId);
+    selectedCollection = collectionOptions.find(c => c.value === $newFiltersStore.collectionIdIn);
     loaded = true;
   });
 
@@ -27,7 +35,7 @@
   }
   $: {
     if (loaded) {
-      $newFiltersStore.collectionId = (selectedCollection || {}).value;
+      $newFiltersStore.collectionIdIn = (selectedCollection || {}).value;
     }
   }
 

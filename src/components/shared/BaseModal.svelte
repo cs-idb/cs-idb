@@ -19,6 +19,10 @@
     hideModal();
     dispatch('update');
   };
+
+  const clearFilters = () => {
+    dispatch('clearFilters');
+  }
 </script>
 
 <style>
@@ -33,7 +37,7 @@
 
     opacity: 0;
     visibility: hidden;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out !important;
   }
   .background-shadow.show {
     opacity: 1;
@@ -85,6 +89,7 @@
   .title :global(button) {
     border-radius: 5px;
     padding: 0px 10px;
+    background-color: var(--color-accent);
   }
 
   .body :global(.input-field label) {
@@ -122,6 +127,7 @@
       </div>
 
       <div class="footer">
+        <Button type="red" on:click={clearFilters}>Clear</Button>
         <Button type="green" on:click={updateFilters}>Save</Button>
       </div>
     </div>

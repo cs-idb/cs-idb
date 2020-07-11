@@ -15,6 +15,7 @@
       { key: 'collectionIdAmount', type: 'num', name: 'Included in x collections' },
     ],
   });
+
   const filtersStore = writable({});
 </script>
 

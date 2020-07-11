@@ -17,26 +17,30 @@
   :global(.knives-container .card) {
     min-height: 400px !important;
   }
+  .knives-container .card-content {
+    padding: 15px !important;
+  }
   :global(.knives-container .card .card-action) {
     padding: 0;
   }
 
   .content {
     position: relative;
-    padding: 0;
-    margin-bottom: -24px;
+    padding: 0;    
   }
 
   .visit {
     position: absolute;
     right: 0px;
     cursor: pointer;
+    color: var(--color-secondary);
   }
 
   .name {
     margin-top: 0;
     max-width: 220px;
     height: 40px;
+    color: var(--color-primary);
   }
 
   .name .weapon {
@@ -50,6 +54,11 @@
 
   .img-container img {
     width: 100%;
+  }
+
+  .collections {
+    color: var(--color-secondary);
+    margin: 5px 0 !important;
   }
 </style>
 
@@ -70,11 +79,11 @@
     <div class="img-container" style={`background: radial-gradient(circle, ${item.rarity.color}b3 0%, #00000080 100%);`}>
       <img loading="lazy" src={`https://steamcdn-a.akamaihd.net/apps/730/icons/econ/${item.image}`} alt={`An image of ${name}`} />
     </div>
-    <p>
+    <p class="collections">
       Included in
       <b>{item.collections.length}</b>
       collections
     </p>
-    <SkinFloat style="margin-top: 10px;" min={item.paintkit ? item.paintkit.minFloat : 0} max={item.paintkit ? item.paintkit.maxFloat : 1} />
+    <SkinFloat min={item.paintkit ? item.paintkit.minFloat : 0} max={item.paintkit ? item.paintkit.maxFloat : 1} />
   </div>
 </Card>
