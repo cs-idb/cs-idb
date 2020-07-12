@@ -52,7 +52,7 @@ export default {
     commonjs(),
     replace({ 
       __BASE_API_URL__: production ? '/api/' : 'http://127.0.0.1:3000/',
-      __VERSION__: '1.5'
+      __VERSION__: '1.6'
     }),
 
     // In dev mode, call `npm run start` once

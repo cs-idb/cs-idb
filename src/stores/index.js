@@ -1,6 +1,7 @@
 import { derived, get } from 'svelte/store';
 import { createLocalStorageStore } from './LocalForageStore';
 
+const raw_changelog = createLocalStorageStore('changelog', []);
 const raw_collections = createLocalStorageStore('collections', []);
 const raw_rarities = createLocalStorageStore('rarities', []);
 const raw_skins = createLocalStorageStore('skins', []);
@@ -178,6 +179,7 @@ const get_knives_in_collection = collectionId => {
 };
 
 export {
+  raw_changelog,
   raw_collections,
   raw_rarities,
   raw_skins,

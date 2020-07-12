@@ -7,6 +7,7 @@ try {
 
   function fileRouter() {
     return {
+      changelog: require('./data/changelog.json'),
       collections: require('./data/collections.json'),
       rarities: require('./data/rarities.json'),
       weapons: require('./data/weapons.json'),

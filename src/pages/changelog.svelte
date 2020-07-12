@@ -1,10 +1,10 @@
 <script>
-  import { changelogs } from '../dal/';
   import M from 'materialize-css';
   import { onMount } from 'svelte';
   import { PageHeader } from '../components/shared';
+  import { raw_changelog } from '../stores';
 
-  $: sortedChangelogs = changelogs.sort((a, b) => (a.time > b.time ? -1 : 1));
+  $: sortedChangelogs = $raw_changelog.sort((a, b) => (a.time > b.time ? -1 : 1));
 
   onMount(() => {
     const collapsibleElems = document.querySelectorAll('.collapsible');
