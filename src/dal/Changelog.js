@@ -55,6 +55,12 @@ const changelogs = [
     time: 1593798665000, // Friday, 3 July 2020,
     header: 'Add knives',
     content: 'Added the /knives page, containing all knife skins. Collections with a case that contains knives now display these knives.'
+  },
+  {
+    version: '1.6',
+    time: 1594496521000, // Saturday, 11 July 2020,
+    header: 'Dark theme',
+    content: 'Added a theme mechanic and a new dark theme; Reworked some item filter logic; Fetch changelog from api instead of storing data locally;'
   }
 ];
 

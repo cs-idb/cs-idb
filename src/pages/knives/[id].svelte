@@ -47,8 +47,8 @@
     height: 250px;
   }
 
-  .image-container img {
-    background-color: white;
+  .collections-header {
+    color: var(--color-primary);
   }
 
   .collections li {
@@ -74,7 +74,7 @@
   }
 
   .collections li:hover {
-    color: #db5b60;
+    color: var(--color-accent);
   }
 </style>
 
@@ -113,7 +113,7 @@
     {/if}
 
     <br />
-    <h5>Available in the following collections ({sortedCollections.length}):</h5>
+    <h5 class="collections-header">Available in the following collections ({sortedCollections.length}):</h5>
     <ul class="collections">
       {#each sortedCollections as collection}
         <li on:click={$goto($url(`/collections/${collection.id}`))}>

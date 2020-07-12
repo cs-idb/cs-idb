@@ -12,15 +12,28 @@
   });
 </script>
 
-<style>
+<style lang="scss">
   .collection {
     border: none;
   }
 
   .collection-item {
-    border: 1px solid #e0e0e0;
+    border: 1px solid var(--color-secondary);
     border-radius: 2px;
     margin-bottom: 5px;
+    background-color: var(--color-background3);
+
+    .version {
+      color: var(--color-heading);
+    }
+
+    .time {
+      color: var(--color-secondary);
+    }
+
+    .content {
+      color: var(--color-primary);
+    }
   }
 </style>
 
@@ -33,9 +46,9 @@
   <ul class="changelog-list collection">
     {#each sortedChangelogs as changelog}
       <li class="collection-item">
-        <h4 class="grey-text text-darken-2">v{changelog.version} - {changelog.header}</h4>
-        <h6 class="grey-text text-darken-1">{new Date(changelog.time).toDateString()}</h6>
-        <p>{changelog.content}</p>
+        <h4 class="version">v{changelog.version} - {changelog.header}</h4>
+        <h6 class="time">{new Date(changelog.time).toDateString()}</h6>
+        <p class="content">{changelog.content}</p>
       </li>
     {/each}
   </ul>

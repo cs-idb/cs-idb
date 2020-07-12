@@ -57,8 +57,7 @@
   }
 
   .basemodal {
-    background-color: white;
-    border: 1px solid lightgrey;
+    background-color: var(--color-background3);
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
     padding: 20px;
     min-width: 90%;
@@ -84,6 +83,7 @@
     margin-top: 0px;
     text-align: center;
     width: 100%;
+    color: var(--color-heading);
   }
 
   .title :global(button) {
