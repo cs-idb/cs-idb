@@ -1,13 +1,17 @@
+@import './theme.scss';
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	transition: background-color 0.2s, color 0.2s ease-in-out !important;
 }
 
 body {
 	display: flex;
 	min-height: 100vh;
 	flex-direction: column;
+	background-color: var(--color-background);
 }
 
 #search-results li.move.active {

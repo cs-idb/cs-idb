@@ -62,6 +62,12 @@
     $filtersStore = $newFiltersStore;
   };
 
+  let resetFilter = () => {};
+
+  const handleClearFilters = () => {
+    resetFilter();
+  };
+
   const clearPagination = () => {
     page = 0;
     paginated_items = [];
@@ -124,12 +130,33 @@
     const height = collapsed ? 0 : [...collapseWrapper.children].reduce((el1, el2) => el1.clientHeight + el2.clientHeight);
     collapseWrapper.style.height = height + 'px';
   }
+
+  function handleToggleModalVisibility() {
+    if (!showFilterModal) {
+      parseFiltersFromParams();
+    }
+    showFilterModal = !showFilterModal;
+  }
 </script>
 
-<style>
+<style lang="scss">
   .collapse-wrapper {
-    transition: height 0.3s;
+    transition: height 0.3s !important;
     overflow: hidden;
+  }
+
+  .filter-and-order-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .filter-container {
+      margin-right: 20px;
+    }
+  }
+
+  .filter-container :global(button) {
+    background-color: var(--color-accent);
   }
 
   .card-list {
@@ -140,9 +167,13 @@
 </style>
 
 {#if showFilterModal}
-  <BaseModal showModal={showFilterModal} on:close={() => (showFilterModal = false)} on:update={handleUpdateFilters}>
+  <BaseModal
+    showModal={showFilterModal}
+    on:close={() => (showFilterModal = false)}
+    on:update={handleUpdateFilters}
+    on:clearFilters={handleClearFilters}>
     <div slot="modal-body">
-      <svelte:component this={cardFilterComponent} {newFiltersStore} />
+      <svelte:component this={cardFilterComponent} {newFiltersStore} bind:resetFilter />
     </div>
   </BaseModal>
 {/if}
@@ -151,7 +182,7 @@
   <div class="filter-and-order-container">
     {#if showFilter}
       <div class="filter-container input-field">
-        <Button style="display: flex; align-items: center;" on:click={() => (showFilterModal = !showFilterModal)}>
+        <Button style="display: flex; align-items: center;" on:click={handleToggleModalVisibility}>
           <i class="material-icons" style="margin-right: 10px;">filter_alt</i>
           <span>Filter {filtered_items.length} items</span>
         </Button>

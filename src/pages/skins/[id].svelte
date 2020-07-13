@@ -47,20 +47,8 @@
     height: 250px;
   }
 
-  .image-container img {
-    background-color: white;
-  }
-
-  .image-placeholder {
-    height: 225px;
-    width: 300px;
-    position: absolute;
-    top: 0;
-    border: 1px solid black;
-    z-index: -1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  :global(.skin button, .skin button:hover, .skin button:focus) {
+    background-color: var(--color-accent);
   }
 
   .skin-collection span,
@@ -79,7 +67,6 @@
         width="300"
         src={'https://steamcdn-a.akamaihd.net/apps/730/icons/econ/' + skin.image}
         alt={`An image of ${skin.weapon.tag} | ${skin.paintkit.tag}`} />
-      <div class="image-placeholder">Loading image...</div>
     </div>
 
     {#if (skin.collection || {}).stattrak === true}
@@ -108,7 +95,7 @@
         {(skin.collection || {}).tag || '-'}
       </h6>
       {#if skin.collection}
-        <Button on:click={() => $goto(`/collections/${skin.collection.id}`)}>
+        <Button type="btn-small" on:click={() => $goto(`/collections/${skin.collection.id}`)}>
           <span>
             View
             <i class="material-icons">chevron_right</i>
@@ -121,7 +108,7 @@
         <b>Weapon:</b>
         {skin.weapon.tag}
       </h6>
-      <Button on:click={() => $goto(`/skins?weaponId=${skin.weapon.id}`)}>
+      <Button type="btn-small" on:click={() => $goto(`/skins?weaponId=${skin.weapon.id}`)}>
         <span>
           View skins
           <i class="material-icons">chevron_right</i>

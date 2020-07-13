@@ -4,13 +4,23 @@
   import Select from 'svelte-select';
 
   export let newFiltersStore;
+  export const resetFilter = () => {
+    selectedWeapon = undefined;
+    selectedPaintkit = undefined;
+    selectedCollection = undefined;
+
+    $newFiltersStore.minFloat = 0.0;
+    $newFiltersStore.maxFloat = 1.0;
+  };
 
   let loaded = false;
 
   onMount(() => {
     selectedWeapon = weaponOptions.find(w => w.value === $newFiltersStore.weaponId);
     selectedPaintkit = skinOptions.find(s => s.value === $newFiltersStore.paintkitTag);
-    selectedCollection = collectionOptions.find(c => c.value === $newFiltersStore.collectionId);
+    selectedCollection = collectionOptions.find(c => c.value === $newFiltersStore.collectionIdIn);
+    if (!$newFiltersStore.minFloat) $newFiltersStore.minFloat = 0.0;
+    if (!$newFiltersStore.maxFloat) $newFiltersStore.maxFloat = 1.0;
     loaded = true;
   });
 
@@ -27,7 +37,7 @@
   }
   $: {
     if (loaded) {
-      $newFiltersStore.collectionId = (selectedCollection || {}).value;
+      $newFiltersStore.collectionIdIn = (selectedCollection || {}).value;
     }
   }
 
@@ -66,10 +76,37 @@
     });
 </script>
 
-<style>
+<style lang="scss">
   .val {
     display: flex;
     align-items: center;
+
+    .range-field {
+      width: 100%;
+      margin-right: 15px;
+
+      input[type='range'] {
+        border: none;
+      }
+
+      input[type='range']::-moz-range-thumb,
+      input[type='range']::-webkit-slider-thumb {
+        background-color: var(--color-accent);
+      }
+    }
+
+    .input-field {
+      width: 65px;
+      margin: 0 0 0 15px;
+
+      input[type='number'] {
+        color: var(--color-primary);
+
+        &:focus {
+          border-bottom: 1px solid var(--color-accent);
+        }
+      }
+    }
   }
 
   .val .range-field {

@@ -2,6 +2,7 @@
   import M from 'materialize-css';
   import { onMount } from 'svelte';
   import SearchSite from './SearchSite.svelte';
+  import SiteSettings from './SiteSettings.svelte';
   import { url } from '@sveltech/routify';
 
   onMount(() => {
@@ -33,10 +34,17 @@
   };
 </script>
 
-<style>
+<style lang="scss">
+  nav {
+    background-color: var(--color-background2);
+  }
+
   nav .brand-logo {
     position: relative;
     padding: 0 15px;
+  }
+  .search-wrapper {
+    height: inherit;
   }
 
   .icon-fix {
@@ -50,6 +58,7 @@
 
   .divider {
     margin: 8px;
+    background-color: var(--color-foreground);
   }
 
   .sidenav .brand-logo {
@@ -64,16 +73,44 @@
     line-height: normal !important;
   }
 
-  #main-sidenav a.navitem {
-    padding: 0 20px;
-  }
+  #main-sidenav {
+    background-color: var(--color-background);
 
-  #main-sidenav a.navitem i {
-    margin: 0 20px 0 0;
+    a.brand-logo {
+      background-color: var(--color-background2);
+      color: white !important;
+    }
+
+    a.navitem {
+      padding: 0 20px;
+      color: var(--color-primary);
+
+      i {
+        margin: 0 20px 0 0;
+        color: var(--color-secondary);
+      }
+    }
   }
 
   #searchsite {
     position: relative;
+    height: inherit;
+
+    :global(#search-box i) {
+      color: var(--color-primary);
+    }
+  }
+
+  #csgoinfo-dropdown {
+    background-color: var(--color-background);
+
+    li:hover {
+      background-color: var(--color-background2);
+    }
+
+    a.navitem {
+      color: var(--color-primary);
+    }
   }
 
   @media only screen and (min-width: 601px) {
@@ -105,7 +142,12 @@
           </a>
         </li>
       </ul>
-      <ul class="hide-on-small-only right">
+      <ul class="right">
+        <li>
+          <SiteSettings />
+        </li>
+      </ul>
+      <ul class="hide-on-med-and-down right search-wrapper">
         <li id="searchsite">
           <SearchSite />
         </li>
@@ -115,9 +157,9 @@
 
   <ul class="sidenav" id="main-sidenav">
     <li>
-      <a class="brand-logo navitem red lighten-2" href={$url('/')}>CSDB</a>
+      <a class="brand-logo navitem" href={$url('/')}>CSDB</a>
     </li>
-    <li id="searchsite">
+    <li id="searchsite-mobile">
       <SearchSite mobile={true} on:closeSideNav={closeSideNav} />
     </li>
     <div class="divider" />
@@ -149,19 +191,19 @@
 
   <ul id="csgoinfo-dropdown" class="dropdown-content">
     <li>
-      <a class="navitem red-text text-lighten-2" href={$url('/collections')}>
+      <a class="navitem" href={$url('/collections')}>
         <i class="material-icons">list</i>
         Collections
       </a>
     </li>
     <li>
-      <a class="navitem red-text text-lighten-2" href={$url('/skins')}>
+      <a class="navitem" href={$url('/skins')}>
         <i class="material-icons">brush</i>
         Skins
       </a>
     </li>
     <li>
-      <a class="navitem red-text text-lighten-2" href={$url('/knives')}>
+      <a class="navitem" href={$url('/knives')}>
         <i class="material-icons">restaurant</i>
         Knives
       </a>

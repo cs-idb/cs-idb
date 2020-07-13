@@ -1,8 +1,9 @@
-import { raw_collections, raw_knives, raw_paintkits, raw_rarities, raw_skins, raw_weapons } from '../stores';
+import { raw_changelog, raw_collections, raw_knives, raw_paintkits, raw_rarities, raw_skins, raw_weapons } from '../stores';
 import localforage from 'localforage';
 
 const sessionDataKey = 'csidb/loadeddata';
 const pathsToFetch = {
+  changelog: raw_changelog,
   collections: raw_collections,
   paintkits: raw_paintkits,
   rarities: raw_rarities,

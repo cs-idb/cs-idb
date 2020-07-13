@@ -68,9 +68,14 @@
   .item-header {
     display: flex;
     align-items: center;
-    color: #2f2f2f;
     cursor: pointer;
   }
+
+  .item-header,
+  .item-subtitle {
+    color: var(--color-heading);
+  }
+
   .item-header i {
     margin: 0 0 0 -10px;
     font-size: 2.5rem;
@@ -102,17 +107,24 @@
     </div>
 
     <br />
+
     <h4 on:click={() => (knivesCollapsed = !knivesCollapsed)} class="item-header" class:collapsed={knivesCollapsed}>
-      <i class="material-icons">expand_more</i>
+      {#if collection_knives.length !== 0}
+        <i class="material-icons">expand_more</i>
+      {/if}
       Knives ({collection_knives.length})
     </h4>
-    <CardList
-      collapsed={knivesCollapsed}
-      items={collection_knives}
-      showFilter={false}
-      sortingStore={knifeSortingStore}
-      filtersStore={knifeFiltersStore}
-      cardComponent={KnifeCard} />
+    {#if collection_knives.length !== 0}
+      <CardList
+        collapsed={knivesCollapsed}
+        items={collection_knives}
+        showFilter={false}
+        sortingStore={knifeSortingStore}
+        filtersStore={knifeFiltersStore}
+        cardComponent={KnifeCard} />
+    {:else}
+      <h6 class="item-subtitle">This collection does not contain any knives...</h6>
+    {/if}
 
     <h4 on:click={() => (skinsCollapsed = !skinsCollapsed)} class="item-header" class:collapsed={skinsCollapsed}>
       <i class="material-icons">expand_more</i>

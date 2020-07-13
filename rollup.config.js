@@ -5,6 +5,16 @@ import livereload from 'rollup-plugin-livereload'
 import { terser } from 'rollup-plugin-terser'
 import css from 'rollup-plugin-css-only'
 import replace from '@rollup/plugin-replace'
+import sveltePreprocess from 'svelte-preprocess';
+
+const preprocess = sveltePreprocess({
+  scss: {
+    includePaths: ['src'],
+  },
+  postcss: {
+    plugins: [require('autoprefixer')],
+  },
+});
 
 const production = !process.env.ROLLUP_WATCH
 
@@ -25,6 +35,7 @@ export default {
       css: (css) => {
         css.write('public/build/bundle.css')
       },
+      preprocess
     }),
 
     css({ output: 'public/build/base.css' }),
@@ -41,7 +52,7 @@ export default {
     commonjs(),
     replace({ 
       __BASE_API_URL__: production ? '/api/' : 'http://127.0.0.1:3000/',
-      __VERSION__: '1.5'
+      __VERSION__: '1.6'
     }),
 
     // In dev mode, call `npm run start` once

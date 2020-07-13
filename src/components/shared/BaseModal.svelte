@@ -19,6 +19,10 @@
     hideModal();
     dispatch('update');
   };
+
+  const clearFilters = () => {
+    dispatch('clearFilters');
+  };
 </script>
 
 <style>
@@ -33,7 +37,7 @@
 
     opacity: 0;
     visibility: hidden;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out !important;
   }
   .background-shadow.show {
     opacity: 1;
@@ -53,8 +57,7 @@
   }
 
   .basemodal {
-    background-color: white;
-    border: 1px solid lightgrey;
+    background-color: var(--color-background3);
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
     padding: 20px;
     min-width: 90%;
@@ -80,24 +83,17 @@
     margin-top: 0px;
     text-align: center;
     width: 100%;
+    color: var(--color-heading);
   }
 
   .title :global(button) {
     border-radius: 5px;
     padding: 0px 10px;
+    background-color: var(--color-accent);
   }
 
   .body :global(.input-field label) {
     left: 0;
-  }
-
-  :global(.selectContainer.focused) {
-    border-color: var(--borderFocusColor, #26a69a) !important;
-  }
-
-  :global(.selectContainer input) {
-    box-shadow: none !important;
-    top: 0;
   }
 
   .footer {
@@ -122,7 +118,8 @@
       </div>
 
       <div class="footer">
-        <Button type="green" on:click={updateFilters}>Save</Button>
+        <Button type="red lighten-1" on:click={clearFilters}>Clear</Button>
+        <Button type="green lighten-1" on:click={updateFilters}>Save</Button>
       </div>
     </div>
   </div>

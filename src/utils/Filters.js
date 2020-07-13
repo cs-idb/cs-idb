@@ -26,6 +26,10 @@ function applyFilterOnItem(item, filterName, filterValue) {
       return itemValue.includes(filterValue);
     }
     case 'collectionId': {
+      const itemValue = item.collection.id;
+      return Number(itemValue) === Number(filterValue);
+    }
+    case 'collectionIdIn': {
       const itemValue = item.collections.map(c => c.id);
       return itemValue.includes(filterValue);
     }
@@ -36,6 +40,10 @@ function applyFilterOnItem(item, filterName, filterValue) {
     case 'maxFloat': {
       const itemValue = item.paintkit ? item.paintkit.maxFloat : 1;
       return Number(itemValue) <= Number(filterValue);
+    }
+    case 'rarityIds': {
+      const itemValue = item.rarity.id;
+      return filterValue.includes(itemValue);
     }
 
     default: {

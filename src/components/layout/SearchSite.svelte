@@ -97,45 +97,86 @@
   };
 </script>
 
-<style>
+<style lang="scss">
   #search-box {
     display: flex;
     align-items: center;
+    height: inherit;
+    padding-top: 5px;
+
+    input {
+      border: 2px solid var(--color-background);
+      border-right: none;
+      border-radius: 5px 0 0 5px;
+      padding-left: 10px;
+      margin: 0;
+      color: white;
+
+      &:focus {
+        box-shadow: none;
+        border: 2px solid var(--color-primary);
+        border-right: none;
+      }
+
+      &:focus + button {
+        box-shadow: none;
+        border: 2px solid var(--color-primary) !important;
+        border-left: none !important;
+      }
+    }
+
+    button {
+      background: none;
+      border: 2px solid var(--color-background) !important;
+      border-left: none !important;
+      display: flex;
+      align-items: center;
+      border: none;
+      height: calc(3rem + 4px);
+      border-radius: 0 5px 5px 0;
+      padding: 0px 10px;
+
+      i {
+        color: white !important;
+      }
+    }
   }
 
   #search-box.mobile {
-    margin: 0 20px;
-  }
+    margin: 5px 10px;
+    width: 225px;
 
-  #search-box.mobile i {
-    margin: 0 20px 0 0;
-  }
+    input {
+      border: 2px solid var(--color-primary);
+      border-right: none;
+      color: var(--color-primary);
 
-  #search-box.mobile #search-input-mobile {
-    color: gray;
-    border-bottom: 1px solid gray;
-    margin-top: 8px;
-  }
-  #search-box.mobile #search-input-mobile::placeholder {
-    color: gray;
-  }
+      &::placeholder {
+        color: var(--color-primary);
+      }
 
-  #search-input-desktop {
-    margin-top: 8px;
-    color: white;
-    border-bottom: 1px solid white;
-  }
+      &:focus {
+        box-shadow: none;
+        border: 2px solid var(--color-accent);
+        border-right: none;
+      }
 
-  #search-input-desktop:focus {
-    box-shadow: 0 1px 0 0 white;
-  }
+      &:focus + button {
+        box-shadow: none;
+        border: 2px solid var(--color-accent) !important;
+        border-left: none !important;
+      }
+    }
 
-  #search-input-desktop::placeholder {
-    color: white;
-  }
+    button {
+      border: 2px solid var(--color-primary) !important;
+      border-left: none !important;
+      height: calc(3rem + 4px);
 
-  #search-box i {
-    margin: 0 15px;
+      i {
+        color: var(--color-primary) !important;
+      }
+    }
   }
 
   #search-results {
@@ -180,21 +221,10 @@
 </style>
 
 <div id="search-box" class:mobile>
-  {#if mobile}
-    <i class="material-icons">search</i>
-  {/if}
-  <div>
-    <input
-      type="text"
-      id={mobile ? 'search-input-mobile' : 'search-input-desktop'}
-      class="autocomplete search-input"
-      placeholder="Search"
-      bind:value={search_value}
-      on:keydown={handleMoveFocus} />
-  </div>
-  {#if !mobile}
-    <i class="material-icons">search</i>
-  {/if}
+  <input type="text" placeholder="Search" bind:value={search_value} on:keydown={handleMoveFocus} />
+  <button>
+    <i class="material-icons prefix">search</i>
+  </button>
 </div>
 
 {#if show_results}

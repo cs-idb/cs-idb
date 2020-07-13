@@ -24,6 +24,7 @@
   .back-to-top-wrapper :global(button) {
     display: flex;
     align-items: center;
+    background-color: var(--color-accent);
   }
 
   .back-to-top-wrapper :global(button .icon) {
