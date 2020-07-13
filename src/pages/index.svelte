@@ -91,6 +91,7 @@
 
   .sources .heading {
     color: var(--color-heading);
+    margin: 0;
   }
 
   .sources span.flex {

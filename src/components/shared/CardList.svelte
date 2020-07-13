@@ -139,10 +139,20 @@
   }
 </script>
 
-<style>
+<style lang="scss">
   .collapse-wrapper {
     transition: height 0.3s !important;
     overflow: hidden;
+  }
+
+  .filter-and-order-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .filter-container {
+      margin-right: 20px;
+    }
   }
 
   .filter-container :global(button) {

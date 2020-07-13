@@ -96,15 +96,6 @@
     left: 0;
   }
 
-  :global(.selectContainer.focused) {
-    border-color: var(--borderFocusColor, #26a69a) !important;
-  }
-
-  :global(.selectContainer input) {
-    box-shadow: none !important;
-    top: 0;
-  }
-
   .footer {
     margin: 15px 0;
     text-align: right;
@@ -127,8 +118,8 @@
       </div>
 
       <div class="footer">
-        <Button type="red" on:click={clearFilters}>Clear</Button>
-        <Button type="green" on:click={updateFilters}>Save</Button>
+        <Button type="red lighten-1" on:click={clearFilters}>Clear</Button>
+        <Button type="green lighten-1" on:click={updateFilters}>Save</Button>
       </div>
     </div>
   </div>

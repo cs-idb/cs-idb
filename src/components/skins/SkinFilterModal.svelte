@@ -23,6 +23,8 @@
     selectedPaintkit = skinOptions.find(s => s.value === $newFiltersStore.paintkitTag);
     selectedCollection = collectionOptions.find(c => c.value === $newFiltersStore.collectionId);
     selectedRarities = $newFiltersStore.rarityIds  || [];
+    if (!$newFiltersStore.minFloat) $newFiltersStore.minFloat = 0.0;
+    if (!$newFiltersStore.maxFloat) $newFiltersStore.maxFloat = 1.0;
     
     loaded = true;
     const elems = document.querySelectorAll('select.needs-materialize-select');
@@ -77,7 +79,7 @@
   };
 </script>
 
-<style>
+<style lang="scss">
   @media only screen and (min-width: 600px) {
     .skin-filter-modal {
       max-width: 500px;
@@ -93,12 +95,17 @@
     display: flex;
     flex-direction: column;
     margin-top: 5px;
+
+    [type="checkbox"].filled-in:checked + span:not(.lever)::after {
+      border: 2px solid var(--color-accent);
+      background-color: var(--color-accent);
+    }
   }
 
   .rarities .invert-button {
     margin: 10px 0;
     text-decoration: underline;
-    color: #0101b3;
+    color: var(--color-primary);
     cursor: pointer;
   }
 
@@ -114,15 +121,35 @@
   .val .range-field {
     width: 100%;
     margin-right: 15px;
+
+    input[type="range"] {
+      border: none;
+    }
+
+    input[type="range"]::-moz-range-thumb, input[type="range"]::-webkit-slider-thumb {
+      background-color: var(--color-accent);
+    }
   }
 
   .val .input-field {
     width: 65px;
     margin: 0 0 0 15px;
+
+    input[type="number"] {
+      color: var(--color-primary);
+
+      &:focus {
+        border-bottom: 1px solid var(--color-accent);
+      }
+    }
+  }
+
+  :global(.selectContainer) {
+    border: var(--border, 2px solid #d8dbdf) !important;
   }
 
   :global(.selectContainer.focused) {
-    border-color: var(--borderFocusColor, #26a69a) !important;
+    border-color: var(--color-accent) !important;
   }
 
   :global(.selectContainer input) {
