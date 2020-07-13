@@ -221,11 +221,7 @@
 </style>
 
 <div id="search-box" class:mobile>
-  <input 
-    type="text" 
-    placeholder="Search" 
-    bind:value={search_value} 
-    on:keydown={handleMoveFocus} />
+  <input type="text" placeholder="Search" bind:value={search_value} on:keydown={handleMoveFocus} />
   <button>
     <i class="material-icons prefix">search</i>
   </button>

@@ -66,7 +66,7 @@
 
   const handleClearFilters = () => {
     resetFilter();
-  }
+  };
 
   const clearPagination = () => {
     page = 0;
@@ -131,7 +131,7 @@
     collapseWrapper.style.height = height + 'px';
   }
 
-  function handleToggleModalVisibility () {
+  function handleToggleModalVisibility() {
     if (!showFilterModal) {
       parseFiltersFromParams();
     }
@@ -167,12 +167,11 @@
 </style>
 
 {#if showFilterModal}
-  <BaseModal 
-    showModal={showFilterModal} 
-    on:close={() => (showFilterModal = false)} 
+  <BaseModal
+    showModal={showFilterModal}
+    on:close={() => (showFilterModal = false)}
     on:update={handleUpdateFilters}
-    on:clearFilters={handleClearFilters}
-  >
+    on:clearFilters={handleClearFilters}>
     <div slot="modal-body">
       <svelte:component this={cardFilterComponent} {newFiltersStore} bind:resetFilter />
     </div>

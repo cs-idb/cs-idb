@@ -22,7 +22,7 @@
 
   const clearFilters = () => {
     dispatch('clearFilters');
-  }
+  };
 </script>
 
 <style>

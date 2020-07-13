@@ -71,7 +71,8 @@
     cursor: pointer;
   }
 
-  .item-header, .item-subtitle {
+  .item-header,
+  .item-subtitle {
     color: var(--color-heading);
   }
 
@@ -111,7 +112,7 @@
       {#if collection_knives.length !== 0}
         <i class="material-icons">expand_more</i>
       {/if}
-      Knives ({collection_knives.length})      
+      Knives ({collection_knives.length})
     </h4>
     {#if collection_knives.length !== 0}
       <CardList

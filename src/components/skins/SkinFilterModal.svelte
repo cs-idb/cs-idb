@@ -12,29 +12,48 @@
     selectedRarities = [];
     $newFiltersStore.minFloat = 0.0;
     $newFiltersStore.maxFloat = 1.0;
-  }
+  };
 
   let loaded = false;
 
-  let selectedWeapon, selectedPaintkit, selectedCollection, selectedRarities = [];
+  let selectedWeapon,
+    selectedPaintkit,
+    selectedCollection,
+    selectedRarities = [];
 
   onMount(() => {
     selectedWeapon = weaponOptions.find(w => w.value === $newFiltersStore.weaponId);
     selectedPaintkit = skinOptions.find(s => s.value === $newFiltersStore.paintkitTag);
     selectedCollection = collectionOptions.find(c => c.value === $newFiltersStore.collectionId);
-    selectedRarities = $newFiltersStore.rarityIds  || [];
+    selectedRarities = $newFiltersStore.rarityIds || [];
     if (!$newFiltersStore.minFloat) $newFiltersStore.minFloat = 0.0;
     if (!$newFiltersStore.maxFloat) $newFiltersStore.maxFloat = 1.0;
-    
+
     loaded = true;
     const elems = document.querySelectorAll('select.needs-materialize-select');
     M.FormSelect.init(elems);
-  })
+  });
 
-  $: { if (loaded) { $newFiltersStore.weaponId = (selectedWeapon || {}).value; } }
-  $: { if (loaded) { $newFiltersStore.paintkitTag = (selectedPaintkit || {}).value; } }
-  $: { if (loaded) { $newFiltersStore.collectionId = (selectedCollection || {}).value; } }
-  $: { if (loaded) { $newFiltersStore.rarityIds = selectedRarities.length > 0 ? selectedRarities : undefined; } }
+  $: {
+    if (loaded) {
+      $newFiltersStore.weaponId = (selectedWeapon || {}).value;
+    }
+  }
+  $: {
+    if (loaded) {
+      $newFiltersStore.paintkitTag = (selectedPaintkit || {}).value;
+    }
+  }
+  $: {
+    if (loaded) {
+      $newFiltersStore.collectionId = (selectedCollection || {}).value;
+    }
+  }
+  $: {
+    if (loaded) {
+      $newFiltersStore.rarityIds = selectedRarities.length > 0 ? selectedRarities : undefined;
+    }
+  }
 
   $: weaponOptions = $weapons
     .filter(w => w.type !== 'Knife')
@@ -96,7 +115,7 @@
     flex-direction: column;
     margin-top: 5px;
 
-    [type="checkbox"].filled-in:checked + span:not(.lever)::after {
+    [type='checkbox'].filled-in:checked + span:not(.lever)::after {
       border: 2px solid var(--color-accent);
       background-color: var(--color-accent);
     }
@@ -122,11 +141,12 @@
     width: 100%;
     margin-right: 15px;
 
-    input[type="range"] {
+    input[type='range'] {
       border: none;
     }
 
-    input[type="range"]::-moz-range-thumb, input[type="range"]::-webkit-slider-thumb {
+    input[type='range']::-moz-range-thumb,
+    input[type='range']::-webkit-slider-thumb {
       background-color: var(--color-accent);
     }
   }
@@ -135,7 +155,7 @@
     width: 65px;
     margin: 0 0 0 15px;
 
-    input[type="number"] {
+    input[type='number'] {
       color: var(--color-primary);
 
       &:focus {

@@ -26,7 +26,7 @@
 
   .content {
     position: relative;
-    padding: 0;    
+    padding: 0;
   }
 
   .visit {
