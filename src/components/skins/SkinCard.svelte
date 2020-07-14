@@ -19,6 +19,7 @@
     .name {
       margin-top: 0;
       color: var(--color-primary);
+      max-width: 205px;
     }
   }
 
