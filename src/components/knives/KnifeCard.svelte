@@ -13,11 +13,11 @@
   }
 </script>
 
-<style global>
+<style>
   :global(.knives-container .card) {
     min-height: 400px !important;
   }
-  .knives-container .card-content {
+  :global(.knives-container .card-content) {
     padding: 15px !important;
   }
   :global(.knives-container .card .card-action) {
