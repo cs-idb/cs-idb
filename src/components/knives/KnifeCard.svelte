@@ -62,9 +62,9 @@
   }
 </style>
 
-<Card>
+<Card on:click={$goto(`/knives/${item.id}`)}>
   <div slot="card-content" class="content">
-    <span class="visit" on:click={$goto(`/knives/${item.id}`)}>
+    <span class="visit">
       <i class="material-icons">visibility</i>
     </span>
     <h6 class="name">
