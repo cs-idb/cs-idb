@@ -15,7 +15,7 @@
   data-target={dataTarget}
   class:modal-trigger={dataTarget}
   class="waves-effect waves-light btn {type}"
-  on:click={() => dispatch('click')}
+  on:click|stopPropagation={() => dispatch('click')}
   {style}>
   <slot />
 </button>

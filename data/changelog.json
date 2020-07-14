@@ -58,5 +58,11 @@
     "time": 1594496521000,
     "header": "Dark theme",
     "content": "Added a theme mechanic and a new dark theme; Reworked some item filter logic; Fetch changelog from api instead of storing data locally;"
+  },
+  {
+    "version": "1.6.1",
+    "time": 1594727083000,
+    "header": "Collection icons",
+    "content": "Added collection items in the global collection list, individual collection pages and individual knife pages."
   }
 ]

@@ -17,7 +17,8 @@
   }
 
   .card:hover {
-    box-shadow: 0 0px 1px 0px var(--color-secondary) !important;
+    transform: scale(102%);
+    cursor: pointer;
   }
 
   .card .card-content {
@@ -45,7 +46,8 @@
   class:flat
   style={`background-color: ${bgColor};`}
   in:fly={{ x: 300, duration: 150 }}
-  out:fade={{ delay: 0, duration: 150 }}>
+  out:fade={{ delay: 0, duration: 150 }}
+  on:click>
   <div class="card-content">
     <slot name="card-content" />
   </div>

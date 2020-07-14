@@ -61,6 +61,11 @@
 </script>
 
 <style>
+  :global(.collection-container .heading span img) {
+    width: 150px;
+    height: auto;
+  }
+
   .collection-container {
     margin: 30px 0;
   }
@@ -87,7 +92,14 @@
 </style>
 
 <div class="collection-container">
-  <PageHeader>{collection ? collection.tag : 'Loading collection...'}</PageHeader>
+  <PageHeader>
+    {#if collection}
+      <img src={`/img/collections/${collection.name.replace('CSGO_', '')}.png`} alt="">
+      <p>{collection.tag}</p>
+    {:else}
+      <p>Loading collection...</p>
+    {/if}
+  </PageHeader>
 
   {#if collection}
     <div class="badges">

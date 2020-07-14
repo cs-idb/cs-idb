@@ -37,7 +37,7 @@
   };
 </script>
 
-<style>
+<style lang="scss">
   .knife {
     margin-bottom: 2rem;
   }
@@ -51,30 +51,57 @@
     color: var(--color-primary);
   }
 
-  .collections li {
-    padding-left: 10px;
-  }
+  .collections {
+    display: flex;
+    flex-wrap: wrap;
 
-  .collections li h6 {
-    margin: 0;
-  }
+    .col {
+      padding-left: 10px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      width: 400px;
 
-  .collections .tag {
-    display: inline-flex;
-    align-items: center;
-    cursor: pointer;
-    padding: 5px;
-  }
-  .collections .tag .material-icons {
-    margin-left: 5px;
-  }
-  .collections .released {
-    font-size: 0.8rem;
-    display: block;
-  }
+      img {
+        width: 75px;
+        height: auto;
+        filter: grayscale(100%);
+      }
 
-  .collections li:hover {
-    color: var(--color-accent);
+      h6 {
+        margin: 0;
+        color: var(--color-primary);
+        width: 100%;
+
+        .tag {
+          display: inline-flex;
+          align-items: center;
+          width: 100%;
+          justify-content: space-between;
+
+          .material-icons {
+            margin-left: 5px;
+          }
+        }
+
+        .released {
+          font-size: 0.8rem;
+          display: block;
+          color: var(--color-secondary);
+        }
+      }
+    }
+    .col:hover {
+      color: var(--color-accent);
+
+      img {
+        filter: grayscale(0%);
+      }
+
+      h6 {
+        color: var(--color-accent);
+      }
+    }
   }
 </style>
 
@@ -116,7 +143,8 @@
     <h5 class="collections-header">Available in the following collections ({sortedCollections.length}):</h5>
     <ul class="collections">
       {#each sortedCollections as collection}
-        <li on:click={$goto($url(`/collections/${collection.id}`))}>
+        <li on:click={$goto($url(`/collections/${collection.id}`))} class="col">
+          <img src={`/img/collections/${collection.name.replace('CSGO_', '')}.png`} alt="">
           <h6>
             <b class="tag">
               <span>{collection.tag}</span>

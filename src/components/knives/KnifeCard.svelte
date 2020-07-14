@@ -13,11 +13,11 @@
   }
 </script>
 
-<style global>
+<style>
   :global(.knives-container .card) {
     min-height: 400px !important;
   }
-  .knives-container .card-content {
+  :global(.knives-container .card-content) {
     padding: 15px !important;
   }
   :global(.knives-container .card .card-action) {
@@ -62,9 +62,9 @@
   }
 </style>
 
-<Card>
+<Card on:click={$goto(`/knives/${item.id}`)}>
   <div slot="card-content" class="content">
-    <span class="visit" on:click={$goto(`/knives/${item.id}`)}>
+    <span class="visit">
       <i class="material-icons">visibility</i>
     </span>
     <h6 class="name">
