@@ -556,5 +556,14 @@
     "stattrak": true,
     "souvenir": false,
     "tag": "The Prisma 2 Collection"
+  },
+  {
+    "id": 62,
+    "name": "CSGO_set_community_26",
+    "case": true,
+    "released": "6 August 2020",
+    "stattrak": true,
+    "souvenir": false,
+    "tag": "The Fracture Collection"
   }
 ]

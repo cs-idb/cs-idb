@@ -5523,7 +5523,7 @@
     "id": 637,
     "name": "cu_usp_cyrex",
     "key": "PaintKit_cu_usp_cyrex",
-    "desc": "It was been given discreet red highlights to give off a futuristic feel.",
+    "desc": "It has been given discreet red highlights to give off a futuristic feel.",
     "flavor": "Imogen was the past Felix, I'm the future - Huxley, The Competition",
     "tag": "Cyrex",
     "minFloat": 0,
@@ -8128,6 +8128,176 @@
     "tag": "Bullet Queen",
     "minFloat": 0,
     "maxFloat": 1
+  },
+  {
+    "id": 958,
+    "name": "cu_negev_ultralight",
+    "key": "PaintKit_cu_negev_ultralight",
+    "desc": "It has been custom painted with a gray digital camo pattern and teal arrows.",
+    "flavor": "Got a light?",
+    "tag": "Ultralight",
+    "minFloat": 0,
+    "maxFloat": 0.79
+  },
+  {
+    "id": 959,
+    "name": "cu_ak47_anubis",
+    "key": "PaintKit_cu_ak47_anubis",
+    "desc": "A custom paint job featuring Egyptian gods Anubis and Ra, representing the balance between life and death, has been applied.",
+    "flavor": "May he tip the scales in your favor",
+    "tag": "Legion of Anubis",
+    "minFloat": 0,
+    "maxFloat": 0.7
+  },
+  {
+    "id": 960,
+    "name": "aq_p2000_lost_world",
+    "key": "PaintKit_aq_p2000_lost_world",
+    "desc": "A twisted, alien being stretches from the grip down the slide of this hand painted P2000.",
+    "flavor": "From the dark corners of the infinite void",
+    "tag": "Gnarled",
+    "minFloat": 0,
+    "maxFloat": 1
+  },
+  {
+    "id": 961,
+    "name": "cu_mag7_monster_call",
+    "key": "PaintKit_cu_mag7_monster_call",
+    "desc": "It has been custom painted with a blue base and underwater creatures in the foreground.",
+    "flavor": "There's always a bigger, greener fish",
+    "tag": "Monster Call",
+    "minFloat": 0,
+    "maxFloat": 1
+  },
+  {
+    "id": 962,
+    "name": "cu_deag_printstream",
+    "key": "PaintKit_cu_deag_printstream",
+    "desc": "It has been custom painted with a stark black and white design and finished with pearlescent highlights.",
+    "flavor": "WHITE_1; BLACK_1; PEARLESCENT_1;",
+    "tag": "Printstream",
+    "minFloat": 0,
+    "maxFloat": 0.8
+  },
+  {
+    "id": 963,
+    "name": "cu_glock_eyecontact",
+    "key": "PaintKit_cu_glock_eyecontact",
+    "desc": "A pair of eyes grace the slide of this custom painted, Pop art inspired Glock.",
+    "flavor": "Look at me while I'm shooting at you!",
+    "tag": "Vogue",
+    "minFloat": 0,
+    "maxFloat": 0.75
+  },
+  {
+    "id": 964,
+    "name": "gs_tec9_guerilla",
+    "key": "PaintKit_gs_tec9_guerilla",
+    "desc": "It has been custom painted with a brown and gold camo pattern and a T-sided agent beneath the rear sight.",
+    "flavor": "I'll watch our butts",
+    "tag": "Brother",
+    "minFloat": 0,
+    "maxFloat": 1
+  },
+  {
+    "id": 965,
+    "name": "cu_mac10_isoonna",
+    "key": "PaintKit_cu_mac10_isoonna",
+    "desc": "A woman in teal, believed to be iso onna, stands before koi fish and crashing waves on this custom painted MAC-10.",
+    "flavor": "Beauty begets bloodshed",
+    "tag": "Allure",
+    "minFloat": 0,
+    "maxFloat": 1
+  },
+  {
+    "id": 966,
+    "name": "gs_sg553_rusty",
+    "key": "PaintKit_gs_sg553_rusty",
+    "desc": "Originally polished steel, moisture has changed this weapon's appearance. \\Ol' Rusty\\ has been stamped above the trigger casing.",
+    "flavor": "A rusty, trusty friend",
+    "tag": "Ol' Rusty",
+    "minFloat": 0,
+    "maxFloat": 0.7
+  },
+  {
+    "id": 967,
+    "name": "cu_ssg08_mainframe",
+    "key": "PaintKit_cu_ssg08_mainframe",
+    "desc": "A high tech custom paint job of blues and purples has been applied.",
+    "flavor": "What secrets does _001 hold?",
+    "tag": "Mainframe 001",
+    "minFloat": 0,
+    "maxFloat": 1
+  },
+  {
+    "id": 968,
+    "name": "cu_p250_cassette",
+    "key": "PaintKit_cu_p250_cassette",
+    "desc": "A custom paint job inspired by video cassette packaging from the 1990s has been applied.",
+    "flavor": "Check the tape",
+    "tag": "Cassette",
+    "minFloat": 0,
+    "maxFloat": 0.6
+  },
+  {
+    "id": 969,
+    "name": "gs_p90_container",
+    "key": "PaintKit_gs_p90_container",
+    "desc": "Its custom paint job resembles a train car covered in graffiti.",
+    "flavor": "Art is not vandalism",
+    "tag": "Freight",
+    "minFloat": 0,
+    "maxFloat": 1
+  },
+  {
+    "id": 970,
+    "name": "cu_xm1014_amulet_blue",
+    "key": "PaintKit_cu_xm1014_amulet_blue",
+    "desc": "Entombed for millennia, this recently unearthed XM-1014 has been custom painted with blue wraps and Egyptian accents.",
+    "flavor": "Fit for a pharaoh",
+    "tag": "Entombed",
+    "minFloat": 0,
+    "maxFloat": 0.5
+  },
+  {
+    "id": 971,
+    "name": "cu_m4a4_queenfairy",
+    "key": "PaintKit_cu_m4a4_queenfairy",
+    "desc": "A custom paint job depicting incisors, molars, and a chilling take on the Tooth Fairy has been applied.",
+    "flavor": "No one said the teeth have to be yours…",
+    "tag": "Tooth Fairy",
+    "minFloat": 0,
+    "maxFloat": 0.73
+  },
+  {
+    "id": 972,
+    "name": "gs_galil_phoenix",
+    "key": "PaintKit_gs_galil_phoenix",
+    "desc": "Phoenix faction logos have been spray painted over its white and red base.",
+    "flavor": "They're bringing in the big guns",
+    "tag": "Connexion",
+    "minFloat": 0,
+    "maxFloat": 0.8
+  },
+  {
+    "id": 973,
+    "name": "gs_bizon_hellraider",
+    "key": "PaintKit_gs_bizon_hellraider",
+    "desc": "This custom paint job features runes of unknown origin and a magazine that resembles a Gatling gun.",
+    "flavor": "Give 'em hell",
+    "tag": "Runic",
+    "minFloat": 0,
+    "maxFloat": 1
+  },
+  {
+    "id": 974,
+    "name": "gs_mp5sd_wasteland_legacy",
+    "key": "PaintKit_gs_mp5sd_wasteland_legacy",
+    "desc": "20 years of MP5 designs have contributed to this custom paint job, held together by duct tape, zip ties, and glue.",
+    "flavor": "If at first (and second and third) you don't succeed…",
+    "tag": "Kitbash",
+    "minFloat": 0,
+    "maxFloat": 0.8
   },
   {
     "id": 10006,
