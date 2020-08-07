@@ -64,5 +64,11 @@
     "time": 1594727083000,
     "header": "Collection icons",
     "content": "Added collection items in the global collection list, individual collection pages and individual knife pages."
+  },
+  {
+    "version": "1.6.2",
+    "time": 1596785416000,
+    "header": "Fracture Collection",
+    "content": "Added the fracture collection, skins and knives."
   }
 ]

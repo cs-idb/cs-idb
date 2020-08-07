@@ -6969,6 +6969,142 @@
   },
   {
     "id": 871,
+    "weaponId": 28,
+    "rarityId": 3,
+    "collectionId": 62,
+    "paintkitId": 958,
+    "image": "default_generated/weapon_negev_cu_negev_ultralight_light_large.f47680cfcd5c2eb1594fd5ae51ed9caf1bb6d9cd.png"
+  },
+  {
+    "id": 872,
+    "weaponId": 32,
+    "rarityId": 3,
+    "collectionId": 62,
+    "paintkitId": 960,
+    "image": "default_generated/weapon_hkp2000_aq_p2000_lost_world_light_large.1d8b2a14b2b5b787ba450205bb3f133678dbe682.png"
+  },
+  {
+    "id": 873,
+    "weaponId": 39,
+    "rarityId": 3,
+    "collectionId": 62,
+    "paintkitId": 966,
+    "image": "default_generated/weapon_sg556_gs_sg553_rusty_light_large.c5dd8204f44be6e68069633eb261b66641444ff6.png"
+  },
+  {
+    "id": 874,
+    "weaponId": 40,
+    "rarityId": 3,
+    "collectionId": 62,
+    "paintkitId": 967,
+    "image": "default_generated/weapon_ssg08_cu_ssg08_mainframe_light_large.7d7d861da80bfecbe5141f19fbd32b95fb4496cf.png"
+  },
+  {
+    "id": 875,
+    "weaponId": 36,
+    "rarityId": 3,
+    "collectionId": 62,
+    "paintkitId": 968,
+    "image": "default_generated/weapon_p250_cu_p250_cassette_light_large.8e62f8c18421bceb377e95aa6a806b5767fcf731.png"
+  },
+  {
+    "id": 876,
+    "weaponId": 19,
+    "rarityId": 3,
+    "collectionId": 62,
+    "paintkitId": 969,
+    "image": "default_generated/weapon_p90_gs_p90_container_light_large.ee8d779318fc1367b1c63bbfa202d6261a0171c1.png"
+  },
+  {
+    "id": 877,
+    "weaponId": 26,
+    "rarityId": 3,
+    "collectionId": 62,
+    "paintkitId": 973,
+    "image": "default_generated/weapon_bizon_gs_bizon_hellraider_light_large.c7aa487268b1e88b2e7fb1ff3c8c2eeeb24d4500.png"
+  },
+  {
+    "id": 878,
+    "weaponId": 27,
+    "rarityId": 4,
+    "collectionId": 62,
+    "paintkitId": 961,
+    "image": "default_generated/weapon_mag7_cu_mag7_monster_call_light_large.8bd66022cda47ab85f73e765dc35526e6a2ce7f0.png"
+  },
+  {
+    "id": 879,
+    "weaponId": 30,
+    "rarityId": 4,
+    "collectionId": 62,
+    "paintkitId": 964,
+    "image": "default_generated/weapon_tec9_gs_tec9_guerilla_light_large.796534c0914361eec796eccd5558930096f75f96.png"
+  },
+  {
+    "id": 880,
+    "weaponId": 17,
+    "rarityId": 4,
+    "collectionId": 62,
+    "paintkitId": 965,
+    "image": "default_generated/weapon_mac10_cu_mac10_isoonna_light_large.004a4ddf7e9318cfbe98448b1c3b888fd4aff8dd.png"
+  },
+  {
+    "id": 881,
+    "weaponId": 13,
+    "rarityId": 4,
+    "collectionId": 62,
+    "paintkitId": 972,
+    "image": "default_generated/weapon_galilar_gs_galil_phoenix_light_large.62909a6e708a56e8679b9aa9225ba438b1539511.png"
+  },
+  {
+    "id": 882,
+    "weaponId": 23,
+    "rarityId": 4,
+    "collectionId": 62,
+    "paintkitId": 974,
+    "image": "default_generated/weapon_mp5sd_gs_mp5sd_wasteland_legacy_light_large.95ba928dc2c910eb819194227aa9196fdf6d9eea.png"
+  },
+  {
+    "id": 883,
+    "weaponId": 16,
+    "rarityId": 5,
+    "collectionId": 62,
+    "paintkitId": 971,
+    "image": "default_generated/weapon_m4a1_cu_m4a4_queenfairy_light_large.e5fb022145442cf85ba485d8c3cfd4f6391938e0.png"
+  },
+  {
+    "id": 884,
+    "weaponId": 4,
+    "rarityId": 5,
+    "collectionId": 62,
+    "paintkitId": 963,
+    "image": "default_generated/weapon_glock_cu_glock_eyecontact_light_large.fb7988d1d3d9ff159f81d3c0d9a2eacb976e2842.png"
+  },
+  {
+    "id": 885,
+    "weaponId": 25,
+    "rarityId": 5,
+    "collectionId": 62,
+    "paintkitId": 970,
+    "image": "default_generated/weapon_xm1014_cu_xm1014_amulet_blue_light_large.1375467de64fba676253ac771bc9ce8f83b6a8f7.png"
+  },
+  {
+    "id": 886,
+    "weaponId": 1,
+    "rarityId": 6,
+    "collectionId": 62,
+    "paintkitId": 962,
+    "image": "default_generated/weapon_deagle_cu_deag_printstream_light_large.b468e56607da39fb2c88e493456290fd5db174c8.png"
+  },
+  {
+    "id": 887,
+    "weaponId": 7,
+    "rarityId": 6,
+    "collectionId": 62,
+    "paintkitId": 959,
+    "image": "default_generated/weapon_ak47_cu_ak47_anubis_light_large.77994b9d6a2f3020c0c5aa8c9c7f70357d460bff.png"
+  },
+  {
+    "id": 888,
     "weaponId": 16,
     "rarityId": 7,
     "collectionId": 24,

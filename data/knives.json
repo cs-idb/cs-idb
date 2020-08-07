@@ -1,6 +1,567 @@
 [
   {
     "id": 0,
+    "weaponId": 521,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60
+    ],
+    "paintkitId": 38,
+    "image": "default_generated/weapon_knife_outdoor_aa_fade_light_large.f24efcbcc28c8f3ddf18e1d777cde462b5c0c739.png"
+  },
+  {
+    "id": 1,
+    "weaponId": 521,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60
+    ],
+    "paintkitId": null,
+    "image": "weapons/base_weapons/weapon_knife_outdoor.fdb3ce5ceef1584781759ef5a7bd6f819bf12e9b.png"
+  },
+  {
+    "id": 2,
+    "weaponId": 521,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60
+    ],
+    "paintkitId": 59,
+    "image": "default_generated/weapon_knife_outdoor_am_zebra_light_large.c372a0fb3df0db00a6d11595ff420c0142d925b2.png"
+  },
+  {
+    "id": 3,
+    "weaponId": 521,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60
+    ],
+    "paintkitId": 12,
+    "image": "default_generated/weapon_knife_outdoor_hy_webs_light_large.da204035f2b27faabebe138093669986beb50943.png"
+  },
+  {
+    "id": 4,
+    "weaponId": 521,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60
+    ],
+    "paintkitId": 44,
+    "image": "default_generated/weapon_knife_outdoor_aq_oiled_light_large.9add3a89dd0e03c85f525b6906c53df829bcc885.png"
+  },
+  {
+    "id": 5,
+    "weaponId": 521,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60
+    ],
+    "paintkitId": 42,
+    "image": "default_generated/weapon_knife_outdoor_aq_blued_light_large.f862df3f6428b2263abc07e569466df251ddbd67.png"
+  },
+  {
+    "id": 6,
+    "weaponId": 521,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60
+    ],
+    "paintkitId": 43,
+    "image": "default_generated/weapon_knife_outdoor_aq_forced_light_large.14a5428217d497aaaeecc8c126390b3d5ead5348.png"
+  },
+  {
+    "id": 7,
+    "weaponId": 521,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60
+    ],
+    "paintkitId": 77,
+    "image": "default_generated/weapon_knife_outdoor_hy_forest_boreal_light_large.d153647065ed5830379413e9c00442378c8cc310.png"
+  },
+  {
+    "id": 8,
+    "weaponId": 521,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60
+    ],
+    "paintkitId": 735,
+    "image": "default_generated/weapon_knife_outdoor_sp_nightstripe_light_large.3aad1683b3f6ffe1204f2aded7fa3be4f47d9c6e.png"
+  },
+  {
+    "id": 9,
+    "weaponId": 521,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60
+    ],
+    "paintkitId": 143,
+    "image": "default_generated/weapon_knife_outdoor_sp_tape_urban_light_large.8712508941f9bfc792f84d0f474701452860f856.png"
+  },
+  {
+    "id": 10,
+    "weaponId": 521,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60
+    ],
+    "paintkitId": 5,
+    "image": "default_generated/weapon_knife_outdoor_hy_ddpat_light_large.c8781e797feef7102162202f74bfd331935f22dc.png"
+  },
+  {
+    "id": 11,
+    "weaponId": 521,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60
+    ],
+    "paintkitId": 175,
+    "image": "default_generated/weapon_knife_outdoor_sp_dapple_light_large.e587077d740da85df09c4cc459608841e7d2cafd.png"
+  },
+  {
+    "id": 12,
+    "weaponId": 521,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60
+    ],
+    "paintkitId": 72,
+    "image": "default_generated/weapon_knife_outdoor_sp_mesh_tan_light_large.7c3c80a31f6255847368dc38a96bcd8c17abca02.png"
+  },
+  {
+    "id": 13,
+    "weaponId": 517,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60
+    ],
+    "paintkitId": 38,
+    "image": "default_generated/weapon_knife_cord_aa_fade_light_large.9a14f355546aa33302e185e4d5ff1f7d6aacb066.png"
+  },
+  {
+    "id": 14,
+    "weaponId": 517,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60
+    ],
+    "paintkitId": 12,
+    "image": "default_generated/weapon_knife_cord_hy_webs_light_large.c54ef1bb727c43bd0e8774a7578e168c9e59cd70.png"
+  },
+  {
+    "id": 15,
+    "weaponId": 517,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60
+    ],
+    "paintkitId": 59,
+    "image": "default_generated/weapon_knife_cord_am_zebra_light_large.4fc56265a0e28111765e2128d18608f5119b17fc.png"
+  },
+  {
+    "id": 16,
+    "weaponId": 517,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60
+    ],
+    "paintkitId": 43,
+    "image": "default_generated/weapon_knife_cord_aq_forced_light_large.7d06225b469031d5821bb57461416fe6ebdd05e9.png"
+  },
+  {
+    "id": 17,
+    "weaponId": 517,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60
+    ],
+    "paintkitId": null,
+    "image": "weapons/base_weapons/weapon_knife_cord.073b5fa991a256ec2264b1c1c581401631eb51cb.png"
+  },
+  {
+    "id": 18,
+    "weaponId": 517,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60
+    ],
+    "paintkitId": 44,
+    "image": "default_generated/weapon_knife_cord_aq_oiled_light_large.e8657de871b02a874d8dedf49c3a0d548572a2f0.png"
+  },
+  {
+    "id": 19,
+    "weaponId": 517,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60
+    ],
+    "paintkitId": 42,
+    "image": "default_generated/weapon_knife_cord_aq_blued_light_large.fb64668e22b20cea7114e71d24dae38059cda8cf.png"
+  },
+  {
+    "id": 20,
+    "weaponId": 517,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60
+    ],
+    "paintkitId": 735,
+    "image": "default_generated/weapon_knife_cord_sp_nightstripe_light_large.2055a32e9d197f0ad6606c1adc7e1d5d991e48d4.png"
+  },
+  {
+    "id": 21,
+    "weaponId": 517,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60
+    ],
+    "paintkitId": 72,
+    "image": "default_generated/weapon_knife_cord_sp_mesh_tan_light_large.3d4a214457d2064db8d3c31bbf7c60177b6d7054.png"
+  },
+  {
+    "id": 22,
+    "weaponId": 517,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60
+    ],
+    "paintkitId": 143,
+    "image": "default_generated/weapon_knife_cord_sp_tape_urban_light_large.24901673d8f1b4d1aa607aa1b6641b2c0f245cb2.png"
+  },
+  {
+    "id": 23,
+    "weaponId": 517,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60
+    ],
+    "paintkitId": 175,
+    "image": "default_generated/weapon_knife_cord_sp_dapple_light_large.bcdaa305cdbafbb475aefc06f3bc215d87d980ae.png"
+  },
+  {
+    "id": 24,
+    "weaponId": 517,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60
+    ],
+    "paintkitId": 77,
+    "image": "default_generated/weapon_knife_cord_hy_forest_boreal_light_large.0ce7ec5b40e8460bf8036d6e34eb5cface471e74.png"
+  },
+  {
+    "id": 25,
+    "weaponId": 517,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60
+    ],
+    "paintkitId": 5,
+    "image": "default_generated/weapon_knife_cord_hy_ddpat_light_large.1e22f371cb1b745fe26e8f414f4a8f0f73687e7f.png"
+  },
+  {
+    "id": 26,
+    "weaponId": 509,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60,
+      24
+    ],
+    "paintkitId": 12,
+    "image": "default_generated/weapon_knife_skeleton_hy_webs_light_large.26e2d641fa3eb5c6a90fc3bf39ff0a7f20367e56.png"
+  },
+  {
+    "id": 27,
+    "weaponId": 509,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60,
+      24
+    ],
+    "paintkitId": 59,
+    "image": "default_generated/weapon_knife_skeleton_am_zebra_light_large.77bd823d8fd0e21cb023e72df0b90aad2770854d.png"
+  },
+  {
+    "id": 28,
+    "weaponId": 509,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60,
+      24
+    ],
+    "paintkitId": null,
+    "image": "weapons/base_weapons/weapon_knife_skeleton.1fc401a844008bcaa89f8381cbe7b550a051609d.png"
+  },
+  {
+    "id": 29,
+    "weaponId": 509,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60,
+      24
+    ],
+    "paintkitId": 42,
+    "image": "default_generated/weapon_knife_skeleton_aq_blued_light_large.e306a716cec27d1640c9876d01b383374d86ef98.png"
+  },
+  {
+    "id": 30,
+    "weaponId": 509,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60,
+      24
+    ],
+    "paintkitId": 44,
+    "image": "default_generated/weapon_knife_skeleton_aq_oiled_light_large.822bad0bf51e44a83631245c24ca5c2999df0948.png"
+  },
+  {
+    "id": 31,
+    "weaponId": 509,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60,
+      24
+    ],
+    "paintkitId": 143,
+    "image": "default_generated/weapon_knife_skeleton_sp_tape_urban_light_large.be8cbee1fb2d09db34efbd706ae3abfa18eb576c.png"
+  },
+  {
+    "id": 32,
+    "weaponId": 509,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60
+    ],
+    "paintkitId": 735,
+    "image": "default_generated/weapon_knife_skeleton_sp_nightstripe_light_large.ad615b6e8bff8a937fed22b0353cfecbcd6be72f.png"
+  },
+  {
+    "id": 33,
+    "weaponId": 509,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60,
+      24
+    ],
+    "paintkitId": 43,
+    "image": "default_generated/weapon_knife_skeleton_aq_forced_light_large.a752be1acf6b4445ff9a18e4b0d2b76bb7931b11.png"
+  },
+  {
+    "id": 34,
+    "weaponId": 509,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60,
+      24
+    ],
+    "paintkitId": 5,
+    "image": "default_generated/weapon_knife_skeleton_hy_ddpat_light_large.619cec010cb8826d284aae1058eabfbc3dde6600.png"
+  },
+  {
+    "id": 35,
+    "weaponId": 509,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60,
+      24
+    ],
+    "paintkitId": 77,
+    "image": "default_generated/weapon_knife_skeleton_hy_forest_boreal_light_large.f702dc4abc53b6f3f884a78da88178d93b209db4.png"
+  },
+  {
+    "id": 36,
+    "weaponId": 509,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60,
+      24
+    ],
+    "paintkitId": 175,
+    "image": "default_generated/weapon_knife_skeleton_sp_dapple_light_large.6f270cc94041e24473960f9450ac1b05ef4bc91b.png"
+  },
+  {
+    "id": 37,
+    "weaponId": 509,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60,
+      24
+    ],
+    "paintkitId": 72,
+    "image": "default_generated/weapon_knife_skeleton_sp_mesh_tan_light_large.843c611b645fdce0b0d929594d6f1a204fd1fe9b.png"
+  },
+  {
+    "id": 38,
+    "weaponId": 509,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60,
+      24
+    ],
+    "paintkitId": 38,
+    "image": "default_generated/weapon_knife_skeleton_aa_fade_light_large.0651775fa2d0551359ec96559f9833e28fa07917.png"
+  },
+  {
+    "id": 39,
+    "weaponId": 518,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60
+    ],
+    "paintkitId": 38,
+    "image": "default_generated/weapon_knife_canis_aa_fade_light_large.92876cf32de94fbd84b9ec16f405afa6858e61b5.png"
+  },
+  {
+    "id": 40,
+    "weaponId": 518,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60
+    ],
+    "paintkitId": 12,
+    "image": "default_generated/weapon_knife_canis_hy_webs_light_large.7261fc72cd4d29a022ff0007fb1979f677fcdda5.png"
+  },
+  {
+    "id": 41,
+    "weaponId": 518,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60
+    ],
+    "paintkitId": 59,
+    "image": "default_generated/weapon_knife_canis_am_zebra_light_large.9d7f3c4d11a4306e6e7802cc7efd3cfdd3e5a157.png"
+  },
+  {
+    "id": 42,
+    "weaponId": 518,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60
+    ],
+    "paintkitId": null,
+    "image": "weapons/base_weapons/weapon_knife_canis.ae03aed81864dc2ee1e1118bb973418f910098ac.png"
+  },
+  {
+    "id": 43,
+    "weaponId": 518,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60
+    ],
+    "paintkitId": 42,
+    "image": "default_generated/weapon_knife_canis_aq_blued_light_large.5ee9cc49a41041b4222e7411b10da359377a6c55.png"
+  },
+  {
+    "id": 44,
+    "weaponId": 518,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60
+    ],
+    "paintkitId": 735,
+    "image": "default_generated/weapon_knife_canis_sp_nightstripe_light_large.e59d46c4c54c4982cf2032f740d9bccd2295c902.png"
+  },
+  {
+    "id": 45,
+    "weaponId": 518,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60
+    ],
+    "paintkitId": 44,
+    "image": "default_generated/weapon_knife_canis_aq_oiled_light_large.2fa47bb5d071d4c97891a46c1d8a809d5ed1df1a.png"
+  },
+  {
+    "id": 46,
+    "weaponId": 518,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60
+    ],
+    "paintkitId": 43,
+    "image": "default_generated/weapon_knife_canis_aq_forced_light_large.5b36558b1d1aa73d1b5d932df92e27e9b4d7393d.png"
+  },
+  {
+    "id": 47,
+    "weaponId": 518,
+    "rarityId": 8,
+    "collectionIds": [
+      62
+    ],
+    "paintkitId": 175,
+    "image": "default_generated/weapon_knife_canis_sp_dapple_light_large.6bcdee364f278146bb1740932a59da614d0db274.png"
+  },
+  {
+    "id": 48,
+    "weaponId": 518,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60
+    ],
+    "paintkitId": 5,
+    "image": "default_generated/weapon_knife_canis_hy_ddpat_light_large.5fd606c2c6356afbebe401fef45799a782b30865.png"
+  },
+  {
+    "id": 49,
+    "weaponId": 518,
+    "rarityId": 8,
+    "collectionIds": [
+      62,
+      60
+    ],
+    "paintkitId": 77,
+    "image": "default_generated/weapon_knife_canis_hy_forest_boreal_light_large.c6d09e409e9574e0aa69b6164feb7387ed7f3e55.png"
+  },
+  {
+    "id": 50,
     "weaponId": 500,
     "rarityId": 8,
     "collectionIds": [
@@ -20,7 +581,7 @@
     "image": "default_generated/weapon_bayonet_aa_fade_light_large.5ac4f422043b48b47e4453cc250c79fda3e78855.png"
   },
   {
-    "id": 1,
+    "id": 51,
     "weaponId": 500,
     "rarityId": 8,
     "collectionIds": [
@@ -40,7 +601,7 @@
     "image": "default_generated/weapon_bayonet_am_zebra_light_large.2234064362204e87ea5ce3f997dc691d844d9168.png"
   },
   {
-    "id": 2,
+    "id": 52,
     "weaponId": 500,
     "rarityId": 8,
     "collectionIds": [
@@ -60,7 +621,7 @@
     "image": "weapons/base_weapons/weapon_bayonet.515de291204d6d896724d9fbb6856fcc6054a787.png"
   },
   {
-    "id": 3,
+    "id": 53,
     "weaponId": 500,
     "rarityId": 8,
     "collectionIds": [
@@ -80,7 +641,7 @@
     "image": "default_generated/weapon_bayonet_aq_oiled_light_large.920866e2a1f17fda7702e0b4cb95f45a8a8c0070.png"
   },
   {
-    "id": 4,
+    "id": 54,
     "weaponId": 500,
     "rarityId": 8,
     "collectionIds": [
@@ -100,7 +661,7 @@
     "image": "default_generated/weapon_bayonet_so_night_light_large.11b2117af2e0f240111305857ab93e0091e347ed.png"
   },
   {
-    "id": 5,
+    "id": 55,
     "weaponId": 500,
     "rarityId": 8,
     "collectionIds": [
@@ -120,7 +681,7 @@
     "image": "default_generated/weapon_bayonet_hy_webs_light_large.9246001fd8c8b0c077dc2836ea7271a4a020750b.png"
   },
   {
-    "id": 6,
+    "id": 56,
     "weaponId": 500,
     "rarityId": 8,
     "collectionIds": [
@@ -140,7 +701,7 @@
     "image": "default_generated/weapon_bayonet_aq_blued_light_large.40905736c36dbdb9d08077ddaebb06cbb237f583.png"
   },
   {
-    "id": 7,
+    "id": 57,
     "weaponId": 500,
     "rarityId": 8,
     "collectionIds": [
@@ -160,7 +721,7 @@
     "image": "default_generated/weapon_bayonet_aq_forced_light_large.460998cd194f90f65aec10ccaea8644b42430fc0.png"
   },
   {
-    "id": 8,
+    "id": 58,
     "weaponId": 500,
     "rarityId": 8,
     "collectionIds": [
@@ -180,7 +741,7 @@
     "image": "default_generated/weapon_bayonet_hy_forest_boreal_light_large.4ecbfdb740d7345cb38430c1a4da15cec468b5ce.png"
   },
   {
-    "id": 9,
+    "id": 59,
     "weaponId": 500,
     "rarityId": 8,
     "collectionIds": [
@@ -200,7 +761,7 @@
     "image": "default_generated/weapon_bayonet_sp_tape_urban_light_large.81c4d2a06c2d8c271a2b6de4bc47f0cb0d3f32be.png"
   },
   {
-    "id": 10,
+    "id": 60,
     "weaponId": 500,
     "rarityId": 8,
     "collectionIds": [
@@ -220,7 +781,7 @@
     "image": "default_generated/weapon_bayonet_sp_dapple_light_large.5c6962d79b65eb2053770a887facae88b361fcfe.png"
   },
   {
-    "id": 11,
+    "id": 61,
     "weaponId": 500,
     "rarityId": 8,
     "collectionIds": [
@@ -240,7 +801,7 @@
     "image": "default_generated/weapon_bayonet_sp_mesh_tan_light_large.f0c1b71fd210b74b42dbf78253556e7ba9a99d15.png"
   },
   {
-    "id": 12,
+    "id": 62,
     "weaponId": 500,
     "rarityId": 8,
     "collectionIds": [
@@ -260,7 +821,7 @@
     "image": "default_generated/weapon_bayonet_hy_ddpat_light_large.f53cb47d0ef8b431116008ec3896f8cedb712fb5.png"
   },
   {
-    "id": 13,
+    "id": 63,
     "weaponId": 505,
     "rarityId": 8,
     "collectionIds": [
@@ -280,7 +841,7 @@
     "image": "default_generated/weapon_knife_flip_aa_fade_light_large.811f8e8af2e00675c047a9c1e9f04bbe5ace83b1.png"
   },
   {
-    "id": 14,
+    "id": 64,
     "weaponId": 505,
     "rarityId": 8,
     "collectionIds": [
@@ -300,7 +861,7 @@
     "image": "default_generated/weapon_knife_flip_hy_webs_light_large.e0bcc9e1d004bff0af07abc34a609c6654835ce6.png"
   },
   {
-    "id": 15,
+    "id": 65,
     "weaponId": 505,
     "rarityId": 8,
     "collectionIds": [
@@ -320,7 +881,7 @@
     "image": "default_generated/weapon_knife_flip_am_zebra_light_large.55467fb65475d82c452bc96180d101ffd7e76192.png"
   },
   {
-    "id": 16,
+    "id": 66,
     "weaponId": 505,
     "rarityId": 8,
     "collectionIds": [
@@ -340,7 +901,7 @@
     "image": "default_generated/weapon_knife_flip_aq_oiled_light_large.14589d4f366330490824f36e7f75219478e2cabd.png"
   },
   {
-    "id": 17,
+    "id": 67,
     "weaponId": 505,
     "rarityId": 8,
     "collectionIds": [
@@ -360,7 +921,7 @@
     "image": "default_generated/weapon_knife_flip_so_night_light_large.cd613460bfdf848992e25f0a45aa3ab17b6d46b6.png"
   },
   {
-    "id": 18,
+    "id": 68,
     "weaponId": 505,
     "rarityId": 8,
     "collectionIds": [
@@ -380,7 +941,7 @@
     "image": "default_generated/weapon_knife_flip_aq_forced_light_large.e9a6576a928a11fc3771b302f2b66539db29b503.png"
   },
   {
-    "id": 19,
+    "id": 69,
     "weaponId": 505,
     "rarityId": 8,
     "collectionIds": [
@@ -400,7 +961,7 @@
     "image": "default_generated/weapon_knife_flip_aq_blued_light_large.495efc692fdc551331e407697152d98c990272c3.png"
   },
   {
-    "id": 20,
+    "id": 70,
     "weaponId": 505,
     "rarityId": 8,
     "collectionIds": [
@@ -420,7 +981,7 @@
     "image": "weapons/base_weapons/weapon_knife_flip.ebfc00735792b1e2947b30a321a07215dae8ceed.png"
   },
   {
-    "id": 21,
+    "id": 71,
     "weaponId": 505,
     "rarityId": 8,
     "collectionIds": [
@@ -440,7 +1001,7 @@
     "image": "default_generated/weapon_knife_flip_hy_ddpat_light_large.882d1120e7e558969121902d618da80b88105c3a.png"
   },
   {
-    "id": 22,
+    "id": 72,
     "weaponId": 505,
     "rarityId": 8,
     "collectionIds": [
@@ -460,7 +1021,7 @@
     "image": "default_generated/weapon_knife_flip_sp_dapple_light_large.fdfee11d1148f81582f438cf1fdf175717c71a0e.png"
   },
   {
-    "id": 23,
+    "id": 73,
     "weaponId": 505,
     "rarityId": 8,
     "collectionIds": [
@@ -480,7 +1041,7 @@
     "image": "default_generated/weapon_knife_flip_sp_mesh_tan_light_large.361c846ac7bce512f7077df8b8bd62da838ebe2e.png"
   },
   {
-    "id": 24,
+    "id": 74,
     "weaponId": 505,
     "rarityId": 8,
     "collectionIds": [
@@ -500,7 +1061,7 @@
     "image": "default_generated/weapon_knife_flip_hy_forest_boreal_light_large.d4878851507a64925cb11000bfdab55caeb3e07c.png"
   },
   {
-    "id": 25,
+    "id": 75,
     "weaponId": 505,
     "rarityId": 8,
     "collectionIds": [
@@ -520,7 +1081,7 @@
     "image": "default_generated/weapon_knife_flip_sp_tape_urban_light_large.bd1c04395ea024acb863acb628becf77edd4e4eb.png"
   },
   {
-    "id": 26,
+    "id": 76,
     "weaponId": 506,
     "rarityId": 8,
     "collectionIds": [
@@ -540,7 +1101,7 @@
     "image": "default_generated/weapon_knife_gut_hy_webs_light_large.217a769ed0131db1d3aef5a40bc927d4470bb22d.png"
   },
   {
-    "id": 27,
+    "id": 77,
     "weaponId": 506,
     "rarityId": 8,
     "collectionIds": [
@@ -560,7 +1121,7 @@
     "image": "default_generated/weapon_knife_gut_aa_fade_light_large.6e89c23706eafc34e7713c264fddeb94444a9b67.png"
   },
   {
-    "id": 28,
+    "id": 78,
     "weaponId": 506,
     "rarityId": 8,
     "collectionIds": [
@@ -580,7 +1141,7 @@
     "image": "default_generated/weapon_knife_gut_aq_oiled_light_large.f141737f74526886d0d4895281e9a57526314c5c.png"
   },
   {
-    "id": 29,
+    "id": 79,
     "weaponId": 506,
     "rarityId": 8,
     "collectionIds": [
@@ -600,7 +1161,7 @@
     "image": "default_generated/weapon_knife_gut_aq_blued_light_large.0e40bb0e3eb5de3de1b925853e3e4ec755f9b65a.png"
   },
   {
-    "id": 30,
+    "id": 80,
     "weaponId": 506,
     "rarityId": 8,
     "collectionIds": [
@@ -620,7 +1181,7 @@
     "image": "default_generated/weapon_knife_gut_am_zebra_light_large.c374f8e71f300e4351b680b6246da645d3dea01d.png"
   },
   {
-    "id": 31,
+    "id": 81,
     "weaponId": 506,
     "rarityId": 8,
     "collectionIds": [
@@ -640,7 +1201,7 @@
     "image": "default_generated/weapon_knife_gut_so_night_light_large.eec2bb404a436b6d74f19c72b88f70380ab31eee.png"
   },
   {
-    "id": 32,
+    "id": 82,
     "weaponId": 506,
     "rarityId": 8,
     "collectionIds": [
@@ -660,7 +1221,7 @@
     "image": "weapons/base_weapons/weapon_knife_gut.1d53007384970e8eaf28448312777683fd633a79.png"
   },
   {
-    "id": 33,
+    "id": 83,
     "weaponId": 506,
     "rarityId": 8,
     "collectionIds": [
@@ -680,7 +1241,7 @@
     "image": "default_generated/weapon_knife_gut_hy_forest_boreal_light_large.b28a4cfb134cd8be5da39f82db0df407577478e8.png"
   },
   {
-    "id": 34,
+    "id": 84,
     "weaponId": 506,
     "rarityId": 8,
     "collectionIds": [
@@ -700,7 +1261,7 @@
     "image": "default_generated/weapon_knife_gut_aq_forced_light_large.3f5b057c710fc4403f54d3979f482f511eb69d8b.png"
   },
   {
-    "id": 35,
+    "id": 85,
     "weaponId": 506,
     "rarityId": 8,
     "collectionIds": [
@@ -720,7 +1281,7 @@
     "image": "default_generated/weapon_knife_gut_hy_ddpat_light_large.855f6ca62686c8f365e503d379b07b4c41a8658a.png"
   },
   {
-    "id": 36,
+    "id": 86,
     "weaponId": 506,
     "rarityId": 8,
     "collectionIds": [
@@ -740,7 +1301,7 @@
     "image": "default_generated/weapon_knife_gut_sp_mesh_tan_light_large.5f58d777d76148ba031b587fff1b0b3465d2c441.png"
   },
   {
-    "id": 37,
+    "id": 87,
     "weaponId": 506,
     "rarityId": 8,
     "collectionIds": [
@@ -760,7 +1321,7 @@
     "image": "default_generated/weapon_knife_gut_sp_tape_urban_light_large.71f4811888602d3b48f35e030bd39ecbcac7f22e.png"
   },
   {
-    "id": 38,
+    "id": 88,
     "weaponId": 506,
     "rarityId": 8,
     "collectionIds": [
@@ -780,7 +1341,7 @@
     "image": "default_generated/weapon_knife_gut_sp_dapple_light_large.657af646f54600080b5c5e79133410eb47397fd6.png"
   },
   {
-    "id": 39,
+    "id": 89,
     "weaponId": 507,
     "rarityId": 8,
     "collectionIds": [
@@ -800,7 +1361,7 @@
     "image": "default_generated/weapon_knife_karambit_aa_fade_light_large.c91680d753adc2fcc5ed2e45daf815f6d4ab50b7.png"
   },
   {
-    "id": 40,
+    "id": 90,
     "weaponId": 507,
     "rarityId": 8,
     "collectionIds": [
@@ -820,7 +1381,7 @@
     "image": "default_generated/weapon_knife_karambit_am_zebra_light_large.88457fbeca42e9dc1767983c76219d34b46abf14.png"
   },
   {
-    "id": 41,
+    "id": 91,
     "weaponId": 507,
     "rarityId": 8,
     "collectionIds": [
@@ -840,7 +1401,7 @@
     "image": "default_generated/weapon_knife_karambit_hy_webs_light_large.61217494aaae26081c31d87f15739f42b4c1444a.png"
   },
   {
-    "id": 42,
+    "id": 92,
     "weaponId": 507,
     "rarityId": 8,
     "collectionIds": [
@@ -860,7 +1421,7 @@
     "image": "default_generated/weapon_knife_karambit_aq_oiled_light_large.52f9229d2960f5557a893a99cc679f1181b48d98.png"
   },
   {
-    "id": 43,
+    "id": 93,
     "weaponId": 507,
     "rarityId": 8,
     "collectionIds": [
@@ -880,7 +1441,7 @@
     "image": "default_generated/weapon_knife_karambit_so_night_light_large.427484b82687b9eb24e38125f5ea9e983847f68f.png"
   },
   {
-    "id": 44,
+    "id": 94,
     "weaponId": 507,
     "rarityId": 8,
     "collectionIds": [
@@ -900,7 +1461,7 @@
     "image": "weapons/base_weapons/weapon_knife_karambit.8b491b581a4b9c7b5298071425f2b29a39a2a12f.png"
   },
   {
-    "id": 45,
+    "id": 95,
     "weaponId": 507,
     "rarityId": 8,
     "collectionIds": [
@@ -920,7 +1481,7 @@
     "image": "default_generated/weapon_knife_karambit_aq_blued_light_large.14e928cdede91a05a47656bc1a470cd515b9d735.png"
   },
   {
-    "id": 46,
+    "id": 96,
     "weaponId": 507,
     "rarityId": 8,
     "collectionIds": [
@@ -940,7 +1501,7 @@
     "image": "default_generated/weapon_knife_karambit_aq_forced_light_large.548f11f88cda9d7dd2915bd53d17e319d28a60ed.png"
   },
   {
-    "id": 47,
+    "id": 97,
     "weaponId": 507,
     "rarityId": 8,
     "collectionIds": [
@@ -960,7 +1521,7 @@
     "image": "default_generated/weapon_knife_karambit_sp_dapple_light_large.88adf51bc8d53efc0d8c04114bd03d388e00d2b8.png"
   },
   {
-    "id": 48,
+    "id": 98,
     "weaponId": 507,
     "rarityId": 8,
     "collectionIds": [
@@ -980,7 +1541,7 @@
     "image": "default_generated/weapon_knife_karambit_hy_forest_boreal_light_large.8be99b9b53275463ecac09d080359af3526c4e81.png"
   },
   {
-    "id": 49,
+    "id": 99,
     "weaponId": 507,
     "rarityId": 8,
     "collectionIds": [
@@ -1000,7 +1561,7 @@
     "image": "default_generated/weapon_knife_karambit_hy_ddpat_light_large.4ce3d0d597a1481ff4cdc9ecc8c171748d492832.png"
   },
   {
-    "id": 50,
+    "id": 100,
     "weaponId": 520,
     "rarityId": 8,
     "collectionIds": [
@@ -1011,7 +1572,7 @@
     "image": "default_generated/weapon_knife_gypsy_jackknife_hy_webs_light_large.56c049ebbe3f61c39bbc61b9658566ae4caf0998.png"
   },
   {
-    "id": 51,
+    "id": 101,
     "weaponId": 520,
     "rarityId": 8,
     "collectionIds": [
@@ -1022,7 +1583,7 @@
     "image": "default_generated/weapon_knife_gypsy_jackknife_aa_fade_light_large.230f96c68e3dfd7936d76b44d7093cdc109b0d45.png"
   },
   {
-    "id": 52,
+    "id": 102,
     "weaponId": 520,
     "rarityId": 8,
     "collectionIds": [
@@ -1033,7 +1594,7 @@
     "image": "default_generated/weapon_knife_gypsy_jackknife_am_zebra_light_large.d05268ca27ffc151fc41aa706c2fd809a30b4a93.png"
   },
   {
-    "id": 53,
+    "id": 103,
     "weaponId": 520,
     "rarityId": 8,
     "collectionIds": [
@@ -1044,7 +1605,7 @@
     "image": "default_generated/weapon_knife_gypsy_jackknife_aq_oiled_light_large.bda53914823c916e925f1ccfdccb779438a837e7.png"
   },
   {
-    "id": 54,
+    "id": 104,
     "weaponId": 520,
     "rarityId": 8,
     "collectionIds": [
@@ -1055,7 +1616,7 @@
     "image": "default_generated/weapon_knife_gypsy_jackknife_sp_nightstripe_light_large.bb637d2594b3d5c5f4bcb82a040be380660b772a.png"
   },
   {
-    "id": 55,
+    "id": 105,
     "weaponId": 520,
     "rarityId": 8,
     "collectionIds": [
@@ -1066,7 +1627,7 @@
     "image": "default_generated/weapon_knife_gypsy_jackknife_aq_forced_light_large.ae7a6c5d03a34e2e9bb1510624dbd852a6b33367.png"
   },
   {
-    "id": 56,
+    "id": 106,
     "weaponId": 520,
     "rarityId": 8,
     "collectionIds": [
@@ -1077,7 +1638,7 @@
     "image": "default_generated/weapon_knife_gypsy_jackknife_aq_blued_light_large.1ce2d4556d50d1c13ca50c65a9a68f9e943ab147.png"
   },
   {
-    "id": 57,
+    "id": 107,
     "weaponId": 520,
     "rarityId": 8,
     "collectionIds": [
@@ -1088,7 +1649,7 @@
     "image": "default_generated/weapon_knife_gypsy_jackknife_sp_dapple_light_large.879ba0d22ebaccd2ba4b62c753e2db58b855a7a0.png"
   },
   {
-    "id": 58,
+    "id": 108,
     "weaponId": 520,
     "rarityId": 8,
     "collectionIds": [
@@ -1099,7 +1660,7 @@
     "image": "default_generated/weapon_knife_gypsy_jackknife_sp_mesh_tan_light_large.f8ae9f3c56bce9253b10d8c390894faa344d30ed.png"
   },
   {
-    "id": 59,
+    "id": 109,
     "weaponId": 520,
     "rarityId": 8,
     "collectionIds": [
@@ -1110,7 +1671,7 @@
     "image": "default_generated/weapon_knife_gypsy_jackknife_hy_forest_boreal_light_large.be1b7fb6471b0630f0709e3b8546e60d8a35fc12.png"
   },
   {
-    "id": 60,
+    "id": 110,
     "weaponId": 520,
     "rarityId": 8,
     "collectionIds": [
@@ -1121,7 +1682,7 @@
     "image": "weapons/base_weapons/weapon_knife_gypsy_jackknife.1a7e57791fa9383cce67d5915ffc442c7de2694a.png"
   },
   {
-    "id": 61,
+    "id": 111,
     "weaponId": 520,
     "rarityId": 8,
     "collectionIds": [
@@ -1132,7 +1693,7 @@
     "image": "default_generated/weapon_knife_gypsy_jackknife_hy_ddpat_light_large.2b9ad6c3016e78b55f6b245c25e7a373f05993d1.png"
   },
   {
-    "id": 62,
+    "id": 112,
     "weaponId": 520,
     "rarityId": 8,
     "collectionIds": [
@@ -1143,7 +1704,7 @@
     "image": "default_generated/weapon_knife_gypsy_jackknife_sp_tape_urban_light_large.c73dbd39174d78663ee57fb6d81a4ab90f3da3e8.png"
   },
   {
-    "id": 63,
+    "id": 113,
     "weaponId": 522,
     "rarityId": 8,
     "collectionIds": [
@@ -1154,7 +1715,7 @@
     "image": "default_generated/weapon_knife_stiletto_aa_fade_light_large.ce3b2f6ddc0a2c5443128f535d8fa1be1a80d7fa.png"
   },
   {
-    "id": 64,
+    "id": 114,
     "weaponId": 522,
     "rarityId": 8,
     "collectionIds": [
@@ -1165,7 +1726,7 @@
     "image": "default_generated/weapon_knife_stiletto_aq_oiled_light_large.fe6a14eecfeddcf502472e7071aa7ee33a3fd727.png"
   },
   {
-    "id": 65,
+    "id": 115,
     "weaponId": 522,
     "rarityId": 8,
     "collectionIds": [
@@ -1176,7 +1737,7 @@
     "image": "default_generated/weapon_knife_stiletto_hy_webs_light_large.5faae0b5462955594df775952fbd16200c430af3.png"
   },
   {
-    "id": 66,
+    "id": 116,
     "weaponId": 522,
     "rarityId": 8,
     "collectionIds": [
@@ -1187,7 +1748,7 @@
     "image": "default_generated/weapon_knife_stiletto_am_zebra_light_large.1c3f0dc6443fdf2cd48cc7e8f7f8c1a3ebf20d9d.png"
   },
   {
-    "id": 67,
+    "id": 117,
     "weaponId": 522,
     "rarityId": 8,
     "collectionIds": [
@@ -1198,7 +1759,7 @@
     "image": "default_generated/weapon_knife_stiletto_aq_blued_light_large.0366c863267920e2d9155d01429f383c7d95b94a.png"
   },
   {
-    "id": 68,
+    "id": 118,
     "weaponId": 522,
     "rarityId": 8,
     "collectionIds": [
@@ -1209,7 +1770,7 @@
     "image": "default_generated/weapon_knife_stiletto_sp_nightstripe_light_large.e8a72a1a946f0853352ed95bd28bdde5e30be953.png"
   },
   {
-    "id": 69,
+    "id": 119,
     "weaponId": 522,
     "rarityId": 8,
     "collectionIds": [
@@ -1220,7 +1781,7 @@
     "image": "weapons/base_weapons/weapon_knife_stiletto.1aefe4ca0e433fc8c3f924ba362283e0666b5f8d.png"
   },
   {
-    "id": 70,
+    "id": 120,
     "weaponId": 522,
     "rarityId": 8,
     "collectionIds": [
@@ -1231,7 +1792,7 @@
     "image": "default_generated/weapon_knife_stiletto_sp_mesh_tan_light_large.6fb75993eb2008e63935a1e580aa8ffc8eceff9a.png"
   },
   {
-    "id": 71,
+    "id": 121,
     "weaponId": 522,
     "rarityId": 8,
     "collectionIds": [
@@ -1242,7 +1803,7 @@
     "image": "default_generated/weapon_knife_stiletto_aq_forced_light_large.7c6f16082961e6365d54670283906c6b58da3c33.png"
   },
   {
-    "id": 72,
+    "id": 122,
     "weaponId": 522,
     "rarityId": 8,
     "collectionIds": [
@@ -1253,7 +1814,7 @@
     "image": "default_generated/weapon_knife_stiletto_sp_dapple_light_large.021b56519632ef7e817de82729f958d7729c613e.png"
   },
   {
-    "id": 73,
+    "id": 123,
     "weaponId": 522,
     "rarityId": 8,
     "collectionIds": [
@@ -1264,7 +1825,7 @@
     "image": "default_generated/weapon_knife_stiletto_hy_forest_boreal_light_large.be53b843654a400a4c5a6787c6237f6909e296ce.png"
   },
   {
-    "id": 74,
+    "id": 124,
     "weaponId": 522,
     "rarityId": 8,
     "collectionIds": [
@@ -1275,7 +1836,7 @@
     "image": "default_generated/weapon_knife_stiletto_sp_tape_urban_light_large.6471b71d87d11a53873fd901d17e689bf945c15e.png"
   },
   {
-    "id": 75,
+    "id": 125,
     "weaponId": 522,
     "rarityId": 8,
     "collectionIds": [
@@ -1286,7 +1847,7 @@
     "image": "default_generated/weapon_knife_stiletto_hy_ddpat_light_large.5299dd8f879d980863dbf503343dec7445d60716.png"
   },
   {
-    "id": 76,
+    "id": 126,
     "weaponId": 523,
     "rarityId": 8,
     "collectionIds": [
@@ -1297,7 +1858,7 @@
     "image": "default_generated/weapon_knife_widowmaker_aa_fade_light_large.54c2c841e44a279e001873f80f987885780bb156.png"
   },
   {
-    "id": 77,
+    "id": 127,
     "weaponId": 523,
     "rarityId": 8,
     "collectionIds": [
@@ -1308,7 +1869,7 @@
     "image": "default_generated/weapon_knife_widowmaker_am_zebra_light_large.80afcfbe0e2aa2435c037524713ac9411c15cae9.png"
   },
   {
-    "id": 78,
+    "id": 128,
     "weaponId": 523,
     "rarityId": 8,
     "collectionIds": [
@@ -1319,7 +1880,7 @@
     "image": "default_generated/weapon_knife_widowmaker_aq_oiled_light_large.795e56b68c0c7319470b7103b093dc48f9c47311.png"
   },
   {
-    "id": 79,
+    "id": 129,
     "weaponId": 523,
     "rarityId": 8,
     "collectionIds": [
@@ -1330,7 +1891,7 @@
     "image": "default_generated/weapon_knife_widowmaker_hy_webs_light_large.875dbed68ca5405a6d2e66e5456a4e712c758342.png"
   },
   {
-    "id": 80,
+    "id": 130,
     "weaponId": 523,
     "rarityId": 8,
     "collectionIds": [
@@ -1341,7 +1902,7 @@
     "image": "weapons/base_weapons/weapon_knife_widowmaker.a0842ad04cda9292483b8896d1dcdaffac9c2e5e.png"
   },
   {
-    "id": 81,
+    "id": 131,
     "weaponId": 523,
     "rarityId": 8,
     "collectionIds": [
@@ -1352,7 +1913,7 @@
     "image": "default_generated/weapon_knife_widowmaker_aq_blued_light_large.5f9fddb9d8623257d62f544027dcf305a087bab1.png"
   },
   {
-    "id": 82,
+    "id": 132,
     "weaponId": 523,
     "rarityId": 8,
     "collectionIds": [
@@ -1363,7 +1924,7 @@
     "image": "default_generated/weapon_knife_widowmaker_aq_forced_light_large.a0176c574002b3f41cdd8df96d61342bf6aa8c7b.png"
   },
   {
-    "id": 83,
+    "id": 133,
     "weaponId": 523,
     "rarityId": 8,
     "collectionIds": [
@@ -1374,7 +1935,7 @@
     "image": "default_generated/weapon_knife_widowmaker_sp_tape_urban_light_large.f667d0db45fdef79c8aae2c6dc922b91fd2e98e5.png"
   },
   {
-    "id": 84,
+    "id": 134,
     "weaponId": 523,
     "rarityId": 8,
     "collectionIds": [
@@ -1385,7 +1946,7 @@
     "image": "default_generated/weapon_knife_widowmaker_sp_mesh_tan_light_large.d0fef03f781d895f204c4888463753ca250397a4.png"
   },
   {
-    "id": 85,
+    "id": 135,
     "weaponId": 523,
     "rarityId": 8,
     "collectionIds": [
@@ -1396,7 +1957,7 @@
     "image": "default_generated/weapon_knife_widowmaker_sp_nightstripe_light_large.0c88154966c609dd394248e955a5db8b2c8bc5b7.png"
   },
   {
-    "id": 86,
+    "id": 136,
     "weaponId": 523,
     "rarityId": 8,
     "collectionIds": [
@@ -1407,7 +1968,7 @@
     "image": "default_generated/weapon_knife_widowmaker_hy_ddpat_light_large.2f4c3c3f6fbc43a980ab3e9dc173ad686655f8cd.png"
   },
   {
-    "id": 87,
+    "id": 137,
     "weaponId": 523,
     "rarityId": 8,
     "collectionIds": [
@@ -1418,7 +1979,7 @@
     "image": "default_generated/weapon_knife_widowmaker_sp_dapple_light_large.5910908e7cd893a87b6517b8f6eb439769a1f060.png"
   },
   {
-    "id": 88,
+    "id": 138,
     "weaponId": 523,
     "rarityId": 8,
     "collectionIds": [
@@ -1429,7 +1990,7 @@
     "image": "default_generated/weapon_knife_widowmaker_hy_forest_boreal_light_large.593dd2a8c4d229e052107a442d7922a4e6846c0f.png"
   },
   {
-    "id": 89,
+    "id": 139,
     "weaponId": 519,
     "rarityId": 8,
     "collectionIds": [
@@ -1440,7 +2001,7 @@
     "image": "default_generated/weapon_knife_ursus_aa_fade_light_large.0b6899d17a60306b6279e6fbee981acb530665fc.png"
   },
   {
-    "id": 90,
+    "id": 140,
     "weaponId": 519,
     "rarityId": 8,
     "collectionIds": [
@@ -1451,7 +2012,7 @@
     "image": "default_generated/weapon_knife_ursus_hy_webs_light_large.831c519791469faa767e2ab582d8e7a8f2631267.png"
   },
   {
-    "id": 91,
+    "id": 141,
     "weaponId": 519,
     "rarityId": 8,
     "collectionIds": [
@@ -1462,7 +2023,7 @@
     "image": "default_generated/weapon_knife_ursus_am_zebra_light_large.8ee56f4ebe2527ddb5789f4e7be3352873f597fa.png"
   },
   {
-    "id": 92,
+    "id": 142,
     "weaponId": 519,
     "rarityId": 8,
     "collectionIds": [
@@ -1473,7 +2034,7 @@
     "image": "weapons/base_weapons/weapon_knife_ursus.34ecda985c12503df5b88e9bda1826f61cc9e80a.png"
   },
   {
-    "id": 93,
+    "id": 143,
     "weaponId": 519,
     "rarityId": 8,
     "collectionIds": [
@@ -1484,7 +2045,7 @@
     "image": "default_generated/weapon_knife_ursus_aq_oiled_light_large.531627867f18fc4a9ef83b92740d96c4099364df.png"
   },
   {
-    "id": 94,
+    "id": 144,
     "weaponId": 519,
     "rarityId": 8,
     "collectionIds": [
@@ -1495,7 +2056,7 @@
     "image": "default_generated/weapon_knife_ursus_sp_nightstripe_light_large.b92f5208e7dc6057d78a7e54b8856d202c899f49.png"
   },
   {
-    "id": 95,
+    "id": 145,
     "weaponId": 519,
     "rarityId": 8,
     "collectionIds": [
@@ -1506,7 +2067,7 @@
     "image": "default_generated/weapon_knife_ursus_aq_blued_light_large.a9cbb774b7ca472768b3aee15700060f138ab7b4.png"
   },
   {
-    "id": 96,
+    "id": 146,
     "weaponId": 519,
     "rarityId": 8,
     "collectionIds": [
@@ -1517,7 +2078,7 @@
     "image": "default_generated/weapon_knife_ursus_sp_tape_urban_light_large.4c9e7e5dc1c789a5a6bf4452e6111f3a667d4f65.png"
   },
   {
-    "id": 97,
+    "id": 147,
     "weaponId": 519,
     "rarityId": 8,
     "collectionIds": [
@@ -1528,7 +2089,7 @@
     "image": "default_generated/weapon_knife_ursus_aq_forced_light_large.805b576db8e7c270129ebbf01326cacb00100f63.png"
   },
   {
-    "id": 98,
+    "id": 148,
     "weaponId": 519,
     "rarityId": 8,
     "collectionIds": [
@@ -1539,7 +2100,7 @@
     "image": "default_generated/weapon_knife_ursus_hy_ddpat_light_large.b32fccdaab716eabc5bdab046650f7c319d6d5b8.png"
   },
   {
-    "id": 99,
+    "id": 149,
     "weaponId": 519,
     "rarityId": 8,
     "collectionIds": [
@@ -1550,7 +2111,7 @@
     "image": "default_generated/weapon_knife_ursus_sp_dapple_light_large.ea36749489631667cbad6045029f59b54a0705aa.png"
   },
   {
-    "id": 100,
+    "id": 150,
     "weaponId": 514,
     "rarityId": 8,
     "collectionIds": [
@@ -1561,7 +2122,7 @@
     "image": "default_generated/weapon_knife_survival_bowie_am_marble_fade_light_large.ee64f39331b11b42f6ef7e00f570bc0da09cf0ee.png"
   },
   {
-    "id": 101,
+    "id": 151,
     "weaponId": 514,
     "rarityId": 8,
     "collectionIds": [
@@ -1572,7 +2133,7 @@
     "image": "default_generated/weapon_knife_survival_bowie_am_blackpearl_marbleized_light_large.d657e8571dcfeac14cd99f0cc16c64b33d7415e8.png"
   },
   {
-    "id": 102,
+    "id": 152,
     "weaponId": 514,
     "rarityId": 8,
     "collectionIds": [
@@ -1583,7 +2144,7 @@
     "image": "default_generated/weapon_knife_survival_bowie_an_tiger_orange_light_large.a8cf2f4214c950f59798f15d0013f7a33e6972fa.png"
   },
   {
-    "id": 103,
+    "id": 153,
     "weaponId": 514,
     "rarityId": 8,
     "collectionIds": [
@@ -1594,7 +2155,7 @@
     "image": "default_generated/weapon_knife_survival_bowie_aq_damascus_90_light_large.b53066882790815ba15f508ac268f29cd6cedf2a.png"
   },
   {
-    "id": 104,
+    "id": 154,
     "weaponId": 514,
     "rarityId": 8,
     "collectionIds": [
@@ -1605,7 +2166,7 @@
     "image": "default_generated/weapon_knife_survival_bowie_so_purple_light_large.af202da5d81b8667477667b6db332769a96bf80e.png"
   },
   {
-    "id": 105,
+    "id": 155,
     "weaponId": 514,
     "rarityId": 8,
     "collectionIds": [
@@ -1616,7 +2177,7 @@
     "image": "default_generated/weapon_knife_survival_bowie_aq_steel_knife_light_large.3a61b0cf23bfa737be1cac012f4cdcde14347921.png"
   },
   {
-    "id": 106,
+    "id": 156,
     "weaponId": 515,
     "rarityId": 8,
     "collectionIds": [
@@ -1627,7 +2188,7 @@
     "image": "default_generated/weapon_knife_butterfly_am_marble_fade_light_large.c9170bcb854e5d3ed0f3a22bae8a4513fd46954a.png"
   },
   {
-    "id": 107,
+    "id": 157,
     "weaponId": 515,
     "rarityId": 8,
     "collectionIds": [
@@ -1638,7 +2199,7 @@
     "image": "default_generated/weapon_knife_butterfly_am_blackpearl_marbleized_b_light_large.9af9c8b88dd3d192824982b82389df231bffd705.png"
   },
   {
-    "id": 108,
+    "id": 158,
     "weaponId": 515,
     "rarityId": 8,
     "collectionIds": [
@@ -1649,7 +2210,7 @@
     "image": "default_generated/weapon_knife_butterfly_an_tiger_orange_light_large.2fece0b06a84ce2bb6e15e7cd3a37f400f218940.png"
   },
   {
-    "id": 109,
+    "id": 159,
     "weaponId": 515,
     "rarityId": 8,
     "collectionIds": [
@@ -1660,7 +2221,7 @@
     "image": "default_generated/weapon_knife_butterfly_aq_damascus_90_light_large.f6eecc56e9d69742d80ad0bf59695a89cb8d9684.png"
   },
   {
-    "id": 110,
+    "id": 160,
     "weaponId": 515,
     "rarityId": 8,
     "collectionIds": [
@@ -1671,7 +2232,7 @@
     "image": "default_generated/weapon_knife_butterfly_so_purple_light_large.116c48bf6a4a33f56d11b3204919422aa58f9337.png"
   },
   {
-    "id": 111,
+    "id": 161,
     "weaponId": 515,
     "rarityId": 8,
     "collectionIds": [
@@ -1682,7 +2243,7 @@
     "image": "default_generated/weapon_knife_butterfly_aq_steel_knife_light_large.033e7505158efd2a1758a7144ccccfb554fcf576.png"
   },
   {
-    "id": 112,
+    "id": 162,
     "weaponId": 512,
     "rarityId": 8,
     "collectionIds": [
@@ -1693,7 +2254,7 @@
     "image": "default_generated/weapon_knife_falchion_am_blackpearl_marbleized_light_large.fe056bffee9a68b7ca48cc06792bc5586dacc220.png"
   },
   {
-    "id": 113,
+    "id": 163,
     "weaponId": 512,
     "rarityId": 8,
     "collectionIds": [
@@ -1704,7 +2265,7 @@
     "image": "default_generated/weapon_knife_falchion_am_marble_fade_light_large.6702e01c69bbdd050ed27964385eaf57fd96d579.png"
   },
   {
-    "id": 114,
+    "id": 164,
     "weaponId": 512,
     "rarityId": 8,
     "collectionIds": [
@@ -1715,7 +2276,7 @@
     "image": "default_generated/weapon_knife_falchion_an_tiger_orange_light_large.c467ce8f738dd9bce8cd7af54610f9186dadd362.png"
   },
   {
-    "id": 115,
+    "id": 165,
     "weaponId": 512,
     "rarityId": 8,
     "collectionIds": [
@@ -1726,7 +2287,7 @@
     "image": "default_generated/weapon_knife_falchion_aq_damascus_90_light_large.9bd7e0f1d32a177ab01bc8c52a51dac9ad61e5a9.png"
   },
   {
-    "id": 116,
+    "id": 166,
     "weaponId": 512,
     "rarityId": 8,
     "collectionIds": [
@@ -1737,7 +2298,7 @@
     "image": "default_generated/weapon_knife_falchion_so_purple_falchion_light_large.010830e050576efeb80b3e046d9dccf6ee21c31b.png"
   },
   {
-    "id": 117,
+    "id": 167,
     "weaponId": 512,
     "rarityId": 8,
     "collectionIds": [
@@ -1748,7 +2309,7 @@
     "image": "default_generated/weapon_knife_falchion_aq_steel_knife_light_large.6d5b1f9bbc924ae1335175a262a69b1587448ccc.png"
   },
   {
-    "id": 118,
+    "id": 168,
     "weaponId": 509,
     "rarityId": 8,
     "collectionIds": [
@@ -1759,7 +2320,7 @@
     "image": "default_generated/weapon_knife_tactical_am_marble_fade_light_large.3efc76764c1aa62477fee4b4df1a380b115f5103.png"
   },
   {
-    "id": 119,
+    "id": 169,
     "weaponId": 509,
     "rarityId": 8,
     "collectionIds": [
@@ -1770,7 +2331,7 @@
     "image": "default_generated/weapon_knife_tactical_am_blackpearl_marbleized_light_large.35d7c97c430cc2b2b3e9c04b716c336fde9b6efb.png"
   },
   {
-    "id": 120,
+    "id": 170,
     "weaponId": 509,
     "rarityId": 8,
     "collectionIds": [
@@ -1781,7 +2342,7 @@
     "image": "default_generated/weapon_knife_tactical_an_tiger_orange_light_large.961c75c287d5cba0859ef13ed8eb638d707b1129.png"
   },
   {
-    "id": 121,
+    "id": 171,
     "weaponId": 509,
     "rarityId": 8,
     "collectionIds": [
@@ -1792,7 +2353,7 @@
     "image": "default_generated/weapon_knife_tactical_cu_purple_huntsman_light_large.3d9355c0a0c0c170d10856ebc2492fef61832fbc.png"
   },
   {
-    "id": 122,
+    "id": 172,
     "weaponId": 509,
     "rarityId": 8,
     "collectionIds": [
@@ -1803,7 +2364,7 @@
     "image": "default_generated/weapon_knife_tactical_aq_damascus_90_light_large.f81def489661a18ae741c49011d70f163552cdce.png"
   },
   {
-    "id": 123,
+    "id": 173,
     "weaponId": 509,
     "rarityId": 8,
     "collectionIds": [
@@ -1814,7 +2375,7 @@
     "image": "default_generated/weapon_knife_tactical_aq_steel_knife_light_large.1e93732da4a5534deaa88e65c22274c57f2cd924.png"
   },
   {
-    "id": 124,
+    "id": 174,
     "weaponId": 516,
     "rarityId": 8,
     "collectionIds": [
@@ -1825,7 +2386,7 @@
     "image": "default_generated/weapon_knife_push_am_blackpearl_marbleized_b_light_large.c164e5c9a9b7b376d23a25081d95d8dd3030529f.png"
   },
   {
-    "id": 125,
+    "id": 175,
     "weaponId": 516,
     "rarityId": 8,
     "collectionIds": [
@@ -1836,7 +2397,7 @@
     "image": "default_generated/weapon_knife_push_am_marble_fade_light_large.fce3f43a307394dcfa71988787dbb5d2ef6a3611.png"
   },
   {
-    "id": 126,
+    "id": 176,
     "weaponId": 516,
     "rarityId": 8,
     "collectionIds": [
@@ -1847,7 +2408,7 @@
     "image": "default_generated/weapon_knife_push_an_tiger_orange_light_large.dc3ed0014b7b2024a7fbcaaaca1fbbfae3331735.png"
   },
   {
-    "id": 127,
+    "id": 177,
     "weaponId": 516,
     "rarityId": 8,
     "collectionIds": [
@@ -1858,7 +2419,7 @@
     "image": "default_generated/weapon_knife_push_aq_damascus_90_light_large.682e0e63f745ebea76a093e8ff4f7cdb17d5d093.png"
   },
   {
-    "id": 128,
+    "id": 178,
     "weaponId": 516,
     "rarityId": 8,
     "collectionIds": [
@@ -1869,7 +2430,7 @@
     "image": "default_generated/weapon_knife_push_so_purple_light_large.af1841afc5146b836e87e6afab49f9a78d90ed1b.png"
   },
   {
-    "id": 129,
+    "id": 179,
     "weaponId": 516,
     "rarityId": 8,
     "collectionIds": [
@@ -1880,7 +2441,7 @@
     "image": "default_generated/weapon_knife_push_aq_steel_knife_light_large.2753f1bc2008c99c34103b2b247801d3eb881d20.png"
   },
   {
-    "id": 130,
+    "id": 180,
     "weaponId": 520,
     "rarityId": 8,
     "collectionIds": [
@@ -1891,7 +2452,7 @@
     "image": "default_generated/weapon_knife_gypsy_jackknife_am_blackpearl_marbleized_light_large.30e6ae54671b49eaa5aca2ee64b6c6ea7ef06ad2.png"
   },
   {
-    "id": 131,
+    "id": 181,
     "weaponId": 520,
     "rarityId": 8,
     "collectionIds": [
@@ -1902,7 +2463,7 @@
     "image": "default_generated/weapon_knife_gypsy_jackknife_am_marble_fade_light_large.06edf782d11987a8a010edae38a1370c17dd5d5a.png"
   },
   {
-    "id": 132,
+    "id": 182,
     "weaponId": 520,
     "rarityId": 8,
     "collectionIds": [
@@ -1913,7 +2474,7 @@
     "image": "default_generated/weapon_knife_gypsy_jackknife_an_tiger_orange_light_large.41be3bbfaf690be67956b8e7da920b29325f6bf2.png"
   },
   {
-    "id": 133,
+    "id": 183,
     "weaponId": 520,
     "rarityId": 8,
     "collectionIds": [
@@ -1924,7 +2485,7 @@
     "image": "default_generated/weapon_knife_gypsy_jackknife_so_purple_light_large.4d3624f9c62d1cdecc29c24e49c58071a8e0aa10.png"
   },
   {
-    "id": 134,
+    "id": 184,
     "weaponId": 520,
     "rarityId": 8,
     "collectionIds": [
@@ -1935,7 +2496,7 @@
     "image": "default_generated/weapon_knife_gypsy_jackknife_aq_damascus_prisma_light_large.b1ef53963cc5daeade17b87af90a4ac173ecfdce.png"
   },
   {
-    "id": 135,
+    "id": 185,
     "weaponId": 520,
     "rarityId": 8,
     "collectionIds": [
@@ -1946,7 +2507,7 @@
     "image": "default_generated/weapon_knife_gypsy_jackknife_aq_steel_knife_light_large.a71a034e635cf59e5d308a2645656f90a072a5d6.png"
   },
   {
-    "id": 136,
+    "id": 186,
     "weaponId": 522,
     "rarityId": 8,
     "collectionIds": [
@@ -1957,7 +2518,7 @@
     "image": "default_generated/weapon_knife_stiletto_am_blackpearl_marbleized_light_large.95c65512c03361dae5f2e1151b9567d6142641ce.png"
   },
   {
-    "id": 137,
+    "id": 187,
     "weaponId": 522,
     "rarityId": 8,
     "collectionIds": [
@@ -1968,7 +2529,7 @@
     "image": "default_generated/weapon_knife_stiletto_am_marble_fade_light_large.2ef9080611c4539f02389c5d92af0bf626925a46.png"
   },
   {
-    "id": 138,
+    "id": 188,
     "weaponId": 522,
     "rarityId": 8,
     "collectionIds": [
@@ -1979,7 +2540,7 @@
     "image": "default_generated/weapon_knife_stiletto_an_tiger_orange_light_large.dd59dfda5a30c3e7b0dbe256831ec91c4405bc34.png"
   },
   {
-    "id": 139,
+    "id": 189,
     "weaponId": 522,
     "rarityId": 8,
     "collectionIds": [
@@ -1990,7 +2551,7 @@
     "image": "default_generated/weapon_knife_stiletto_aq_damascus_prisma_light_large.d7378dcf37ca47334e789fed3691b11c9571a3a3.png"
   },
   {
-    "id": 140,
+    "id": 190,
     "weaponId": 522,
     "rarityId": 8,
     "collectionIds": [
@@ -2001,7 +2562,7 @@
     "image": "default_generated/weapon_knife_stiletto_so_purple_light_large.2a718be5434a5ff1b2b1a2d271ae5cc30030d7ef.png"
   },
   {
-    "id": 141,
+    "id": 191,
     "weaponId": 522,
     "rarityId": 8,
     "collectionIds": [
@@ -2012,7 +2573,7 @@
     "image": "default_generated/weapon_knife_stiletto_aq_steel_knife_light_large.f714d7f3d6c1e0381dbfcd8f221f7edbe8bd2f28.png"
   },
   {
-    "id": 142,
+    "id": 192,
     "weaponId": 523,
     "rarityId": 8,
     "collectionIds": [
@@ -2023,7 +2584,7 @@
     "image": "default_generated/weapon_knife_widowmaker_am_marble_fade_widow_light_large.122c3dd61683bf749d2e7d4b759d3409a3293822.png"
   },
   {
-    "id": 143,
+    "id": 193,
     "weaponId": 523,
     "rarityId": 8,
     "collectionIds": [
@@ -2034,7 +2595,7 @@
     "image": "default_generated/weapon_knife_widowmaker_am_blackpearl_marbleized_light_large.6b6debfd841a09133e47b1afe191dce9011305b1.png"
   },
   {
-    "id": 144,
+    "id": 194,
     "weaponId": 523,
     "rarityId": 8,
     "collectionIds": [
@@ -2045,7 +2606,7 @@
     "image": "default_generated/weapon_knife_widowmaker_an_tiger_orange_light_large.f9c5d573a1f20baf81898db77dfa6fd0537bb92f.png"
   },
   {
-    "id": 145,
+    "id": 195,
     "weaponId": 523,
     "rarityId": 8,
     "collectionIds": [
@@ -2056,7 +2617,7 @@
     "image": "default_generated/weapon_knife_widowmaker_aq_damascus_widow_light_large.57ae6cb141a599ac36b47b9d4ff20f9f880a520f.png"
   },
   {
-    "id": 146,
+    "id": 196,
     "weaponId": 523,
     "rarityId": 8,
     "collectionIds": [
@@ -2067,7 +2628,7 @@
     "image": "default_generated/weapon_knife_widowmaker_aq_steel_knife_light_large.09f8e1ffebb9345ae6293dc1734e855a1e83c0c5.png"
   },
   {
-    "id": 147,
+    "id": 197,
     "weaponId": 523,
     "rarityId": 8,
     "collectionIds": [
@@ -2078,7 +2639,7 @@
     "image": "default_generated/weapon_knife_widowmaker_so_purple_light_large.8338e07caf8f6c129754b605709612b5e3d1679d.png"
   },
   {
-    "id": 148,
+    "id": 198,
     "weaponId": 519,
     "rarityId": 8,
     "collectionIds": [
@@ -2089,7 +2650,7 @@
     "image": "default_generated/weapon_knife_ursus_am_marble_fade_light_large.9bb670990070eff6f22a1a358459fb69cece0b5b.png"
   },
   {
-    "id": 149,
+    "id": 199,
     "weaponId": 519,
     "rarityId": 8,
     "collectionIds": [
@@ -2100,7 +2661,7 @@
     "image": "default_generated/weapon_knife_ursus_am_blackpearl_marbleized_light_large.6c9e4e8846c406c2daa19058e399eac00ef15835.png"
   },
   {
-    "id": 150,
+    "id": 200,
     "weaponId": 519,
     "rarityId": 8,
     "collectionIds": [
@@ -2111,7 +2672,7 @@
     "image": "default_generated/weapon_knife_ursus_so_purple_light_large.88bd0def19100cd3e17f1d568206d2816614daa5.png"
   },
   {
-    "id": 151,
+    "id": 201,
     "weaponId": 519,
     "rarityId": 8,
     "collectionIds": [
@@ -2122,7 +2683,7 @@
     "image": "default_generated/weapon_knife_ursus_an_tiger_orange_light_large.34be676a93f4d6f275e0690d64a3c601e1612dc9.png"
   },
   {
-    "id": 152,
+    "id": 202,
     "weaponId": 519,
     "rarityId": 8,
     "collectionIds": [
@@ -2133,7 +2694,7 @@
     "image": "default_generated/weapon_knife_ursus_aq_damascus_prisma_light_large.3d36b7616e102e1648b9b18ed186dd9a4f2f49ed.png"
   },
   {
-    "id": 153,
+    "id": 203,
     "weaponId": 519,
     "rarityId": 8,
     "collectionIds": [
@@ -2144,499 +2705,7 @@
     "image": "default_generated/weapon_knife_ursus_aq_steel_knife_light_large.cbc964450e298df0282216027edba827c45c0964.png"
   },
   {
-    "id": 154,
-    "weaponId": 521,
-    "rarityId": 8,
-    "collectionIds": [
-      60
-    ],
-    "paintkitId": 38,
-    "image": "default_generated/weapon_knife_outdoor_aa_fade_light_large.f24efcbcc28c8f3ddf18e1d777cde462b5c0c739.png"
-  },
-  {
-    "id": 155,
-    "weaponId": 521,
-    "rarityId": 8,
-    "collectionIds": [
-      60
-    ],
-    "paintkitId": 59,
-    "image": "default_generated/weapon_knife_outdoor_am_zebra_light_large.c372a0fb3df0db00a6d11595ff420c0142d925b2.png"
-  },
-  {
-    "id": 156,
-    "weaponId": 521,
-    "rarityId": 8,
-    "collectionIds": [
-      60
-    ],
-    "paintkitId": 12,
-    "image": "default_generated/weapon_knife_outdoor_hy_webs_light_large.da204035f2b27faabebe138093669986beb50943.png"
-  },
-  {
-    "id": 157,
-    "weaponId": 521,
-    "rarityId": 8,
-    "collectionIds": [
-      60
-    ],
-    "paintkitId": 43,
-    "image": "default_generated/weapon_knife_outdoor_aq_forced_light_large.14a5428217d497aaaeecc8c126390b3d5ead5348.png"
-  },
-  {
-    "id": 158,
-    "weaponId": 521,
-    "rarityId": 8,
-    "collectionIds": [
-      60
-    ],
-    "paintkitId": 77,
-    "image": "default_generated/weapon_knife_outdoor_hy_forest_boreal_light_large.d153647065ed5830379413e9c00442378c8cc310.png"
-  },
-  {
-    "id": 159,
-    "weaponId": 521,
-    "rarityId": 8,
-    "collectionIds": [
-      60
-    ],
-    "paintkitId": null,
-    "image": "weapons/base_weapons/weapon_knife_outdoor.fdb3ce5ceef1584781759ef5a7bd6f819bf12e9b.png"
-  },
-  {
-    "id": 160,
-    "weaponId": 521,
-    "rarityId": 8,
-    "collectionIds": [
-      60
-    ],
-    "paintkitId": 44,
-    "image": "default_generated/weapon_knife_outdoor_aq_oiled_light_large.9add3a89dd0e03c85f525b6906c53df829bcc885.png"
-  },
-  {
-    "id": 161,
-    "weaponId": 521,
-    "rarityId": 8,
-    "collectionIds": [
-      60
-    ],
-    "paintkitId": 42,
-    "image": "default_generated/weapon_knife_outdoor_aq_blued_light_large.f862df3f6428b2263abc07e569466df251ddbd67.png"
-  },
-  {
-    "id": 162,
-    "weaponId": 521,
-    "rarityId": 8,
-    "collectionIds": [
-      60
-    ],
-    "paintkitId": 735,
-    "image": "default_generated/weapon_knife_outdoor_sp_nightstripe_light_large.3aad1683b3f6ffe1204f2aded7fa3be4f47d9c6e.png"
-  },
-  {
-    "id": 163,
-    "weaponId": 521,
-    "rarityId": 8,
-    "collectionIds": [
-      60
-    ],
-    "paintkitId": 175,
-    "image": "default_generated/weapon_knife_outdoor_sp_dapple_light_large.e587077d740da85df09c4cc459608841e7d2cafd.png"
-  },
-  {
-    "id": 164,
-    "weaponId": 521,
-    "rarityId": 8,
-    "collectionIds": [
-      60
-    ],
-    "paintkitId": 72,
-    "image": "default_generated/weapon_knife_outdoor_sp_mesh_tan_light_large.7c3c80a31f6255847368dc38a96bcd8c17abca02.png"
-  },
-  {
-    "id": 165,
-    "weaponId": 521,
-    "rarityId": 8,
-    "collectionIds": [
-      60
-    ],
-    "paintkitId": 5,
-    "image": "default_generated/weapon_knife_outdoor_hy_ddpat_light_large.c8781e797feef7102162202f74bfd331935f22dc.png"
-  },
-  {
-    "id": 166,
-    "weaponId": 521,
-    "rarityId": 8,
-    "collectionIds": [
-      60
-    ],
-    "paintkitId": 143,
-    "image": "default_generated/weapon_knife_outdoor_sp_tape_urban_light_large.8712508941f9bfc792f84d0f474701452860f856.png"
-  },
-  {
-    "id": 167,
-    "weaponId": 517,
-    "rarityId": 8,
-    "collectionIds": [
-      60
-    ],
-    "paintkitId": 38,
-    "image": "default_generated/weapon_knife_cord_aa_fade_light_large.9a14f355546aa33302e185e4d5ff1f7d6aacb066.png"
-  },
-  {
-    "id": 168,
-    "weaponId": 517,
-    "rarityId": 8,
-    "collectionIds": [
-      60
-    ],
-    "paintkitId": 59,
-    "image": "default_generated/weapon_knife_cord_am_zebra_light_large.4fc56265a0e28111765e2128d18608f5119b17fc.png"
-  },
-  {
-    "id": 169,
-    "weaponId": 517,
-    "rarityId": 8,
-    "collectionIds": [
-      60
-    ],
-    "paintkitId": 12,
-    "image": "default_generated/weapon_knife_cord_hy_webs_light_large.c54ef1bb727c43bd0e8774a7578e168c9e59cd70.png"
-  },
-  {
-    "id": 170,
-    "weaponId": 517,
-    "rarityId": 8,
-    "collectionIds": [
-      60
-    ],
-    "paintkitId": null,
-    "image": "weapons/base_weapons/weapon_knife_cord.073b5fa991a256ec2264b1c1c581401631eb51cb.png"
-  },
-  {
-    "id": 171,
-    "weaponId": 517,
-    "rarityId": 8,
-    "collectionIds": [
-      60
-    ],
-    "paintkitId": 42,
-    "image": "default_generated/weapon_knife_cord_aq_blued_light_large.fb64668e22b20cea7114e71d24dae38059cda8cf.png"
-  },
-  {
-    "id": 172,
-    "weaponId": 517,
-    "rarityId": 8,
-    "collectionIds": [
-      60
-    ],
-    "paintkitId": 44,
-    "image": "default_generated/weapon_knife_cord_aq_oiled_light_large.e8657de871b02a874d8dedf49c3a0d548572a2f0.png"
-  },
-  {
-    "id": 173,
-    "weaponId": 517,
-    "rarityId": 8,
-    "collectionIds": [
-      60
-    ],
-    "paintkitId": 43,
-    "image": "default_generated/weapon_knife_cord_aq_forced_light_large.7d06225b469031d5821bb57461416fe6ebdd05e9.png"
-  },
-  {
-    "id": 174,
-    "weaponId": 517,
-    "rarityId": 8,
-    "collectionIds": [
-      60
-    ],
-    "paintkitId": 77,
-    "image": "default_generated/weapon_knife_cord_hy_forest_boreal_light_large.0ce7ec5b40e8460bf8036d6e34eb5cface471e74.png"
-  },
-  {
-    "id": 175,
-    "weaponId": 517,
-    "rarityId": 8,
-    "collectionIds": [
-      60
-    ],
-    "paintkitId": 143,
-    "image": "default_generated/weapon_knife_cord_sp_tape_urban_light_large.24901673d8f1b4d1aa607aa1b6641b2c0f245cb2.png"
-  },
-  {
-    "id": 176,
-    "weaponId": 517,
-    "rarityId": 8,
-    "collectionIds": [
-      60
-    ],
-    "paintkitId": 735,
-    "image": "default_generated/weapon_knife_cord_sp_nightstripe_light_large.2055a32e9d197f0ad6606c1adc7e1d5d991e48d4.png"
-  },
-  {
-    "id": 177,
-    "weaponId": 517,
-    "rarityId": 8,
-    "collectionIds": [
-      60
-    ],
-    "paintkitId": 175,
-    "image": "default_generated/weapon_knife_cord_sp_dapple_light_large.bcdaa305cdbafbb475aefc06f3bc215d87d980ae.png"
-  },
-  {
-    "id": 178,
-    "weaponId": 517,
-    "rarityId": 8,
-    "collectionIds": [
-      60
-    ],
-    "paintkitId": 5,
-    "image": "default_generated/weapon_knife_cord_hy_ddpat_light_large.1e22f371cb1b745fe26e8f414f4a8f0f73687e7f.png"
-  },
-  {
-    "id": 179,
-    "weaponId": 517,
-    "rarityId": 8,
-    "collectionIds": [
-      60
-    ],
-    "paintkitId": 72,
-    "image": "default_generated/weapon_knife_cord_sp_mesh_tan_light_large.3d4a214457d2064db8d3c31bbf7c60177b6d7054.png"
-  },
-  {
-    "id": 180,
-    "weaponId": 509,
-    "rarityId": 8,
-    "collectionIds": [
-      60,
-      24
-    ],
-    "paintkitId": 42,
-    "image": "default_generated/weapon_knife_skeleton_aq_blued_light_large.e306a716cec27d1640c9876d01b383374d86ef98.png"
-  },
-  {
-    "id": 181,
-    "weaponId": 509,
-    "rarityId": 8,
-    "collectionIds": [
-      60,
-      24
-    ],
-    "paintkitId": 59,
-    "image": "default_generated/weapon_knife_skeleton_am_zebra_light_large.77bd823d8fd0e21cb023e72df0b90aad2770854d.png"
-  },
-  {
-    "id": 182,
-    "weaponId": 509,
-    "rarityId": 8,
-    "collectionIds": [
-      60,
-      24
-    ],
-    "paintkitId": null,
-    "image": "weapons/base_weapons/weapon_knife_skeleton.1fc401a844008bcaa89f8381cbe7b550a051609d.png"
-  },
-  {
-    "id": 183,
-    "weaponId": 509,
-    "rarityId": 8,
-    "collectionIds": [
-      60,
-      24
-    ],
-    "paintkitId": 12,
-    "image": "default_generated/weapon_knife_skeleton_hy_webs_light_large.26e2d641fa3eb5c6a90fc3bf39ff0a7f20367e56.png"
-  },
-  {
-    "id": 184,
-    "weaponId": 509,
-    "rarityId": 8,
-    "collectionIds": [
-      60,
-      24
-    ],
-    "paintkitId": 44,
-    "image": "default_generated/weapon_knife_skeleton_aq_oiled_light_large.822bad0bf51e44a83631245c24ca5c2999df0948.png"
-  },
-  {
-    "id": 185,
-    "weaponId": 509,
-    "rarityId": 8,
-    "collectionIds": [
-      60,
-      24
-    ],
-    "paintkitId": 5,
-    "image": "default_generated/weapon_knife_skeleton_hy_ddpat_light_large.619cec010cb8826d284aae1058eabfbc3dde6600.png"
-  },
-  {
-    "id": 186,
-    "weaponId": 509,
-    "rarityId": 8,
-    "collectionIds": [
-      60,
-      24
-    ],
-    "paintkitId": 143,
-    "image": "default_generated/weapon_knife_skeleton_sp_tape_urban_light_large.be8cbee1fb2d09db34efbd706ae3abfa18eb576c.png"
-  },
-  {
-    "id": 187,
-    "weaponId": 509,
-    "rarityId": 8,
-    "collectionIds": [
-      60,
-      24
-    ],
-    "paintkitId": 77,
-    "image": "default_generated/weapon_knife_skeleton_hy_forest_boreal_light_large.f702dc4abc53b6f3f884a78da88178d93b209db4.png"
-  },
-  {
-    "id": 188,
-    "weaponId": 509,
-    "rarityId": 8,
-    "collectionIds": [
-      60
-    ],
-    "paintkitId": 735,
-    "image": "default_generated/weapon_knife_skeleton_sp_nightstripe_light_large.ad615b6e8bff8a937fed22b0353cfecbcd6be72f.png"
-  },
-  {
-    "id": 189,
-    "weaponId": 509,
-    "rarityId": 8,
-    "collectionIds": [
-      60,
-      24
-    ],
-    "paintkitId": 43,
-    "image": "default_generated/weapon_knife_skeleton_aq_forced_light_large.a752be1acf6b4445ff9a18e4b0d2b76bb7931b11.png"
-  },
-  {
-    "id": 190,
-    "weaponId": 509,
-    "rarityId": 8,
-    "collectionIds": [
-      60,
-      24
-    ],
-    "paintkitId": 175,
-    "image": "default_generated/weapon_knife_skeleton_sp_dapple_light_large.6f270cc94041e24473960f9450ac1b05ef4bc91b.png"
-  },
-  {
-    "id": 191,
-    "weaponId": 509,
-    "rarityId": 8,
-    "collectionIds": [
-      60,
-      24
-    ],
-    "paintkitId": 72,
-    "image": "default_generated/weapon_knife_skeleton_sp_mesh_tan_light_large.843c611b645fdce0b0d929594d6f1a204fd1fe9b.png"
-  },
-  {
-    "id": 192,
-    "weaponId": 509,
-    "rarityId": 8,
-    "collectionIds": [
-      60,
-      24
-    ],
-    "paintkitId": 38,
-    "image": "default_generated/weapon_knife_skeleton_aa_fade_light_large.0651775fa2d0551359ec96559f9833e28fa07917.png"
-  },
-  {
-    "id": 193,
-    "weaponId": 518,
-    "rarityId": 8,
-    "collectionIds": [
-      60
-    ],
-    "paintkitId": 38,
-    "image": "default_generated/weapon_knife_canis_aa_fade_light_large.92876cf32de94fbd84b9ec16f405afa6858e61b5.png"
-  },
-  {
-    "id": 194,
-    "weaponId": 518,
-    "rarityId": 8,
-    "collectionIds": [
-      60
-    ],
-    "paintkitId": 12,
-    "image": "default_generated/weapon_knife_canis_hy_webs_light_large.7261fc72cd4d29a022ff0007fb1979f677fcdda5.png"
-  },
-  {
-    "id": 195,
-    "weaponId": 518,
-    "rarityId": 8,
-    "collectionIds": [
-      60
-    ],
-    "paintkitId": 59,
-    "image": "default_generated/weapon_knife_canis_am_zebra_light_large.9d7f3c4d11a4306e6e7802cc7efd3cfdd3e5a157.png"
-  },
-  {
-    "id": 196,
-    "weaponId": 518,
-    "rarityId": 8,
-    "collectionIds": [
-      60
-    ],
-    "paintkitId": null,
-    "image": "weapons/base_weapons/weapon_knife_canis.ae03aed81864dc2ee1e1118bb973418f910098ac.png"
-  },
-  {
-    "id": 197,
-    "weaponId": 518,
-    "rarityId": 8,
-    "collectionIds": [
-      60
-    ],
-    "paintkitId": 5,
-    "image": "default_generated/weapon_knife_canis_hy_ddpat_light_large.5fd606c2c6356afbebe401fef45799a782b30865.png"
-  },
-  {
-    "id": 198,
-    "weaponId": 518,
-    "rarityId": 8,
-    "collectionIds": [
-      60
-    ],
-    "paintkitId": 43,
-    "image": "default_generated/weapon_knife_canis_aq_forced_light_large.5b36558b1d1aa73d1b5d932df92e27e9b4d7393d.png"
-  },
-  {
-    "id": 199,
-    "weaponId": 518,
-    "rarityId": 8,
-    "collectionIds": [
-      60
-    ],
-    "paintkitId": 44,
-    "image": "default_generated/weapon_knife_canis_aq_oiled_light_large.2fa47bb5d071d4c97891a46c1d8a809d5ed1df1a.png"
-  },
-  {
-    "id": 200,
-    "weaponId": 518,
-    "rarityId": 8,
-    "collectionIds": [
-      60
-    ],
-    "paintkitId": 735,
-    "image": "default_generated/weapon_knife_canis_sp_nightstripe_light_large.e59d46c4c54c4982cf2032f740d9bccd2295c902.png"
-  },
-  {
-    "id": 201,
-    "weaponId": 518,
-    "rarityId": 8,
-    "collectionIds": [
-      60
-    ],
-    "paintkitId": 42,
-    "image": "default_generated/weapon_knife_canis_aq_blued_light_large.5ee9cc49a41041b4222e7411b10da359377a6c55.png"
-  },
-  {
-    "id": 202,
+    "id": 204,
     "weaponId": 518,
     "rarityId": 8,
     "collectionIds": [
@@ -2646,17 +2715,7 @@
     "image": "default_generated/weapon_knife_canis_sp_tape_urban_light_large.a7a1b8f1c13416e109b5e9a6ba2c094af0df4317.png"
   },
   {
-    "id": 203,
-    "weaponId": 518,
-    "rarityId": 8,
-    "collectionIds": [
-      60
-    ],
-    "paintkitId": 77,
-    "image": "default_generated/weapon_knife_canis_hy_forest_boreal_light_large.c6d09e409e9574e0aa69b6164feb7387ed7f3e55.png"
-  },
-  {
-    "id": 204,
+    "id": 205,
     "weaponId": 500,
     "rarityId": 8,
     "collectionIds": [
@@ -2667,7 +2726,7 @@
     "image": "default_generated/weapon_bayonet_cu_bayonet_lore_light_large.372c7e0ec654f3be5d53e87cbbac3ab160c8c76e.png"
   },
   {
-    "id": 205,
+    "id": 206,
     "weaponId": 500,
     "rarityId": 8,
     "collectionIds": [
@@ -2678,7 +2737,7 @@
     "image": "default_generated/weapon_bayonet_am_emerald_marbleized_light_large.1d5942648013eb335f8ef7d931c93a30f84b9984.png"
   },
   {
-    "id": 206,
+    "id": 207,
     "weaponId": 500,
     "rarityId": 8,
     "collectionIds": [
@@ -2689,7 +2748,7 @@
     "image": "default_generated/weapon_bayonet_gs_bayonet_autotronic_light_large.4b7f809f4ee434dff8f270b041100012f39c5ebe.png"
   },
   {
-    "id": 207,
+    "id": 208,
     "weaponId": 500,
     "rarityId": 8,
     "collectionIds": [
@@ -2700,7 +2759,7 @@
     "image": "default_generated/weapon_bayonet_cu_bayonet_stonewash_light_large.0f931ca831c405927983d5b2ca3120aa9363d7d3.png"
   },
   {
-    "id": 208,
+    "id": 209,
     "weaponId": 500,
     "rarityId": 8,
     "collectionIds": [
@@ -2711,7 +2770,7 @@
     "image": "default_generated/weapon_bayonet_am_marked_up_light_large.c2a4dbca9338c1a5ffaa246715696f92168a49bc.png"
   },
   {
-    "id": 209,
+    "id": 210,
     "weaponId": 500,
     "rarityId": 8,
     "collectionIds": [
@@ -2722,7 +2781,7 @@
     "image": "default_generated/weapon_bayonet_hy_ocean_knife_light_large.d262ade9c249afcfbeeacf19deef49ccb0049c1a.png"
   },
   {
-    "id": 210,
+    "id": 211,
     "weaponId": 505,
     "rarityId": 8,
     "collectionIds": [
@@ -2733,7 +2792,7 @@
     "image": "default_generated/weapon_knife_flip_cu_flip_lore_light_large.df03b3186c105676470d2ac73e4bea375fedbf77.png"
   },
   {
-    "id": 211,
+    "id": 212,
     "weaponId": 505,
     "rarityId": 8,
     "collectionIds": [
@@ -2744,7 +2803,7 @@
     "image": "default_generated/weapon_knife_flip_am_emerald_marbleized_light_large.23968a46076f59126cbbc3bd959cc209dcae5e74.png"
   },
   {
-    "id": 212,
+    "id": 213,
     "weaponId": 505,
     "rarityId": 8,
     "collectionIds": [
@@ -2755,7 +2814,7 @@
     "image": "default_generated/weapon_knife_flip_hy_ocean_knife_light_large.6d35f9bc8d0ab2da7112155cf37ef782e542ef31.png"
   },
   {
-    "id": 213,
+    "id": 214,
     "weaponId": 505,
     "rarityId": 8,
     "collectionIds": [
@@ -2766,7 +2825,7 @@
     "image": "default_generated/weapon_knife_flip_gs_flip_autotronic_light_large.882d012ef1e758c9e323dd5d6202c49fbe894e05.png"
   },
   {
-    "id": 214,
+    "id": 215,
     "weaponId": 505,
     "rarityId": 8,
     "collectionIds": [
@@ -2777,7 +2836,7 @@
     "image": "default_generated/weapon_knife_flip_am_marked_up_light_large.6420438f1930c72f9aee1fb6d2e1e41238caf340.png"
   },
   {
-    "id": 215,
+    "id": 216,
     "weaponId": 505,
     "rarityId": 8,
     "collectionIds": [
@@ -2788,7 +2847,7 @@
     "image": "default_generated/weapon_knife_flip_cu_flip_stonewash_light_large.e6f71d193d2965b443ede7015911feedfea6e5a8.png"
   },
   {
-    "id": 216,
+    "id": 217,
     "weaponId": 506,
     "rarityId": 8,
     "collectionIds": [
@@ -2799,7 +2858,7 @@
     "image": "default_generated/weapon_knife_gut_am_emerald_marbleized_light_large.ebfec45aa5a1b82d5eca0e67cb3f58847c47fc24.png"
   },
   {
-    "id": 217,
+    "id": 218,
     "weaponId": 506,
     "rarityId": 8,
     "collectionIds": [
@@ -2810,7 +2869,7 @@
     "image": "default_generated/weapon_knife_gut_cu_gut_lore_light_large.5cf5a77978675bd3d276a86017e6d1fcacd7bf00.png"
   },
   {
-    "id": 218,
+    "id": 219,
     "weaponId": 506,
     "rarityId": 8,
     "collectionIds": [
@@ -2821,7 +2880,7 @@
     "image": "default_generated/weapon_knife_gut_gs_gut_autotronic_light_large.160e79d868da6ebb84c52e835aaf24ab9c6334f1.png"
   },
   {
-    "id": 219,
+    "id": 220,
     "weaponId": 506,
     "rarityId": 8,
     "collectionIds": [
@@ -2832,7 +2891,7 @@
     "image": "default_generated/weapon_knife_gut_hy_ocean_knife_light_large.649f890d55e6ee2987e988e44a0f52e1a5020486.png"
   },
   {
-    "id": 220,
+    "id": 221,
     "weaponId": 506,
     "rarityId": 8,
     "collectionIds": [
@@ -2843,7 +2902,7 @@
     "image": "default_generated/weapon_knife_gut_cu_gut_stonewash_light_large.52a1c223ee5d85ddb2242c75a67c1f2f49b0e0b9.png"
   },
   {
-    "id": 221,
+    "id": 222,
     "weaponId": 506,
     "rarityId": 8,
     "collectionIds": [
@@ -2854,7 +2913,7 @@
     "image": "default_generated/weapon_knife_gut_am_marked_up_light_large.08dac4cfbf7b626df37bb2b6ffd3d07d2fc86988.png"
   },
   {
-    "id": 222,
+    "id": 223,
     "weaponId": 507,
     "rarityId": 8,
     "collectionIds": [
@@ -2865,7 +2924,7 @@
     "image": "default_generated/weapon_knife_karambit_am_emerald_marbleized_light_large.ffcdfd3b2173ccd6560ba1db6f35ad6c6b039645.png"
   },
   {
-    "id": 223,
+    "id": 224,
     "weaponId": 507,
     "rarityId": 8,
     "collectionIds": [
@@ -2876,7 +2935,7 @@
     "image": "default_generated/weapon_knife_karambit_cu_karam_lore_light_large.7090aea57b3a2abd82e09f0cdb840ac72f41df73.png"
   },
   {
-    "id": 224,
+    "id": 225,
     "weaponId": 507,
     "rarityId": 8,
     "collectionIds": [
@@ -2887,7 +2946,7 @@
     "image": "default_generated/weapon_knife_karambit_gs_karam_autotronic_light_large.5af6c108ce38f71f0964f1bbd06bc48c1d3e5462.png"
   },
   {
-    "id": 225,
+    "id": 226,
     "weaponId": 507,
     "rarityId": 8,
     "collectionIds": [
@@ -2898,7 +2957,7 @@
     "image": "default_generated/weapon_knife_karambit_cu_karam_stonewash_light_large.a45dfc7db5703c23ef3e5733fcc4a7b2a9bf6d73.png"
   },
   {
-    "id": 226,
+    "id": 227,
     "weaponId": 507,
     "rarityId": 8,
     "collectionIds": [
@@ -2909,7 +2968,7 @@
     "image": "default_generated/weapon_knife_karambit_am_marked_up_fine_light_large.8814a38afa2383489a723019fc9e6e43f021f047.png"
   },
   {
-    "id": 227,
+    "id": 228,
     "weaponId": 507,
     "rarityId": 8,
     "collectionIds": [
@@ -2920,7 +2979,7 @@
     "image": "default_generated/weapon_knife_karambit_hy_ocean_knife_light_large.f108e6440259472084635566f62d7497b9d5ab51.png"
   },
   {
-    "id": 228,
+    "id": 229,
     "weaponId": 508,
     "rarityId": 8,
     "collectionIds": [
@@ -2931,7 +2990,7 @@
     "image": "default_generated/weapon_knife_m9_bayonet_gs_m9_bay_autotronic_light_large.f81f68f78b0b40717602fc88f62b4d7af346c430.png"
   },
   {
-    "id": 229,
+    "id": 230,
     "weaponId": 508,
     "rarityId": 8,
     "collectionIds": [
@@ -2942,7 +3001,7 @@
     "image": "default_generated/weapon_knife_m9_bayonet_cu_m9_bay_lore_light_large.b4bfa26d570d440ee4c04244605a81031909da2f.png"
   },
   {
-    "id": 230,
+    "id": 231,
     "weaponId": 508,
     "rarityId": 8,
     "collectionIds": [
@@ -2953,7 +3012,7 @@
     "image": "default_generated/weapon_knife_m9_bayonet_am_emerald_marbleized_light_large.5da41deaab71a392d147b3aafb5128bfbe5aefd1.png"
   },
   {
-    "id": 231,
+    "id": 232,
     "weaponId": 508,
     "rarityId": 8,
     "collectionIds": [
@@ -2964,7 +3023,7 @@
     "image": "default_generated/weapon_knife_m9_bayonet_cu_m9_bay_stonewash_light_large.addebdf2a1eb13e40ff7102e7a918d116653414b.png"
   },
   {
-    "id": 232,
+    "id": 233,
     "weaponId": 508,
     "rarityId": 8,
     "collectionIds": [
@@ -2975,7 +3034,7 @@
     "image": "default_generated/weapon_knife_m9_bayonet_am_marked_up_90_light_large.30a346e62c77a9552fe7ce89eca7c44e018aafd5.png"
   },
   {
-    "id": 233,
+    "id": 234,
     "weaponId": 508,
     "rarityId": 8,
     "collectionIds": [
@@ -2986,7 +3045,7 @@
     "image": "default_generated/weapon_knife_m9_bayonet_hy_ocean_knife_90_light_large.7c349b48ff79eb591eaa741aff78a0e086feaa4d.png"
   },
   {
-    "id": 234,
+    "id": 235,
     "weaponId": 509,
     "rarityId": 8,
     "collectionIds": [
@@ -2996,7 +3055,7 @@
     "image": "default_generated/weapon_knife_tactical_so_night_light_large.b0f1183807fcb10c3592200d569dcc79073d1515.png"
   },
   {
-    "id": 235,
+    "id": 236,
     "weaponId": 500,
     "rarityId": 8,
     "collectionIds": [
@@ -3008,7 +3067,7 @@
     "image": "default_generated/weapon_bayonet_am_marble_fade_light_large.adc286f39c98a9630620a97831ca2e5050229dff.png"
   },
   {
-    "id": 236,
+    "id": 237,
     "weaponId": 500,
     "rarityId": 8,
     "collectionIds": [
@@ -3020,7 +3079,7 @@
     "image": "default_generated/weapon_bayonet_an_tiger_orange_light_large.780ff3a58d01a73d4d7d755adbdca46483d13faf.png"
   },
   {
-    "id": 237,
+    "id": 238,
     "weaponId": 500,
     "rarityId": 8,
     "collectionIds": [
@@ -3032,7 +3091,7 @@
     "image": "default_generated/weapon_bayonet_am_blackpearl_marbleized_light_large.df1b0c31fec19fdb172e19e14715e3bc2f6a829b.png"
   },
   {
-    "id": 238,
+    "id": 239,
     "weaponId": 500,
     "rarityId": 8,
     "collectionIds": [
@@ -3044,7 +3103,7 @@
     "image": "default_generated/weapon_bayonet_aq_steel_knife_light_large.3a913d1a41833bcfb673a31cfdf3fddb592f2f85.png"
   },
   {
-    "id": 239,
+    "id": 240,
     "weaponId": 500,
     "rarityId": 8,
     "collectionIds": [
@@ -3056,7 +3115,7 @@
     "image": "default_generated/weapon_bayonet_aq_damascus_light_large.bd2b3b3fcd70fdec736a782fa5108ea9286d86a8.png"
   },
   {
-    "id": 240,
+    "id": 241,
     "weaponId": 500,
     "rarityId": 8,
     "collectionIds": [
@@ -3068,7 +3127,7 @@
     "image": "default_generated/weapon_bayonet_so_purple_light_large.c7f08cb18f5cc792a27e186ee630614b93c35200.png"
   },
   {
-    "id": 241,
+    "id": 242,
     "weaponId": 505,
     "rarityId": 8,
     "collectionIds": [
@@ -3080,7 +3139,7 @@
     "image": "default_generated/weapon_knife_flip_am_blackpearl_marbleized_light_large.4f181c67a3cc273a46b7125f62ea71b5ac5e2f77.png"
   },
   {
-    "id": 242,
+    "id": 243,
     "weaponId": 505,
     "rarityId": 8,
     "collectionIds": [
@@ -3092,7 +3151,7 @@
     "image": "default_generated/weapon_knife_flip_am_marble_fade_light_large.57a993ab6632bab742dc96e8ebedf98473fa5b48.png"
   },
   {
-    "id": 243,
+    "id": 244,
     "weaponId": 505,
     "rarityId": 8,
     "collectionIds": [
@@ -3104,7 +3163,7 @@
     "image": "default_generated/weapon_knife_flip_an_tiger_orange_light_large.441c0d2cf427d90fb079e82af0d074c1bfad13e4.png"
   },
   {
-    "id": 244,
+    "id": 245,
     "weaponId": 505,
     "rarityId": 8,
     "collectionIds": [
@@ -3116,7 +3175,7 @@
     "image": "default_generated/weapon_knife_flip_so_purple_light_large.6a76bb50dd3ebf15bd94cc5e0d39daf34b02270f.png"
   },
   {
-    "id": 245,
+    "id": 246,
     "weaponId": 505,
     "rarityId": 8,
     "collectionIds": [
@@ -3128,7 +3187,7 @@
     "image": "default_generated/weapon_knife_flip_aq_damascus_light_large.9b08bc30249a431d8ea084daf7d9fcb8da5e0e19.png"
   },
   {
-    "id": 246,
+    "id": 247,
     "weaponId": 505,
     "rarityId": 8,
     "collectionIds": [
@@ -3140,7 +3199,7 @@
     "image": "default_generated/weapon_knife_flip_aq_steel_knife_light_large.3be134e0b20c32442d7b508a2ec065af3c59ea89.png"
   },
   {
-    "id": 247,
+    "id": 248,
     "weaponId": 506,
     "rarityId": 8,
     "collectionIds": [
@@ -3152,7 +3211,7 @@
     "image": "default_generated/weapon_knife_gut_so_purple_light_large.dbe6989416501166c43bd1cfb18ee835dbfa0ac7.png"
   },
   {
-    "id": 248,
+    "id": 249,
     "weaponId": 506,
     "rarityId": 8,
     "collectionIds": [
@@ -3164,7 +3223,7 @@
     "image": "default_generated/weapon_knife_gut_am_blackpearl_marbleized_light_large.14cb974a948ef999b876ce9e1331f0ee1da88e19.png"
   },
   {
-    "id": 249,
+    "id": 250,
     "weaponId": 506,
     "rarityId": 8,
     "collectionIds": [
@@ -3176,7 +3235,7 @@
     "image": "default_generated/weapon_knife_gut_am_marble_fade_light_large.85f1cad22ba4e6716045d53e9e0cf5459760d152.png"
   },
   {
-    "id": 250,
+    "id": 251,
     "weaponId": 506,
     "rarityId": 8,
     "collectionIds": [
@@ -3188,7 +3247,7 @@
     "image": "default_generated/weapon_knife_gut_an_tiger_orange_light_large.4590d3a96661c5e54af3285cb237077fc63d486b.png"
   },
   {
-    "id": 251,
+    "id": 252,
     "weaponId": 506,
     "rarityId": 8,
     "collectionIds": [
@@ -3200,7 +3259,7 @@
     "image": "default_generated/weapon_knife_gut_aq_damascus_light_large.9eaf9c050c3f5dfe5c647d361538a1ea7001f835.png"
   },
   {
-    "id": 252,
+    "id": 253,
     "weaponId": 506,
     "rarityId": 8,
     "collectionIds": [
@@ -3212,7 +3271,7 @@
     "image": "default_generated/weapon_knife_gut_aq_steel_knife_light_large.d56ab6033e5da6115f6af2aba93bae8edde57cb3.png"
   },
   {
-    "id": 253,
+    "id": 254,
     "weaponId": 507,
     "rarityId": 8,
     "collectionIds": [
@@ -3224,7 +3283,7 @@
     "image": "default_generated/weapon_knife_karambit_am_marble_fade_light_large.e5d0f471cc4aad8ddd6ede429afe8cd2d80c1cf2.png"
   },
   {
-    "id": 254,
+    "id": 255,
     "weaponId": 507,
     "rarityId": 8,
     "collectionIds": [
@@ -3236,7 +3295,7 @@
     "image": "default_generated/weapon_knife_karambit_an_tiger_orange_light_large.cd5a9d7da1f15b5360e825b7d8261210ce717643.png"
   },
   {
-    "id": 255,
+    "id": 256,
     "weaponId": 507,
     "rarityId": 8,
     "collectionIds": [
@@ -3248,7 +3307,7 @@
     "image": "default_generated/weapon_knife_karambit_am_blackpearl_marbleized_light_large.c6f1bd8f39a3e32fcfa8771735b8c881701087e3.png"
   },
   {
-    "id": 256,
+    "id": 257,
     "weaponId": 507,
     "rarityId": 8,
     "collectionIds": [
@@ -3260,7 +3319,7 @@
     "image": "default_generated/weapon_knife_karambit_aq_damascus_light_large.47a76f786c10dcd8e0cabbf7d0ffaec93ea9960a.png"
   },
   {
-    "id": 257,
+    "id": 258,
     "weaponId": 507,
     "rarityId": 8,
     "collectionIds": [
@@ -3272,7 +3331,7 @@
     "image": "default_generated/weapon_knife_karambit_so_purple_light_large.c30d6c61e9ec2e808b845d594a615e4623d56ee5.png"
   },
   {
-    "id": 258,
+    "id": 259,
     "weaponId": 507,
     "rarityId": 8,
     "collectionIds": [
@@ -3284,7 +3343,7 @@
     "image": "default_generated/weapon_knife_karambit_aq_steel_knife_light_large.fe0b528138096b68d213ad497a76396483f68f50.png"
   },
   {
-    "id": 259,
+    "id": 260,
     "weaponId": 508,
     "rarityId": 8,
     "collectionIds": [
@@ -3296,7 +3355,7 @@
     "image": "default_generated/weapon_knife_m9_bayonet_am_marble_fade_light_large.732b2c0e3c297968ccc0c7ecde0438ab995f9720.png"
   },
   {
-    "id": 260,
+    "id": 261,
     "weaponId": 508,
     "rarityId": 8,
     "collectionIds": [
@@ -3308,7 +3367,7 @@
     "image": "default_generated/weapon_knife_m9_bayonet_am_blackpearl_marbleized_light_large.a2a2b6c520268b3cb5f28191992a6abd7fba90ce.png"
   },
   {
-    "id": 261,
+    "id": 262,
     "weaponId": 508,
     "rarityId": 8,
     "collectionIds": [
@@ -3320,7 +3379,7 @@
     "image": "default_generated/weapon_knife_m9_bayonet_an_tiger_orange_light_large.49d5afb6d7f17cb0b384be1416a9533841174ac5.png"
   },
   {
-    "id": 262,
+    "id": 263,
     "weaponId": 508,
     "rarityId": 8,
     "collectionIds": [
@@ -3332,7 +3391,7 @@
     "image": "default_generated/weapon_knife_m9_bayonet_aq_damascus_90_light_large.c8510c6e031c61d9c1c2421df3b912125547dc83.png"
   },
   {
-    "id": 263,
+    "id": 264,
     "weaponId": 508,
     "rarityId": 8,
     "collectionIds": [
@@ -3344,7 +3403,7 @@
     "image": "default_generated/weapon_knife_m9_bayonet_so_purple_light_large.5ca833ab51b7a972d9b5bb7792c88957a69c4b4c.png"
   },
   {
-    "id": 264,
+    "id": 265,
     "weaponId": 508,
     "rarityId": 8,
     "collectionIds": [
@@ -3356,7 +3415,7 @@
     "image": "default_generated/weapon_knife_m9_bayonet_aq_steel_knife_light_large.b89310b9d111f845adf87260417a732028154f27.png"
   },
   {
-    "id": 265,
+    "id": 266,
     "weaponId": 515,
     "rarityId": 8,
     "collectionIds": [
@@ -3366,7 +3425,7 @@
     "image": "default_generated/weapon_knife_butterfly_aa_fade_light_large.b1ab5fb3ed08185a266334b6488a364bb3f220f8.png"
   },
   {
-    "id": 266,
+    "id": 267,
     "weaponId": 515,
     "rarityId": 8,
     "collectionIds": [
@@ -3376,7 +3435,7 @@
     "image": "default_generated/weapon_knife_butterfly_am_zebra_light_large.8f5d28f8b8607d83059c4df618b399e2fa551bb4.png"
   },
   {
-    "id": 267,
+    "id": 268,
     "weaponId": 515,
     "rarityId": 8,
     "collectionIds": [
@@ -3386,7 +3445,7 @@
     "image": "default_generated/weapon_knife_butterfly_hy_webs_light_large.8e3a3668a8678a4ce56b2675c60d7ec6a756827a.png"
   },
   {
-    "id": 268,
+    "id": 269,
     "weaponId": 515,
     "rarityId": 8,
     "collectionIds": [
@@ -3396,7 +3455,7 @@
     "image": "weapons/base_weapons/weapon_knife_butterfly.794147e84a4e9426202d45145910cbb007797ce5.png"
   },
   {
-    "id": 269,
+    "id": 270,
     "weaponId": 515,
     "rarityId": 8,
     "collectionIds": [
@@ -3406,7 +3465,7 @@
     "image": "default_generated/weapon_knife_butterfly_aq_oiled_light_large.d53e80b706e7d7fac9d22d265595ea1a959ea79b.png"
   },
   {
-    "id": 270,
+    "id": 271,
     "weaponId": 515,
     "rarityId": 8,
     "collectionIds": [
@@ -3416,7 +3475,7 @@
     "image": "default_generated/weapon_knife_butterfly_so_night_light_large.9f2544c35867a540f1d0a5e446d10d35b4bb3202.png"
   },
   {
-    "id": 271,
+    "id": 272,
     "weaponId": 515,
     "rarityId": 8,
     "collectionIds": [
@@ -3426,7 +3485,7 @@
     "image": "default_generated/weapon_knife_butterfly_aq_blued_light_large.969518ce760404d72095af853f90df7582e7889f.png"
   },
   {
-    "id": 272,
+    "id": 273,
     "weaponId": 515,
     "rarityId": 8,
     "collectionIds": [
@@ -3436,7 +3495,7 @@
     "image": "default_generated/weapon_knife_butterfly_aq_forced_light_large.1e52259f8bd6b3c242cedb2d0a879e9fc17b7a23.png"
   },
   {
-    "id": 273,
+    "id": 274,
     "weaponId": 515,
     "rarityId": 8,
     "collectionIds": [
@@ -3446,7 +3505,7 @@
     "image": "default_generated/weapon_knife_butterfly_sp_tape_urban_light_large.dab43f48bd2eb2c9734c90b5482f222eaa95cebb.png"
   },
   {
-    "id": 274,
+    "id": 275,
     "weaponId": 515,
     "rarityId": 8,
     "collectionIds": [
@@ -3456,7 +3515,7 @@
     "image": "default_generated/weapon_knife_butterfly_hy_forest_boreal_light_large.f817483d1e53b69919a8a11349b075c27d8829b1.png"
   },
   {
-    "id": 275,
+    "id": 276,
     "weaponId": 515,
     "rarityId": 8,
     "collectionIds": [
@@ -3466,7 +3525,7 @@
     "image": "default_generated/weapon_knife_butterfly_sp_mesh_tan_light_large.9c30ece5beb38356f406e5c5fa56e7f4056f0757.png"
   },
   {
-    "id": 276,
+    "id": 277,
     "weaponId": 515,
     "rarityId": 8,
     "collectionIds": [
@@ -3476,7 +3535,7 @@
     "image": "default_generated/weapon_knife_butterfly_hy_ddpat_light_large.6e874d0a6db5d1468c3b5b99c303bf76837593fe.png"
   },
   {
-    "id": 277,
+    "id": 278,
     "weaponId": 515,
     "rarityId": 8,
     "collectionIds": [
@@ -3486,7 +3545,7 @@
     "image": "default_generated/weapon_knife_butterfly_sp_dapple_light_large.6110a91f809c996696fa87d90b7ea88e0377d0df.png"
   },
   {
-    "id": 278,
+    "id": 279,
     "weaponId": 512,
     "rarityId": 8,
     "collectionIds": [
@@ -3496,7 +3555,7 @@
     "image": "default_generated/weapon_knife_falchion_hy_webs_light_large.9c355c7819b8fd993b543bceec976e798e6e8633.png"
   },
   {
-    "id": 279,
+    "id": 280,
     "weaponId": 512,
     "rarityId": 8,
     "collectionIds": [
@@ -3506,7 +3565,7 @@
     "image": "default_generated/weapon_knife_falchion_aa_fade_light_large.1db6bc12f4b49677b330382c3e5af21f46d0c124.png"
   },
   {
-    "id": 280,
+    "id": 281,
     "weaponId": 512,
     "rarityId": 8,
     "collectionIds": [
@@ -3516,7 +3575,7 @@
     "image": "default_generated/weapon_knife_falchion_aq_oiled_light_large.ddcd8f4a87e08ab50fe3241e6791896125c48e03.png"
   },
   {
-    "id": 281,
+    "id": 282,
     "weaponId": 512,
     "rarityId": 8,
     "collectionIds": [
@@ -3526,7 +3585,7 @@
     "image": "default_generated/weapon_knife_falchion_am_zebra_light_large.3cbce2191d2a20b88e610d8180c2f4a9ee0066ca.png"
   },
   {
-    "id": 282,
+    "id": 283,
     "weaponId": 512,
     "rarityId": 8,
     "collectionIds": [
@@ -3536,7 +3595,7 @@
     "image": "default_generated/weapon_knife_falchion_aq_blued_light_large.ead09a065b115e707a59aa49689af0ed3dd8d1f3.png"
   },
   {
-    "id": 283,
+    "id": 284,
     "weaponId": 512,
     "rarityId": 8,
     "collectionIds": [
@@ -3546,7 +3605,7 @@
     "image": "default_generated/weapon_knife_falchion_hy_ddpat_light_large.3b2857b99bb2aa1b1337248d8a1ae24aae1bf450.png"
   },
   {
-    "id": 284,
+    "id": 285,
     "weaponId": 512,
     "rarityId": 8,
     "collectionIds": [
@@ -3556,7 +3615,7 @@
     "image": "default_generated/weapon_knife_falchion_hy_forest_boreal_light_large.9bf4abd73deee0ae82ce0a8670e1056d3a546107.png"
   },
   {
-    "id": 285,
+    "id": 286,
     "weaponId": 512,
     "rarityId": 8,
     "collectionIds": [
@@ -3566,7 +3625,7 @@
     "image": "weapons/base_weapons/weapon_knife_falchion.adcc43a018fd4fe315dbdbc7960cfc52c5d63e3e.png"
   },
   {
-    "id": 286,
+    "id": 287,
     "weaponId": 512,
     "rarityId": 8,
     "collectionIds": [
@@ -3576,7 +3635,7 @@
     "image": "default_generated/weapon_knife_falchion_so_night_light_large.535e93982805360eacc5969e1b28fe64f15216fe.png"
   },
   {
-    "id": 287,
+    "id": 288,
     "weaponId": 512,
     "rarityId": 8,
     "collectionIds": [
@@ -3586,7 +3645,7 @@
     "image": "default_generated/weapon_knife_falchion_aq_forced_light_large.3b986dfc395e6607d1f05fcd1f3e6b8c2c2c1f59.png"
   },
   {
-    "id": 288,
+    "id": 289,
     "weaponId": 512,
     "rarityId": 8,
     "collectionIds": [
@@ -3596,7 +3655,7 @@
     "image": "default_generated/weapon_knife_falchion_sp_tape_urban_light_large.c3904e816bfc30cd130a7a1865ef37a32ed03434.png"
   },
   {
-    "id": 289,
+    "id": 290,
     "weaponId": 512,
     "rarityId": 8,
     "collectionIds": [
@@ -3606,7 +3665,7 @@
     "image": "default_generated/weapon_knife_falchion_sp_mesh_tan_light_large.eccb7999f574f5e1080dfef159c3903c4e6db0de.png"
   },
   {
-    "id": 290,
+    "id": 291,
     "weaponId": 512,
     "rarityId": 8,
     "collectionIds": [
@@ -3616,7 +3675,7 @@
     "image": "default_generated/weapon_knife_falchion_sp_dapple_light_large.072bd4143a0c769f2d78835eaee88de49c849bd3.png"
   },
   {
-    "id": 291,
+    "id": 292,
     "weaponId": 503,
     "rarityId": 8,
     "collectionIds": [
@@ -3626,7 +3685,7 @@
     "image": "default_generated/weapon_knife_css_aa_fade_light_large.f39aed45b6599c0e5850cb948b81f45268febc83.png"
   },
   {
-    "id": 292,
+    "id": 293,
     "weaponId": 503,
     "rarityId": 8,
     "collectionIds": [
@@ -3636,7 +3695,7 @@
     "image": "default_generated/weapon_knife_css_hy_webs_light_large.9f0ea28d7a29034eaade735f0bfd5d8bc5600e99.png"
   },
   {
-    "id": 293,
+    "id": 294,
     "weaponId": 503,
     "rarityId": 8,
     "collectionIds": [
@@ -3646,7 +3705,7 @@
     "image": "default_generated/weapon_knife_css_am_zebra_light_large.ae26f920f022f2dc8d700bba2dee4e7003552a4b.png"
   },
   {
-    "id": 294,
+    "id": 295,
     "weaponId": 503,
     "rarityId": 8,
     "collectionIds": [
@@ -3656,7 +3715,7 @@
     "image": "weapons/base_weapons/weapon_knife_css.0b33071c28c02e6f19e363dc9a838566c6557389.png"
   },
   {
-    "id": 295,
+    "id": 296,
     "weaponId": 503,
     "rarityId": 8,
     "collectionIds": [
@@ -3666,7 +3725,7 @@
     "image": "default_generated/weapon_knife_css_sp_dapple_light_large.4ff8fd82fa685fea7a2d243eecf8b7a230c46ee9.png"
   },
   {
-    "id": 296,
+    "id": 297,
     "weaponId": 503,
     "rarityId": 8,
     "collectionIds": [
@@ -3676,7 +3735,7 @@
     "image": "default_generated/weapon_knife_css_aq_oiled_light_large.20001c41e9bf3e1c1da9938c9f72a935241755c8.png"
   },
   {
-    "id": 297,
+    "id": 298,
     "weaponId": 503,
     "rarityId": 8,
     "collectionIds": [
@@ -3686,7 +3745,7 @@
     "image": "default_generated/weapon_knife_css_sp_nightstripe_light_large.464a6d76bcc6c3648aa079ca346ee3076783b55b.png"
   },
   {
-    "id": 298,
+    "id": 299,
     "weaponId": 503,
     "rarityId": 8,
     "collectionIds": [
@@ -3696,7 +3755,7 @@
     "image": "default_generated/weapon_knife_css_aq_blued_light_large.917fe4fc323042ac09109c9185742ba228539985.png"
   },
   {
-    "id": 299,
+    "id": 300,
     "weaponId": 503,
     "rarityId": 8,
     "collectionIds": [
@@ -3706,7 +3765,7 @@
     "image": "default_generated/weapon_knife_css_aq_forced_light_large.7f67fec75394666e6df6aa8a31aa492d4540fc94.png"
   },
   {
-    "id": 300,
+    "id": 301,
     "weaponId": 503,
     "rarityId": 8,
     "collectionIds": [
@@ -3716,7 +3775,7 @@
     "image": "default_generated/weapon_knife_css_hy_ddpat_light_large.66740db6797133d2d2d7240b3ce70f530e9a0a81.png"
   },
   {
-    "id": 301,
+    "id": 302,
     "weaponId": 503,
     "rarityId": 8,
     "collectionIds": [
@@ -3726,7 +3785,7 @@
     "image": "default_generated/weapon_knife_css_hy_forest_boreal_light_large.6139ce1d3498601b6114389dcdb2835157ef618b.png"
   },
   {
-    "id": 302,
+    "id": 303,
     "weaponId": 503,
     "rarityId": 8,
     "collectionIds": [
@@ -3736,7 +3795,7 @@
     "image": "default_generated/weapon_knife_css_sp_tape_urban_light_large.441ee120340e931006889e4848c673200d44b476.png"
   },
   {
-    "id": 303,
+    "id": 304,
     "weaponId": 503,
     "rarityId": 8,
     "collectionIds": [
@@ -3746,7 +3805,7 @@
     "image": "default_generated/weapon_knife_css_sp_mesh_tan_light_large.1c0bd9203662ac57a740117d1c22fead6e7863df.png"
   },
   {
-    "id": 304,
+    "id": 305,
     "weaponId": 514,
     "rarityId": 8,
     "collectionIds": [
@@ -3756,7 +3815,7 @@
     "image": "default_generated/weapon_knife_survival_bowie_aa_fade_light_large.fd85e3d9fbd875ca2551b3758f5374e33d167fbf.png"
   },
   {
-    "id": 305,
+    "id": 306,
     "weaponId": 514,
     "rarityId": 8,
     "collectionIds": [
@@ -3766,7 +3825,7 @@
     "image": "default_generated/weapon_knife_survival_bowie_am_zebra_light_large.2ecbba9bd0e985ca0ae66ea95e7ef497358389d1.png"
   },
   {
-    "id": 306,
+    "id": 307,
     "weaponId": 514,
     "rarityId": 8,
     "collectionIds": [
@@ -3776,7 +3835,7 @@
     "image": "default_generated/weapon_knife_survival_bowie_hy_webs_light_large.d03e755f33f66df9ee9d8b1cf50b633ff458978b.png"
   },
   {
-    "id": 307,
+    "id": 308,
     "weaponId": 514,
     "rarityId": 8,
     "collectionIds": [
@@ -3786,7 +3845,7 @@
     "image": "default_generated/weapon_knife_survival_bowie_aq_oiled_light_large.5d61d6e094f21b2e857f06fc6123ad4d1fe96193.png"
   },
   {
-    "id": 308,
+    "id": 309,
     "weaponId": 514,
     "rarityId": 8,
     "collectionIds": [
@@ -3796,7 +3855,7 @@
     "image": "default_generated/weapon_knife_survival_bowie_so_night_light_large.d0d6c2e5a296631fd0531172663499095030c2b2.png"
   },
   {
-    "id": 309,
+    "id": 310,
     "weaponId": 514,
     "rarityId": 8,
     "collectionIds": [
@@ -3806,7 +3865,7 @@
     "image": "default_generated/weapon_knife_survival_bowie_aq_forced_light_large.dc9107ac17070401b6be113e1af07b1fe257c951.png"
   },
   {
-    "id": 310,
+    "id": 311,
     "weaponId": 514,
     "rarityId": 8,
     "collectionIds": [
@@ -3816,7 +3875,7 @@
     "image": "default_generated/weapon_knife_survival_bowie_aq_blued_light_large.d24c03eb5e7feb65ba397f5aaca5f1304acefc62.png"
   },
   {
-    "id": 311,
+    "id": 312,
     "weaponId": 514,
     "rarityId": 8,
     "collectionIds": [
@@ -3826,7 +3885,7 @@
     "image": "weapons/base_weapons/weapon_knife_survival_bowie.01addb54d400815308b1d312290594a3177dd55f.png"
   },
   {
-    "id": 312,
+    "id": 313,
     "weaponId": 514,
     "rarityId": 8,
     "collectionIds": [
@@ -3836,7 +3895,7 @@
     "image": "default_generated/weapon_knife_survival_bowie_sp_mesh_tan_light_large.360aa198bded3bec8d3c051bd1d6dc7270b3b91f.png"
   },
   {
-    "id": 313,
+    "id": 314,
     "weaponId": 514,
     "rarityId": 8,
     "collectionIds": [
@@ -3846,7 +3905,7 @@
     "image": "default_generated/weapon_knife_survival_bowie_sp_tape_urban_light_large.8038d2ef3b412fc5151061528702309da2a71545.png"
   },
   {
-    "id": 314,
+    "id": 315,
     "weaponId": 514,
     "rarityId": 8,
     "collectionIds": [
@@ -3856,7 +3915,7 @@
     "image": "default_generated/weapon_knife_survival_bowie_hy_forest_boreal_light_large.439a6bd0f88b3caa73d7ea847452a116ed1ecec7.png"
   },
   {
-    "id": 315,
+    "id": 316,
     "weaponId": 514,
     "rarityId": 8,
     "collectionIds": [
@@ -3866,7 +3925,7 @@
     "image": "default_generated/weapon_knife_survival_bowie_sp_dapple_light_large.491c0483853ac7568ae0d98a09b5ba6e9b757411.png"
   },
   {
-    "id": 316,
+    "id": 317,
     "weaponId": 514,
     "rarityId": 8,
     "collectionIds": [
@@ -3876,7 +3935,7 @@
     "image": "default_generated/weapon_knife_survival_bowie_hy_ddpat_light_large.41ce1d0d829bdfe39882a843045a2a940da6be8f.png"
   },
   {
-    "id": 317,
+    "id": 318,
     "weaponId": 516,
     "rarityId": 8,
     "collectionIds": [
@@ -3886,7 +3945,7 @@
     "image": "default_generated/weapon_knife_push_aa_fade_light_large.f73d939a3358a126ffbb7b93c9f87b9b78a6c78f.png"
   },
   {
-    "id": 318,
+    "id": 319,
     "weaponId": 516,
     "rarityId": 8,
     "collectionIds": [
@@ -3896,7 +3955,7 @@
     "image": "default_generated/weapon_knife_push_aq_oiled_light_large.cbcb75a234d66325b56318abcf1d1cc8ebe7b893.png"
   },
   {
-    "id": 319,
+    "id": 320,
     "weaponId": 516,
     "rarityId": 8,
     "collectionIds": [
@@ -3906,7 +3965,7 @@
     "image": "default_generated/weapon_knife_push_am_zebra_light_large.a09a6cf348b102f80e87226cc71d03544e502703.png"
   },
   {
-    "id": 320,
+    "id": 321,
     "weaponId": 516,
     "rarityId": 8,
     "collectionIds": [
@@ -3916,7 +3975,7 @@
     "image": "weapons/base_weapons/weapon_knife_push.13f409f23e653107c90711e5ab258b52b187ff6a.png"
   },
   {
-    "id": 321,
+    "id": 322,
     "weaponId": 516,
     "rarityId": 8,
     "collectionIds": [
@@ -3926,7 +3985,7 @@
     "image": "default_generated/weapon_knife_push_hy_webs_light_large.df749be6007a8df0ed8ee572e42151235ef7cfb8.png"
   },
   {
-    "id": 322,
+    "id": 323,
     "weaponId": 516,
     "rarityId": 8,
     "collectionIds": [
@@ -3936,7 +3995,7 @@
     "image": "default_generated/weapon_knife_push_sp_mesh_tan_light_large.b6b390c3652c2bc1c074cd23b3ca921bf9870b4b.png"
   },
   {
-    "id": 323,
+    "id": 324,
     "weaponId": 516,
     "rarityId": 8,
     "collectionIds": [
@@ -3946,7 +4005,7 @@
     "image": "default_generated/weapon_knife_push_aq_blued_light_large.e0b2ecdeec3fb3066cecaf5b2d9392bfe4dbc674.png"
   },
   {
-    "id": 324,
+    "id": 325,
     "weaponId": 516,
     "rarityId": 8,
     "collectionIds": [
@@ -3956,7 +4015,7 @@
     "image": "default_generated/weapon_knife_push_sp_dapple_light_large.2f7cde55a22c5cd038bceb38533f5397a9fc8252.png"
   },
   {
-    "id": 325,
+    "id": 326,
     "weaponId": 516,
     "rarityId": 8,
     "collectionIds": [
@@ -3966,7 +4025,7 @@
     "image": "default_generated/weapon_knife_push_aq_forced_light_large.2ceafeb104afeb40f9ba4c7a7cc4d590bc36c3dd.png"
   },
   {
-    "id": 326,
+    "id": 327,
     "weaponId": 516,
     "rarityId": 8,
     "collectionIds": [
@@ -3976,7 +4035,7 @@
     "image": "default_generated/weapon_knife_push_sp_tape_urban_light_large.b443359282b2cbc75c2cc765af8c9a00e4b2dfdb.png"
   },
   {
-    "id": 327,
+    "id": 328,
     "weaponId": 516,
     "rarityId": 8,
     "collectionIds": [
@@ -3986,7 +4045,7 @@
     "image": "default_generated/weapon_knife_push_so_night_light_large.6bf4ccf0b4c054ad19beb4d3da884cae5fb2a302.png"
   },
   {
-    "id": 328,
+    "id": 329,
     "weaponId": 516,
     "rarityId": 8,
     "collectionIds": [
@@ -3996,7 +4055,7 @@
     "image": "default_generated/weapon_knife_push_hy_ddpat_light_large.a5821bfe03d91034b78b0aaf1eaa50cf556645b3.png"
   },
   {
-    "id": 329,
+    "id": 330,
     "weaponId": 516,
     "rarityId": 8,
     "collectionIds": [
